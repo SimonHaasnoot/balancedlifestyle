@@ -28,11 +28,16 @@ theme = createTheme({
     typography: {
         fontFamily: ['Exo', 'Nunito', 'Numans'].join(','),
         h1: {
+            // background: `linear-gradient(to right, ${color03}, ${color02})`,
+            // WebkitBackgroundClip: 'text',
+            // WebkitTextFillColor: 'transparent',
+            // textShadow: '4px 3px rgba(255 255 255 / 15%)',
+            lineHeight: 1,
             fontWeight: 700,
-            color: color01,
+            color: color03,
             fontSize: '5.2em',
             fontFamily: 'Exo',
-            // textTransform: 'uppercase',
+            textTransform: 'uppercase',
             [theme.breakpoints.between('xs', 'sm')]: {
                 fontSize: 48,
             },
@@ -87,7 +92,7 @@ theme = createTheme({
             wordBreak: 'break-word',
         },
         subtitle1: {
-            lineHeight: 1,
+            lineHeight: 1.3,
             fontSize: 24,
             fontFamily: 'Numans',
             [theme.breakpoints.between('xs', 'sm')]: {
@@ -122,12 +127,10 @@ theme = createTheme({
                     'color': 'white',
                     'padding': '16px 32px',
                     'border': 0,
-                    'boxShadow': '2px 4px 8px 0 rgb(255 255 255 / 50%)',
                     '&:hover': {
                         border: 0,
-                        background: color01,
+                        background: color04,
                         transform: 'translateY(-2px)',
-                        boxShadow: '4px 4px 10px 0 rgb(255 255 255 / 50%)',
                         transition: 'all 0.2s ease-in-out',
                     },
                 },

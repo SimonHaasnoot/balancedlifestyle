@@ -1,18 +1,18 @@
 export enum projectVariables {
     // Path: src\project.ts
-    COMPANY_NAME = "Example",
-    COMPANY_DESCRIPTION = "Example",
-    COMPANY_ADDRESS = "Example",
-    COMPANY_PHONE = "Example",
-    COMPANY_EMAIL = "Example",
-    COMPANY_WEBSITE = "Example",
-    COMPANY_FACEBOOK = "Example",
-    COMPANY_INSTAGRAM = "Example",
-    COMPANY_TWITTER = "Example",
-    COMPANY_YOUTUBE = "Example",
-    COMPANY_LINKEDIN = "Example",
+    COMPANY_NAME = 'Balanced Lifestyle',
+    COMPANY_DESCRIPTION = "Balanced Lifestyle is gespecialiseerd in het maken van voedingsschema's en het geven van voedingsadvies. Verder bieden wij ook personal training aan.",
+    COMPANY_ADDRESS = 'Wilhelminalaan 5, 3701BD, Zeist',
+    COMPANY_PHONE = '0637199776',
+    COMPANY_EMAIL = 'info@balancedlifestyle.online',
+    COMPANY_WEBSITE = 'balancedlifestyle.online',
+    COMPANY_FACEBOOK = 'https://www.facebook.com/sem.vandegriendt.5',
+    COMPANY_INSTAGRAM = '#',
+    COMPANY_TWITTER = '#',
+    COMPANY_YOUTUBE = '#',
+    COMPANY_LINKEDIN = '#',
 
-    GOOGLE_ANALYTICS_KEY = "",
+    GOOGLE_ANALYTICS_KEY = '',
 
-    AUTHOR = "Simon Haasnoot",
+    AUTHOR = 'Simon Haasnoot',
 }

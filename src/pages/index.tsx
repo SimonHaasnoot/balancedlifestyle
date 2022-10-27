@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import * as React from 'react';
+import { Hero } from '../components/organisms/Hero';
 import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
 import { Layout } from '../components/pagelayout/Layout';
 import '../css/app.css';
@@ -8,7 +9,8 @@ export const index = () => {
     return (
         <>
             <Layout>
-                {/* <Hero height='95vh' /> */}
+                <Hero />
+
 
                 <DefaultContainer maxWidth="lg">
                     <Typography sx={{mb: '20px'}} variant="h1">This is H1</Typography>

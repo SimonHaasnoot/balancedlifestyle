@@ -6,18 +6,20 @@ import React, { useEffect, useState } from 'react';
 import useIsMobile from '../../hooks/useMobile';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { Footer } from './Footer';
+import useScrollPosition from '../../hooks/useScrollPosition';
 
 type HeaderRouteType = {
     name: string;
     path: string;
+    activeYAxis?: boolean;
     icon?: (props: SvgIconProps) => JSX.Element;
 };
 
 export const headerRoutes = [
-    { name: 'Home', path: '#' },
+    { name: 'Home', path: '#', activeYAxis: 0 },
     { name: 'Visie', path: '#' },
-    { name: 'Wie wij zijn', path: '#' },
-    { name: 'Massages', path: '#' },
+    { name: 'Over mij', path: '#' },
+    { name: 'Aanbod', path: '#' },
     { name: 'Contact', path: '#' },
 ] as HeaderRouteType[];
 
@@ -26,6 +28,7 @@ export const Layout = (props: { children: any }) => {
     const { isMobile } = useIsMobile();
     const [mobileMenuActive, setMobileMenuActive] = useState<boolean>(false);
     const [showContent, setShowContent] = useState(false);
+    const hasScrolled = useScrollPosition() > 0;
 
     useEffect(() => {
         //Otherwise SSR will cause layoutshift
@@ -42,23 +45,41 @@ export const Layout = (props: { children: any }) => {
                     opacity: 1,
                     transition: 'all 0.2s ease-in-out',
                     border: 0,
-                    background: 'white',
+                    boxShadow: 'none',
+                    background: hasScrolled ? 'black' : 'transparent',
                 }}
             >
-                <Box borderBottom={`2px solid ${theme.palette.primary.main}`}>
+                <Box>
                     <Container maxWidth="lg">
                         <List sx={{ display: 'flex', justifyContent: 'flex-start' }}>
-                            <Box marginRight="auto" justifyContent="center" display="flex" alignItems="center">
+                            <Box
+                                sx={{
+                                    marginRight: 'auto',
+                                    justifyContent: 'center',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    height: hasScrolled ? '80px' : '100px',
+                                    transition: 'all 0.35s ease-in-out',
+                                }}
+                            >
                                 {!isMobile ? (
                                     <>
                                         {headerRoutes.map((route, index) => {
+                                            const isActive = false;
+
                                             return (
                                                 <ListItem key={index}>
                                                     <Link
                                                         component="a"
                                                         underline="none"
                                                         href={`${route.path}`}
-                                                        sx={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap', fontWeight: 500 }}
+                                                        sx={{
+                                                            display: 'flex',
+                                                            alignItems: 'center',
+                                                            whiteSpace: 'nowrap',
+                                                            fontWeight: 500,
+                                                            color: isActive ? theme.palette.secondary.main : '#ffffff',
+                                                        }}
                                                     >
                                                         {route.icon && <Icon component={route.icon} sx={{ marginRight: 1 }} />}
                                                         {route.name}
@@ -75,7 +96,7 @@ export const Layout = (props: { children: any }) => {
                                     />
                                 )}
                             </Box>
-                            <ListItem sx={{ maxWidth: isMobile ? '180px' : '300px' }}>
+                            {/* <ListItem sx={{ maxWidth: isMobile ? '180px' : '300px' }}>
                                 <Link href="#">
                                     <StaticImage
                                         src="../../images/gatsby-icon.png"
@@ -84,7 +105,7 @@ export const Layout = (props: { children: any }) => {
                                         style={{ position: 'absolute', top: 0, left: 0, borderRadius: '73% 27% 55% 45% / 45% 64% 36% 55% ' }}
                                     />
                                 </Link>
-                            </ListItem>
+                            </ListItem> */}
                         </List>
 
                         {isMobile && (
