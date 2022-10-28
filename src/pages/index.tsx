@@ -1,36 +1,101 @@
-import { Box, Typography } from '@mui/material';
+import { FitnessCenter, MenuBook, SupervisorAccount } from '@mui/icons-material';
+import { Box, Button, Container, Grid, Icon, Typography, useTheme } from '@mui/material';
+import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
+import { Usp } from '../components/molecules/Usp';
 import { Hero } from '../components/organisms/Hero';
 import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
 import { Layout } from '../components/pagelayout/Layout';
 import '../css/app.css';
+import useIsMobile from '../hooks/useMobile';
 
 export const index = () => {
+    const theme = useTheme();
+    const { isMobile } = useIsMobile();
+
     return (
         <>
             <Layout>
                 <Hero />
 
+                <Box sx={{ backgroundColor: theme.palette.grey[100] }}>
+                    <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
+                        <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
+                            Waarom wij?
+                        </Typography>
+                        <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.white, mb: 5 }}>
+                            Samen grenzen verleggen
+                        </Typography>
+                        <Grid container spacing={isMobile ? 5 : 10} justifyContent="center" display="flex">
+                            <Grid item xs={12} md={4}>
+                                <Usp
+                                    title="Professioneel trainingsplan"
+                                    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet, nisl vitae tincidunt luctus."
+                                    icon={FitnessCenter}
+                                />
+                            </Grid>
+                            <Grid item xs={12} md={4}>
+                                <Usp
+                                    title="Voedingsschema's"
+                                    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet, nisl vitae tincidunt luctus."
+                                    icon={MenuBook}
+                                />
+                            </Grid>
+                            <Grid item xs={12} md={4}>
+                                <Usp
+                                    title="Gepersonaliseerd"
+                                    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet, nisl vitae tincidunt luctus."
+                                    icon={SupervisorAccount}
+                                />
+                            </Grid>
+                        </Grid>
+                    </DefaultContainer>
+                </Box>
 
-                <DefaultContainer maxWidth="lg">
-                    <Typography sx={{mb: '20px'}} variant="h1">This is H1</Typography>
-                    <Typography sx={{mb: '20px'}} variant="h2">This is H2</Typography>
-                    <Typography sx={{mb: '20px'}} variant="h3">This is H3</Typography>
-                    <Typography sx={{mb: '20px'}} variant="h4">This is H4</Typography>
-                    <Typography sx={{mb: '20px'}} variant="subtitle1">This is subtitle1</Typography>
-                    <Typography sx={{mb: '20px'}} variant="subtitle2">This is subtitle2</Typography>
-                    <Typography sx={{mb: '20px'}} variant="body1">This is body1</Typography>
-                    <Typography sx={{mb: '20px'}} variant="body2">This is body2</Typography>
-                    <Box>
-                        <Typography sx={{mb: '20px'}} variant="caption">This is a caption</Typography>
-                    </Box>
-                    <Box>
-                        <Typography sx={{mb: '20px'}} variant="overline">This is an overline</Typography>
-                    </Box>
-                    <Box>
-                        <Typography sx={{mb: '20px'}} variant="button">This is a button</Typography>
-                    </Box>
-                </DefaultContainer>
+                <Container maxWidth={false} disableGutters>
+                    <Grid container spacing={0}>
+                        <Grid item xs={12} md={6}>
+                            <StaticImage src="../images/pt1.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        </Grid>
+                        <Grid item xs={12} md={6}>
+                            <Box
+                                p={10}
+                                sx={{
+                                    [theme.breakpoints.down('md')]: {
+                                        p: 5,
+                                    },
+                                    [theme.breakpoints.up('xl')]: {
+                                        p: 20,
+                                    },
+                                }}
+                            >
+                                <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
+                                    Iets over mij
+                                </Typography>
+                                <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.black, mb: 5 }}>
+                                    Waarom Personal Training
+                                </Typography>
+                                <Typography variant="body1" sx={{ color: theme.palette.common.black }}>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet, nisl vitae tincidunt luctus, nunc nisl
+                                    ultricies nunc, nec aliquam nisl nunc vel lorem. Sed tincidunt, nisl vitae tincidunt luctus, nunc nisl ultricies
+                                    nunc, nec aliquam nisl nunc vel lorem. Sed tincidunt, nisl vitae tincidunt luctus, nunc nisl ultricies nunc, nec
+                                    aliquam nisl nunc vel lorem. Sed tincidunt, nisl vitae tincidunt luctus, nunc nisl
+                                </Typography>
+                                <Button variant="contained" sx={{ mt: 5 }}>
+                                    Neem contact op
+                                </Button>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Container>
+
+                <Box sx={{ backgroundColor: theme.palette.grey[100] }}>
+                    <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
+                        <Typography variant="h2" sx={{ color: theme.palette.secondary.main }}>
+                            Onze trainer
+                        </Typography>
+                    </DefaultContainer>
+                </Box>
             </Layout>
         </>
     );

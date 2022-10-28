@@ -1,5 +1,5 @@
 import { FacebookOutlined, Instagram, Twitter } from '@mui/icons-material';
-import { Box, Button, Container, Icon, Link, Typography, useTheme } from '@mui/material';
+import { Box, Button, Container, Icon, Link, Typography } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import useMobile from '../../hooks/useMobile';
@@ -44,7 +44,7 @@ export const Hero: React.FC = () => {
                         <Typography variant="h1" component="h1" sx={{ mb: 3, pt: 10 }}>
                             Balanced <br /> Lifestyle
                         </Typography>
-                        <Typography variant="subtitle1" sx={{ mb: 3, maxWidth: isMobile ? '100%' : '60%' }}>
+                        <Typography variant="subtitle2" sx={{ mb: 3, maxWidth: isMobile ? '100%' : '60%' }}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet, nisl vitae tincidunt luctus, nisl nisl aliquam
                             lorem, vitae ultricies nisl lorem quis nunc. Sed euismod, nisl sit amet aliquam luctus, nisl nisl aliquam lorem, vitae
                         </Typography>

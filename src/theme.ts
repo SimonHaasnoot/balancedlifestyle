@@ -3,7 +3,7 @@ import { createTheme } from '@mui/material/styles';
 
 export const color01 = '#000000'; // Black
 export const color02 = '#5ab7db'; // Blue
-export const color03 = '#fcfcfc' // White
+export const color03 = '#fcfcfc'; // White
 export const color04 = '#90cee6'; // Less Blue
 export const color05 = '#c6e5f1'; // Less less Blue
 
@@ -24,6 +24,9 @@ theme = createTheme({
         error: {
             main: red.A400,
         },
+        grey: {
+            100: '#151515'
+        }
     },
     typography: {
         fontFamily: ['Exo', 'Nunito', 'Numans'].join(','),
@@ -93,6 +96,7 @@ theme = createTheme({
         },
         subtitle1: {
             lineHeight: 1.3,
+            textTransform: 'uppercase',
             fontSize: 24,
             fontFamily: 'Numans',
             [theme.breakpoints.between('xs', 'sm')]: {
@@ -122,7 +126,6 @@ theme = createTheme({
         MuiButton: {
             styleOverrides: {
                 outlined: {
-                    'borderRadius': 24,
                     'background': color02,
                     'color': 'white',
                     'padding': '16px 32px',
@@ -131,6 +134,18 @@ theme = createTheme({
                         border: 0,
                         background: color04,
                         transform: 'translateY(-2px)',
+                        transition: 'all 0.2s ease-in-out',
+                    },
+                },
+                contained: {
+                    'background': '#ffffff',
+                    'color': color04,
+                    'padding': '16px 32px',
+                    'border': `2px solid ${color04}`,
+                    'boxShadow': 'none',
+                    '&:hover': {
+                        background: color04,
+                        color: '#ffffff',
                         transition: 'all 0.2s ease-in-out',
                     },
                 },

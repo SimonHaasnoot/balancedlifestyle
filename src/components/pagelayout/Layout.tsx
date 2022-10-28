@@ -1,12 +1,10 @@
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { Close } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar, Box, Container, Icon, Link, List, ListItem, SvgIconProps, useTheme } from '@mui/material';
-import { StaticImage } from 'gatsby-plugin-image';
 import React, { useEffect, useState } from 'react';
 import useIsMobile from '../../hooks/useMobile';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { Footer } from './Footer';
-import useScrollPosition from '../../hooks/useScrollPosition';
+import { useScrollPosition } from '../../hooks/useScrollPosition';
 
 type HeaderRouteType = {
     name: string;
@@ -16,11 +14,11 @@ type HeaderRouteType = {
 };
 
 export const headerRoutes = [
-    { name: 'Home', path: '#', activeYAxis: 0 },
-    { name: 'Visie', path: '#' },
-    { name: 'Over mij', path: '#' },
-    { name: 'Aanbod', path: '#' },
-    { name: 'Contact', path: '#' },
+    { name: 'Home', path: '/#', activeYAxis: 0 },
+    { name: 'Visie', path: '/#visie' },
+    { name: 'Over mij', path: '/#overmij' },
+    { name: 'Aanbod', path: '/#aanbod' },
+    { name: 'Contact', path: '/contact' },
 ] as HeaderRouteType[];
 
 export const Layout = (props: { children: any }) => {
@@ -28,7 +26,7 @@ export const Layout = (props: { children: any }) => {
     const { isMobile } = useIsMobile();
     const [mobileMenuActive, setMobileMenuActive] = useState<boolean>(false);
     const [showContent, setShowContent] = useState(false);
-    const hasScrolled = useScrollPosition() > 0;
+    const { atTopOfPage } = useScrollPosition();
 
     useEffect(() => {
         //Otherwise SSR will cause layoutshift
@@ -46,7 +44,7 @@ export const Layout = (props: { children: any }) => {
                     transition: 'all 0.2s ease-in-out',
                     border: 0,
                     boxShadow: 'none',
-                    background: hasScrolled ? 'black' : 'transparent',
+                    background: !atTopOfPage ? 'black' : 'transparent',
                 }}
             >
                 <Box>
@@ -58,7 +56,7 @@ export const Layout = (props: { children: any }) => {
                                     justifyContent: 'center',
                                     display: 'flex',
                                     alignItems: 'center',
-                                    height: hasScrolled ? '80px' : '100px',
+                                    height: isMobile ? 'auto' : !atTopOfPage ? '80px' : '100px',
                                     transition: 'all 0.35s ease-in-out',
                                 }}
                             >
@@ -79,6 +77,9 @@ export const Layout = (props: { children: any }) => {
                                                             whiteSpace: 'nowrap',
                                                             fontWeight: 500,
                                                             color: isActive ? theme.palette.secondary.main : '#ffffff',
+                                                            [':hover']: {
+                                                                color: theme.palette.secondary.main,
+                                                            },
                                                         }}
                                                     >
                                                         {route.icon && <Icon component={route.icon} sx={{ marginRight: 1 }} />}
@@ -89,11 +90,10 @@ export const Layout = (props: { children: any }) => {
                                         })}
                                     </>
                                 ) : (
-                                    <Icon
-                                        component={MenuIcon}
-                                        sx={{ fontSize: '40px', color: theme.palette.primary.main }}
-                                        onClick={() => setMobileMenuActive(true)}
-                                    />
+                                    <Box sx={{ display: 'flex', flexDirection: 'column', color: '#ffffff' }}>
+                                        <Icon component={MenuIcon} sx={{ fontSize: '40px' }} onClick={() => setMobileMenuActive(true)} />
+                                        <small>Menu</small>
+                                    </Box>
                                 )}
                             </Box>
                             {/* <ListItem sx={{ maxWidth: isMobile ? '180px' : '300px' }}>
@@ -117,14 +117,14 @@ export const Layout = (props: { children: any }) => {
                                     right: 0,
                                     bottom: 0,
                                     zIndex: 1000,
-                                    maxWidth: mobileMenuActive ? '100vw' : 0,
                                     visibility: mobileMenuActive ? 'visible' : 'hidden',
                                     opacity: mobileMenuActive ? 1 : 0,
-                                    background: 'white',
-                                    py: mobileMenuActive ? 10 : 0,
-                                    px: mobileMenuActive ? 5 : 0,
+                                    background: 'rgba(0, 0, 0, 0.9)',
                                     lineHeight: 2,
-                                    transition: 'all 0.35s ease-in-out',
+                                    transition: 'opacity 0.35s ease-in-out, visibility 0.35s ease-in-out',
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    justifyContent: 'center',
                                 }}
                             >
                                 <Box position="relative">
@@ -136,9 +136,8 @@ export const Layout = (props: { children: any }) => {
                                                     onClick={() => setMobileMenuActive(false)}
                                                     underline="none"
                                                     href={`${route.path}`}
-                                                    sx={{ display: 'flex', alignItems: 'center' }}
+                                                    sx={{ display: 'flex', alignItems: 'center', color: '#ffffff' }}
                                                 >
-                                                    <Icon component={KeyboardArrowRightIcon} sx={{ mr: 1 }} />
                                                     {route.name}
                                                 </Link>
                                             </ListItem>
@@ -146,15 +145,12 @@ export const Layout = (props: { children: any }) => {
                                     })}
                                 </Box>
                                 <Icon
-                                    component={ChevronLeftIcon}
+                                    component={Close}
                                     sx={{
                                         position: 'absolute',
                                         top: '20px',
                                         left: '20px',
-                                        fontSize: '30px',
-                                        borderRadius: '100%',
-                                        padding: '5px',
-                                        background: theme.palette.secondary.main,
+                                        fontSize: '40px',
                                         color: theme.palette.common.white,
                                     }}
                                     onClick={() => setMobileMenuActive(false)}

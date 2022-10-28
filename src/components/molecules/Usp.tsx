@@ -1,4 +1,4 @@
-import { Box, SvgIconTypeMap, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Icon, SvgIconTypeMap, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import React from 'react';
 
@@ -12,39 +12,35 @@ export type UspProps = {
 
 export const Usp: React.FC<UspProps> = (props) => {
     const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('md'), {
-        defaultMatches: true,
-    });
 
     return (
-        <Box p={isMobile ? 0 : 4} display="flex" flexDirection="column" alignItems="center" flex="1 1 0px">
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Box
                 sx={{
-                    width: 250,
-                    height: 250,
-                    position: 'relative',
+                    height: '90px',
+                    width: '90px',
+                    borderRadius: '100%',
+                    mb: 3,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: theme.palette.primary.main,
+                    [':hover']: {
+                        backgroundColor: theme.palette.secondary.main,
+                        ['svg']: {
+                            color: theme.palette.common.white,
+                        },
+                    },
                 }}
             >
-                <Box
-                    sx={{
-                        position: 'absolute',
-                        inset: 30,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        borderRadius: '100%',
-                        boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.3)',
-                        background: 'white',
-                        overflow: 'hidden',
-                    }}
-                >
-                    {props.children}
-                </Box>
+                <Icon component={props.icon} sx={{ fontSize: '30px', color: theme.palette.secondary.main }} />
             </Box>
-            <Typography variant="subtitle2" mb={3}>
+            <Typography variant="subtitle1" sx={{ color: theme.palette.common.white, mb: 2 }}>
                 {props.title}
             </Typography>
-            <Typography variant="body1" textAlign="center" dangerouslySetInnerHTML={{ __html: props.body }} />
+            <Typography variant="body2" sx={{ color: theme.palette.common.white }}>
+                {props.body}
+            </Typography>
         </Box>
     );
 };
