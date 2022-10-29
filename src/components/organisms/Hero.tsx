@@ -40,19 +40,18 @@ export const Hero: React.FC = () => {
                 }}
             >
                 <Container maxWidth="lg" sx={{ position: 'relative' }}>
-                    <Box sx={{ color: 'white' }}>
+                    <Box sx={{ color: 'white', textAlign: isMobile ? 'center' : 'inherit' }}>
                         <Typography variant="h1" component="h1" sx={{ mb: 3, pt: 10 }}>
-                            Balanced <br /> Lifestyle
+                            Balanced <br/> Lifestyle
                         </Typography>
                         <Typography variant="subtitle2" sx={{ mb: 3, maxWidth: isMobile ? '100%' : '60%' }}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet, nisl vitae tincidunt luctus, nisl nisl aliquam
-                            lorem, vitae ultricies nisl lorem quis nunc. Sed euismod, nisl sit amet aliquam luctus, nisl nisl aliquam lorem, vitae
+                            Join the balanced living!
                         </Typography>
                         <Button variant="outlined" sx={{ mb: 10 }}>
-                            Get started
+                            Start hier
                         </Button>
 
-                        <Box sx={{ display: 'flex', gap: 5 }}>
+                        <Box sx={{ display: 'flex', gap: 5, justifyContent: isMobile ? 'center' : 'left' }}>
                             <Link color="#ffffff" href={projectVariables.COMPANY_TWITTER}>
                                 <Icon component={Twitter} sx={{ fontSize: '30px' }} />
                             </Link>

@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
                 <DefaultContainer maxWidth="lg">
                     <Box py={2}>
                         <Typography variant="body2" textAlign="center">
-                            &copy; {new Date().getFullYear()} {projectVariables.COMPANY_NAME}. Alle rechten voorbehouden
+                            &copy; {new Date().getFullYear()} {projectVariables.COMPANY_NAME}. Alle rechten voorbehouden.
                         </Typography>
                     </Box>
                 </DefaultContainer>

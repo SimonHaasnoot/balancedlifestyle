@@ -1,7 +1,9 @@
 import React from 'react';
-import { Button, FormControl, TextField, Typography } from '@mui/material';
+import { Button, FormControl, TextField, Typography, useTheme } from '@mui/material';
 
 export const ContactForm = () => {
+    const theme = useTheme();
+
     return (
         <form name="Contactformulier" method="POST" data-netlify="true" netlify-honeypot="gender">
             <input type="hidden" name="gender" />
@@ -12,13 +14,9 @@ export const ContactForm = () => {
                 sx={{
                     ['> div']: { marginBottom: '20px' },
                     padding: '32px',
-                    borderRadius: '12px',
-                    background: '#f7f7f7',
+                    background: theme.palette.common.white,
                 }}
             >
-                <Typography sx={{ pb: 3 }}>
-                    Vragen, offerte of in contact komen? Vul onderstaand formulier in en wij nemen contact met je op. Bellen of WhatsApp ook mogelijk.
-                </Typography>
                 <TextField name="name" id="name" label="Naam" variant="standard" required={true} autoComplete="name" />
                 <TextField name="celphone" id="celphone" label="Telefoonnummer" variant="standard" required={true} autoComplete="tel" />
                 <TextField name="email" id="email" label="E-mail" variant="standard" required={true} autoComplete="email" />
@@ -32,7 +30,7 @@ export const ContactForm = () => {
                     rows={5}
                     sx={{ background: 'white' }}
                 />
-                <Button variant="outlined" type="submit" >
+                <Button variant="outlined" type="submit">
                     Versturen
                 </Button>
             </FormControl>

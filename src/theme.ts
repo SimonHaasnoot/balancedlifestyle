@@ -25,8 +25,8 @@ theme = createTheme({
             main: red.A400,
         },
         grey: {
-            100: '#151515'
-        }
+            100: '#151515',
+        },
     },
     typography: {
         fontFamily: ['Exo', 'Nunito', 'Numans'].join(','),
@@ -159,6 +159,15 @@ theme = createTheme({
                     [':hover img']: {
                         transform: 'scale(1.2)',
                         transition: '.3s ease-in-out',
+                    },
+                },
+            },
+        },
+        MuiIcon: {
+            styleOverrides: {
+                root: {
+                    ':hover': {
+                        color: color04,
                     },
                 },
             },
