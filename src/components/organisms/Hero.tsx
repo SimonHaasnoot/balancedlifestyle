@@ -3,6 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import useMobile from '../../hooks/useMobile';
 import { SocialMedia } from '../molecules/SocialMedia';
+import { getRouteUrl, HeaderRoutesEnum } from '../../types/HeaderRoute';
 
 export const Hero: React.FC = () => {
     const { isMobile } = useMobile();
@@ -41,12 +42,12 @@ export const Hero: React.FC = () => {
                 <Container maxWidth="lg" sx={{ position: 'relative' }}>
                     <Box sx={{ color: 'white', textAlign: isMobile ? 'center' : 'inherit' }}>
                         <Typography variant="h1" component="h1" sx={{ mb: 3, pt: 10 }}>
-                            Balanced <br/> Lifestyle
+                            Balanced <br /> Lifestyle
                         </Typography>
                         <Typography variant="subtitle2" sx={{ mb: 3, maxWidth: isMobile ? '100%' : '60%' }}>
                             Join the balanced living!
                         </Typography>
-                        <Button variant="outlined" sx={{ mb: 10 }}>
+                        <Button variant="outlined" sx={{ mb: 10 }} href={getRouteUrl(HeaderRoutesEnum.BALANCED_LIFESTYLE)}>
                             Start hier
                         </Button>
 

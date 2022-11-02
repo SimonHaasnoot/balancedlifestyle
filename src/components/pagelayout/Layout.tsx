@@ -32,6 +32,10 @@ export const Layout: React.FC<LayoutProps> = (props) => {
     const { atTopOfPage } = useScrollPosition();
 
     useEffect(() => {
+        document.body.style.overflow = mobileMenuActive ? 'hidden' : 'auto';
+    }, [mobileMenuActive])
+
+    useEffect(() => {
         //Otherwise SSR will cause layoutshift
         setShowContent(true);
     }, []);
