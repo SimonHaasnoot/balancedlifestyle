@@ -69,12 +69,11 @@ export const Footer: React.FC = () => {
                                 </ListItem>
                             </List>
                         </Grid>
-                        <Grid item xs={12} sm={6} md={6}>
+                        <Grid item xs={12} sm={6} md={6} sx={{ textAlign: 'center' }}>
                             <Typography
                                 component="h4"
                                 variant="h1"
                                 sx={{
-                                    textAlign: 'center',
                                     color: theme.palette.common.white,
                                     [theme.breakpoints.down('md')]: {
                                         fontSize: 30,
@@ -85,6 +84,9 @@ export const Footer: React.FC = () => {
                                 }}
                             >
                                 {projectVariables.COMPANY_NAME}
+                            </Typography>
+                            <Typography variant="caption" sx={{ color: theme.palette.common.white }}>
+                                Join the balanced living!
                             </Typography>
                         </Grid>
                     </Grid>
