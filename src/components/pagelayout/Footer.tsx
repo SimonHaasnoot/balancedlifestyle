@@ -4,7 +4,7 @@ import useIsMobile from '../../hooks/useMobile';
 import { projectVariables } from '../../project';
 import { SocialMedia } from '../molecules/SocialMedia';
 import { DefaultContainer } from '../pagelayout/DefaultContainer';
-import { headerRoutes } from '../pagelayout/Layout';
+import { headerRoutes } from './Layout';
 
 export const Footer: React.FC = () => {
     const { isMobile } = useIsMobile();
@@ -70,7 +70,20 @@ export const Footer: React.FC = () => {
                             </List>
                         </Grid>
                         <Grid item xs={12} sm={6} md={6}>
-                            <Typography component="h4" variant="h1" sx={{ color: theme.palette.common.white, fontSize: 40 }}>
+                            <Typography
+                                component="h4"
+                                variant="h1"
+                                sx={{
+                                    textAlign: 'center',
+                                    color: theme.palette.common.white,
+                                    [theme.breakpoints.down('md')]: {
+                                        fontSize: 30,
+                                    },
+                                    [theme.breakpoints.up('md')]: {
+                                        fontSize: 40,
+                                    },
+                                }}
+                            >
                                 {projectVariables.COMPANY_NAME}
                             </Typography>
                         </Grid>

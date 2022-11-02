@@ -6,7 +6,6 @@ import { Usp } from '../components/molecules/Usp';
 import { Hero } from '../components/organisms/Hero';
 import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
 import { Layout, headerRoutes } from '../components/pagelayout/Layout';
-import '../css/app.css';
 import useIsMobile from '../hooks/useMobile';
 import { HeaderRoutesEnum } from '../types/HeaderRoute';
 

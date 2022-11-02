@@ -14,7 +14,7 @@ export const packages = (props: any) => {
 
     return (
         <Layout location={props.location}>
-            <Heading align="center" title="Pakketten" subtitle="Kies een pakket dat bij jou past en start vandaag nog met je nieuwe levensstijl!." />
+            <Heading align="center" title="Pakketten" subtitle="Kies een pakket dat bij jou past en start vandaag nog met je nieuwe levensstijl!" />
             <Box
                 sx={{
                     background: theme.palette.common.black,
