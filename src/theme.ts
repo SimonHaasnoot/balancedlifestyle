@@ -172,6 +172,24 @@ theme = createTheme({
                 },
             },
         },
+        MuiTableCell: {
+            styleOverrides: {
+                root: {
+                    [theme.breakpoints.between('xs', 'sm')]: {
+                        fontSize: 13,
+                    },
+                },
+            },
+        },
+        MuiTableHead: {
+            styleOverrides: {
+                root: {
+                    'th' : {
+                        fontWeight: 700,
+                    }
+                }
+            }
+        }
     },
 });
 

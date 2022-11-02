@@ -1,4 +1,5 @@
 import { SvgIconProps } from '@mui/material';
+import { headerRoutes } from '../components/pagelayout/Layout';
 
 export type HeaderRouteType = {
     name: HeaderRoutesEnum;
@@ -16,4 +17,8 @@ export enum HeaderRoutesEnum {
     GOOD_MEAT = 'Goed vlees',
     ABOUT_ME = 'Over mij',
     CONTACT = 'Contact',
+}
+
+export const getRouteUrl = (route: HeaderRoutesEnum): string => {
+    return headerRoutes.find((headerRoute) => headerRoute.name === route)?.path || '#';
 }

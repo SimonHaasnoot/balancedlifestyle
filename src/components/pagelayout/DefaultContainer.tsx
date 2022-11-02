@@ -16,7 +16,9 @@ export const DefaultContainer: React.FC<DefaultContainerProps> = (props) => {
 
     return (
         <Container disableGutters={props.disableGutters} maxWidth={props.maxWidth} sx={{ background, position: 'relative', ...props.sx }}>
-            <Box py={isMobile ? 5 : 10}>{props.children}</Box>
+            <Box py={isMobile ? 5 : 10} flex={1}>
+                {props.children}
+            </Box>
         </Container>
     );
 };

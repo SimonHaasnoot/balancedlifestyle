@@ -1,9 +1,8 @@
-import { FacebookOutlined, Instagram, Twitter } from '@mui/icons-material';
-import { Box, Button, Container, Icon, Link, Typography } from '@mui/material';
+import { Box, Button, Container, Typography } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import useMobile from '../../hooks/useMobile';
-import { projectVariables } from '../../project';
+import { SocialMedia } from '../molecules/SocialMedia';
 
 export const Hero: React.FC = () => {
     const { isMobile } = useMobile();
@@ -51,17 +50,7 @@ export const Hero: React.FC = () => {
                             Start hier
                         </Button>
 
-                        <Box sx={{ display: 'flex', gap: 5, justifyContent: isMobile ? 'center' : 'left' }}>
-                            <Link color="#ffffff" href={projectVariables.COMPANY_TWITTER}>
-                                <Icon component={Twitter} sx={{ fontSize: '30px' }} />
-                            </Link>
-                            <Link color="#ffffff" href={projectVariables.COMPANY_INSTAGRAM}>
-                                <Icon component={Instagram} sx={{ fontSize: '30px' }} />
-                            </Link>
-                            <Link color="#ffffff" href={projectVariables.COMPANY_INSTAGRAM}>
-                                <Icon component={FacebookOutlined} sx={{ fontSize: '30px' }} />
-                            </Link>
-                        </Box>
+                        <SocialMedia />
                     </Box>
                 </Container>
             </Box>

@@ -5,7 +5,7 @@ export const ContactForm = () => {
     const theme = useTheme();
 
     return (
-        <form name="Contactformulier" method="POST" data-netlify="true" netlify-honeypot="gender">
+        <form name="Contactformulier" method="POST" data-netlify="true" action="/bedankt" netlify-honeypot="gender">
             <input type="hidden" name="gender" />
             <input type="hidden" name="form-name" value="Contactformulier" />
             <FormControl

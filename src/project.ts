@@ -11,6 +11,9 @@ export enum projectVariables {
     COMPANY_TWITTER = '#',
     COMPANY_YOUTUBE = '#',
     COMPANY_LINKEDIN = '#',
+    COMPANY_KVK = '1231232123',
+    COMPANY_BTW = '',
+    COMPANY_IBAN = '',
 
     GOOGLE_ANALYTICS_KEY = '',
 

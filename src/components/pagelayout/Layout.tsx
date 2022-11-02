@@ -6,7 +6,6 @@ import useIsMobile from '../../hooks/useMobile';
 import { Footer } from './Footer';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
 import { HeaderRouteType } from '../../types/HeaderRoute';
-import { LayoutProps } from '../../types/Layout';
 
 export const headerRoutes = [
     { name: 'Home', path: '/' },
@@ -18,6 +17,12 @@ export const headerRoutes = [
     { name: 'Over mij', path: '/over-mij' },
     { name: 'Contact', path: '/contact' },
 ] as HeaderRouteType[];
+
+export type LayoutProps = {
+    location?: Location;
+    disableHeaderTransition?: boolean;
+    children?: any;
+};
 
 export const Layout: React.FC<LayoutProps> = (props) => {
     const theme = useTheme();
@@ -42,7 +47,7 @@ export const Layout: React.FC<LayoutProps> = (props) => {
                     transition: 'all 0.2s ease-in-out',
                     border: 0,
                     boxShadow: 'none',
-                    background: !atTopOfPage ? 'black' : 'transparent',
+                    background: props.disableHeaderTransition ? 'black' : !atTopOfPage ? 'black' : 'transparent',
                 }}
             >
                 <Box>
