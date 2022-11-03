@@ -196,7 +196,15 @@ theme = createTheme({
                     background: color02,
                     color: color03,
                 },
-
+            },
+        },
+        MuiListItemButton: {
+            styleOverrides: {
+                root: {
+                    '&:hover': {
+                        color: color02,
+                    },
+                },
             },
         },
     },

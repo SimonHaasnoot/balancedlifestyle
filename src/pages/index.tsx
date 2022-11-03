@@ -1,7 +1,8 @@
 import { FitnessCenter, MenuBook, SupervisorAccount } from '@mui/icons-material';
-import { Box, Button, Container, Grid, Icon, Typography, useTheme } from '@mui/material';
+import { Box, Button, Container, Grid, Typography, useTheme } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
+import { Rating } from '../components/molecules/Rating';
 import { Usp } from '../components/molecules/Usp';
 import { Hero } from '../components/organisms/Hero';
 import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
@@ -124,6 +125,24 @@ export const index = (props: any) => {
                     <Typography variant="h2" component="h2" sx={{ mb: 3, textAlign: 'center' }}>
                         Ervaring van de klant
                     </Typography>
+                    <Box>
+                        <Grid container spacing={isMobile ? 1 : 3} justifyContent="center" display="flex">
+                            <Grid item xs={12} md={4} display="flex">
+                                <Rating
+                                    rating={4}
+                                    reviewerText="Heel erg fijne begeleiding en meedenkend. Ik heb veel geleerd en ben nu veel sterker geworden. Ik ben blij dat ik de stap heb genomen."
+                                    reviewerName="Sem van de Gevel"
+                                />
+                            </Grid>
+                            <Grid item xs={12} md={4} display="flex">
+                                <Rating
+                                    rating={5}
+                                    reviewerText="Ik heb genoten en veel geleerd. Ik ben blij dat ik de stap heb genomen."
+                                    reviewerName="Avec Izjen"
+                                />
+                            </Grid>
+                        </Grid>
+                    </Box>
                 </DefaultContainer>
             </Layout>
         </>
