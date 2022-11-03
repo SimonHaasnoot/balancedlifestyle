@@ -184,12 +184,21 @@ theme = createTheme({
         MuiTableHead: {
             styleOverrides: {
                 root: {
-                    'th' : {
+                    th: {
                         fontWeight: 700,
-                    }
-                }
-            }
-        }
+                    },
+                },
+            },
+        },
+        MuiChip: {
+            styleOverrides: {
+                root: {
+                    background: color02,
+                    color: color03,
+                },
+
+            },
+        },
     },
 });
 
