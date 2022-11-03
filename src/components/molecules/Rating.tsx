@@ -28,7 +28,7 @@ export const Rating: React.FC<RatingProps> = (props) => {
                 }}
             >
                 <Box sx={{ width: imageHeight, height: imageHeight, borderRadius: '100%', overflow: 'hidden' }}>
-                    <StaticImage src="../../images/silhoutte.webp" alt="Silhoutte" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <StaticImage src="../../images/silhouette.png" alt="Silhoutte" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </Box>
                 <Typography variant="body2" sx={{ color: theme.palette.common.white }}>
                     "{props.reviewerText}"
