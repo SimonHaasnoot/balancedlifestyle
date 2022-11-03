@@ -8,14 +8,14 @@ import { useScrollPosition } from '../../hooks/useScrollPosition';
 import { HeaderRoutesEnum, HeaderRouteType } from '../../types/HeaderRoute';
 
 export const headerRoutes = [
-    { name: HeaderRoutesEnum.HOME, path: '/' },
-    { name: HeaderRoutesEnum.BALANCED_LIFESTYLE, path: '/balanced-lifestyle' },
-    { name: HeaderRoutesEnum.PACKAGES, path: '/pakketten' },
-    { name: HeaderRoutesEnum.PERSONAL_TRAINING, path: '/personal-training' },
-    { name: HeaderRoutesEnum.BLOGS, path: '/blogs' },
-    { name: HeaderRoutesEnum.GOOD_MEAT, path: '/vlees' },
-    { name: HeaderRoutesEnum.ABOUT_ME, path: '/over-mij' },
-    { name: HeaderRoutesEnum.CONTACT, path: '/contact' },
+    { name: 'Home', path: '/' },
+    { name: 'Balanced Lifestyle', path: '/balanced-lifestyle' },
+    { name: 'Pakketten', path: '/pakketten' },
+    { name: 'Personal training', path: '/personal-training' },
+    { name: 'Blogs', path: '/blogs' },
+    { name: 'Goed vlees', path: '/vlees' },
+    { name: 'Over mij', path: '/over-mij' },
+    { name: 'Contact', path: '/contact' },
 ] as HeaderRouteType[];
 
 export type LayoutProps = {
