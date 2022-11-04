@@ -149,6 +149,10 @@ theme = createTheme({
                         transition: 'all 0.2s ease-in-out',
                     },
                 },
+                containedSecondary: {
+                    background: '#5ab7db91',
+                    color: '#ffffff',
+                },
             },
         },
         MuiImageListItem: {

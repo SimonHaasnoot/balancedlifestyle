@@ -8,7 +8,7 @@ import { Hero } from '../components/organisms/Hero';
 import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
 import { Layout, headerRoutes } from '../components/pagelayout/Layout';
 import useIsMobile from '../hooks/useMobile';
-import { HeaderRoutesEnum } from '../types/HeaderRoute';
+import { HeaderRoutesEnum, getRouteUrl } from '../types/HeaderRoute';
 
 export const index = (props: any) => {
     const theme = useTheme();
@@ -100,19 +100,81 @@ export const index = (props: any) => {
                 <Box sx={{ backgroundColor: theme.palette.grey[100] }}>
                     <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
                         <Grid container spacing={isMobile ? 1 : 10}>
-                            <Grid item xs={6} md={6}>
+                            <Grid
+                                item
+                                xs={12}
+                                sm={6}
+                                position="relative"
+                                sx={{
+                                    ':hover': {
+                                        a: {
+                                            transition: 'all 0.3s ease-in-out',
+                                            transform: 'scale(1.1)',
+                                        },
+                                    },
+                                }}
+                            >
                                 <StaticImage
                                     src="../images/workouts/workout1.jpg"
                                     alt="Hero"
                                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                 />
+                                <Box
+                                    sx={{
+                                        position: 'absolute',
+                                        inset: 0,
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        padding: 'inherit',
+                                    }}
+                                >
+                                    <Button
+                                        variant="contained"
+                                        href={getRouteUrl(HeaderRoutesEnum.BALANCED_LIFESTYLE)}
+                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white }}
+                                    >
+                                        Balanced Lifestyle
+                                    </Button>
+                                </Box>
                             </Grid>
-                            <Grid item xs={6} md={6}>
+                            <Grid
+                                item
+                                xs={12}
+                                sm={6}
+                                position="relative"
+                                sx={{
+                                    ':hover': {
+                                        a: {
+                                            transition: 'all 0.3s ease-in-out',
+                                            transform: 'scale(1.1)',
+                                        },
+                                    },
+                                }}
+                            >
                                 <StaticImage
                                     src="../images/workouts/workout2.jpg"
                                     alt="Hero"
                                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                 />
+                                <Box
+                                    sx={{
+                                        position: 'absolute',
+                                        inset: 0,
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        padding: 'inherit',
+                                    }}
+                                >
+                                    <Button
+                                        variant="contained"
+                                        href={getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING)}
+                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white }}
+                                    >
+                                        Personal training
+                                    </Button>
+                                </Box>
                             </Grid>
                         </Grid>
                     </DefaultContainer>
@@ -122,7 +184,7 @@ export const index = (props: any) => {
                     <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
                         Reviews
                     </Typography>
-                    <Typography variant="h2" component="h2" sx={{ mb: 3, textAlign: 'center' }}>
+                    <Typography variant="h2" component="h2" sx={{ mb: 5, textAlign: 'center' }}>
                         Ervaring van de klant
                     </Typography>
                     <Box>
