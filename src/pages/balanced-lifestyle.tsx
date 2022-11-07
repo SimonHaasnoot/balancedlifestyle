@@ -5,6 +5,7 @@ import { Heading } from '../components/molecules/Heading';
 import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
 import { Layout } from '../components/pagelayout/Layout';
 import useIsMobile from '../hooks/useMobile';
+import { getRouteUrl, HeaderRoutesEnum } from '../types/HeaderRoute';
 
 export const BalancedLifestylePage = (props: any) => {
     const theme = useTheme();
@@ -129,7 +130,11 @@ export const BalancedLifestylePage = (props: any) => {
                         <Typography variant="subtitle1" sx={{ color: theme.palette.common.white }}>
                             Dan is het tijd om in actie te komen!
                         </Typography>
-                        <Button variant="contained" sx={{ mt: 5, background: theme.palette.secondary.main, color: theme.palette.common.white }}>
+                        <Button
+                            variant="contained"
+                            href={getRouteUrl(HeaderRoutesEnum.CONTACT)}
+                            sx={{ mt: 5, background: theme.palette.secondary.main, color: theme.palette.common.white }}
+                        >
                             Neem contact op
                         </Button>
                     </DefaultContainer>

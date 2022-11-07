@@ -17,4 +17,5 @@ export const PersonalTrainingPage = (props: any) => {
     );
 };
 
+
 export default PersonalTrainingPage;

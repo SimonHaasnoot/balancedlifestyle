@@ -88,7 +88,7 @@ export const index = (props: any) => {
                                 <Button
                                     variant="contained"
                                     sx={{ mt: 5 }}
-                                    href={headerRoutes.find((x) => x.name === HeaderRoutesEnum.ABOUT_ME)?.path}
+                                    href={getRouteUrl(HeaderRoutesEnum.ABOUT_ME)}
                                 >
                                     Lees hier verder
                                 </Button>
