@@ -11,6 +11,7 @@ export type HeaderRouteType = {
 export enum HeaderRoutesEnum {
     HOME = 'Home',
     BALANCED_LIFESTYLE = 'Balanced Lifestyle',
+    ONLINE_COACHING = 'Online coaching',
     PACKAGES = 'Pakketten',
     PERSONAL_TRAINING = 'Personal training',
     BLOGS = 'Blogs',
@@ -21,4 +22,4 @@ export enum HeaderRoutesEnum {
 
 export const getRouteUrl = (route: HeaderRoutesEnum): string => {
     return headerRoutes.find((headerRoute) => headerRoute.name === route)?.path || '#';
-}
+};

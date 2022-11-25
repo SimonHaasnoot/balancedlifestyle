@@ -37,12 +37,12 @@ export const aboutme = (props: any) => {
                                         position: isTabletOrSmaller ? 'inherit' : 'absolute',
                                         bottom: isTabletOrSmaller ? '0' : '-200px',
                                         border: isTabletOrSmaller ? 'none' : '5px solid white',
+                                        width: '300px',
+                                        height: '300px'
                                     }}
                                 >
                                     <StaticImage
-                                        width={300}
-                                        height={300}
-                                        src="../images/aboutme.jpg"
+                                        src="../images/aboutme3.webp"
                                         alt="Sem van de Griendt"
                                         placeholder="blurred"
                                         loading="eager"

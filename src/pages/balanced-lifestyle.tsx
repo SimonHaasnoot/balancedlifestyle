@@ -40,7 +40,7 @@ export const BalancedLifestylePage = (props: any) => {
                         <Grid item xs={4} md={2}>
                             <Box sx={{ background: theme.palette.grey[100] }}>
                                 <StaticImage
-                                    src="../images/workouts/workout1.jpg"
+                                    src="../images/workouts/workout3.jpg"
                                     alt="Workout"
                                     style={{ width: '100%', objectFit: 'cover', height: imageHeight }}
                                 />
@@ -48,15 +48,6 @@ export const BalancedLifestylePage = (props: any) => {
                         </Grid>
                         {!isMobile && (
                             <>
-                                <Grid item xs={4} md={2}>
-                                    <Box sx={{ background: theme.palette.grey[100] }}>
-                                        <StaticImage
-                                            src="../images/workouts/workout2.jpg"
-                                            alt="Workout"
-                                            style={{ width: '100%', objectFit: 'cover', height: imageHeight }}
-                                        />
-                                    </Box>
-                                </Grid>
                                 <Grid item xs={4} md={2}>
                                     <Box sx={{ background: theme.palette.grey[100] }}>
                                         <StaticImage
@@ -70,6 +61,15 @@ export const BalancedLifestylePage = (props: any) => {
                                     <Box sx={{ background: theme.palette.grey[100] }}>
                                         <StaticImage
                                             src="../images/workouts/workout2.jpg"
+                                            alt="Workout"
+                                            style={{ width: '100%', objectFit: 'cover', height: imageHeight }}
+                                        />
+                                    </Box>
+                                </Grid>
+                                <Grid item xs={4} md={2}>
+                                    <Box sx={{ background: theme.palette.grey[100] }}>
+                                        <StaticImage
+                                            src="../images/workouts/workout3.jpg"
                                             alt="Workout"
                                             style={{ width: '100%', objectFit: 'cover', height: imageHeight }}
                                         />

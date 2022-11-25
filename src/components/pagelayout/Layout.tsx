@@ -10,9 +10,10 @@ import { HeaderRoutesEnum, HeaderRouteType } from '../../types/HeaderRoute';
 export const headerRoutes = [
     { name: 'Home', path: '/' },
     { name: 'Balanced Lifestyle', path: '/balanced-lifestyle' },
+    { name: 'Online coaching', path: '/online-coaching' },
     { name: 'Pakketten', path: '/pakketten' },
     { name: 'Personal training', path: '/personal-training' },
-    { name: 'Blogs', path: '/blogs' },
+    // { name: 'Blogs', path: '/blogs' },
     { name: 'Goed vlees', path: '/vlees' },
     { name: 'Over mij', path: '/over-mij' },
     { name: 'Contact', path: '/contact' },
@@ -26,7 +27,7 @@ export type LayoutProps = {
 
 export const Layout: React.FC<LayoutProps> = (props) => {
     const theme = useTheme();
-    const { isTabletOrSmaller } = useIsMobile();
+    const { isTabletOrSmaller, isDesktop } = useIsMobile();
     const [mobileMenuActive, setMobileMenuActive] = useState<boolean>(false);
     const [showContent, setShowContent] = useState(false);
     const { atTopOfPage } = useScrollPosition();
@@ -83,6 +84,7 @@ export const Layout: React.FC<LayoutProps> = (props) => {
                                                             alignItems: 'center',
                                                             whiteSpace: 'nowrap',
                                                             fontWeight: 500,
+                                                            fontSize: isDesktop ? 'inherit' : '0.9rem',
                                                             color: isActive ? theme.palette.secondary.main : theme.palette.common.white,
                                                             [':hover']: {
                                                                 color: theme.palette.secondary.main,

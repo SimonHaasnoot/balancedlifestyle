@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box, Button, List, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, useTheme } from '@mui/material';
 import { SimpleSchema } from '../../types/Schema';
 import useIsMobile from '../../hooks/useMobile';
@@ -10,6 +10,7 @@ export interface SchemaTableProps {
     schema: SimpleSchema[];
     tableHead: string[];
     id?: string;
+    isMountedCallback?: (isMounted: boolean) => void;
 }
 
 export const SchemaTable: React.FC<SchemaTableProps> = (props) => {
@@ -20,6 +21,12 @@ export const SchemaTable: React.FC<SchemaTableProps> = (props) => {
         /* Optional options */
         threshold: 0.5,
     });
+
+    useEffect(() => {
+        if (props.isMountedCallback) {
+            props.isMountedCallback(true);
+        }
+    }, []);
 
     return (
         <Box sx={{ pb: isMobile ? 5 : 10, textAlign: 'center', maxWidth: tableHead.length > 2 ? '100%' : isMobile ? '100%' : '80%', margin: 'auto' }}>

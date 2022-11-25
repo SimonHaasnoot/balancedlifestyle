@@ -1,5 +1,5 @@
 import { Box, Button, Typography, useTheme } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Heading } from '../components/molecules/Heading';
 import { SchemaTable } from '../components/molecules/SchemaTable';
 import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
@@ -11,6 +11,15 @@ import { getRouteUrl, HeaderRoutesEnum } from '../types/HeaderRoute';
 export const packages = (props: any) => {
     const theme = useTheme();
     const { isMobile, isTabletOrSmaller } = useIsMobile();
+    const [scrollElementsMounted, setScrollElementsMounted] = React.useState(false);
+
+    useEffect(() => {
+        const hashElement = props.location.hash && document.querySelector(props.location.hash);
+
+        if (hashElement) {
+            hashElement.scrollIntoView();
+        }
+    }, [scrollElementsMounted]);
 
     return (
         <Layout location={props.location}>
@@ -102,6 +111,7 @@ export const packages = (props: any) => {
                         schema={onlineCoachingSchema}
                         tableHead={['Aangeboden', 'Totale duur', 'Aantal', 'Prijs']}
                         id="online-coaching"
+                        isMountedCallback={setScrollElementsMounted}
                     />
                 </DefaultContainer>
             </Box>

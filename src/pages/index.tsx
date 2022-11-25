@@ -56,7 +56,7 @@ export const index = (props: any) => {
                 <Container maxWidth={false} disableGutters>
                     <Grid container spacing={0}>
                         <Grid item xs={12} md={6}>
-                            <StaticImage src="../images/aboutme.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <StaticImage src="../images/aboutme2.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         </Grid>
                         <Grid item xs={12} md={6}>
                             <Box

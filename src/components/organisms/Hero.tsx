@@ -21,14 +21,17 @@ export const Hero: React.FC = () => {
         >
             <Box sx={{ position: 'absolute', inset: '0 0 0 0' }}>
                 <StaticImage
-                    src="../../images/hero.png"
+                    src="../../images/aboutme2-1.jpg"
                     alt="Random image"
                     placeholder="blurred"
                     loading="eager"
+                    layout='fixed'
                     style={{ height: '100%', width: '100%', objectFit: 'cover', filter: 'brightness(0.4)' }}
+                    transformOptions={{
+                        cropFocus: "entropy"
+                    }}
                 />
             </Box>
-
             <Box
                 sx={{
                     display: 'flex',
