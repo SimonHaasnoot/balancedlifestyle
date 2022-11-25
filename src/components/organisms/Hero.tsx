@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
         >
             <Box sx={{ position: 'absolute', inset: '0 0 0 0' }}>
                 <StaticImage
-                    src="../../images/aboutme2-1.jpg"
+                    src="../../images/aboutme21.jpg"
                     alt="Random image"
                     placeholder="blurred"
                     loading="eager"
