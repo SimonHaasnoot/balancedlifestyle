@@ -33,7 +33,13 @@ export const SchemaTable: React.FC<SchemaTableProps> = (props) => {
             <Typography
                 variant="h3"
                 component="h2"
-                sx={{ color: theme.palette.secondary.main, transition: 'transform 0.5s ease-in-out', transform: inView ? 'scale(1.05)' : 'scale(1)' }}
+                sx={{
+                    color: theme.palette.secondary.main,
+                    transition: 'transform 0.5s ease-in-out',
+                    transform: inView ? 'scale(1.05)' : 'scale(1)',
+                    background: '#1515150f',
+                    p: 2,
+                }}
                 id={props.id}
             >
                 {title}

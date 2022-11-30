@@ -1,4 +1,5 @@
 import { Box, Grid, List, ListItem, ListItemButton, ListItemText, Typography, useTheme } from '@mui/material';
+import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import useIsMobile from '../../hooks/useMobile';
 import { projectVariables } from '../../project';
@@ -69,7 +70,7 @@ export const Footer: React.FC = () => {
                                 </ListItem>
                             </List>
                         </Grid>
-                        <Grid item xs={12} sm={6} md={6} sx={{ textAlign: 'center' }}>
+                        <Grid item xs={12} sm={6} md={6} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'column' }}>
                             <Typography
                                 component="h4"
                                 variant="h1"
@@ -86,8 +87,20 @@ export const Footer: React.FC = () => {
                                 {projectVariables.COMPANY_NAME}
                             </Typography>
                             <Typography variant="caption" sx={{ color: theme.palette.common.white }}>
-                                Join the balanced living!
+                                {projectVariables.COMPANY_ONELINER}
                             </Typography>
+                            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 'auto' }}>
+                                <StaticImage
+                                    src="../../images/logo-white.png"
+                                    alt="Logo"
+                                    placeholder="blurred"
+                                    style={{
+                                        width: '200px',
+                                        height: 'auto',
+                                        objectFit: 'cover',
+                                    }}
+                                />
+                            </Box>
                         </Grid>
                     </Grid>
                 </DefaultContainer>
