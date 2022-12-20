@@ -25,8 +25,12 @@ export const Heading: React.FC<HeadingProps> = (props) => {
                         <Typography variant="h1" component="h1" sx={{ mb: 3 }}>
                             {props.title}
                         </Typography>
-                        <Typography variant="subtitle2" component="h2" sx={{ mb: 3, color: theme.palette.secondary.main, lineHeight: 1.5 }} dangerouslySetInnerHTML={{__html: props.subtitle}}>
-                        </Typography>
+                        <Typography
+                            variant="subtitle2"
+                            component="h2"
+                            sx={{ mb: 3, color: theme.palette.secondary.main, lineHeight: 1.5 }}
+                            dangerouslySetInnerHTML={{ __html: props.subtitle }}
+                        ></Typography>
                     </Box>
                 </DefaultContainer>
             </Box>

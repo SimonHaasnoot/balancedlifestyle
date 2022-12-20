@@ -1,4 +1,4 @@
-import { Box, Button, List, ListItem, Typography, useTheme } from '@mui/material';
+import { Box, Button, Icon, List, ListItem, Typography, useTheme } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { Heading } from '../components/molecules/Heading';
@@ -7,6 +7,7 @@ import { Layout } from '../components/pagelayout/Layout';
 import useIsMobile from '../hooks/useMobile';
 import Carousel from 'react-material-ui-carousel';
 import { getRouteUrl, HeaderRoutesEnum } from '../types/HeaderRoute';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 export const PersonalTrainingPage = (props: any) => {
     const theme = useTheme();
@@ -59,13 +60,11 @@ export const PersonalTrainingPage = (props: any) => {
                                     Dus, even in het kort:
                                 </Typography>
                                 <List>
-                                    <ListItem sx={{ color: theme.palette.common.white }}>
-                                        Gevarieerde trainingen; kracht en conditie oefeningen, mobiliteitsoefeningen en technieklessen
-                                    </ListItem>
-                                    <ListItem sx={{ color: theme.palette.common.white }}>Aanpakken van eetgewoontes</ListItem>
-                                    <ListItem sx={{ color: theme.palette.common.white }}>Aanleren van gezonde en bewuste keuzes</ListItem>
-                                    <ListItem sx={{ color: theme.palette.common.white }}>Slaapritme</ListItem>
-                                    <ListItem sx={{ color: theme.palette.common.white }}>Ontspanning</ListItem>
+                                    <ListItem sx={{ color: theme.palette.common.white }}><Icon component={ChevronRightIcon} sx={{color: theme.palette.secondary.main}} /> Gevarieerde trainingen; kracht en conditie oefeningen, mobiliteitsoefeningen en technieklessen</ListItem>
+                                    <ListItem sx={{ color: theme.palette.common.white }}><Icon component={ChevronRightIcon} sx={{color: theme.palette.secondary.main}} /> Aanpakken van eetgewoontes</ListItem>
+                                    <ListItem sx={{ color: theme.palette.common.white }}><Icon component={ChevronRightIcon} sx={{color: theme.palette.secondary.main}} /> Aanleren van gezonde en bewuste keuzes</ListItem>
+                                    <ListItem sx={{ color: theme.palette.common.white }}><Icon component={ChevronRightIcon} sx={{color: theme.palette.secondary.main}} /> Slaapritme</ListItem>
+                                    <ListItem sx={{ color: theme.palette.common.white }}><Icon component={ChevronRightIcon} sx={{color: theme.palette.secondary.main}} /> Ontspanning</ListItem>
                                 </List>
                                 <Box sx={{ mt: isMobile ? 2 : 5 }}>
                                     <Button variant="outlined" sx={{ mb: 10 }} href={getRouteUrl(HeaderRoutesEnum.CONTACT)}>

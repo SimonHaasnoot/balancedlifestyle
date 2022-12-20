@@ -2,6 +2,7 @@ import { FitnessCenter, MenuBook, SupervisorAccount } from '@mui/icons-material'
 import { Box, Button, Container, Grid, Typography, useTheme } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
+import { Block } from '../components/molecules/Block';
 import { Rating } from '../components/molecules/Rating';
 import { Usp } from '../components/molecules/Usp';
 import { Hero } from '../components/organisms/Hero';
@@ -20,7 +21,7 @@ export const index = (props: any) => {
                 <Hero />
 
                 <Box sx={{ backgroundColor: theme.palette.grey[100] }}>
-                    <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
+                    <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }} doublePadding>
                         <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
                             Waarom?
                         </Typography>
@@ -35,7 +36,7 @@ export const index = (props: any) => {
                                     icon={FitnessCenter}
                                 />
                             </Grid>
-                            <Grid item xs={12} md={4}>
+                            <Grid item xs={12} md={4} sx={{ mt: isMobile ? 0 : 10 }}>
                                 <Usp
                                     title="Voedingsschema's"
                                     body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet, nisl vitae tincidunt luctus."
@@ -53,51 +54,30 @@ export const index = (props: any) => {
                     </DefaultContainer>
                 </Box>
 
-                <Container maxWidth={false} disableGutters>
-                    <Grid container spacing={0}>
-                        <Grid item xs={12} md={6}>
-                            <StaticImage src="../images/aboutme2.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                            <Box
-                                p={10}
-                                sx={{
-                                    [theme.breakpoints.down('md')]: {
-                                        p: 5,
-                                    },
-                                    [theme.breakpoints.up('xl')]: {
-                                        p: 20,
-                                    },
-                                }}
-                            >
-                                <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
-                                    Iets over mij
-                                </Typography>
-                                <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.black, mb: 5 }}>
-                                    Terug naar het begin
-                                </Typography>
-                                <Typography variant="body1" sx={{ color: theme.palette.common.black }}>
-                                    Welkom, mijn naam is Sem van de Griendt. Oprichter van Balanced lifestyle.
-                                    <br />
-                                    <br />
-                                    Balanced lifestyle in ontstaan uit een persoonlijk verhaal. Ik heb jaren met extreme huidklachten rondgelopen. De
-                                    milde huidklachten ontstonden toen ik 14 was. In het begin maakte ik mij weinig zorgen en was ik ervan overtuigd
-                                    dat de pubertijd de veroorzaker was van mijn huidproblemen. 3 Jaar later, tientallen doktersbezoeken en
-                                    antibioticakuren verder werden mijn problemen niet minder, maar juist erger.
-                                </Typography>
-                                <Button
-                                    variant="contained"
-                                    sx={{ mt: 5 }}
-                                    href={getRouteUrl(HeaderRoutesEnum.ABOUT_ME)}
-                                >
-                                    Lees hier verder
-                                </Button>
-                            </Box>
-                        </Grid>
-                    </Grid>
-                </Container>
+                <Block
+                    title="Iets over mij"
+                    subtitle="Terug naar het begin"
+                    body="Welkom, mijn naam is Sem van de Griendt. Oprichter van Balanced lifestyle.<br /><br /> Balanced lifestyle in ontstaan uit een persoonlijk verhaal. Ik heb jaren met extreme huidklachten rondgelopen. De
+                    milde huidklachten ontstonden toen ik 14 was. In het begin maakte ik mij weinig zorgen en was ik ervan overtuigd
+                    dat de pubertijd de veroorzaker was van mijn huidproblemen. 3 Jaar later, tientallen doktersbezoeken en
+                    antibioticakuren verder werden mijn problemen niet minder, maar juist erger."
+                    button={{
+                        text: 'Lees hier verder',
+                        link: HeaderRoutesEnum.ABOUT_ME,
+                    }}
+                    staticImage={
+                        <StaticImage src="../images/workouts/workout4.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    }
+                />
 
                 <Box sx={{ backgroundColor: theme.palette.grey[100] }}>
+                    <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
+                        <Typography variant="subtitle2" sx={{ color: theme.palette.common.white }}>
+                            Het is mijn missie om mensen te helpen om de balans te vinden in hun leven doormiddel van een goed bewegings- en
+                            voedingspatroon, een consistent gezond slaapritme en dagelijkse ontspanning in combinatie met het behalen van jouw
+                            persoonlijke/werkleer doelen.
+                        </Typography>
+                    </DefaultContainer>
                     <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
                         <Grid container spacing={isMobile ? 1 : 10}>
                             <Grid
