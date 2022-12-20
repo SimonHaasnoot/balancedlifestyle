@@ -8,6 +8,7 @@ import useIsMobile from '../hooks/useMobile';
 import Carousel from 'react-material-ui-carousel';
 import { getRouteUrl, HeaderRoutesEnum } from '../types/HeaderRoute';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { SmallHero } from '../components/organisms/SmallHero';
 
 export const PersonalTrainingPage = (props: any) => {
     const theme = useTheme();
@@ -16,25 +17,31 @@ export const PersonalTrainingPage = (props: any) => {
     return (
         <>
             <Layout location={props.location}>
-                <Heading
+                <SmallHero
+                    image={
+                        <StaticImage
+                            src="../images/pt/pt1.jpg"
+                            alt="Hero"
+                            style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.5)' }}
+                        />
+                    }
                     title="Personal training"
                     subtitle="Ben jij iemand die streeft naar meer fysieke en mentale inspanning, een fitter lichaam en een verbeterd zelfbeeld, maar hiervoor een stukje motivatie, kennis en directe feedback mist? Dan is personal training de oplossing voor jou!"
                 />
 
-                <Box sx={{ background: theme.palette.common.white, position: 'relative' }}>
-                    <Box sx={{ inset: 0, position: 'absolute' }}>
-                        <StaticImage src="../images/hero.jpg" alt="Personal training" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    </Box>
-
+                <Box sx={{ background: theme.palette.primary.main, position: 'relative' }}>
                     <DefaultContainer maxWidth="lg">
-                        <Box sx={{ maxWidth: isMobile ? '100%' : '70%', background: '#ffffffd1', padding: isMobile ? 3 : 5 }}>
-                            <Typography
-                                variant="h3"
-                                sx={{ color: theme.palette.secondary.main, marginTop: '-70px', background: theme.palette.common.white, padding: 3 }}
-                            >
-                                Hoe werkt het?
+                        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
+                                Hoe het werkt
                             </Typography>
-                            <Typography variant="body1" sx={{ color: theme.palette.common.black, lineHeight: 2, mb: 5 }}>
+                            <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.white, mb: 5 }}>
+                                Wat we gaan doen
+                            </Typography>
+                            <Typography
+                                variant="body1"
+                                sx={{ color: theme.palette.common.white, lineHeight: 2, mb: 5, maxWidth: !isMobile ? '70%' : '100%' }}
+                            >
                                 <b>Samen gaan wij aan de slag om jouw doelen te realiseren en de beste versie van jou naar boven te halen.</b>{' '}
                                 Wekelijks gaan wij op 1 op 1 sporten op een locatie naar jouw keuze. In een veilige omgeving, waarin jouw
                                 prestatieverbetering voorop staat.
@@ -47,8 +54,8 @@ export const PersonalTrainingPage = (props: any) => {
                     <DefaultContainer maxWidth="lg">
                         <Box sx={{ display: 'flex', gap: 5, mb: isMobile ? 2 : 5 }}>
                             <Box sx={{ flex: 1 }}>
-                                <Typography variant="h3" sx={{ color: theme.palette.secondary.main }}>
-                                    Wat gaan we doen?
+                                <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 2 }}>
+                                    De inhoud
                                 </Typography>
                                 <Typography variant="body1" sx={{ color: theme.palette.common.white, lineHeight: 2 }}>
                                     Trainingen zullen bestaan uit kracht en conditie oefeningen, mobiliteitsoefeningen en technieklessen. Daarnaast
@@ -60,11 +67,23 @@ export const PersonalTrainingPage = (props: any) => {
                                     Dus, even in het kort:
                                 </Typography>
                                 <List>
-                                    <ListItem sx={{ color: theme.palette.common.white }}><Icon component={ChevronRightIcon} sx={{color: theme.palette.secondary.main}} /> Gevarieerde trainingen; kracht en conditie oefeningen, mobiliteitsoefeningen en technieklessen</ListItem>
-                                    <ListItem sx={{ color: theme.palette.common.white }}><Icon component={ChevronRightIcon} sx={{color: theme.palette.secondary.main}} /> Aanpakken van eetgewoontes</ListItem>
-                                    <ListItem sx={{ color: theme.palette.common.white }}><Icon component={ChevronRightIcon} sx={{color: theme.palette.secondary.main}} /> Aanleren van gezonde en bewuste keuzes</ListItem>
-                                    <ListItem sx={{ color: theme.palette.common.white }}><Icon component={ChevronRightIcon} sx={{color: theme.palette.secondary.main}} /> Slaapritme</ListItem>
-                                    <ListItem sx={{ color: theme.palette.common.white }}><Icon component={ChevronRightIcon} sx={{color: theme.palette.secondary.main}} /> Ontspanning</ListItem>
+                                    <ListItem sx={{ color: theme.palette.common.white }}>
+                                        <Icon component={ChevronRightIcon} sx={{ color: theme.palette.secondary.main }} /> Gevarieerde trainingen;
+                                        kracht en conditie oefeningen, mobiliteitsoefeningen en technieklessen
+                                    </ListItem>
+                                    <ListItem sx={{ color: theme.palette.common.white }}>
+                                        <Icon component={ChevronRightIcon} sx={{ color: theme.palette.secondary.main }} /> Aanpakken van eetgewoontes
+                                    </ListItem>
+                                    <ListItem sx={{ color: theme.palette.common.white }}>
+                                        <Icon component={ChevronRightIcon} sx={{ color: theme.palette.secondary.main }} /> Aanleren van gezonde en
+                                        bewuste keuzes
+                                    </ListItem>
+                                    <ListItem sx={{ color: theme.palette.common.white }}>
+                                        <Icon component={ChevronRightIcon} sx={{ color: theme.palette.secondary.main }} /> Slaapritme
+                                    </ListItem>
+                                    <ListItem sx={{ color: theme.palette.common.white }}>
+                                        <Icon component={ChevronRightIcon} sx={{ color: theme.palette.secondary.main }} /> Ontspanning
+                                    </ListItem>
                                 </List>
                                 <Box sx={{ mt: isMobile ? 2 : 5 }}>
                                     <Button variant="outlined" sx={{ mb: 10 }} href={getRouteUrl(HeaderRoutesEnum.CONTACT)}>

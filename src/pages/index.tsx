@@ -72,18 +72,27 @@ export const index = (props: any) => {
 
                 <Box sx={{ backgroundColor: theme.palette.grey[100] }}>
                     <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
-                        <Typography variant="subtitle2" sx={{ color: theme.palette.common.white }}>
+                        <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
+                            Mijn missie
+                        </Typography>
+                        <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.white, mb: 5 }}>
+                            Helpen in het vinden van balans
+                        </Typography>
+                        <Typography variant="body1" sx={{ color: theme.palette.common.white, lineHeight: 2, maxWidth: isMobile ? '100%' : '60%', margin: 'auto' }}>
                             Het is mijn missie om mensen te helpen om de balans te vinden in hun leven doormiddel van een goed bewegings- en
                             voedingspatroon, een consistent gezond slaapritme en dagelijkse ontspanning in combinatie met het behalen van jouw
-                            persoonlijke/werkleer doelen.
+                            persoonlijke/werk-leer doelen.
                         </Typography>
                     </DefaultContainer>
+                </Box>
+
+                <Box sx={{ backgroundColor: theme.palette.primary.main }}>
                     <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
                         <Grid container spacing={isMobile ? 1 : 10}>
                             <Grid
                                 item
                                 xs={12}
-                                sm={6}
+                                sm={4}
                                 position="relative"
                                 sx={{
                                     ':hover': {
@@ -117,11 +126,49 @@ export const index = (props: any) => {
                                         Balanced Lifestyle
                                     </Button>
                                 </Box>
+                            </Grid>{' '}
+                            <Grid
+                                item
+                                xs={12}
+                                sm={4}
+                                position="relative"
+                                sx={{
+                                    ':hover': {
+                                        a: {
+                                            transition: 'all 0.3s ease-in-out',
+                                            transform: 'scale(1.1)',
+                                        },
+                                    },
+                                }}
+                            >
+                                <StaticImage
+                                    src="../images/workouts/workout1.jpg"
+                                    alt="Hero"
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                />
+                                <Box
+                                    sx={{
+                                        position: 'absolute',
+                                        inset: 0,
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        padding: 'inherit',
+                                    }}
+                                >
+                                    <Button
+                                        variant="contained"
+                                        href={getRouteUrl(HeaderRoutesEnum.ONLINE_COACHING)}
+                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white }}
+                                    >
+                                        Online Coaching
+                                    </Button>
+                                </Box>
                             </Grid>
                             <Grid
                                 item
                                 xs={12}
-                                sm={6}
+                                sm={4}
                                 position="relative"
                                 sx={{
                                     ':hover': {
@@ -164,7 +211,7 @@ export const index = (props: any) => {
                     <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
                         Reviews
                     </Typography>
-                    <Typography variant="h2" component="h2" sx={{ mb: 5, textAlign: 'center' }}>
+                    <Typography variant="h4" component="h3" sx={{ mb: 5, textAlign: 'center' }}>
                         Ervaring van de klant
                     </Typography>
                     <Box>
