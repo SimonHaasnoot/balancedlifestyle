@@ -114,11 +114,17 @@ theme = createTheme({
         body1: {
             fontWeight: 500,
             fontSize: 18,
+            [theme.breakpoints.between('xs', 'sm')]: {
+                fontSize: 16,
+            },
             fontFamily: 'Numans',
         },
         body2: {
             fontWeight: 400,
             fontSize: 16,
+            [theme.breakpoints.between('xs', 'sm')]: {
+                fontSize: 14,
+            },
             fontFamily: 'Numans',
         },
     },

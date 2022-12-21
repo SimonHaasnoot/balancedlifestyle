@@ -1,19 +1,37 @@
+import { Box } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
+import { Block } from '../components/molecules/Block';
 import { Heading } from '../components/molecules/Heading';
+import { SmallHero } from '../components/organisms/SmallHero';
+import { Teaser } from '../components/organisms/Teaser';
 import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
 import { Layout } from '../components/pagelayout/Layout';
 
 export const onlinecoaching = () => {
     return (
         <Layout>
-            <Heading
+            <SmallHero
+                image={
+                    <StaticImage
+                        src="../images/pages/stairs.jpg"
+                        alt="Hero"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.5)' }}
+                    />
+                }
                 title="Online coaching"
-                subtitle="Wil jij graag zelfstandig aan de slag met het verbeteren van je gezondheid, het vergroten van jouw spiermassa en het reduceren van vetmassa, maar weet jij zelf niet hoe je dit op de meest effectief mogelijke manier kan behalen en woon je te ver uit de buurt van Utrecht? Dan is online coaching de oplossing voor jou!"
+                subtitle="Ga zelfstandig aan de slag met het verbeteren van je gezondheid, vergroten van spiermassa en/of het reduceren van je vetmassa."
             />
-            <DefaultContainer maxWidth="lg">
-                <StaticImage src="../images/growth/mirron.jpg" alt="Mirron progressie"  />
-            </DefaultContainer>
+            <Box py={5}>
+                <Block
+                    staticImage={<StaticImage src="../images/growth/mirron.jpg" alt="Mirron progressie" />}
+                    title="Mirron"
+                    subtitle="Starter van het programma"
+                    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl eu nunc. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl eu nunc. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl eu nunc. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl eu nunc. "
+                    maxWidth="lg"
+                    disableScale
+                />
+            </Box>
         </Layout>
     );
 };

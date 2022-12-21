@@ -45,7 +45,10 @@ export const SmallHero: React.FC<SmallHeroProps> = (props) => {
                             <Typography variant="h1" component="h1" sx={{ mb: 3, pt: 10 }}>
                                 {props.title}
                             </Typography>
-                            <Typography variant="subtitle2" sx={{ mb: 3, maxWidth: isMobile ? '100%' : '60%', padding: 3, background: '#ffffff4f', lineHeight: 1.5 }}>
+                            <Typography
+                                variant="subtitle2"
+                                sx={{ mb: 3, maxWidth: isMobile ? '100%' : '60%', padding: 3, background: '#ffffff4f', lineHeight: 1.5 }}
+                            >
                                 {props.subtitle}
                             </Typography>
                         </Box>

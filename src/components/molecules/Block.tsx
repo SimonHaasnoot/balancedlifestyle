@@ -14,6 +14,8 @@ export type BlockProps = {
         link: HeaderRoutesEnum;
         text: string;
     };
+    maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | false;
+    disableScale?: boolean;
 };
 
 export const Block: React.FC<BlockProps> = (props) => {
@@ -23,11 +25,13 @@ export const Block: React.FC<BlockProps> = (props) => {
         /* Optional options */
         threshold: 0.9,
     });
+    const maxWidth = props.maxWidth || false;
+    const disableScale = props.disableScale || false;
 
     return (
-        <Container maxWidth={false} disableGutters>
+        <Container maxWidth={maxWidth} disableGutters>
             <Grid container spacing={0}>
-                <Grid item xs={12} md={6} sx={{ transform: inView && !isMobile ? 'scale(1.05)' : 'scale(1)', transition: 'all 0.3s ease-in-out' }}>
+                <Grid item xs={12} md={6} sx={{ transform: !disableScale && inView && !isMobile ? 'scale(1.05)' : 'scale(1)', transition: 'all 0.3s ease-in-out' }}>
                     {props.staticImage}
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -38,7 +42,7 @@ export const Block: React.FC<BlockProps> = (props) => {
                                 p: 5,
                             },
                             [theme.breakpoints.up('xl')]: {
-                                p: 20,
+                                p: maxWidth ? 10 : 20,
                             },
                         }}
                         ref={ref}
