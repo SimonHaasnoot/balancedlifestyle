@@ -2,10 +2,7 @@ import { Box } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { Block } from '../components/molecules/Block';
-import { Heading } from '../components/molecules/Heading';
 import { SmallHero } from '../components/organisms/SmallHero';
-import { Teaser } from '../components/organisms/Teaser';
-import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
 import { Layout } from '../components/pagelayout/Layout';
 
 export const onlinecoaching = () => {

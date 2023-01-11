@@ -31,7 +31,12 @@ export const Block: React.FC<BlockProps> = (props) => {
     return (
         <Container maxWidth={maxWidth} disableGutters>
             <Grid container spacing={0}>
-                <Grid item xs={12} md={6} sx={{ transform: !disableScale && inView && !isMobile ? 'scale(1.05)' : 'scale(1)', transition: 'all 0.3s ease-in-out' }}>
+                <Grid
+                    item
+                    xs={12}
+                    md={6}
+                    sx={{ transform: !disableScale && inView && !isMobile ? 'scale(1.05)' : 'scale(1)', transition: 'all 0.3s ease-in-out' }}
+                >
                     {props.staticImage}
                 </Grid>
                 <Grid item xs={12} md={6}>

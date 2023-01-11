@@ -42,12 +42,11 @@ export const MeatPage = (props: any) => {
                             eiwit.
                             <br />
                             <br />
-                            Bij <b>Balanced lifestyle</b> staan we voor balans en sluiten we geen enkele voedingsgroep uit. Plantaardig producten worden
-                            gekocht bij de supermarkt en dierlijke producten bij een lokale (bio) boerderij. Deze staat los van de veeteelt industrie.
-                            Vlees van een goede afkomst staan centraal in een gezond en bewust voedingspatroon. Supermarkt vlees wordt niet gekocht en
-                            geconsumeerd, waardoor er niet wordt bijgedragen aan de veeteelt industrie en de productie ervan.
+                            Bij <b>Balanced lifestyle</b> staan we voor balans en sluiten we geen enkele voedingsgroep uit. Plantaardig producten
+                            worden gekocht bij de supermarkt en dierlijke producten bij een lokale (bio) boerderij. Deze staat los van de veeteelt
+                            industrie. Vlees van een goede afkomst staan centraal in een gezond en bewust voedingspatroon. Supermarkt vlees wordt niet
+                            gekocht en geconsumeerd, waardoor er niet wordt bijgedragen aan de veeteelt industrie en de productie ervan.
                         </Typography>
-
                     </DefaultContainer>
                 </Box>
 
