@@ -20,7 +20,7 @@ export const Blog: React.FC<BlogProps> = (props) => {
 
     return (
         <Box component={'section'}>
-            <StaticImage src="../../images/pt1.jpg" alt="Blog afbeelding" />
+            <StaticImage src="../../images/pt/pt1.jpg" alt="Blog afbeelding" />
 
             <Typography
                 variant="h4"
