@@ -59,7 +59,7 @@ export const MeatPage = (props: any) => {
                     prijs. Noem gerust Balanced lifestyle bij een bezoek aan de boerderij! (Van Teylingenweg 172, 3471 GK Kamerik -
                     0348 401 254"
                         staticImage={
-                            <StaticImage src="../images/meat/koe1.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <StaticImage src="../images/meat/koe0.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         }
                     />
                 </Box>

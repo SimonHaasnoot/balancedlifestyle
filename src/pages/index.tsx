@@ -66,7 +66,7 @@ export const index = (props: any) => {
                         link: HeaderRoutesEnum.ABOUT_ME,
                     }}
                     staticImage={
-                        <StaticImage src="../images/workouts/workout4.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <StaticImage src="../images/workouts/workout5.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     }
                 />
 
