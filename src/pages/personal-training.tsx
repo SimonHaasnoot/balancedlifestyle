@@ -29,6 +29,8 @@ export const PersonalTrainingPage = (props: any) => {
                     subtitle="Ben jij iemand die streeft naar meer fysieke en mentale inspanning, een fitter lichaam en een verbeterd zelfbeeld, maar hiervoor een stukje motivatie, kennis en directe feedback mist? Dan is personal training de oplossing voor jou!"
                 />
 
+
+
                 <Box sx={{ background: theme.palette.primary.main, position: 'relative' }}>
                     <DefaultContainer maxWidth="lg">
                         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>

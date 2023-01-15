@@ -69,7 +69,7 @@ export const SchemaTable: React.FC<SchemaTableProps> = (props) => {
                                     {row.name}
                                 </TableCell>
                                 {row.time && <TableCell align="right">{row.time}</TableCell>}
-                                {row.quantity && <TableCell align="right">{row.time}</TableCell>}
+                                {row.quantity && <TableCell align="right">{row.quantity}</TableCell>}
                                 <TableCell align="right">{row.price}</TableCell>
                             </TableRow>
                         ))}

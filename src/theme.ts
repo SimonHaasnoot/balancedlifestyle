@@ -6,6 +6,7 @@ export const color02 = '#5ab7db'; // Blue
 export const color03 = '#fcfcfc'; // White
 export const color04 = '#90cee6'; // Less Blue
 export const color05 = '#c6e5f1'; // Less less Blue
+export const color06 = '#b2c138'; // yellow
 
 let theme = createTheme();
 
@@ -27,6 +28,9 @@ theme = createTheme({
         grey: {
             100: '#151515',
         },
+        warning: {
+            main: color06,
+        }
     },
     typography: {
         fontFamily: ['Exo', 'Nunito', 'Numans'].join(','),
@@ -110,6 +114,9 @@ theme = createTheme({
             [theme.breakpoints.between('xs', 'sm')]: {
                 fontSize: 16,
             },
+            ['> span']: {
+                color: color02,
+            }
         },
         body1: {
             fontWeight: 500,
@@ -118,6 +125,9 @@ theme = createTheme({
                 fontSize: 16,
             },
             fontFamily: 'Numans',
+            ['> span']: {
+                color: color02,
+            }
         },
         body2: {
             fontWeight: 400,
@@ -169,6 +179,18 @@ theme = createTheme({
                     [':hover img']: {
                         transform: 'scale(1.2)',
                         transition: '.3s ease-in-out',
+                    },
+                },
+            },
+        },
+        MuiLink: {
+            styleOverrides: {
+                root: {
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    color: color06,
+                    '&:hover': {
+                        color: color02,
                     },
                 },
             },

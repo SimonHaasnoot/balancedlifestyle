@@ -1,18 +1,22 @@
-import { Box, Button, Container, Typography } from '@mui/material';
-import { StaticImage } from 'gatsby-plugin-image';
+import { Box, Container, Link, Typography, useTheme } from '@mui/material';
 import * as React from 'react';
 import useMobile from '../../hooks/useMobile';
-import { SocialMedia } from '../molecules/SocialMedia';
-import { getRouteUrl, HeaderRoutesEnum } from '../../types/HeaderRoute';
 import { Helmet } from 'react-helmet';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 export type SmallHeroProps = {
     image: React.ReactNode;
     title: string;
     subtitle: string;
+    linkTo?: {
+        link: string;
+        text: string;
+    }
 };
+
 export const SmallHero: React.FC<SmallHeroProps> = (props) => {
     const { isMobile } = useMobile();
+    const theme = useTheme();
 
     return (
         <>
@@ -25,7 +29,7 @@ export const SmallHero: React.FC<SmallHeroProps> = (props) => {
                 sx={{
                     position: 'relative',
                     overflow: 'hidden',
-                    height: '65vh',
+                    height: isMobile ? '90vh' : '75vh',
                     backgroundColor: '#1C1D1F',
                 }}
             >
@@ -47,10 +51,21 @@ export const SmallHero: React.FC<SmallHeroProps> = (props) => {
                             </Typography>
                             <Typography
                                 variant="subtitle2"
-                                sx={{ mb: 3, maxWidth: isMobile ? '100%' : '60%', padding: 3, background: '#ffffff4f', lineHeight: 1.5 }}
+                                sx={{ mb: 3, maxWidth: isMobile ? '100%' : '60%', padding: 3, background: '#5ab7db38', lineHeight: 1.5 }}
+                                dangerouslySetInnerHTML={{ __html: props.subtitle }}
                             >
-                                {props.subtitle}
                             </Typography>
+                            {props.linkTo && (
+                                <Link href='#' sx={{
+                                    p: 1,
+                                    border: `1px solid ${theme.palette.warning.main}`,
+                                    display: 'inline-flex',
+                                    fontSize: '15px',
+                                }}>
+                                    {props.linkTo.text}
+                                    <ChevronRightIcon sx={{ ml: 1 }} />
+                                </Link>
+                            )}
                         </Box>
                     </Container>
                 </Box>

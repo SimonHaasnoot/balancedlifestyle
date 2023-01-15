@@ -109,7 +109,7 @@ export const packages = (props: any) => {
                     <SchemaTable
                         title="Online coaching"
                         schema={onlineCoachingSchema}
-                        tableHead={['Aangeboden', 'Totale duur', 'Aantal', 'Prijs']}
+                        tableHead={['Aangeboden', 'Totale duur', 'Contact', 'Prijs']}
                         id="online-coaching"
                         isMountedCallback={setScrollElementsMounted}
                     />

@@ -1,23 +1,19 @@
 export const dietSchema = [
-    { name: 'Voedingsschema standaard', price: '€ 40 excl. btw' },
     { name: 'Voedingsschema op maat', price: '€50 excl. btw' },
-    { name: 'Voedingsschema op maat + wekelijkse check-up', price: '€55 excl. btw' },
-    { name: '100% vegetarisch voedingsschema op maat', price: '€50 excl. btw' },
-    { name: '100% plantaardig voedingsschema op maat', price: '€40 excl. btw' },
+    { name: 'Voedingsschema op maat + wekelijkse check-up', price: '€100 excl. btw per maand' },
+    { name: '100% Balanced lifestyle voedingsschema', price: '€50 excl. btw' },
+    { name: '100% Balanced lifestyle voedingsschema + wekelijkse check-up', price: '€100 excl. btw per maand' },
 ];
 
 export const trainingSchema = [
-    { name: 'Trainingsschema standaard', price: '€40 excl. btw' },
     { name: 'Trainingsschema op maat', price: '€50 excl. btw' },
-    { name: 'Trainingsschema op maat + wekelijkse check-up', price: '€55 excl. btw' },
-    { name: 'Trainingsschema voor thuis | beginner', price: '€25 excl. btw' },
-    { name: 'Trainingsschema voor thuis | ervaren', price: '€30 excl. btw' },
+    { name: 'Trainingsschema op maat + wekelijkse check-up', price: '€100 excl. btw per maand' },
+    { name: 'Trainingsschema voor thuis | buiten', price: '€50 excl. btw' },
 ];
 
 export const combiSchema = [
-    { name: 'Training + voedingsschema standaard', price: '€80 excl. btw' },
     { name: 'Training + voedingsschema op maat', price: '€90 excl. btw' },
-    { name: 'Training + voedingsschema op maat + wekelijkse check-up', price: '€100 excl. btw' },
+    { name: 'Training + voedingsschema op maat + wekelijkse check-up', price: '€150 excl. btw' },
 ];
 
 export const personalTrainingSchema = [
@@ -32,7 +28,6 @@ export const personalTrainingSchema = [
 ];
 
 export const onlineCoachingSchema = [
-    { name: 'Balanced lifestyle challenge', time: '3 maanden', quantity: '-', price: '€75 per week excl. btw' },
-    { name: 'Online coaching - algemeen', time: '3 - 6 - 12 maanden', quantity: '-', price: '€100 excl. btw' },
-    { name: 'Online coaching - intensief', time: '3 - 6 - 12 maanden', quantity: '-', price: '€150 excl. btw' },
+    { name: 'Online coaching algemeen', time: 'Minimaal 3 maanden', quantity: '1x per week contact', price: '€150 excl. btw per maand' },
+    { name: 'Online coaching intensief', time: 'Minimaal 6 maanden', quantity: 'Dagelijks contact', price: '€200 excl. btw per maand' },
 ];

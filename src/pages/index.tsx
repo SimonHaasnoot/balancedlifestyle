@@ -26,27 +26,27 @@ export const index = (props: any) => {
                             Waarom?
                         </Typography>
                         <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.white, mb: 5 }}>
-                            Samen grenzen verleggen
+                            Jouw gezondheid staat centraal
                         </Typography>
                         <Grid container spacing={isMobile ? 5 : 10} justifyContent="center" display="flex">
                             <Grid item xs={12} md={4}>
                                 <Usp
                                     title="Professioneel trainingsplan"
-                                    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet, nisl vitae tincidunt luctus."
+                                    body="Persoonlijk trainingsschema op basis van een vragenlijst afgestemd op jouw doelen en wensen."
                                     icon={FitnessCenter}
                                 />
                             </Grid>
                             <Grid item xs={12} md={4} sx={{ mt: isMobile ? 0 : 10 }}>
                                 <Usp
-                                    title="Voedingsschema's"
-                                    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet, nisl vitae tincidunt luctus."
+                                    title="Professioneel voedingsplan"
+                                    body="Persoonlijk voedingsschema op basis van een vragenlijst afgestemd op jouw doelen en wensen."
                                     icon={MenuBook}
                                 />
                             </Grid>
                             <Grid item xs={12} md={4}>
                                 <Usp
                                     title="Gepersonaliseerd"
-                                    body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet, nisl vitae tincidunt luctus."
+                                    body="Na het afnemen word je niet aan jouw lot overgelaten. Een maand later is er een check up, waarin je positieve en negatieve ervaringen worden doorgenomen en vanuit daar eventuele veranderingen zullen plaatsvinden in jouw plan van aanpak."
                                     icon={SupervisorAccount}
                                 />
                             </Grid>
@@ -78,7 +78,10 @@ export const index = (props: any) => {
                         <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.white, mb: 5 }}>
                             Helpen in het vinden van balans
                         </Typography>
-                        <Typography variant="body1" sx={{ color: theme.palette.common.white, lineHeight: 2, maxWidth: isMobile ? '100%' : '60%', margin: 'auto' }}>
+                        <Typography
+                            variant="body1"
+                            sx={{ color: theme.palette.common.white, lineHeight: 2, maxWidth: isMobile ? '100%' : '60%', margin: 'auto' }}
+                        >
                             Het is mijn missie om mensen te helpen om de balans te vinden in hun leven doormiddel van een goed bewegings- en
                             voedingspatroon, een consistent gezond slaapritme en dagelijkse ontspanning in combinatie met het behalen van jouw
                             persoonlijke/werk-leer doelen.
@@ -88,10 +91,15 @@ export const index = (props: any) => {
 
                 <Box sx={{ backgroundColor: theme.palette.primary.main }}>
                     <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
-                        <Grid container spacing={isMobile ? 1 : 10}>
+                        <Box>
+                            <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, py: 5, mb: isMobile ? 0 : 10 }}>
+                                Wat kan ik voor jou betekenen?
+                            </Typography>
+                        </Box>
+                        <Grid container spacing={isMobile ? 2 : 10} justifyContent="center" sx={{ gap: isMobile ? 3 : 0 }}>
                             <Grid
                                 item
-                                xs={12}
+                                xs={10}
                                 sm={4}
                                 position="relative"
                                 sx={{
@@ -103,11 +111,27 @@ export const index = (props: any) => {
                                     },
                                 }}
                             >
-                                <StaticImage
-                                    src="../images/workouts/workout1.jpg"
-                                    alt="Hero"
-                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                />
+                                <Box
+                                    sx={{
+                                        width: '100%',
+                                        height: '100%',
+                                        position: 'relative',
+                                    }}
+                                >
+                                    <StaticImage
+                                        src="../images/workouts/workout1.jpg"
+                                        alt="Hero"
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    />
+                                    <Box
+                                        sx={{
+                                            position: 'absolute',
+                                            inset: 0,
+                                            background: 'linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(255,255,255,0) 50%)',
+                                        }}
+                                    />
+                                </Box>
+
                                 <Box
                                     sx={{
                                         position: 'absolute',
@@ -126,48 +150,10 @@ export const index = (props: any) => {
                                         Balanced Lifestyle
                                     </Button>
                                 </Box>
-                            </Grid>{' '}
-                            <Grid
-                                item
-                                xs={12}
-                                sm={4}
-                                position="relative"
-                                sx={{
-                                    ':hover': {
-                                        a: {
-                                            transition: 'all 0.3s ease-in-out',
-                                            transform: 'scale(1.1)',
-                                        },
-                                    },
-                                }}
-                            >
-                                <StaticImage
-                                    src="../images/workouts/workout1.jpg"
-                                    alt="Hero"
-                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                />
-                                <Box
-                                    sx={{
-                                        position: 'absolute',
-                                        inset: 0,
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        padding: 'inherit',
-                                    }}
-                                >
-                                    <Button
-                                        variant="contained"
-                                        href={getRouteUrl(HeaderRoutesEnum.ONLINE_COACHING)}
-                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white }}
-                                    >
-                                        Online Coaching
-                                    </Button>
-                                </Box>
                             </Grid>
                             <Grid
                                 item
-                                xs={12}
+                                xs={10}
                                 sm={4}
                                 position="relative"
                                 sx={{
@@ -179,11 +165,27 @@ export const index = (props: any) => {
                                     },
                                 }}
                             >
-                                <StaticImage
-                                    src="../images/workouts/workout2.jpg"
-                                    alt="Hero"
-                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                />
+                                <Box
+                                    sx={{
+                                        width: '100%',
+                                        height: '100%',
+                                        position: 'relative',
+                                    }}
+                                >
+                                    <StaticImage
+                                        src="../images/workouts/workout2.jpg"
+                                        alt="Hero"
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    />
+                                    <Box
+                                        sx={{
+                                            position: 'absolute',
+                                            inset: 0,
+                                            background: 'linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(255,255,255,0) 50%)',
+                                        }}
+                                    />
+                                </Box>
+
                                 <Box
                                     sx={{
                                         position: 'absolute',
@@ -200,6 +202,73 @@ export const index = (props: any) => {
                                         sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white }}
                                     >
                                         Personal training
+                                    </Button>
+                                </Box>
+                            </Grid>
+                            <Grid
+                                item
+                                xs={10}
+                                sm={4}
+                                position="relative"
+                                sx={{
+                                    ':hover': {
+                                        a: {
+                                            transition: 'all 0.3s ease-in-out',
+                                            transform: 'scale(1.1)',
+                                        },
+                                    },
+                                }}
+                            >
+                                <Box
+                                    sx={{
+                                        width: '100%',
+                                        height: '100%',
+                                        position: 'relative',
+                                    }}
+                                >
+                                    <StaticImage
+                                        src="../images/workouts/workout1.jpg"
+                                        alt="Hero"
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'cover',
+                                        }}
+                                    />
+                                    <Box
+                                        sx={{
+                                            position: 'absolute',
+                                            inset: 0,
+                                            background: 'linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(255,255,255,0) 50%)',
+                                        }}
+                                    />
+                                </Box>
+
+                                <Box
+                                    sx={{
+                                        position: 'absolute',
+                                        inset: 0,
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        padding: 'inherit',
+                                    }}
+                                >
+                                    <Box
+                                        sx={{
+                                            position: 'absolute',
+                                            inset: 0,
+                                            background: 'rgba(0, 0, 0, 0.3)',
+                                            width: '100%',
+                                            height: '100%',
+                                        }}
+                                    />
+                                    <Button
+                                        variant="contained"
+                                        href={getRouteUrl(HeaderRoutesEnum.ONLINE_COACHING)}
+                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white }}
+                                    >
+                                        Online Coaching
                                     </Button>
                                 </Box>
                             </Grid>
