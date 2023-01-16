@@ -10,6 +10,8 @@ import { Layout } from '../components/pagelayout/Layout';
 import useIsMobile from '../hooks/useMobile';
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 import { getRouteUrl, HeaderRoutesEnum } from '../types/HeaderRoute';
+import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
+import { Cards } from '../components/organisms/Cards';
 
 export const onlinecoaching = () => {
     const theme = useTheme();
@@ -28,7 +30,7 @@ export const onlinecoaching = () => {
                 title="Online coaching"
                 subtitle="Ga zelfstandig aan de slag met het <span>verbeteren van je gezondheid</span>, vergroten van spiermassa en/of het reduceren van je vetmassa."
                 linkTo={{
-                    link: '#',
+                    link: '#succesverhalen',
                     text: 'Of, ga naar succesverhalen',
                 }}
             />
@@ -87,8 +89,8 @@ export const onlinecoaching = () => {
                                 <b>3.</b> Het creëren van een vast slaapritme en opzoek gaan naar een dagelijks stuk ontspanning.
                             </Typography>
                             <Typography variant="body1" sx={{ color: theme.palette.common.white, mb: 2 }}>
-                                Als je met deze elementen een tijdje actief mee bezig bent ga je <span>regelmaat</span> creëren. Hier komt een ritme uit voor wat
-                                uiteindelijk evalueert naar goede gewoontes.
+                                Als je met deze elementen een tijdje actief mee bezig bent ga je <span>regelmaat</span> creëren. Hier komt een ritme
+                                uit voor wat uiteindelijk evalueert naar goede gewoontes.
                             </Typography>
                         </Grid>
                         <Grid xs={12} md={6}>
@@ -144,14 +146,37 @@ export const onlinecoaching = () => {
             </Box>
 
             <Box py={5}>
-                <Block
-                    staticImage={<StaticImage src="../images/growth/mirron.jpg" alt="Mirron progressie" />}
-                    title="Mirron"
-                    subtitle="Starter van het programma"
-                    body='"Sem van Balanced Lifestyle heeft mij zeer goed op weg geholpen met mijn fitness journey! Door hem heb ik de juiste motivatie gekregen en hij heeft een gepersonaliseerd schema opgesteld met de juiste voeding. Heel tevreden dus!"'
-                    // maxWidth="lg"
-                    disableScale
-                />
+                <DefaultContainer>
+                    <Typography variant="h2" sx={{ color: theme.palette.primary.main, textAlign: 'center' }} id="succesverhalen">
+                        Succesverhalen
+                    </Typography>
+                    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                        <Typography variant="body1" sx={{ color: theme.palette.secondary.main, textAlign: 'center' }}>
+                            Hieronder vind je een aantal voorbeelden van deelnemers die ik (heb) begeleid.
+                        </Typography>
+                    </Box>
+
+                    <Divider />
+
+                    <Cards
+                        cards={[
+                            {
+                                title: 'Mirron',
+                                subtitle: 'Starter van het programma',
+                                image: <StaticImage src="../images/growth/mirron.jpg" alt="Mirron progressie" />,
+                                package: 'online coaching',
+                                text: '"Sem van Balanced Lifestyle heeft mij zeer goed op weg geholpen met mijn fitness journey! Door hem heb ik de juiste motivatie gekregen en hij heeft een gepersonaliseerd schema opgesteld met de juiste voeding. Heel tevreden dus!"',
+                            },
+                            {
+                                title: 'Wiebe',
+                                subtitle: 'Meer dan 1 jaar lid',
+                                image: <StaticImage src="../images/growth/wiebe.png" alt="Wiebe progressie" />,
+                                package: 'personal training',
+                                text: '"In de afgelopen periode heb ik samen met Sem erg veel stappen gemaakt. Ik ben sterker geworden en meer dan 20kg afgevallen."',
+                            },
+                        ]}
+                    />
+                </DefaultContainer>
             </Box>
         </Layout>
     );

@@ -56,7 +56,7 @@ export const SmallHero: React.FC<SmallHeroProps> = (props) => {
                             >
                             </Typography>
                             {props.linkTo && (
-                                <Link href='#' sx={{
+                                <Link href={props.linkTo.link} sx={{
                                     p: 1,
                                     border: `1px solid ${theme.palette.warning.main}`,
                                     display: 'inline-flex',
