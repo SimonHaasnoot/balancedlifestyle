@@ -40,7 +40,7 @@ export const Cards: React.FC<CardsProps> = (props) => {
                             >
                                 {card.image}
                             </Box>
-                            <Typography variant="h5" sx={{ color: theme.palette.primary.main, mt: 2 }}>
+                            <Typography variant="h5" sx={{ color: theme.palette.primary.main, mt: 2, mb: 1 }}>
                                 {card.title}
                             </Typography>
                             <Typography variant="subtitle2" sx={{ color: theme.palette.secondary.main }}>

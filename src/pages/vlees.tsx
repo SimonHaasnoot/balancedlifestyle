@@ -29,6 +29,9 @@ export const MeatPage = (props: any) => {
 
                 <Box sx={{ background: theme.palette.grey[100] }}>
                     <DefaultContainer maxWidth="lg" sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                        <Typography variant="subtitle1" sx={{ mb: 5, color: theme.palette.secondary.main }}>
+                            Mijn visie uitgelegd
+                        </Typography>
                         <Typography variant="body1" sx={{ lineHeight: 2, mb: 5, color: theme.palette.common.white }}>
                             <StaticImage
                                 src="../images/meat/koe3.jpg"
@@ -59,7 +62,7 @@ export const MeatPage = (props: any) => {
                     prijs. Noem gerust Balanced lifestyle bij een bezoek aan de boerderij! (Van Teylingenweg 172, 3471 GK Kamerik -
                     0348 401 254"
                         staticImage={
-                            <StaticImage src="../images/meat/koe0.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <StaticImage src="../images/meat/koe1.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         }
                     />
                 </Box>

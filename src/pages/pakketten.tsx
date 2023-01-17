@@ -7,6 +7,7 @@ import { Layout } from '../components/pagelayout/Layout';
 import { combiSchema, dietSchema, onlineCoachingSchema, personalTrainingSchema, trainingSchema } from '../data/schema';
 import useIsMobile from '../hooks/useMobile';
 import { getRouteUrl, HeaderRoutesEnum } from '../types/HeaderRoute';
+import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 
 export const packages = (props: any) => {
     const theme = useTheme();
@@ -34,19 +35,19 @@ export const packages = (props: any) => {
                         Ik ben op zoek naar
                     </Typography>
                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', gap: isTabletOrSmaller ? 3 : 1 }}>
-                        <Button variant="outlined" href={`#voedingsschema`} sx={{ mr: 2, width: isMobile ? '80%' : 'inherit'}}>
+                        <Button variant="outlined" href={`#voedingsschema`} sx={{ mr: 2, width: isMobile ? '80%' : 'inherit' }}>
                             Voedingsschema
                         </Button>
-                        <Button variant="outlined" href="#trainingsschema" sx={{ mr: 2, width: isMobile ? '80%' : 'inherit'}}>
+                        <Button variant="outlined" href="#trainingsschema" sx={{ mr: 2, width: isMobile ? '80%' : 'inherit' }}>
                             Trainingsschema
                         </Button>
-                        <Button variant="outlined" href="#combi-schema" sx={{ mr: 2, width: isMobile ? '80%' : 'inherit'}}>
+                        <Button variant="outlined" href="#combi-schema" sx={{ mr: 2, width: isMobile ? '80%' : 'inherit' }}>
                             Combi schema
                         </Button>
-                        <Button variant="outlined" href="#personal-training" sx={{ mr: 2, width: isMobile ? '80%' : 'inherit'}}>
+                        <Button variant="outlined" href="#personal-training" sx={{ mr: 2, width: isMobile ? '80%' : 'inherit' }}>
                             Personal training
                         </Button>
-                        <Button variant="outlined" href="#online-coaching" sx={{ mr: 2, width: isMobile ? '80%' : 'inherit'}}>
+                        <Button variant="outlined" href="#online-coaching" sx={{ mr: 2, width: isMobile ? '80%' : 'inherit' }}>
                             Online coaching
                         </Button>
                     </Box>

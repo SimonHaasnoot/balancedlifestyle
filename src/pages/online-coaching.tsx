@@ -1,8 +1,7 @@
-import { Box, Button, Link, List, ListItem, ListItemText, Typography, useTheme } from '@mui/material';
+import { Box, Link, List, ListItem, Typography, useTheme } from '@mui/material';
 import Grid from '@mui/system/Unstable_Grid';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
-import { Block } from '../components/molecules/Block';
 import { Divider } from '../components/molecules/Divider';
 import { SmallHero } from '../components/organisms/SmallHero';
 import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
@@ -10,7 +9,6 @@ import { Layout } from '../components/pagelayout/Layout';
 import useIsMobile from '../hooks/useMobile';
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 import { getRouteUrl, HeaderRoutesEnum } from '../types/HeaderRoute';
-import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 import { Cards } from '../components/organisms/Cards';
 
 export const onlinecoaching = () => {
@@ -64,7 +62,7 @@ export const onlinecoaching = () => {
 
                     <Divider />
 
-                    <Grid container spacing={isMobile ? 0 : 5} sx={{ mt: 10, textAlign: 'left' }}>
+                    <Grid container spacing={isMobile ? 0 : 5} sx={{ py: isMobile ? 5 : 10, textAlign: 'left' }}>
                         <Grid xs={12} md={6}>
                             <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 2 }}>
                                 Wat je krijgt
@@ -100,11 +98,7 @@ export const onlinecoaching = () => {
 
                     <Divider />
 
-                    <Box sx={{ color: theme.palette.common.white }}>
-                        <Typography variant="h2" sx={{ color: theme.palette.common.white, mb: 5, mt: 10 }}>
-                            De inhoud
-                        </Typography>
-
+                    <Box sx={{ color: theme.palette.common.white, pt: isMobile ? 5 : 10 }}>
                         <Grid container spacing={isMobile ? 0 : 5} sx={{ textAlign: 'left' }}>
                             <Grid xs={12} md={6}>
                                 <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 1 }}>
@@ -137,7 +131,7 @@ export const onlinecoaching = () => {
                                 <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 1 }}>
                                     Extra info
                                 </Typography>
-                                Bekijk <Link href={getRouteUrl(HeaderRoutesEnum.PACKAGES)}>hier</Link> de prijzen of{' '}
+                                Bekijk <Link href={getRouteUrl(HeaderRoutesEnum.PACKAGES) + '#online-coaching'}>hier</Link> de prijzen of{' '}
                                 <Link href={getRouteUrl(HeaderRoutesEnum.CONTACT)}>neem contact op.</Link>
                             </Grid>
                         </Grid>

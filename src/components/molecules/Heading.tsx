@@ -8,6 +8,7 @@ export type HeadingProps = {
     title: string;
     subtitle?: string | any;
     align?: 'left' | 'center' | 'right';
+    children?: any;
 };
 
 export const Heading: React.FC<HeadingProps> = (props) => {
@@ -31,6 +32,9 @@ export const Heading: React.FC<HeadingProps> = (props) => {
                             sx={{ mb: 3, color: theme.palette.secondary.main, lineHeight: 1.5 }}
                             dangerouslySetInnerHTML={{ __html: props.subtitle }}
                         ></Typography>
+                        <Box>
+                            {props.children}
+                        </Box>
                     </Box>
                 </DefaultContainer>
             </Box>

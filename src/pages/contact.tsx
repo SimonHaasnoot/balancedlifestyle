@@ -53,7 +53,7 @@ export const contact = (props: any) => {
                                 Contact opnemen
                             </Typography>
                             <Typography variant="subtitle2" sx={{ mb: 3, maxWidth: isMobile ? '100%' : '60%', color: theme.palette.secondary.main }}>
-                                Zet de eerste stap naar een gezonder en gelukkiger leven!
+                                Zet de eerste stap naar een gezonder en gelukkiger bestaan!
                             </Typography>
                         </Box>
                     </Container>

@@ -189,6 +189,7 @@ theme = createTheme({
                     display: 'inline-flex',
                     alignItems: 'center',
                     color: color06,
+                    textDecoration: 'none',
                     '&:hover': {
                         color: color02,
                     },
