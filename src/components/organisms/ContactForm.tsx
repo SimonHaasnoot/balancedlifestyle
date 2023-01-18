@@ -1,29 +1,54 @@
 import React from 'react';
 import { Button, FormControl, TextField, useTheme } from '@mui/material';
+import { navigate } from 'gatsby';
 
 export const ContactForm = () => {
     const theme = useTheme();
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    // const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    //     event.preventDefault();
+
+    //     const form = event.currentTarget;
+    //     const formData = new FormData(form);
+
+    //     fetch('/', {
+    //         method: 'POST',
+    //         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    //         body: new URLSearchParams(formData as any).toString(),
+    //     })
+    //         .then(() => {
+    //             window.location.href = '/bedankt';
+    //         })
+    //         .catch(() => alert('Er ging iets fout, probeer het later opnieuw.'));
+    // };
+
+    function encode(data: any) {
+        return Object.keys(data)
+          .map(
+            (key) =>
+              encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+          )
+          .join("&");
+      }
+
+    const handleSubmit = (event: any) => {
         event.preventDefault();
-
-        const form = event.currentTarget;
-        const formData = new FormData(form);
-
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData as any).toString(),
+            body: encode({
+                'form-name': event.target.getAttribute('name'),
+                ...name as any,
+            }),
         })
-            .then(() => {
-                window.location.href = '/bedankt';
-            })
-            .catch(() => alert('Er ging iets fout, probeer het later opnieuw.'));
+            .then(() => navigate('/bedankt'))
+            .catch((error) => alert(error));
     };
 
     return (
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="gender" onSubmit={handleSubmit}>
+        <form name="contact" method="post" data-netlify="true" netlify-honeypot="gender" onSubmit={handleSubmit}>
             <input type="hidden" name="gender" />
+            <input type="hidden" name="form-name" value="contact" />
             <FormControl
                 fullWidth={true}
                 margin="normal"
