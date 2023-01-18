@@ -22,9 +22,8 @@ export const ContactForm = () => {
     };
 
     return (
-        <form name="Contactformulier" method="POST" data-netlify="true" netlify-honeypot="gender" onSubmit={handleSubmit}>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="gender" onSubmit={handleSubmit}>
             <input type="hidden" name="gender" />
-            <input type="hidden" name="form-name" value="Contactformulier" />
             <FormControl
                 fullWidth={true}
                 margin="normal"
