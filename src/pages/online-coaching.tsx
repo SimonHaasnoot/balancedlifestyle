@@ -155,7 +155,7 @@ export const onlinecoaching = () => {
                     <Cards
                         cards={[
                             {
-                                title: 'Mirron',
+                                title: 'Miron Jansen',
                                 subtitle: 'Starter van het programma',
                                 image: <StaticImage src="../images/growth/mirron.jpg" alt="Mirron progressie" />,
                                 package: 'online coaching',

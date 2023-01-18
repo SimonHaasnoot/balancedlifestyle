@@ -287,14 +287,14 @@ export const index = (props: any) => {
                         <Grid container spacing={isMobile ? 1 : 3} justifyContent="center" display="flex">
                             <Grid item xs={12} md={4} display="flex">
                                 <Rating
-                                    rating={4}
-                                    reviewerText="Heel erg fijne begeleiding en meedenkend. Ik heb veel geleerd en ben nu veel sterker geworden. Ik ben blij dat ik de stap heb genomen."
-                                    reviewerName="Sem van de Gevel"
+                                    rating={5}
+                                    reviewerText="Door Sem heb ik de juiste motivatie gekregen en hij heeft een gepersonaliseerd schema opgesteld met de juiste voeding. Heel tevreden dus!"
+                                    reviewerName="Miron Jansen"
                                 />
                             </Grid>
                             <Grid item xs={12} md={4} display="flex">
                                 <Rating
-                                    rating={5}
+                                    rating={4}
                                     reviewerText="Ik heb genoten en veel geleerd. Ik ben blij dat ik de stap heb genomen."
                                     reviewerName="Avec Izjen"
                                 />
