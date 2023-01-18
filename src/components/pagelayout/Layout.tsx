@@ -1,11 +1,11 @@
 import { Close } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
-import { AppBar, Box, Container, Icon, Link, List, ListItem, SvgIconProps, useTheme } from '@mui/material';
+import { AppBar, Box, Container, Icon, Link, List, ListItem, useTheme } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import useIsMobile from '../../hooks/useMobile';
 import { Footer } from './Footer';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
-import { HeaderRoutesEnum, HeaderRouteType } from '../../types/HeaderRoute';
+import { HeaderRouteType } from '../../types/HeaderRoute';
 
 export const headerRoutes = [
     { name: 'Home', path: '/' },
@@ -41,9 +41,9 @@ export const Layout: React.FC<LayoutProps> = (props) => {
         setShowContent(true);
     }, []);
 
-    // return showContent ? (
+
     return (
-        <>
+        <div style={{ display: showContent ? 'block' : 'none' }}>
             <AppBar
                 color="transparent"
                 position="fixed"
@@ -72,7 +72,15 @@ export const Layout: React.FC<LayoutProps> = (props) => {
                                 {!isTabletOrSmaller ? (
                                     <>
                                         {headerRoutes.map((route, index) => {
-                                            const isActive = route.path.replace('#', '') === props.location?.pathname;
+                                            let isActive = false;
+
+                                            if (route.path === '/' && props.location?.pathname === '/') {
+                                                isActive = true;
+                                            }
+
+                                            if (route.path !== '/' && props.location?.pathname?.includes(route.path)) {
+                                                isActive = true;
+                                            }
 
                                             return (
                                                 <ListItem key={index}>
@@ -173,7 +181,6 @@ export const Layout: React.FC<LayoutProps> = (props) => {
             {props.children}
 
             <Footer />
-        </>
+        </div>
     );
-    // ) : null;
 };

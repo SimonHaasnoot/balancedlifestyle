@@ -1,15 +1,14 @@
-import { useMediaQuery } from "react-responsive";
-
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const useIsMobile = () => {
-    const isMobile = useMediaQuery({ maxWidth: 767 });
-    const isTabletOrSmaller = useMediaQuery({ maxWidth: 1023 });
-    const isDesktop = useMediaQuery({ minWidth: 1200 });
+    const isMobile = useMediaQuery('(max-width:767px)', { defaultMatches: false });
+    const isTabletOrSmaller = useMediaQuery('(max-width:1023px)');
+    const isDesktop = useMediaQuery('(min-width:1200px)');
 
     return {
         isMobile,
         isTabletOrSmaller,
-        isDesktop
+        isDesktop,
     };
 };
 
