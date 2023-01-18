@@ -41,7 +41,8 @@ export const Layout: React.FC<LayoutProps> = (props) => {
         setShowContent(true);
     }, []);
 
-    return showContent ? (
+    // return showContent ? (
+    return (
         <>
             <AppBar
                 color="transparent"
@@ -173,5 +174,6 @@ export const Layout: React.FC<LayoutProps> = (props) => {
 
             <Footer />
         </>
-    ) : null;
+    );
+    // ) : null;
 };

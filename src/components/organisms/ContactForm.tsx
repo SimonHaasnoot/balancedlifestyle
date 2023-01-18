@@ -41,12 +41,12 @@ export const ContactForm = () => {
                 ...name as any,
             }),
         })
-            .then(() => navigate('/bedankt'))
+            .then(() => navigate('/bedankt/'))
             .catch((error) => alert(error));
     };
 
     return (
-        <form name="contact" method="post" data-netlify="true" netlify-honeypot="gender" onSubmit={handleSubmit}>
+        <form name="contact" method="post" action="/bedankt" data-netlify="true" netlify-honeypot="gender">
             <input type="hidden" name="gender" />
             <input type="hidden" name="form-name" value="contact" />
             <FormControl
