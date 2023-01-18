@@ -9,6 +9,7 @@ export type HeadingProps = {
     subtitle?: string | any;
     align?: 'left' | 'center' | 'right';
     children?: any;
+    image?: React.ReactNode;
 };
 
 export const Heading: React.FC<HeadingProps> = (props) => {
@@ -21,7 +22,7 @@ export const Heading: React.FC<HeadingProps> = (props) => {
                 <title>{props.title} - Balanced Lifestyle</title>
             </Helmet>
             <Box sx={{ position: 'relative', background: theme.palette.grey[100], pt: isMobile ? 10 : 20, pb: 0 }}>
-                <DefaultContainer maxWidth="lg" sx={{ textAlign: props.align ? props.align : '' }}>
+                <DefaultContainer maxWidth="lg" sx={{ textAlign: props.align ? props.align : '', zIndex: 2 }}>
                     <Box sx={{ color: 'white' }}>
                         <Typography variant="h1" component="h1" sx={{ mb: 3 }}>
                             {props.title}
@@ -32,11 +33,23 @@ export const Heading: React.FC<HeadingProps> = (props) => {
                             sx={{ mb: 3, color: theme.palette.secondary.main, lineHeight: 1.5 }}
                             dangerouslySetInnerHTML={{ __html: props.subtitle }}
                         ></Typography>
-                        <Box>
-                            {props.children}
-                        </Box>
+                        <Box>{props.children}</Box>
                     </Box>
                 </DefaultContainer>
+
+                {props.image && (
+                    <Box
+                        sx={{
+                            position: 'absolute',
+                            top: 0,
+                            right: 0,
+                            bottom: 0,
+                            left: 0,
+                        }}
+                    >
+                        {props.image}
+                    </Box>
+                )}
             </Box>
         </>
     );
