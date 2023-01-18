@@ -16,7 +16,7 @@ export enum projectVariables {
     COMPANY_BTW = '',
     COMPANY_IBAN = '',
 
-    GOOGLE_ANALYTICS_KEY = '',
+    GOOGLE_ANALYTICS_KEY = 'G-NQ76EC660V',
 
     AUTHOR = 'Simon Haasnoot',
 }

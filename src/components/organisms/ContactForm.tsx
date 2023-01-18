@@ -1,11 +1,28 @@
 import React from 'react';
-import { Button, FormControl, TextField, Typography, useTheme } from '@mui/material';
+import { Button, FormControl, TextField, useTheme } from '@mui/material';
 
 export const ContactForm = () => {
     const theme = useTheme();
 
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        const form = event.currentTarget;
+        const formData = new FormData(form);
+
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData as any).toString(),
+        })
+            .then(() => {
+                window.location.href = '/bedankt';
+            })
+            .catch(() => alert('Er ging iets fout, probeer het later opnieuw.'));
+    };
+
     return (
-        <form name="Contactformulier" method="POST" data-netlify="true" action="/bedankt" netlify-honeypot="gender">
+        <form name="Contactformulier" method="POST" data-netlify="true" netlify-honeypot="gender" onSubmit={handleSubmit}>
             <input type="hidden" name="gender" />
             <input type="hidden" name="form-name" value="Contactformulier" />
             <FormControl
