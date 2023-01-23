@@ -3,4 +3,5 @@ export type SimpleSchema = {
     time?: string;
     quantity?: string;
     price: string;
+    tooltip?: string | string[];
 }

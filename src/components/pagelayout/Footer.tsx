@@ -86,8 +86,19 @@ export const Footer: React.FC = () => {
                             >
                                 {projectVariables.COMPANY_NAME}
                             </Typography>
-                            <Typography variant="caption" sx={{ color: theme.palette.common.white }}>
+
+                            <Typography variant="caption" sx={{ color: theme.palette.common.white, mb: 2 }}>
                                 {projectVariables.COMPANY_ONELINER}
+                            </Typography>
+                            {/* insert floating dot spacer */}
+                            <Typography variant="subtitle1" sx={{ color: theme.palette.common.white, mb: 2 }}>
+                                ·
+                            </Typography>
+                            <Typography variant="body2" sx={{ color: theme.palette.common.white, mb: 2, color: theme.palette.secondary.main }}>
+                                {projectVariables.COMPANY_DESCRIPTION}
+                            </Typography>
+                            <Typography variant="subtitle1" sx={{ color: theme.palette.common.white, mb: 2 }}>
+                                ·
                             </Typography>
                             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 'auto' }}>
                                 <StaticImage

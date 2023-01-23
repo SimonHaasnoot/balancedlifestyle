@@ -155,9 +155,9 @@ export const PersonalTrainingPage = (props: any) => {
                         <Cards
                             cards={[
                                 {
-                                    title: 'Mirron Jansen',
+                                    title: 'Miron Jansen',
                                     subtitle: 'Starter van het programma',
-                                    image: <StaticImage src="../images/growth/mirron.jpg" alt="Mirron progressie" />,
+                                    image: <StaticImage src="../images/growth/miron.jpg" alt="Mirron progressie" />,
                                     package: 'online coaching',
                                     text: '"Sem van Balanced Lifestyle heeft mij zeer goed op weg geholpen met mijn fitness journey! Door hem heb ik de juiste motivatie gekregen en hij heeft een gepersonaliseerd schema opgesteld met de juiste voeding. Heel tevreden dus!"',
                                 },

@@ -12,6 +12,7 @@
         "@emotion/styled": "latest",
         "@mui/icons-material": "latest",
         "@mui/material": "latest",
+        "@tippyjs/react": "^4.2.6",
         "gatsby": "latest",
         "gatsby-plugin-google-gtag": "^4.22.0",
         "gatsby-plugin-image": "latest",

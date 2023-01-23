@@ -161,6 +161,18 @@ export const Layout: React.FC<LayoutProps> = (props) => {
                                         );
                                     })}
                                 </Box>
+                                {/* small copyright text bottom right */}
+                                <Box
+                                    sx={{
+                                        position: 'absolute',
+                                        bottom: '20px',
+                                        right: '20px',
+                                        color: theme.palette.common.white,
+                                        fontSize: '0.8rem',
+                                    }}
+                                >
+                                    © {new Date().getFullYear()} Balanced lifestyle
+                                </Box>
                                 <Icon
                                     component={Close}
                                     sx={{

@@ -35,6 +35,15 @@ export const Usp: React.FC<UspProps> = (props) => {
             >
                 <Icon component={props.icon} sx={{ fontSize: '30px', color: theme.palette.secondary.main }} />
             </Box>
+            <Box
+                sx={{
+                    width: 100,
+                    height: 2,
+                    backgroundColor: theme.palette.warning.main,
+                    margin: 'auto',
+                    mb: 2,
+                }}
+            />
             <Typography variant="subtitle1" sx={{ color: theme.palette.common.white, mb: 2 }}>
                 {props.title}
             </Typography>

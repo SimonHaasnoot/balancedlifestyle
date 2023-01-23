@@ -24,10 +24,22 @@ export const personalTrainingSchema = [
     { name: 'Techniek training', time: '1 sportsessie', quantity: '1x 120m', price: '€100 excl. btw' },
     { name: 'Sportschool kickstart', time: '4 sportsessies', quantity: '4x 90m', price: '€300 excl. btw' },
     { name: 'Kickbokslessen', time: 'Per sessie', quantity: '60m', price: '€50 excl. btw' },
-    { name: 'Voeding + training schema', time: '-', quantity: '1x (kan door de tijd heen aangepast worden)', price: '€50 excl. btw' },
+    { name: 'Voeding + training schema', time: '-', quantity: '1x (aanpassing mogelijk)', price: '€50 excl. btw' },
 ];
 
 export const onlineCoachingSchema = [
-    { name: 'Online coaching algemeen', time: 'Minimaal 3 maanden', quantity: '1x per week contact', price: '€150 excl. btw per maand' },
-    { name: 'Online coaching intensief', time: 'Minimaal 6 maanden', quantity: 'Dagelijks contact', price: '€200 excl. btw per maand' },
+    {
+        name: 'Online coaching algemeen',
+        time: 'Minimaal 3 maanden',
+        quantity: '1x per week contact',
+        price: '€150 excl. btw per maand',
+        tooltip: ['1x per maand check up', '1x per week contact moment', "1x per maand schema's aanpassen", 'Zelfstandig progressie bijhouden'],
+    },
+    {
+        name: 'Online coaching intensief',
+        time: 'Minimaal 6 maanden',
+        quantity: 'Dagelijks contact',
+        price: '€200 excl. btw per maand',
+        tooltip: ['1x per week check up', 'Dagelijks contact moment', "Schema's naar behoefte aanpassen", 'Progressie word voor je bijgehouden'],
+    },
 ];

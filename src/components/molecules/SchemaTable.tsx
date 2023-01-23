@@ -3,6 +3,8 @@ import { Box, Button, List, Paper, Table, TableBody, TableCell, TableContainer, 
 import { SimpleSchema } from '../../types/Schema';
 import useIsMobile from '../../hooks/useMobile';
 import { useInView } from 'react-intersection-observer';
+import Tippy from '@tippyjs/react';
+import { Tooltip } from '../atoms/Tooltip';
 
 export interface SchemaTableProps {
     title: string;
@@ -29,26 +31,34 @@ export const SchemaTable: React.FC<SchemaTableProps> = (props) => {
     }, []);
 
     return (
-        <Box sx={{ pb: isMobile ? 5 : 10, textAlign: 'center', maxWidth: tableHead.length > 2 ? '100%' : isMobile ? '100%' : '80%', margin: 'auto' }}>
+        <Box sx={{ pb: isMobile ? 5 : 10, maxWidth: isMobile ? '100%' : '80%', margin: 'auto' }}>
             <Typography
-                variant="h3"
+                variant="subtitle1"
                 component="h2"
                 sx={{
                     color: theme.palette.secondary.main,
                     transition: 'transform 0.5s ease-in-out',
                     transform: inView ? 'scale(1.05)' : 'scale(1)',
-                    background: '#1515150f',
-                    p: 2,
+                    mb: 1
                 }}
                 id={props.id}
             >
                 {title}
             </Typography>
             {props.description && (
-                <Typography variant="body2" sx={{ color: theme.palette.primary.main, mb: 3 }}>
+                <Typography variant="body2" sx={{ color: theme.palette.primary.main }}>
                     {props.description}
                 </Typography>
             )}
+            <Box
+                sx={{
+                    width: 100,
+                    height: 5,
+                    mb: 5,
+                    mt: 2,
+                    backgroundColor: theme.palette.warning.main,
+                }}
+            />
             <TableContainer component={Paper} ref={ref}>
                 <Table aria-label={title}>
                     <TableHead>
@@ -65,8 +75,9 @@ export const SchemaTable: React.FC<SchemaTableProps> = (props) => {
                     <TableBody>
                         {schema.map((row, index) => (
                             <TableRow key={`${row.name} + ${index}`}>
-                                <TableCell component="th" scope="row">
+                                <TableCell component="th" scope="row" sx={{ position: 'relative' }}>
                                     {row.name}
+                                    {row.tooltip && <Tooltip text={row.tooltip}/>}
                                 </TableCell>
                                 {row.time && <TableCell align="right">{row.time}</TableCell>}
                                 {row.quantity && <TableCell align="right">{row.quantity}</TableCell>}
