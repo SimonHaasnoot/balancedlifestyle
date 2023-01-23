@@ -31,6 +31,13 @@ module.exports = {
                 icon: 'src/images/gatsby-icon.png',
             },
         },
+        {
+            resolve: 'gatsby-plugin-sitemap',
+            options: {
+                excludes: ['/404', '/bedankt'],
+                output: '/'
+            },
+        },
     ],
     siteMetadata: {
         title: projectVariables.COMPANY_NAME,
@@ -38,5 +45,4 @@ module.exports = {
         author: projectVariables.AUTHOR,
         siteUrl: projectVariables.COMPANY_URL,
     },
-
 };
