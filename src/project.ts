@@ -1,8 +1,9 @@
 export enum projectVariables {
     // Path: src\project.ts
+    COMPANY_URL = 'https://balanced-lifestyle.online',
     COMPANY_NAME = 'Balanced Lifestyle',
     COMPANY_ONELINER = 'Join the balanced living!',
-    COMPANY_DESCRIPTION = "Balanced Lifestyle is gespecialiseerd in het maken van voedingsschema's en het geven van voedingsadvies. Verder bieden wij ook personal training aan.",
+    COMPANY_DESCRIPTION = "Balanced Lifestyle is gespecialiseerd in het geven van personal training, het maken van voedingsschema's en het geven van voedingsadvies. Regio Utrecht en Zeist.",
     COMPANY_ADDRESS = 'Wilhelminalaan 5, 3701BD, Zeist',
     COMPANY_PHONE = '0637199776',
     COMPANY_EMAIL = 'info@balanced-lifestyle.online',
