@@ -10,6 +10,8 @@ module.exports = {
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
         'gatsby-plugin-netlify',
+        'gatsby-plugin-sitemap',
+        'gatsby-plugin-preload-fonts',
         {
             resolve: `gatsby-plugin-google-gtag`,
             options: {
@@ -34,5 +36,7 @@ module.exports = {
         title: projectVariables.COMPANY_NAME,
         description: projectVariables.COMPANY_DESCRIPTION,
         author: projectVariables.AUTHOR,
+        siteUrl: projectVariables.COMPANY_URL,
     },
+
 };

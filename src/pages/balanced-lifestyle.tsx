@@ -137,7 +137,7 @@ export const BalancedLifestylePage = (props: any) => {
                                     <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 2, mt: 5 }}>
                                         Extra info
                                     </Typography>
-                                    Bekijk <Link href={getRouteUrl(HeaderRoutesEnum.PACKAGES) + '#bala'}>hier</Link> de prijzen of{' '}
+                                    Bekijk <Link href={getRouteUrl(HeaderRoutesEnum.PACKAGES)}>hier</Link> de prijzen of
                                     <Link href={getRouteUrl(HeaderRoutesEnum.CONTACT)}>neem contact op.</Link>
                                 </Grid2>
                             </Grid2>
