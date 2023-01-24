@@ -1,4 +1,4 @@
-import { FacebookOutlined, Instagram, Twitter } from '@mui/icons-material';
+import { FacebookOutlined, Instagram, LinkedIn, YouTube } from '@mui/icons-material';
 import { Box, Icon, Link } from '@mui/material';
 import React from 'react';
 import useIsMobile from '../../hooks/useMobile';
@@ -22,14 +22,17 @@ export const SocialMedia: React.FC<SocialMediaProps> = (props) => {
 
     return (
         <Box sx={{ display: 'flex', gap: gap, justifyContent: isMobile ? 'center' : 'left', ...props.sx }}>
-            <Link color={color} href={projectVariables.COMPANY_TWITTER}>
-                <Icon component={Twitter} sx={{ fontSize: '30px' }} />
-            </Link>
             <Link color={color} href={projectVariables.COMPANY_INSTAGRAM}>
                 <Icon component={Instagram} sx={{ fontSize: '30px' }} />
             </Link>
-            <Link color={color} href={projectVariables.COMPANY_INSTAGRAM}>
+            <Link color={color} href={projectVariables.COMPANY_FACEBOOK}>
                 <Icon component={FacebookOutlined} sx={{ fontSize: '30px' }} />
+            </Link>
+            <Link color={color} href={projectVariables.COMPANY_YOUTUBE}>
+                <Icon component={YouTube} sx={{ fontSize: '30px' }} />
+            </Link>
+            <Link color={color} href={projectVariables.COMPANY_LINKEDIN}>
+                <Icon component={LinkedIn} sx={{ fontSize: '30px' }} />
             </Link>
         </Box>
     );
