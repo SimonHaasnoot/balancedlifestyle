@@ -21,5 +21,5 @@ export enum HeaderRoutesEnum {
 }
 
 export const getRouteUrl = (route: HeaderRoutesEnum): string => {
-    return headerRoutes.find((headerRoute) => headerRoute.name === route)?.path || route ? route : '#';
+    return headerRoutes.find((headerRoute) => headerRoute.name === route)?.path || '#';
 };

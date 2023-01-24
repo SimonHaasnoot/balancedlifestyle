@@ -11,7 +11,7 @@ export type BlockProps = {
     subtitle: string;
     body: string;
     button?: {
-        link: HeaderRoutesEnum;
+        link: HeaderRoutesEnum | string;
         text: string;
     };
     maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | false;
@@ -27,6 +27,14 @@ export const Block: React.FC<BlockProps> = (props) => {
     });
     const maxWidth = props.maxWidth || false;
     const disableScale = props.disableScale || false;
+
+    const getButtonLinkRoute = (link: string | HeaderRoutesEnum) => {
+        if (typeof link === typeof(HeaderRoutesEnum)) {
+            return getRouteUrl(link as HeaderRoutesEnum);
+        }
+
+        return link;
+    }
 
     return (
         <Container maxWidth={maxWidth} disableGutters>
@@ -64,7 +72,7 @@ export const Block: React.FC<BlockProps> = (props) => {
                             dangerouslySetInnerHTML={{ __html: props.body }}
                         ></Typography>
                         {props.button && (
-                            <Button variant="contained" sx={{ mt: 5 }} href={getRouteUrl(props.button.link)}>
+                            <Button variant="contained" sx={{ mt: 5 }} href={getButtonLinkRoute(props.button.link)}>
                                 {props.button.text}
                             </Button>
                         )}
