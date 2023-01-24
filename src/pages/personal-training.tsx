@@ -84,11 +84,11 @@ export const PersonalTrainingPage = (props: any) => {
                                 )}
 
                                 <Typography variant="body1" sx={{ color: theme.palette.common.white, lineHeight: 2, wordBreak: 'break-word' }}>
-                                    "Trainingen zullen bestaan uit <span>kracht en conditie oefeningen</span>, <span>mobiliteitsoefeningen</span> en{' '}
-                                    <span>technieklessen</span>. Daarnaast gaan wij ook samen aan de slag met jouw <span>eetgewoontes</span>. Wij gaan
-                                    jou aanleren om <span>gezondere en bewustere keuzes</span> te maken thuis en buitenshuis, waarin{' '}
-                                    <span>balans</span> voorop staat. Daarnaast gaan we werken aan een vast slaapritme, waarin naar een dagelijkse
-                                    ontspanning centraal staat."
+                                    "Trainingen bestaan uit <span>kracht, conditie en mobiliteitsoefeningen</span> in combinatie met <span>kickboksen en technieklessen</span>.
+                                    Naast het sporten gaan wij aan de slag met jouw <span>eetgewoontes</span> door het aan te leren om <span>gezondere en bewustere </span>
+                                    keuzes te maken. Dit geldt ook voor buitenshuis/sociale gelegenheden, waarin <span>balans</span> voorop staat. Hiernaast gaan
+                                    wij ook werken aan jouw <span>slaapritme</span> voor meer ritme en regelmaat. Als laatste gaan wij jouw <span>stressniveau verlagen </span>
+                                    en ontspanningsbezigheid verhogen met als uitkomst een <span>positieve verandering in mindset</span>."
                                 </Typography>
                             </Grid2>
                         </Grid2>
@@ -110,12 +110,14 @@ export const PersonalTrainingPage = (props: any) => {
                                     <Typography variant="body1" sx={{ mb: 5 }}>
                                         <List sx={{ listStyleType: isMobile ? '' : 'decimal' }}>
                                             <ListItem sx={{ display: 'list-item' }}>
-                                                Gevarieerde trainingen; kracht en conditie oefeningen, mobiliteitsoefeningen en technieklessen
+                                                Gevarieerde trainingen; kracht, conditie, mobiliteitsoefeningen en technieklessen
                                             </ListItem>
-                                            <ListItem sx={{ display: 'list-item' }}>Aanpakken van eetgewoontes</ListItem>
-                                            <ListItem sx={{ display: 'list-item' }}>Aanleren van gezonde en bewuste keuzes</ListItem>
-                                            <ListItem sx={{ display: 'list-item' }}>Slaapritme</ListItem>
-                                            <ListItem sx={{ display: 'list-item' }}>Ontspanning</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Kickboksen</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Verbeteren van eetgewoontes</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Verbeteren van slaapritme</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Verlagen van stress en verhogen ontspanning</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Aanleren gezonde en bewuste keuzes</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Positieve verandering in mindset</ListItem>
                                         </List>
                                     </Typography>
                                 </Grid2>

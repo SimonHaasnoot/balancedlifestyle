@@ -1,4 +1,4 @@
-import { Box, Button, Typography, useTheme } from '@mui/material';
+import { Box, Button, Link, Typography, useTheme } from '@mui/material';
 import React, { useEffect } from 'react';
 import { Heading } from '../components/molecules/Heading';
 import { SchemaTable } from '../components/molecules/SchemaTable';
@@ -24,7 +24,11 @@ export const packages = (props: any) => {
 
     return (
         <Layout location={props.location}>
-            <Heading align="center" title="Pakketten" subtitle="Kies een pakket dat bij jou past en start vandaag nog met je nieuwe levensstijl!" />
+            <Heading
+                align="center"
+                title="Pakketten"
+                subtitle="Kies een pakket dat aansluit op jouw doelen en start vandaag met het verbeteren van jouw leefstijl."
+            />
             <Box
                 sx={{
                     background: theme.palette.common.black,
@@ -57,7 +61,7 @@ export const packages = (props: any) => {
                 <DefaultContainer maxWidth="lg">
                     <SchemaTable
                         title="Voedingsschema's"
-                        description="Bij het opstellen van een voedingsschema houden we rekening met: geslacht, leeftijd, gewicht & lengte, aankomen/afvallen en de duur ( 3 - 6 - 9 - 12 maanden)."
+                        description="Bij het opstellen van een voedingsschema houden we rekening met: geslacht, leeftijd, gewicht en lengte."
                         schema={dietSchema}
                         tableHead={['Voedingsschema', 'Prijs']}
                         id="voedingsschema"
@@ -65,7 +69,7 @@ export const packages = (props: any) => {
                     <SchemaTable
                         title="Trainingsschema's"
                         description="
-                        Bij het opstellen van een trainingsschema houden we rekening met: geslacht, leeftijd, gewicht & lengte, aantal x per week, duur (3 - 6 - 9 - 12 maanden), full body, upper/lower, push/pull/legs, bro split.
+                        Bij het opstellen van een trainingsschema houden we rekening met: geslacht, leeftijd, gewicht en lengte.
                         "
                         schema={trainingSchema}
                         tableHead={['Trainingsschema', 'Prijs']}
@@ -106,14 +110,23 @@ export const packages = (props: any) => {
                         schema={personalTrainingSchema}
                         tableHead={['Dienst', 'Traject', 'Aantal', 'Prijs']}
                         id="personal-training"
-                    />
+                    >
+                        <Typography variant="body2" sx={{ mb: 3, color: theme.palette.primary.main }}>
+                            Meer weten over personal training? klik dan <Link href={getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING)}>hier</Link>.
+                        </Typography>
+                    </SchemaTable>
+
                     <SchemaTable
                         title="Online coaching"
                         schema={onlineCoachingSchema}
                         tableHead={['Aangeboden', 'Totale duur', 'Contact', 'Prijs']}
                         id="online-coaching"
                         isMountedCallback={setScrollElementsMounted}
-                    />
+                    >
+                        <Typography variant="body2" sx={{ mb: 3, color: theme.palette.primary.main }}>
+                            Meer weten over online coaching? klik dan <Link href={getRouteUrl(HeaderRoutesEnum.ONLINE_COACHING)}>hier</Link>.
+                        </Typography>
+                    </SchemaTable>
                 </DefaultContainer>
             </Box>
         </Layout>

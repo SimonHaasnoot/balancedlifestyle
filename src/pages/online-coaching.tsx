@@ -42,9 +42,9 @@ export const onlinecoaching = () => {
                         Waarom eigenlijk online coaching?
                     </Typography>
                     <Typography variant="body1" sx={{ color: theme.palette.common.white, mb: 5 }}>
-                        Wil jij graag zelfstandig aan de slag met het verbeteren van je gezondheid, het vergroten van jouw spiermassa en het reduceren
-                        van vetmassa, maar weet jij zelf niet hoe je dit op de meest effectief mogelijke manier kan behalen en woon je te ver uit de
-                        buurt van Utrecht? Dan is online coaching de oplossing voor jou!
+                        Wil jij graag zelfstandig (onder aan het aanzien van een coach) aan de slag met het verbeteren van jouw gezondheid, het
+                        vergroten van jouw spiermassa en het verlagen van jouw vetmassa, maar woon je hiervoor te ver uit de buurt van Utrecht? Dan is
+                        online coaching de oplossing voor jou!
                     </Typography>
                     <Typography
                         variant="body2"
@@ -80,15 +80,15 @@ export const onlinecoaching = () => {
                                 <br />
                                 <span>Belangrijke elementen zijn bijvoorbeeld:</span>
                                 <br />
-                                <b>1.</b> experimenteren met gezonde en lekkere voedingsbronnen.
+                                <b>1.</b> Consistent een voedingsschema volgen en experimenteren met lekkere en gezonde voedingsbronnen.
                                 <br />
                                 <b>2.</b> Consistent een trainingsschema volgen en je progressie bijhouden.
                                 <br />
                                 <b>3.</b> Het creëren van een vast slaapritme en opzoek gaan naar een dagelijks stuk ontspanning.
                             </Typography>
                             <Typography variant="body1" sx={{ color: theme.palette.common.white, mb: 2 }}>
-                                Als je met deze elementen een tijdje actief mee bezig bent ga je <span>regelmaat</span> creëren. Hier komt een ritme
-                                uit voor wat uiteindelijk evalueert naar goede gewoontes.
+                                Als je met deze elementen een tijdje actief bezig bent ga je <span>regelmaat</span> creëren. Uit regelmaat ontstaat
+                                een ritme wat uiteindelijk ontwikkeld naar gewoontes.
                             </Typography>
                         </Grid>
                         <Grid xs={12} md={6}>

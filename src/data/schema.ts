@@ -13,7 +13,7 @@ export const trainingSchema = [
 
 export const combiSchema = [
     { name: 'Training + voedingsschema op maat', price: '€90 excl. btw' },
-    { name: 'Training + voedingsschema op maat + wekelijkse check-up', price: '€150 excl. btw' },
+    { name: 'Training + voedingsschema op maat + wekelijkse check-up', price: '€150 excl. btw per maand' },
 ];
 
 export const personalTrainingSchema = [

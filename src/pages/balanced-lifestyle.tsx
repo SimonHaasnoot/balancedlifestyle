@@ -1,4 +1,4 @@
-import { Box, useTheme, Typography, Button, Link } from '@mui/material';
+import { Box, useTheme, Typography, Button, Link, List, ListItem } from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
@@ -63,7 +63,7 @@ export const BalancedLifestylePage = (props: any) => {
                             <Grid2 xs={6} md={3}>
                                 <Box sx={{ background: theme.palette.grey[100] }}>
                                     <StaticImage
-                                        src="../images/workouts/workout3.jpg"
+                                        src="../images/workouts/workout4.jpg"
                                         alt="Workout"
                                         style={{ width: '100%', objectFit: 'cover', height: imageHeight }}
                                     />
@@ -90,9 +90,7 @@ export const BalancedLifestylePage = (props: any) => {
                                 leven te bieden heeft?
                                 <br />
                                 <br />
-                                Dan is dit het perfecte traject voor jou! Door een <span>gebalanceerde lifestyle</span> waar een{' '}
-                                <span>gezonde geest en een fit lichaam</span> centraal komen te staan, want balans is de sleutel tot een succesvol,
-                                fit en gelukkig bestaan.
+                                <span>Dan is dit het perfecte traject voor jou!</span>
                             </Typography>
                             <Typography
                                 variant="body2"
@@ -117,11 +115,12 @@ export const BalancedLifestylePage = (props: any) => {
                                             Wat houdt de Balanced Lifestyle challenge in?
                                         </Typography>
                                         <Typography variant="body1" sx={{ color: theme.palette.common.white }}>
-                                            The Balanced Lifestyle challenge is een “life changing” programma. Wij gaan samen in 12 weken tijd jouw
-                                            bestaan een nieuw leven in blazen. Een intensief traject waar wij 1 op 1 jou de basis leren van een
-                                            gezonder, gelukkiger gebalanceerd bestaan. Met 4 kern elementen een goed en uitdagend beweegpatroon,
-                                            gezonde en bewuste voedingskeuzes, een goed en stabiel slaapritme en een mix van plantaardige en dierlijke
-                                            producten van een goede oorsprong.
+                                            The balanced lifestyle challenge is een "life changing" programma. Een intensief traject waarin wij 1 op 1
+                                            aan de slag gaan en in 12 weken tijd het roer in jouw lifestyle met 360 graden gaan omgooien. Een
+                                            uitdagend bewegingspatroon, bewuste voedingskeuzes, een stabiel slaapritme en stress management doormiddel
+                                            van ontspanning zijn de kern elementen van een gebalanceerd bestaan. Kracht en conditie training in
+                                            combinatie met plantaardige en dierlijke producten van goede afkomst staan centraal in het "life changing"
+                                            traject.
                                         </Typography>
                                     </Box>
                                 </Grid2>
@@ -129,10 +128,20 @@ export const BalancedLifestylePage = (props: any) => {
                                     <Typography variant="subtitle1" component="h3" sx={{ color: theme.palette.secondary.main, mb: 2 }}>
                                         Wat kun je verwachten?
                                     </Typography>
-                                    <Typography variant="body1" sx={{ color: theme.palette.common.white }}>
-                                        We hebben dagelijks online contact en daarnaast gaan we 2x per week samen sporten. Jijzelf sport hiernaast nog
-                                        2x zelfstandig vanuit een schema op maat gemaakt voor jou. Je krijgt een persoonlijk voedingsschema, afgestemd
-                                        op jouw wensen en voorkeuren. Hier hebben we ook dagelijks contact over indien behoefte aan.
+                                    <Typography variant="body1" sx={{ mb: 5 }}>
+                                        <List sx={{ listStyleType: isMobile ? '' : 'decimal' }}>
+                                            <ListItem sx={{ display: 'list-item' }}>Vet verlies en spieropbouw</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>
+                                                Dagelijks online contact
+                                            </ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>3x een fysieke check-up</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Trainingsschema op maat</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Voedingsschema op maat</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Minimaal 1x per week samen sporten</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Progressie foto van het begin en einde traject</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>De handvaten voor een gebalanceerde leefstijl</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Positieve verandering in mindset</ListItem>
+                                        </List>
                                     </Typography>
                                     <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 2, mt: 5 }}>
                                         Extra info

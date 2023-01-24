@@ -62,7 +62,7 @@ export const MeatPage = (props: any) => {
                     prijs. Noem gerust Balanced lifestyle bij een bezoek aan de boerderij! (Van Teylingenweg 172, 3471 GK Kamerik -
                     0348 401 254"
                         button={{
-                            link: 'https://beekhoeve.eu/?ref=balanced-lifestyle' as any,
+                            link: 'https://beekhoeve.eu/?ref=balanced-lifestyle',
                             text: 'Neem gerust een kijkje!'
                         }}
                         staticImage={

@@ -12,6 +12,7 @@ export interface SchemaTableProps {
     schema: SimpleSchema[];
     tableHead: string[];
     id?: string;
+    children?: React.ReactNode;
     isMountedCallback?: (isMounted: boolean) => void;
 }
 
@@ -39,16 +40,18 @@ export const SchemaTable: React.FC<SchemaTableProps> = (props) => {
                     color: theme.palette.secondary.main,
                     transition: 'transform 0.5s ease-in-out',
                     transform: inView ? 'scale(1.05)' : 'scale(1)',
-                    mb: 1
+                    mb: 1,
                 }}
                 id={props.id}
             >
                 {title}
             </Typography>
             {props.description && (
-                <Typography variant="body2" sx={{ color: theme.palette.primary.main }}>
-                    {props.description}
-                </Typography>
+                <Typography
+                    variant="body2"
+                    sx={{ color: theme.palette.primary.main }}
+                    dangerouslySetInnerHTML={{ __html: props.description }}
+                ></Typography>
             )}
             <Box
                 sx={{
@@ -59,6 +62,7 @@ export const SchemaTable: React.FC<SchemaTableProps> = (props) => {
                     backgroundColor: theme.palette.warning.main,
                 }}
             />
+            {props.children}
             <TableContainer component={Paper} ref={ref}>
                 <Table aria-label={title}>
                     <TableHead>
@@ -77,7 +81,7 @@ export const SchemaTable: React.FC<SchemaTableProps> = (props) => {
                             <TableRow key={`${row.name} + ${index}`}>
                                 <TableCell component="th" scope="row" sx={{ position: 'relative' }}>
                                     {row.name}
-                                    {row.tooltip && <Tooltip text={row.tooltip}/>}
+                                    {row.tooltip && <Tooltip text={row.tooltip} />}
                                 </TableCell>
                                 {row.time && <TableCell align="right">{row.time}</TableCell>}
                                 {row.quantity && <TableCell align="right">{row.quantity}</TableCell>}

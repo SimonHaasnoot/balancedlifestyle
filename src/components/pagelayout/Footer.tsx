@@ -90,7 +90,6 @@ export const Footer: React.FC = () => {
                             <Typography variant="caption" sx={{ color: theme.palette.common.white, mb: 2 }}>
                                 {projectVariables.COMPANY_ONELINER}
                             </Typography>
-                            {/* insert floating dot spacer */}
                             <Typography variant="subtitle1" sx={{ color: theme.palette.common.white, mb: 2 }}>
                                 ·
                             </Typography>
