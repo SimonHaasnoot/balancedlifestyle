@@ -61,6 +61,10 @@ export const MeatPage = (props: any) => {
                     De Beekhoeve in Kamerik is een biologische boerderij waar je hoog kwalitatief vlees kan kopen voor een eerlijke
                     prijs. Noem gerust Balanced lifestyle bij een bezoek aan de boerderij! (Van Teylingenweg 172, 3471 GK Kamerik -
                     0348 401 254"
+                        button={{
+                            link: 'https://beekhoeve.eu/?ref=balanced-lifestyle' as any,
+                            text: 'Neem gerust een kijkje!'
+                        }}
                         staticImage={
                             <StaticImage src="../images/meat/koe1.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                         }

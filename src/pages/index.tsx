@@ -50,6 +50,7 @@ export const index = (props: any) => {
         <>
             <Layout location={props.location}>
                 <Hero />
+
                 <Box sx={{ backgroundColor: theme.palette.grey[100] }}>
                     <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }} doublePadding>
                         <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
@@ -177,7 +178,7 @@ export const index = (props: any) => {
                                     <Button
                                         variant="contained"
                                         href={getRouteUrl(HeaderRoutesEnum.BALANCED_LIFESTYLE)}
-                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white }}
+                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white, border: 0 }}
                                     >
                                         Balanced Lifestyle
                                     </Button>
@@ -231,7 +232,7 @@ export const index = (props: any) => {
                                     <Button
                                         variant="contained"
                                         href={getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING)}
-                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white }}
+                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white, border: 0 }}
                                     >
                                         Personal training
                                     </Button>
@@ -298,7 +299,7 @@ export const index = (props: any) => {
                                     <Button
                                         variant="contained"
                                         href={getRouteUrl(HeaderRoutesEnum.ONLINE_COACHING)}
-                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white }}
+                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white, border: 0 }}
                                     >
                                         Online Coaching
                                     </Button>

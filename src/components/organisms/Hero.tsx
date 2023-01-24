@@ -25,10 +25,10 @@ export const Hero: React.FC = () => {
                     alt="Random image"
                     placeholder="blurred"
                     loading="eager"
-                    layout='fixed'
+                    layout="fixed"
                     style={{ height: '100%', width: '100%', objectFit: 'cover', filter: 'brightness(0.4)' }}
                     transformOptions={{
-                        cropFocus: "entropy"
+                        cropFocus: 'entropy',
                     }}
                 />
             </Box>
@@ -50,10 +50,19 @@ export const Hero: React.FC = () => {
                         <Typography variant="subtitle2" sx={{ mb: 3, maxWidth: isMobile ? '100%' : '60%' }}>
                             Join the balanced living!
                         </Typography>
-                        <Button variant="outlined" sx={{ mb: 10 }} href={getRouteUrl(HeaderRoutesEnum.BALANCED_LIFESTYLE)}>
-                            Start hier
-                        </Button>
+                        <Box sx={{ mb: 10, display: 'flex', gap: 2, flexDirection: isMobile ? 'column' : 'row'  }}>
+                            <Button variant="outlined" href={getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING)}>
+                                Personal training
+                            </Button>
 
+                            <Button
+                                variant="outlined"
+                                sx={{ outline: '2px solid white', background: 'transparent' }}
+                                href={getRouteUrl(HeaderRoutesEnum.ONLINE_COACHING)}
+                            >
+                                Online coaching
+                            </Button>
+                        </Box>
                         <SocialMedia />
                     </Box>
                 </Container>
