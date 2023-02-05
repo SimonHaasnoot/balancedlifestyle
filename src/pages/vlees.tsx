@@ -40,15 +40,16 @@ export const MeatPage = (props: any) => {
                                 style={{ width: '100%', height: 'auto', maxWidth: '50%', float: 'right', margin: isMobile ? '8px' : '20px' }}
                             />
                             Tal van nieuwe extreme diëten die de oplossing zouden moeten zijn voor jouw gezondheid. Koolhydraat/vet arm, keto, vegan,
-                            paleo, carnivoor en ga zo maar door. Het probleem met deze nieuwe en hippe dieetvormen is dat het bepaalde voedingsgroepen
+                            paleo, carnivoor en ga zo maar door. Het probleem met deze nieuwe en hippe dieetvormen is dat er bepaalde voedingsgroepen
                             worden uitgesloten, waardoor de kans wordt vergroot voor het missen van belangrijke voedingsstoffen en kwalitatief hoog
                             eiwit.
                             <br />
                             <br />
-                            Bij <b>Balanced lifestyle</b> staan we voor balans en sluiten we geen enkele voedingsgroep uit. Plantaardig producten
-                            worden gekocht bij de supermarkt en dierlijke producten bij een lokale (bio) boerderij. Deze staat los van de veeteelt
-                            industrie. Vlees van een goede afkomst staan centraal in een gezond en bewust voedingspatroon. Supermarkt vlees wordt niet
-                            gekocht en geconsumeerd, waardoor er niet wordt bijgedragen aan de veeteelt industrie en de productie ervan.
+                            Bij <span>Balanced lifestyle</span> staan we voor balans en sluiten we geen enkele voedingsgroep uit. Plantaardig producten worden
+                            gekocht bij de supermarkt en dierlijke producten bij een lokale (bio) boerderij. Wat staat los van de veeteelt industrie.
+                            Vlees van een goede afkomst staan centraal in een gezond en bewust voedingspatroon. Al het vlees los van een bedrijf wat
+                            staat voor goed vlees wordt niet gekocht en geconsumeerd, waardoor er niet wordt bijgedragen aan de veeteelt industrie en
+                            de productie ervan. Zoek naar gras gevoerd! Als dit er niet opstaat is het 9/10 vlees uit de massa productie.
                         </Typography>
                     </DefaultContainer>
                 </Box>
@@ -63,7 +64,7 @@ export const MeatPage = (props: any) => {
                     0348 401 254"
                         button={{
                             link: 'https://beekhoeve.eu/?ref=balanced-lifestyle',
-                            text: 'Neem gerust een kijkje!'
+                            text: 'Neem gerust een kijkje!',
                         }}
                         staticImage={
                             <StaticImage src="../images/meat/koe1.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
