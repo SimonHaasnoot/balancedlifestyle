@@ -23,7 +23,7 @@ export const contact = (props: any) => {
                 sx={{
                     position: 'relative',
                     overflow: 'hidden',
-                    height: '95vh',
+                    height: '75vh',
                     backgroundColor: theme.palette.grey[100],
                 }}
             >
@@ -59,7 +59,7 @@ export const contact = (props: any) => {
                     </Container>
                 </Box>
             </Container>
-            <Box sx={{ background: theme.palette.grey[100], mt: -40 }}>
+            <Box sx={{ background: theme.palette.grey[100], mt: -30 }}>
                 <DefaultContainer maxWidth="lg">
                     <Grid container spacing={4}>
                         <Grid item xs={12} md={6}>

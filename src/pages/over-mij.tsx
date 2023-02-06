@@ -128,11 +128,13 @@ export const aboutme = (props: any) => {
                                 laten ervaren. En laten inzien dat een gebalanceerd bestaan, het beste bestaan is.
                             </Box>
 
-                            <Box sx={{ mt: 2 }}>
-                                <Button variant="outlined" onClick={() => setReadMore(!readMore)} sx={{ color: theme.palette.primary.main }}>
-                                    Klik hier om meer te lezen
-                                </Button>
-                            </Box>
+                            {!readMore && (
+                                <Box sx={{ mt: 2 }}>
+                                    <Button variant="outlined" onClick={() => setReadMore(!readMore)} sx={{ color: theme.palette.primary.main }}>
+                                        Klik hier om meer te lezen
+                                    </Button>
+                                </Box>
+                            )}
                         </Typography>
                     </Box>
                     <Box>
@@ -143,7 +145,7 @@ export const aboutme = (props: any) => {
                                 justifyContent: 'space-between',
                                 alignItems: 'center',
                                 mt: isMobile ? 5 : 10,
-                                gap: isMobile ? 5 : 0
+                                gap: isMobile ? 5 : 0,
                             }}
                         >
                             <Box sx={{ width: isTabletOrSmaller ? '100%' : '50%' }}>
@@ -151,7 +153,7 @@ export const aboutme = (props: any) => {
                                     Resultaat voorkant
                                 </Typography>
                                 <Box sx={{ mt: 2, maxHeight: '500px' }}>
-                                    <StaticImage src="../images/Sem/beforeafter1.jpg" alt="Before after foto 1" height={500}/>
+                                    <StaticImage src="../images/Sem/beforeafter1.jpg" alt="Before after foto 1" height={500} />
                                 </Box>
                             </Box>
                             <Box sx={{ width: isTabletOrSmaller ? '100%' : '50%' }}>
@@ -159,7 +161,7 @@ export const aboutme = (props: any) => {
                                     Resultaat achterkant
                                 </Typography>
                                 <Box sx={{ mt: 2, maxHeight: '500px' }}>
-                                    <StaticImage src="../images/Sem/beforeafter2.jpg" alt="Before after foto 2" height={500}/>
+                                    <StaticImage src="../images/Sem/beforeafter2.jpg" alt="Before after foto 2" height={500} />
                                 </Box>
                             </Box>
                         </Box>
