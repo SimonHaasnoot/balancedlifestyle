@@ -27,14 +27,14 @@ export const SuccessStories: React.FC = () => {
                         {
                             title: 'Miron Jansen',
                             subtitle: '8kg spiermassa aangekomen in 12 maanden',
-                            image: <StaticImage src="../images/growth/mirron.jpg" alt="Mirron progressie" />,
+                            image: <StaticImage src="../../images/growth/mirron.jpg" alt="Mirron progressie" />,
                             package: 'online coaching',
                             text: '"Sem van Balanced Lifestyle heeft mij zeer goed op weg geholpen met mijn fitness journey! Door hem heb ik de juiste motivatie gekregen en hij heeft een gepersonaliseerd schema opgesteld met de juiste voeding. Heel tevreden dus!"',
                         },
                         {
-                            title: 'Wiebe',
+                            title: 'Wiebe Palstra',
                             subtitle: '20 kg afgevallen in 18 maanden',
-                            image: <StaticImage src="../images/growth/wiebe.png" alt="Wiebe progressie" />,
+                            image: <StaticImage src="../../images/growth/wiebe.png" alt="Wiebe progressie" />,
                             package: 'personal training',
                             text: '"In de afgelopen periode heb ik samen met Sem erg veel stappen gemaakt. Ik ben sterker geworden en meer dan 20kg afgevallen."',
                         },

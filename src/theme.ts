@@ -114,7 +114,7 @@ theme = createTheme({
             [theme.breakpoints.between('xs', 'sm')]: {
                 fontSize: 16,
             },
-            ['> span']: {
+            ['span']: {
                 color: color02,
             }
         },
@@ -125,7 +125,7 @@ theme = createTheme({
                 fontSize: 16,
             },
             fontFamily: 'Numans',
-            ['> span']: {
+            ['span']: {
                 color: color02,
             }
         },

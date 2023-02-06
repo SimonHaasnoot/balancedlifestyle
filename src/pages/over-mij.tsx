@@ -63,16 +63,16 @@ export const aboutme = (props: any) => {
                             <div>
                                 <span>Balanced lifestyle</span> is ontstaan uit een persoonlijk verhaal. Ik heb jaren met extreme huidklachten
                                 rondgelopen. De milde huidklachten ontstonden toen ik 15 was. In het begin maakte ik mij weinig zorgen en was ik ervan
-                                overtuigd dat de pubertijd de oorzaak was van mijn huidproblemen. 4 jaar later, tal van doktersbezoeken en
+                                overtuigd dat de pubertijd de oorzaak was van mijn huidproblemen. 4 Jaar later, tal van doktersbezoeken en
                                 antibioticakuren verder werden mijn problemen niet minder, maar juist erger. Mijn milde huidklachten ontwikkelden zich
                                 tot zeer ernstige huidklachten. De angst voor chronische klachten nam toe. Evengoed als mijn onzekerheid in het
                                 dagelijks leven. Naast fysieke klachten ging ik er mentaal ook aan onder door. Het werd een obsessie, waardoor mijn
-                                zelfbeeld met tijd snel achteruit ging.
+                                zelfbeeld met de tijd snel achteruit ging.
                                 <br /> <br />
                                 De mentale klachten ontstonden door onwetendheid. Keer op keer falen zonder enige vooruitgang te boeken. Ik leefde in
-                                een vicieuze cirkel waar ik 4 jaar voor nodig heb gehad om uit te komen. Op eigen kracht zonder enige hulp van de
-                                medische wereld kreeg ik kennis van een uitweg. Mij werd verteld van een duurzame, diervriendelijke uitweg wat
-                                daarnaast ook zou bijdragen aan je fysieke en mentale gezondheid. Klinkt bijna te mooi om waard te zijn.
+                                een vicieuze cirkel waar ik 4 jaar de tijd voor nodig heb gehad om eruit te komen. Op eigen kracht zonder enige hulp
+                                van de medische wereld kreeg ik kennis van een uitweg. Een duurzame, diervriendelijke uitweg wat daarnaast ook zou
+                                bijdragen aan je fysieke en mentale gezondheid. Het klonk bijna te mooi om waard te zijn.
                                 <br /> <br />
                             </div>
                             <Box
@@ -101,31 +101,31 @@ export const aboutme = (props: any) => {
                                 }
                             >
                                 Na 3 weken plantaardig (vegan) te hebben gegeten werd ik op een zaterdagochtend wakker. De wekker ging en ik sprong
-                                uit bed. Ik voelde een bepaalde vorm van energie die ik nog nooit eerder had gevoeld. Het voelde goed, maar ook gek.
+                                uit bed. Ik voelde een bepaalde vorm van energie die ik nog nooit eerder had ervaren. Het voelde goed, maar ook gek.
                                 Het voelde alsof mijn lichaam op een andere vorm van energie was overgegaan. Ik ben na het ontbijt naar de sportschool
                                 gegaan en was sterker dan ooit tevoren. Ik was niet te stoppen die dag. Zelfs aan het einde van die dag voelde ik deze
-                                bron van energie nog. Ik sliep die nacht perfect. Ik werd de volgende ochtend wakker. Het was een herhaling van de dag
-                                ervoor. Deze cyclus is nooit meer opgehouden tot op de dag van vandaag.
+                                bron van energie nog steeds. Ik sliep die nacht perfect. Ik werd de volgende ochtend wakker en het was een herhaling
+                                van de dag ervoor. Deze cyclus is nooit meer opgehouden tot op de dag van vandaag.
                                 <br /> <br />
-                                Naast de enorme mentale switch boekte mijn huid ook enorm voortuitgang. Na 3 maanden waren de resultaten al beter dan
-                                de 4 jaar ervoor. 2 Jaar later was ik verlost van mijn ernstige onverklaarbare huidproblemen (SOLK). Ik realiseerde
-                                mij dat het fundamentele probleem van binnenuit kwam, en opgelost moest worden van binnenuit i.p.v. door een pilletje
-                                of een zalfje.
+                                Naast de enorme mentale switch boekte mijn huid ook enorm voortuitgang. Na een paar maanden waren de resultaten al
+                                beter dan de jaren ervoor. 2 Jaar later was ik verlost van mijn ernstige onverklaarbare huidproblemen (SOLK). Ik
+                                realiseerde mij dat het fundamentele probleem van binnenuit kwam, n opgelost moest worden van binnenuit. I.p.v. door
+                                een pilletje of een zalfje.
                                 <br /> <br />
                                 <span>
                                     Na 3 jaar vegan te zijn geweest en deze hoek compleet te hebben uitgepluisd ben ik tot de volgende overtuiging
                                     gekomen:
                                 </span>{' '}
                                 Er bestaat geen perfect dieet. Het beste dieet is hetgeen waar jij de meeste energie uithaalt, je comfortabel bij
-                                voelt en je het lekkerst vindt. Sluit geen voedingsgroepen uit, maar zorg dat oorsprong van de voedingsgroepen van zo
-                                hoog mogelijk kwaliteit zijn. Zoek voor jezelf waar je intolerant voor bent en probeer de consumptie van deze
-                                producten te beperken tot minimaal. Voor mij was dit bijvoorbeeld lactose en varkensvlees.
+                                voelt en jij het lekkerst vindt om te consumeren. Sluit geen voedingsgroepen uit, maar zorg dat oorsprong van de
+                                voedingsgroepen van zo hoog mogelijk kwaliteit zijn. Zoek voor jezelf waar je intolerant voor bent en probeer de
+                                consumptie van deze producten te beperken tot minimaal. Voor mij was dit bijvoorbeeld lactose en varkensvlees.
                                 <br /> <br />
                                 Mijn dieet bestond voornamelijk uit dierlijke producten uit de supermarkt, een hoop zuivel en weinig groente en fruit.
                                 Sinds ik dit heb omgegooid en op de juiste manier ben gaan eten stond mijn leven binnen no-time op zijn kop. In de
                                 meest positieve zin. Ik zou jou graag willen laten zien dat het gaat om een leefstijl, waarin balans centraal staat
                                 tussen goed vlees en gezonde plantaardige producten, zoals fruit, groenten en noten. Ik zou jou graag ook dit gevoel
-                                laten ervaren. En laten inzien dat een gebalanceerd bestaan, het beste bestaan is.
+                                laten ervaren en laten inzien dat een gebalanceerd bestaan, het beste bestaan is.
                             </Box>
 
                             {!readMore && (

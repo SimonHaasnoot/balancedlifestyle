@@ -1,12 +1,14 @@
-import { Box, Button, Container, Typography } from '@mui/material';
+import { Box, Button, Container, Typography, useTheme } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import useMobile from '../../hooks/useMobile';
 import { SocialMedia } from '../molecules/SocialMedia';
 import { getRouteUrl, HeaderRoutesEnum } from '../../types/HeaderRoute';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
 export const Hero: React.FC = () => {
     const { isMobile } = useMobile();
+    const theme = useTheme();
 
     return (
         <Container
@@ -50,7 +52,7 @@ export const Hero: React.FC = () => {
                         <Typography variant="subtitle2" sx={{ mb: 3, maxWidth: isMobile ? '100%' : '60%' }}>
                             Join the balanced living!
                         </Typography>
-                        <Box sx={{ mb: 10, display: 'flex', gap: 2, flexDirection: isMobile ? 'column' : 'row'  }}>
+                        <Box sx={{ mb: 10, display: 'flex', gap: 2, flexDirection: isMobile ? 'column' : 'row' }}>
                             <Button variant="outlined" href={getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING)}>
                                 Personal training
                             </Button>
@@ -63,7 +65,16 @@ export const Hero: React.FC = () => {
                                 Online coaching
                             </Button>
                         </Box>
-                        <SocialMedia />
+                        <SocialMedia sx={{ mb: 5 }} />
+                        <Box sx={{ position: 'relative', p: 3, display: 'inline-flex' }}>
+                            <Typography variant="caption" sx={{ position: 'absolute', top: 0, left: 0, color: theme.palette.warning.main, display: 'flex', alignItems: 'center', }}>
+                                <InfoOutlinedIcon sx={{ mr: 1 }} />
+                                Laatste update
+                            </Typography>
+                            <Typography variant="subtitle2" sx={{ color: 'white', textDecoration: 'underline', textDecorationColor: theme.palette.warning.main }}>
+                                "We zijn live met Balanced Lifestyle!"
+                            </Typography>
+                        </Box>
                     </Box>
                 </Container>
             </Box>

@@ -329,7 +329,7 @@ export const index = (props: any) => {
                                 <Rating
                                     rating={4}
                                     reviewerText="Ik heb genoten en veel geleerd. Ik ben blij dat ik de stap heb genomen."
-                                    reviewerName="Wiebe"
+                                    reviewerName="Wiebe Palstra"
                                     isMale={true}
                                 />
                             </Grid>
