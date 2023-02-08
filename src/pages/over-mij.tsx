@@ -109,8 +109,8 @@ export const aboutme = (props: any) => {
                                 <br /> <br />
                                 Naast de enorme mentale switch boekte mijn huid ook enorm voortuitgang. Na een paar maanden waren de resultaten al
                                 beter dan de jaren ervoor. 2 Jaar later was ik verlost van mijn ernstige onverklaarbare huidproblemen (SOLK). Ik
-                                realiseerde mij dat het fundamentele probleem van binnenuit kwam en opgelost moest worden van binnenuit in plaats van door
-                                een pilletje of een zalfje.
+                                realiseerde mij dat het fundamentele probleem van binnenuit kwam en opgelost moest worden van binnenuit in plaats van
+                                door een pilletje of een zalfje.
                                 <br /> <br />
                                 <span>
                                     Na 3 jaar vegan te zijn geweest en deze hoek compleet te hebben uitgepluisd ben ik tot de volgende overtuiging
@@ -175,8 +175,10 @@ export const aboutme = (props: any) => {
                                 "Mijn missie is om mensen fitter, sterker en gelukkiger te maken door hen de handvaten te geven van een gebalanceerde
                                 leefstijl. Waarin gezonde voeding centraal staat in combinatie met een vast slaapritme en dagelijkse beweging en
                                 ontspanning. Mijn missie is niet om jou 100% te laten leven zoals ik dat doe. Mijn missie is om mijn kennis aan jou
-                                over te dragen en jou bewust te laten worden van hetgeen wat jij in jouw lichaam stopt, zodat je jezelf zelfstandig in
-                                de toekomst gezond en fit kan houden en positief terug kan kijken op je eigen keuzes en acties."
+                                over te dragen en jou bewust te laten worden van hetgeen wat jij in jouw lichaam stopt.
+                                <br /> <br />
+                                Met als uitkomst dat je jezelf in de toekomst gezond, fit en gelukkig kan houden en positief terug kan kijken op je
+                                eigen keuzes en acties, zonder mijn hulp!
                             </Typography>
                             <Divider />
                             <Typography variant="h3" sx={{ color: theme.palette.common.white, textAlign: 'center', mt: 5 }}>

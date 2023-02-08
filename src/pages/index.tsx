@@ -113,9 +113,11 @@ export const index = (props: any) => {
                             variant="body1"
                             sx={{ color: theme.palette.common.white, lineHeight: 2, maxWidth: isMobile ? '100%' : '60%', margin: 'auto' }}
                         >
-                            Het is mijn missie om mensen te helpen om de balans te vinden in hun leven doormiddel van een goed bewegings- en
-                            voedingspatroon, een consistent gezond slaapritme en dagelijkse ontspanning in combinatie met het behalen van jouw
-                            persoonlijke/werk-leer doelen.
+                            Mijn missie is om mijn kennis aan jou over te dragen en jou bewust te laten worden van hetgeen wat jij in jouw lichaam
+                            stopt.
+                            <br /> <br />
+                            Met als uitkomst dat je jezelf in de toekomst gezond, fit en gelukkig kan houden en positief terug kan kijken op je eigen
+                            keuzes en acties, zonder mijn hulp!
                         </Typography>
                     </DefaultContainer>
 
