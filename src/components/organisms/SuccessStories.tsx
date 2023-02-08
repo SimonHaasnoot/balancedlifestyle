@@ -36,7 +36,7 @@ export const SuccessStories: React.FC = () => {
                             subtitle: '20 kg afgevallen in 18 maanden',
                             image: <StaticImage src="../../images/growth/wiebe.png" alt="Wiebe progressie" />,
                             package: 'personal training',
-                            text: '"In de afgelopen periode heb ik samen met Sem erg veel stappen gemaakt. Ik ben sterker geworden en meer dan 20kg afgevallen."',
+                            text: '"Dat uurtje sporten met Sem is een uurtje voor mijzelf, die ik in mijzelf investeer, om mij goed te laten voelen! Twee jaar verder: Ik heb meer energie, zit lekkerder in mijn vel, verleg mijn grenzen en voel mij sterk! En gestopt met roken!"',
                         },
                     ]}
                 />
