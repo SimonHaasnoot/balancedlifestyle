@@ -41,15 +41,15 @@ export const MeatPage = (props: any) => {
                             />
                             Tal van nieuwe extreme diëten die de oplossing zouden moeten zijn voor jouw gezondheid. Koolhydraat/vet arm, keto, vegan,
                             paleo, carnivoor en ga zo maar door. Het probleem met deze nieuwe en hippe dieetvormen is dat er bepaalde voedingsgroepen
-                            worden uitgesloten, waardoor de kans wordt vergroot voor het missen van belangrijke voedingsstoffen en kwalitatief hoog
-                            eiwit.
+                            worden uitgesloten, waardoor de kans toeneemt op het missen van belangrijke voedingsstoffen en kwalitatief hoog eiwit.
                             <br />
                             <br />
-                            Bij <span>Balanced lifestyle</span> staan we voor balans en sluiten we geen enkele voedingsgroep uit. Plantaardig producten worden
-                            gekocht bij de supermarkt en dierlijke producten bij een lokale (bio) boerderij. Wat staat los van de veeteelt industrie.
-                            Vlees van een goede afkomst staan centraal in een gezond en bewust voedingspatroon. Al het vlees los van een bedrijf wat
-                            staat voor goed vlees wordt niet gekocht en geconsumeerd, waardoor er niet wordt bijgedragen aan de veeteelt industrie en
-                            de productie ervan. Zoek naar gras gevoerd! Als dit er niet opstaat is het 9/10 vlees uit de massa productie.
+                            Bij <span>Balanced lifestyle</span> staan we voor balans en sluiten we geen enkele voedingsgroep uit. Plantaardige
+                            producten worden gekocht bij de supermarkt en dierlijke producten bij een lokale (bio) boerderij die niets van doen heeft
+                            met de intensieve veehouderij. Vlees van een goede afkomst staat centraal in een gezond en bewust voedingspatroon. Al het
+                            vlees los van een bedrijf wat staat voor goed vlees wordt niet gekocht en geconsumeerd, waardoor er niet wordt bijgedragen
+                            aan de veeteelt industrie en de productie ervan. Zoek naar "gras gevoerd"! Als dit niet op de verpakking staat, is het
+                            bijna zeker vlees uit de massa productie.
                         </Typography>
                     </DefaultContainer>
                 </Box>

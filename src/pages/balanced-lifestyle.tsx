@@ -85,8 +85,8 @@ export const BalancedLifestylePage = (props: any) => {
                                 Ga de uitdaging aan!
                             </Typography>
                             <Typography variant="body1" sx={{ color: theme.palette.common.white, mb: 5 }}>
-                                Ben jij iemand die altijd al het roer heeft willen omgooien? Opzoek is naar een{' '}
-                                <span>nieuwe, gezondere en leukere leefstijl</span>, maar toch lekker wilt blijven genieten van al hetgeen wat het
+                                Ben jij iemand die altijd al het roer heeft willen omgooien? Op zoek is naar een{' '}
+                                <span>nieuwe, gezondere en leukere leefstijl</span>, maar toch lekker wil blijven genieten van al hetgeen wat het
                                 leven te bieden heeft?
                                 <br />
                                 <br />
@@ -117,7 +117,7 @@ export const BalancedLifestylePage = (props: any) => {
                                         <Typography variant="body1" sx={{ color: theme.palette.common.white }}>
                                             The balanced lifestyle challenge is een "life changing" programma. Een intensief traject waarin wij 1 op 1
                                             aan de slag gaan en in 12 weken tijd het roer in jouw lifestyle met 360 graden gaan omgooien. Een
-                                            uitdagend bewegingspatroon, bewuste voedingskeuzes, een stabiel slaapritme en stress management doormiddel
+                                            uitdagend bewegingspatroon, bewuste voedingskeuzes, een stabiel slaapritme en stress management door middel
                                             van ontspanning zijn de kern elementen van een gebalanceerd bestaan. Kracht en conditie training in
                                             combinatie met plantaardige en dierlijke producten van goede afkomst staan centraal in het "life changing"
                                             traject.

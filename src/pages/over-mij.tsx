@@ -109,7 +109,7 @@ export const aboutme = (props: any) => {
                                 <br /> <br />
                                 Naast de enorme mentale switch boekte mijn huid ook enorm voortuitgang. Na een paar maanden waren de resultaten al
                                 beter dan de jaren ervoor. 2 Jaar later was ik verlost van mijn ernstige onverklaarbare huidproblemen (SOLK). Ik
-                                realiseerde mij dat het fundamentele probleem van binnenuit kwam, n opgelost moest worden van binnenuit. I.p.v. door
+                                realiseerde mij dat het fundamentele probleem van binnenuit kwam en opgelost moest worden van binnenuit in plaats van door
                                 een pilletje of een zalfje.
                                 <br /> <br />
                                 <span>

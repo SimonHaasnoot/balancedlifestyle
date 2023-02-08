@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
                                 {headerRoutes.map((route, index) => {
                                     return (
                                         <ListItemButton sx={{ textAlign: isMobile ? 'center' : 'left' }} component="a" href={route.path} key={index}>
-                                            <ListItemText primary={route.name} />
+                                            <ListItemText primary={route.name} sx={{ '> span': { color: theme.palette.common.white } }} />
                                         </ListItemButton>
                                     );
                                 })}
