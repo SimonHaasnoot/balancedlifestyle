@@ -13,7 +13,7 @@ export const trainingSchema = [
 
 export const combiSchema = [
     { name: 'Training + voedingsschema op maat', price: '€90 excl. btw' },
-    { name: 'Training + voedingsschema op maat + wekelijkse check-up', price: '€150 excl. btw per maand' },
+    { name: 'Training + voedingsschema op maat + wekelijkse check-up', price: '€125 excl. btw per maand' },
 ];
 
 export const personalTrainingSchema = [
@@ -24,7 +24,6 @@ export const personalTrainingSchema = [
     { name: 'Techniek training', time: '1 sportsessie', quantity: '1x 120m', price: '€100 excl. btw' },
     { name: 'Sportschool kickstart', time: '4 sportsessies', quantity: '4x 90m', price: '€300 excl. btw' },
     { name: 'Kickbokslessen', time: 'Per sessie', quantity: '60m', price: '€50 excl. btw' },
-    { name: 'Voeding + training schema', time: '-', quantity: '1x (aanpassing mogelijk)', price: '€50 excl. btw' },
 ];
 
 export const onlineCoachingSchema = [
