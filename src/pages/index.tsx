@@ -182,7 +182,7 @@ export const index = (props: any) => {
                                         href={getRouteUrl(HeaderRoutesEnum.BALANCED_LIFESTYLE)}
                                         sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white, border: 0 }}
                                     >
-                                        Balanced Lifestyle
+                                        🏆 Balanced Lifestyle
                                     </Button>
                                 </Box>
                             </Grid>

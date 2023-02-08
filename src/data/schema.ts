@@ -1,8 +1,8 @@
 export const dietSchema = [
     { name: 'Voedingsschema op maat', price: '€50 excl. btw' },
     { name: 'Voedingsschema op maat + wekelijkse check-up', price: '€100 excl. btw per maand' },
-    { name: '100% Balanced lifestyle voedingsschema', price: '€50 excl. btw' },
-    { name: '100% Balanced lifestyle voedingsschema + wekelijkse check-up', price: '€100 excl. btw per maand' },
+    { name: '100% Balanced Lifestyle voedingsschema', price: '€50 excl. btw' },
+    { name: '100% Balanced Lifestyle voedingsschema + wekelijkse check-up', price: '€100 excl. btw per maand' },
 ];
 
 export const trainingSchema = [
@@ -10,6 +10,10 @@ export const trainingSchema = [
     { name: 'Trainingsschema op maat + wekelijkse check-up', price: '€100 excl. btw per maand' },
     { name: 'Trainingsschema voor thuis | buiten', price: '€50 excl. btw' },
 ];
+
+export const balancedLifestyleSchema= [
+    { name: '🏆 Balanced Lifestyle challenge', time: '3 maanden', price: '€75 excl. btw per week' },
+]
 
 export const combiSchema = [
     { name: 'Training + voedingsschema op maat', price: '€90 excl. btw' },
