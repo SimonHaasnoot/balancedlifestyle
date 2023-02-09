@@ -93,7 +93,7 @@ export const index = (props: any) => {
                     antibioticakuren verder werden mijn problemen niet minder, maar juist erger."
                     button={{
                         text: 'Lees hier verder',
-                        link: HeaderRoutesEnum.ABOUT_ME,
+                        link: getRouteUrl(HeaderRoutesEnum.ABOUT_ME),
                     }}
                     staticImage={
                         <StaticImage src="../images/workouts/workout5.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
