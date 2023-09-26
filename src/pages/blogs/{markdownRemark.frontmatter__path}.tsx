@@ -10,7 +10,9 @@ export default function BlogPostTemplate({
     data, // this prop will be injected by the GraphQL query below.
 }) {
     const { markdownRemark } = data; // data.markdownRemark holds your post data
-    const { frontmatter, html } = markdownRemark;
+    const { frontmatter } = markdownRemark;
+
+    console.log(markdownRemark);
 
     return (
         <Layout disableHeaderTransition={true}>
@@ -32,7 +34,6 @@ export default function BlogPostTemplate({
 export const pageQuery = graphql`
     query($id: String!) {
         markdownRemark(id: { eq: $id }) {
-            html
             frontmatter {
                 path
                 image
