@@ -3,9 +3,6 @@ import { Box, Button, Chip, Typography, Icon } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import useIsMobile from '../../hooks/useMobile';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import rehypeRaw from 'rehype-raw';
 
 export type BlogProps = {
     title: string;
@@ -41,7 +38,7 @@ export const Blog: React.FC<BlogProps> = (props) => {
                     })}
                 </Box>
             )}
-            <ReactMarkdown linkTarget="_blank" rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} children={props.content}></ReactMarkdown>
+            {/* <ReactMarkdown linkTarget="_blank" rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} children={props.content}></ReactMarkdown> */}
 
             <Box sx={{ mt: isMobile ? 5 : 10 }}>
                 <Button variant="contained" color="primary" href={'/blogs'}>
