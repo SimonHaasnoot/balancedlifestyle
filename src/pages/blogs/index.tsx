@@ -62,6 +62,7 @@ export const pageQuery = graphql`
     query IndexPageQuery {
         allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(blog)/" } }) {
             nodes {
+                html
                 frontmatter {
                     path
                     date(formatString: "MMMM DD, YYYY")
