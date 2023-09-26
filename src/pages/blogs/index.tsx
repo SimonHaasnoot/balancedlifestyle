@@ -58,17 +58,17 @@ export default function BlogPage(props: BlogPageProps) {
     );
 }
 
-// export const pageQuery = graphql`
-//     query IndexPageQuery {
-//         allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(blog)/" } }) {
-//             nodes {
-//                 frontmatter {
-//                     path
-//                     date(formatString: "MMMM DD, YYYY")
-//                     title
-//                     image
-//                 }
-//             }
-//         }
-//     }
-// `;
+export const pageQuery = graphql`
+    query IndexPageQuery {
+        allMarkdownRemark {
+            nodes {
+                frontmatter {
+                    path
+                    date(formatString: "MMMM DD, YYYY")
+                    title
+                    image
+                }
+            }
+        }
+    }
+`;
