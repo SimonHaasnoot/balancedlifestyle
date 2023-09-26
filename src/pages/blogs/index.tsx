@@ -1,14 +1,21 @@
-import { useTheme, Grid, Typography, Chip, Box } from '@mui/material';
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 import React from 'react';
 import { Heading } from '../../components/molecules/Heading';
-import { Blog } from '../../components/organisms/Blog';
 import { DefaultContainer } from '../../components/pagelayout/DefaultContainer';
 import { Layout } from '../../components/pagelayout/Layout';
-import useIsMobile from '../../hooks/useMobile';
+import { graphql } from 'gatsby';
+import { allMarkdownRemark } from '../../types/markdownRemark';
+import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 
-export const BlogPage = (props: any) => {
-    const theme = useTheme();
-    const { isMobile, isTabletOrSmaller } = useIsMobile();
+type BlogPageProps = {
+    data: {
+        allMarkdownRemark: allMarkdownRemark;
+    };
+    location: Location;
+};
+
+export default function BlogPage(props: BlogPageProps) {
+    const blogs = props.data?.allMarkdownRemark?.nodes || [];
 
     return (
         <>
@@ -19,28 +26,49 @@ export const BlogPage = (props: any) => {
                                 een gebalanceerde leefstijl."
                 />
                 <DefaultContainer maxWidth="lg">
-                    <Grid container>
-                        <Grid item xs={12} md={9}>
-                            <Blog
-                                title="#1 De hype van de blije koe"
-                                date="3-11-2022"
-                                keywords={['Voeding', 'Lifestyle']}
-                                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies tincidunt, nisl nisl aliquet nisl, nec
-                                lacinia nunc lorem eget nunc. Nullam eget nisl condimentum, lacinia nisl vitae, tincidunt nisl. Nulla facilisi. Nulla facilisi.
-                                Nulla facilisi. Nulla facilisi. Nulla facilisi. Nulla facilisi. Nulla facilisi. Nulla facilisi.
-                                <br />
-                                <br />
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vitae ultricies tincidunt, nisl nisl aliquet nisl, nec
-                                lacinia nunc lorem eget nunc. Nullam eget nisl condimentum, lacinia nisl vitae, tincidunt nisl. Nulla facilisi. Nulla facilisi.
-                                Nulla facilisi. Nulla facilisi. Nulla facilisi. Nulla facilisi. Nulla facilisi. Nulla facilisi."
-                            />
-                        </Grid>
-                        <Grid item xs={12} md={3}></Grid>
-                    </Grid>
+                    <Grid2 container spacing={2}>
+                        {blogs.map((node, index) => {
+                            return (
+                                <Grid2 xs={12} md={4} key={index}>
+                                    <Card>
+                                        <CardActionArea href={node.frontmatter.path}>
+                                            <CardMedia sx={{ height: 200 }} image={node.frontmatter.image} title={node.frontmatter.title} />
+                                            <CardContent>
+                                                <Typography gutterBottom variant="h5" component="div">
+                                                    {node.frontmatter.title}
+                                                </Typography>
+                                                <Typography variant="body2" color="text.secondary">
+                                                    {node.frontmatter.date}
+                                                </Typography>
+                                            </CardContent>
+                                            <CardActions>
+                                                <Button size="small" href={node.frontmatter.path}>
+                                                    Lezen
+                                                </Button>
+                                            </CardActions>
+                                        </CardActionArea>
+                                    </Card>
+                                </Grid2>
+                            );
+                        })}
+                    </Grid2>
                 </DefaultContainer>
             </Layout>
         </>
     );
-};
+}
 
-export default BlogPage;
+export const pageQuery = graphql`
+    query IndexPageQuery {
+        allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(blog)/" } }) {
+            nodes {
+                frontmatter {
+                    path
+                    date(formatString: "MMMM DD, YYYY")
+                    title
+                    image
+                }
+            }
+        }
+    }
+`;

@@ -1,9 +1,11 @@
 import { ArrowLeft } from '@mui/icons-material';
-import { Box, Button, Chip, Typography, useTheme, Icon } from '@mui/material';
+import { Box, Button, Chip, Typography, Icon } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import useIsMobile from '../../hooks/useMobile';
-import { getRouteUrl, HeaderRoutesEnum } from '../../types/HeaderRoute';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 
 export type BlogProps = {
     title: string;
@@ -15,7 +17,6 @@ export type BlogProps = {
 };
 
 export const Blog: React.FC<BlogProps> = (props) => {
-    const theme = useTheme();
     const { isMobile } = useIsMobile();
 
     return (
@@ -36,14 +37,14 @@ export const Blog: React.FC<BlogProps> = (props) => {
             {props.keywords?.length && (
                 <Box sx={{ display: 'flex', gap: 1, mb: 3 }}>
                     {props.keywords.map((keyword, index) => {
-                        return <Chip label={keyword} key={index} />;
+                        return <Chip label={keyword} key={index} sx={{ ['> *']: { color: 'black' } }} />;
                     })}
                 </Box>
             )}
-            <Typography variant="body1" sx={{ mb: 2 }} dangerouslySetInnerHTML={{ __html: props.content }}></Typography>
+            <ReactMarkdown linkTarget="_blank" rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} children={props.content}></ReactMarkdown>
 
             <Box sx={{ mt: isMobile ? 5 : 10 }}>
-                <Button variant="contained" color="primary" href={getRouteUrl(HeaderRoutesEnum.BLOGS)}>
+                <Button variant="contained" color="primary" href={'/blogs'}>
                     <Icon component={ArrowLeft} sx={{ mr: 1 }} />
                     Ga terug
                 </Button>

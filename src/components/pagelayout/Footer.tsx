@@ -105,7 +105,7 @@ export const Footer: React.FC = () => {
                                     alt="Logo"
                                     placeholder="blurred"
                                     style={{
-                                        width: '200px',
+                                        width: '400px',
                                         height: 'auto',
                                         objectFit: 'cover',
                                     }}

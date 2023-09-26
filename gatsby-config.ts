@@ -37,8 +37,19 @@ module.exports = {
             resolve: 'gatsby-plugin-sitemap',
             options: {
                 excludes: ['/404', '/bedankt'],
-                output: '/'
+                output: '/',
             },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `content`,
+                path: `${__dirname}/blog`,
+            },
+        },
+        {
+            resolve: `gatsby-transformer-remark`,
+            plugins: ['gatsby-remark-typescript'],
         },
     ],
     siteMetadata: {

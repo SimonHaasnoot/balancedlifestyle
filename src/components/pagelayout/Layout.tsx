@@ -61,6 +61,7 @@ export const Layout: React.FC<LayoutProps> = (props) => {
                         <List sx={{ display: 'flex', justifyContent: 'flex-start' }}>
                             <Box
                                 sx={{
+                                    margin: isDesktop ? 'auto' : 'unset',
                                     marginRight: 'auto',
                                     justifyContent: 'center',
                                     display: 'flex',
@@ -93,7 +94,7 @@ export const Layout: React.FC<LayoutProps> = (props) => {
                                                             alignItems: 'center',
                                                             whiteSpace: 'nowrap',
                                                             fontWeight: 500,
-                                                            fontSize: isDesktop ? 'inherit' : '0.9rem',
+                                                            fontSize: isDesktop ? '1rem' : '0.9rem',
                                                             color: isActive ? theme.palette.secondary.main : theme.palette.common.white,
                                                             [':hover']: {
                                                                 color: theme.palette.secondary.main,
