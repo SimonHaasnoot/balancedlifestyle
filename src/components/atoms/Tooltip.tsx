@@ -1,7 +1,6 @@
 import Tippy from '@tippyjs/react';
 import React from 'react';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import 'tippy.js/dist/tippy.css'; // optional
 import useMobile from '../../hooks/useMobile';
 
 export type TooltipProps = {

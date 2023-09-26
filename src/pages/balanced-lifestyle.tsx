@@ -1,5 +1,5 @@
 import { Box, useTheme, Typography, Button, Link, List, ListItem } from '@mui/material';
-import Grid2 from '@mui/material/Unstable_Grid2';
+import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { SmallHero } from '../components/organisms/SmallHero';
@@ -28,7 +28,7 @@ export const BalancedLifestylePage = (props: any) => {
                             src="../images/pages/gym.jpg"
                             alt="Random image"
                             placeholder="blurred"
-                            style={{ height: '100%', objectFit: 'cover' }}
+                            style={{ height: '100%', objectFit: 'cover', width: '100%' }}
                         />
                     }
                 />

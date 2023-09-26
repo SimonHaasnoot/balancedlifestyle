@@ -12,6 +12,8 @@ module.exports = {
         'gatsby-plugin-netlify',
         'gatsby-plugin-sitemap',
         'gatsby-plugin-preload-fonts',
+        'gatsby-plugin-pnpm',
+        'gatsby-plugin-netlify-cms',
         {
             resolve: `gatsby-plugin-google-gtag`,
             options: {

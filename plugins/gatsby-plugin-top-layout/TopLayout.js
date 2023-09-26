@@ -1,5 +1,4 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
@@ -25,7 +24,3 @@ export default function TopLayout(props) {
         </React.Fragment>
     );
 }
-
-TopLayout.propTypes = {
-    children: PropTypes.node,
-};

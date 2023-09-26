@@ -1,5 +1,4 @@
 import { Box, Link, List, ListItem, Typography, useTheme } from '@mui/material';
-import Grid from '@mui/system/Unstable_Grid';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { Divider } from '../components/molecules/Divider';
@@ -9,8 +8,8 @@ import { Layout } from '../components/pagelayout/Layout';
 import useIsMobile from '../hooks/useMobile';
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 import { getRouteUrl, HeaderRoutesEnum } from '../types/HeaderRoute';
-import { Cards } from '../components/organisms/Cards';
 import { SuccessStories } from '../components/organisms/SuccessStories';
+import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 
 export const onlinecoaching = () => {
     const theme = useTheme();
@@ -63,8 +62,8 @@ export const onlinecoaching = () => {
 
                     <Divider />
 
-                    <Grid container spacing={isMobile ? 0 : 5} sx={{ py: isMobile ? 5 : 10, textAlign: 'left' }}>
-                        <Grid xs={12} md={6}>
+                    <Grid2 container spacing={isMobile ? 0 : 5} sx={{ py: isMobile ? 5 : 10, textAlign: 'left' }}>
+                        <Grid2 xs={12} md={6}>
                             <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 2 }}>
                                 Wat je krijgt
                             </Typography>
@@ -91,17 +90,17 @@ export const onlinecoaching = () => {
                                 Als je met deze elementen een tijdje actief bezig bent ga je <span>regelmaat</span> creëren. Uit regelmaat ontstaat
                                 een ritme wat uiteindelijk ontwikkeld naar gewoontes.
                             </Typography>
-                        </Grid>
-                        <Grid xs={12} md={6}>
+                        </Grid2>
+                        <Grid2 xs={12} md={6}>
                             <StaticImage src="../images/schemes/foodscheme.jpg" alt="Voedingsschema" style={{ margin: '40px' }} />
-                        </Grid>
-                    </Grid>
+                        </Grid2>
+                    </Grid2>
 
                     <Divider />
 
                     <Box sx={{ color: theme.palette.common.white, pt: isMobile ? 5 : 10 }}>
-                        <Grid container spacing={isMobile ? 0 : 5} sx={{ textAlign: 'left' }}>
-                            <Grid xs={12} md={6}>
+                        <Grid2 container spacing={isMobile ? 0 : 5} sx={{ textAlign: 'left' }}>
+                            <Grid2 xs={12} md={6}>
                                 <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 1 }}>
                                     Nog even alles op een rijtje
                                 </Typography>
@@ -119,8 +118,8 @@ export const onlinecoaching = () => {
                                         <ListItem sx={{ display: 'list-item' }}>Feedback op ingestuurde techniek video's</ListItem>
                                     </List>
                                 </Typography>
-                            </Grid>
-                            <Grid xs={12} md={6}>
+                            </Grid2>
+                            <Grid2 xs={12} md={6}>
                                 <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 1 }}>
                                     Na inschrijving
                                 </Typography>
@@ -134,8 +133,8 @@ export const onlinecoaching = () => {
                                 </Typography>
                                 Bekijk <Link href={getRouteUrl(HeaderRoutesEnum.PACKAGES) + '#online-coaching'}>hier</Link> de prijzen of{' '}
                                 <Link href={getRouteUrl(HeaderRoutesEnum.CONTACT)}>neem contact op.</Link>
-                            </Grid>
-                        </Grid>
+                            </Grid2>
+                        </Grid2>
                     </Box>
                 </DefaultContainer>
             </Box>

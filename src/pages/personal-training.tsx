@@ -10,8 +10,6 @@ import ptVideo from '../images/pt/C0056-2.mp4';
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 import { StaticImage } from 'gatsby-plugin-image';
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
-import { Cards } from '../components/organisms/Cards';
-import { Divider } from '../components/molecules/Divider';
 import { SuccessStories } from '../components/organisms/SuccessStories';
 
 export const PersonalTrainingPage = (props: any) => {

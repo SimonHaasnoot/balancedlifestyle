@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, Grid, Typography, useTheme } from '@mui/material';
-import Grid2 from '@mui/material/Unstable_Grid2';
 import { StaticImage } from 'gatsby-plugin-image';
+import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 
 export type CardsProps = {
     cards: {
