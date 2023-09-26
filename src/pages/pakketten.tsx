@@ -74,7 +74,7 @@ export const packages = (props: any) => {
                     <SchemaTable
                         title="🏆 Balanced Lifestyle challenge"
                         schema={balancedLifestyleSchema}
-                        tableHead={['Aangeboden', 'Totale duur', 'Prijs']}
+                        tableHead={['Aangeboden', 'Totale duur']}
                         id="balanced-lifestyle"
                     >
                         <Typography variant="body2" sx={{ mb: 3, color: theme.palette.primary.main }}>
@@ -85,7 +85,7 @@ export const packages = (props: any) => {
                     <SchemaTable
                         title="Personal training"
                         schema={personalTrainingSchema}
-                        tableHead={['Dienst', 'Traject', 'Aantal', 'Prijs']}
+                        tableHead={['Dienst', 'Traject', 'Aantal']}
                         id="personal-training"
                     >
                         <Typography variant="body2" sx={{ mb: 3, color: theme.palette.primary.main }}>
@@ -96,7 +96,7 @@ export const packages = (props: any) => {
                     <SchemaTable
                         title="Online coaching"
                         schema={onlineCoachingSchema}
-                        tableHead={['Aangeboden', 'Totale duur', 'Contact', 'Prijs']}
+                        tableHead={['Aangeboden', 'Totale duur', 'Contact', ]}
                         id="online-coaching"
                         isMountedCallback={setScrollElementsMounted}
                     >
@@ -137,7 +137,7 @@ export const packages = (props: any) => {
                         title="Voedingsschema's"
                         description="Bij het opstellen van een voedingsschema houden we rekening met: geslacht, leeftijd, gewicht en lengte."
                         schema={dietSchema}
-                        tableHead={['Voedingsschema', 'Prijs']}
+                        tableHead={['Voedingsschema', ]}
                         id="voedingsschema"
                     />
                     <SchemaTable
@@ -146,10 +146,10 @@ export const packages = (props: any) => {
                         Bij het opstellen van een trainingsschema houden we rekening met: geslacht, leeftijd, gewicht en lengte.
                         "
                         schema={trainingSchema}
-                        tableHead={['Trainingsschema', 'Prijs']}
+                        tableHead={['Trainingsschema', ]}
                         id="trainingsschema"
                     />
-                    <SchemaTable title="Combi schema's" schema={combiSchema} tableHead={['Schema', 'Prijs']} id="combi-schema" />
+                    <SchemaTable title="Combi schema's" schema={combiSchema} tableHead={['Schema', ]} id="combi-schema" />
                 </DefaultContainer>
             </Box>
         </Layout>
