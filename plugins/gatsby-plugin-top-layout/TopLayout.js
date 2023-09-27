@@ -4,6 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '../../src/theme';
 import '../../src/css/app.css';
+import 'tippy.js/dist/tippy.css'; // optional
 
 export default function TopLayout(props) {
     return (
