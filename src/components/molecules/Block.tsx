@@ -37,7 +37,7 @@ export const Block: React.FC<BlockProps> = (props) => {
     }
 
     return (
-        <Container maxWidth={maxWidth} disableGutters>
+        <Container maxWidth={maxWidth} disableGutters component="section">
             <Grid container spacing={0}>
                 <Grid
                     item

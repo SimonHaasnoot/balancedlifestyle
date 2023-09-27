@@ -51,7 +51,7 @@ export const index = (props: any) => {
             <Layout location={props.location}>
                 <Hero />
 
-                <Box sx={{ backgroundColor: theme.palette.grey[100] }}>
+                <Box sx={{ backgroundColor: theme.palette.grey[100] }} component="section">
                     <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }} doublePadding>
                         <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
                             Waarom?
@@ -99,7 +99,7 @@ export const index = (props: any) => {
                         <StaticImage src="../images/workouts/workout5.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     }
                 />
-                <Box sx={{ backgroundColor: theme.palette.grey[100], position: 'relative' }}>
+                <Box sx={{ backgroundColor: theme.palette.grey[100], position: 'relative' }} component="section">
                     <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
                         <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
                             Mijn missie
@@ -124,7 +124,7 @@ export const index = (props: any) => {
                     {generateFlowBackground()}
                 </Box>
 
-                <Box sx={{ backgroundColor: theme.palette.primary.main }}>
+                <Box sx={{ backgroundColor: theme.palette.primary.main }} component="section">
                     <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
                         <Box>
                             <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, py: 5, mb: isMobile ? 0 : 10 }}>
@@ -310,7 +310,7 @@ export const index = (props: any) => {
                         </Grid>
                     </DefaultContainer>
                 </Box>
-                <DefaultContainer sx={{ textAlign: 'center' }}>
+                <DefaultContainer sx={{ textAlign: 'center' }} component="section">
                     <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
                         Reviews
                     </Typography>

@@ -32,6 +32,7 @@ export const SmallHero: React.FC<SmallHeroProps> = (props) => {
                     height: isMobile ? '90vh' : '75vh',
                     backgroundColor: '#1C1D1F',
                 }}
+                component="section"
             >
                 <Box sx={{ position: 'absolute', inset: '0 0 0 0' }}>{props.image}</Box>
                 <Box

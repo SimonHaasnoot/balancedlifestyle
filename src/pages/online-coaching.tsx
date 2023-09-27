@@ -33,8 +33,8 @@ export const onlinecoaching = () => {
                 }}
             />
 
-            <Box sx={{ backgroundColor: theme.palette.grey[100] }}>
-                <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }} doublePadding>
+            <Box sx={{ backgroundColor: theme.palette.grey[100] }} component="section">
+                <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }} doublePadding={true}>
                     <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
                         First things first
                     </Typography>

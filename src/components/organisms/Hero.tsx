@@ -14,6 +14,7 @@ export const Hero: React.FC = () => {
         <Container
             maxWidth={false}
             disableGutters
+            component={'section'}
             sx={{
                 position: 'relative',
                 overflow: 'hidden',

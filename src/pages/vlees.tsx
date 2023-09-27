@@ -27,7 +27,7 @@ export const MeatPage = (props: any) => {
                     subtitle="Tegenwoordig zie je door de bomen het bos niet meer als het aankomt op gezonde voeding."
                 />
 
-                <Box sx={{ background: theme.palette.grey[100] }}>
+                <Box sx={{ background: theme.palette.grey[100] }} component="section">
                     <DefaultContainer maxWidth="lg" sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                         <Typography variant="subtitle1" sx={{ mb: 5, color: theme.palette.secondary.main }}>
                             Mijn visie uitgelegd
@@ -54,23 +54,21 @@ export const MeatPage = (props: any) => {
                     </DefaultContainer>
                 </Box>
 
-                <Box>
-                    <Block
-                        title="Vlees van biologische boerderij"
-                        subtitle="Biologisch"
-                        body="
+                <Block
+                    title="Vlees van biologische boerderij"
+                    subtitle="Biologisch"
+                    body="
                     De Beekhoeve in Kamerik is een biologische boerderij waar je hoog kwalitatief vlees kan kopen voor een eerlijke
                     prijs. Noem gerust Balanced lifestyle bij een bezoek aan de boerderij! (Van Teylingenweg 172, 3471 GK Kamerik -
                     0348 401 254"
-                        button={{
-                            link: 'https://beekhoeve.eu/?ref=balanced-lifestyle',
-                            text: 'Neem gerust een kijkje!',
-                        }}
-                        staticImage={
-                            <StaticImage src="../images/meat/koe1.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                        }
-                    />
-                </Box>
+                    button={{
+                        link: 'https://beekhoeve.eu/?ref=balanced-lifestyle',
+                        text: 'Neem gerust een kijkje!',
+                    }}
+                    staticImage={
+                        <StaticImage src="../images/meat/koe1.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    }
+                />
             </Layout>
         </>
     );

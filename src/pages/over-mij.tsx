@@ -19,7 +19,7 @@ export const aboutme = (props: any) => {
                 <title>Over mij - Balanced Lifestyle</title>
             </Helmet>
             <Layout location={props.location}>
-                <Box sx={{ position: 'relative', background: theme.palette.grey[100], pt: isMobile ? 10 : 20, pb: 0 }}>
+                <Box sx={{ position: 'relative', background: theme.palette.grey[100], pt: isMobile ? 10 : 20, pb: 0 }} component="section">
                     <DefaultContainer maxWidth="lg" sx={{ mb: isTabletOrSmaller ? 0 : 0 }}>
                         <Grid container spacing={5}>
                             <Grid item xs={12} md={8} sx={{ textAlign: isMobile ? 'center' : 'left' }}>
@@ -57,7 +57,7 @@ export const aboutme = (props: any) => {
                     </DefaultContainer>
                 </Box>
 
-                <DefaultContainer maxWidth="lg">
+                <DefaultContainer maxWidth="lg" component="section">
                     <Box sx={{ maxWidth: isTabletOrSmaller ? '100%' : '70%' }}>
                         <Typography variant="body1">
                             <div>
@@ -168,7 +168,7 @@ export const aboutme = (props: any) => {
                     </Box>
                 </DefaultContainer>
 
-                <Box sx={{ backgroundColor: theme.palette.grey[100], padding: '50px 0' }}>
+                <Box sx={{ backgroundColor: theme.palette.grey[100], padding: '50px 0' }} component="section">
                     <DefaultContainer maxWidth="lg">
                         <Box sx={{ maxWidth: isTabletOrSmaller ? '100%' : '70%', m: 'auto' }}>
                             <Typography variant="body1" sx={{ color: theme.palette.common.white, lineHeight: 2, textAlign: 'center' }}>

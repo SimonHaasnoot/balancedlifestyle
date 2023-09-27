@@ -33,7 +33,7 @@ export const BalancedLifestylePage = (props: any) => {
                     }
                 />
 
-                <Box sx={{ background: theme.palette.grey[100] }}>
+                <Box sx={{ background: theme.palette.grey[100] }} component="section">
                     <DefaultContainer maxWidth="lg">
                         <Grid2
                             container
@@ -156,7 +156,7 @@ export const BalancedLifestylePage = (props: any) => {
 
                 <Banner />
 
-                <Box sx={{ background: theme.palette.grey[100] }}>
+                <Box sx={{ background: theme.palette.grey[100] }} component="section">
                     <DefaultContainer maxWidth="lg">
                         <Typography variant="h4" sx={{ color: theme.palette.secondary.main }}>
                             Enthousiast geraakt?

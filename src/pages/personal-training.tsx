@@ -33,7 +33,7 @@ export const PersonalTrainingPage = (props: any) => {
                     }}
                 />
 
-                <Box sx={{ background: theme.palette.primary.main, position: 'relative' }}>
+                <Box sx={{ background: theme.palette.primary.main, position: 'relative' }} component="section">
                     <DefaultContainer maxWidth="lg">
                         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                             <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
@@ -67,7 +67,7 @@ export const PersonalTrainingPage = (props: any) => {
                     </DefaultContainer>
                 </Box>
 
-                <Box sx={{ background: theme.palette.grey[100], position: 'relative' }}>
+                <Box sx={{ background: theme.palette.grey[100], position: 'relative' }} component="section">
                     <DefaultContainer maxWidth="lg">
                         <Grid2 container>
                             <Grid2 xs={12} md={6}>
@@ -98,7 +98,7 @@ export const PersonalTrainingPage = (props: any) => {
                         )}
                     </DefaultContainer>
                 </Box>
-                <Box sx={{ backgroundColor: theme.palette.primary.main, py: isMobile ? 5 : 10 }}>
+                <Box sx={{ backgroundColor: theme.palette.primary.main, py: isMobile ? 5 : 10 }} component="section">
                     <DefaultContainer maxWidth="lg">
                         <Box sx={{ color: theme.palette.common.white }}>
                             <Grid2 container spacing={isMobile ? 0 : 5} sx={{ textAlign: 'left' }}>

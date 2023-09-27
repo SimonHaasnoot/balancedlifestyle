@@ -34,7 +34,7 @@ export const packages = (props: any) => {
                     background: theme.palette.common.black,
                 }}
             >
-                <DefaultContainer maxWidth="lg">
+                <DefaultContainer maxWidth="lg" component="section">
                     <Typography variant="subtitle2" sx={{ textAlign: 'center', mb: 3, color: theme.palette.common.white }}>
                         Ik ben op zoek naar
                     </Typography>
@@ -69,7 +69,7 @@ export const packages = (props: any) => {
                     </Box>
                 </DefaultContainer>
             </Box>
-            <Box>
+            <Box component="section">
                 <DefaultContainer maxWidth="lg">
                     <SchemaTable
                         title="🏆 Balanced Lifestyle challenge"
@@ -107,7 +107,7 @@ export const packages = (props: any) => {
                 </DefaultContainer>
             </Box>
 
-            <Box sx={{ background: theme.palette.grey[100] }}>
+            <Box sx={{ background: theme.palette.grey[100] }} component="section">
                 <DefaultContainer maxWidth="lg">
                     <Typography variant="h2" component="h2" sx={{ textAlign: 'center', mb: 3, color: theme.palette.common.white }}>
                         Contact opnemen
@@ -131,7 +131,7 @@ export const packages = (props: any) => {
                 </DefaultContainer>
             </Box>
 
-            <Box>
+            <Box component="section">
                 <DefaultContainer maxWidth="lg">
                     <SchemaTable
                         title="Voedingsschema's"
