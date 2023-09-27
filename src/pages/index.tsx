@@ -1,5 +1,5 @@
-import { FitnessCenter, MenuBook, SupervisorAccount } from '@mui/icons-material';
-import { Box, Button, Grid, Typography, useTheme } from '@mui/material';
+import { FitnessCenter, MenuBook, SupervisorAccount, ArrowRight } from '@mui/icons-material';
+import { Box, Button, Grid, Icon, Typography, useTheme } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import { Block } from '../components/molecules/Block';
@@ -82,6 +82,16 @@ export const index = (props: any) => {
                                 />
                             </Grid>
                         </Grid>
+                        <Box sx={{ mt: isMobile ? 5 : 10, display: 'flex', justifyContent: 'center' }}>
+                            <Button
+                                variant="text"
+                                href={getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING)}
+                                sx={{ color: theme.palette.secondary.main, display: 'flex', alignItems: 'center' }}
+                            >
+                                <Icon component={ArrowRight} />
+                                Lees hier meer over personal training
+                            </Button>
+                        </Box>
                     </DefaultContainer>
                 </Box>
                 <Block

@@ -8,21 +8,16 @@ export const useScrollPosition = () => {
     const isClient = typeof window !== 'undefined';
 
     const addWindowScrollListener = () => {
-        window.addEventListener('scroll', _.debounce(handleScroll, 50));
+        window.addEventListener('scroll', _.debounce(handleScroll, 100));
     };
 
     const handleScroll = () => {
-        setScrollPosition(window.pageYOffset);
+        setScrollPosition(window.scrollY);
     };
 
     useEffect(() => {
-        console.log('useScrollPosition: useEffect');
-
-    }, [scrollPosition]);
-
-    useEffect(() => {
         if (isClient) {
-            setScrollPosition(window.pageYOffset);
+            setScrollPosition(window.scrollY);
 
             addWindowScrollListener();
         }

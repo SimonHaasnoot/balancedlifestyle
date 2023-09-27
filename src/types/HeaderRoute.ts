@@ -6,6 +6,7 @@ export type HeaderRouteType = {
     path: string;
     activeYAxis?: boolean;
     icon?: (props: SvgIconProps) => JSX.Element;
+    isSecondaryLevel?: boolean;
 };
 
 export enum HeaderRoutesEnum {
