@@ -33,10 +33,16 @@ export const SuccessStories: React.FC = () => {
                         },
                         {
                             title: 'Wiebe Palstra',
-                            subtitle: '20 kg afgevallen in 18 maanden',
+                            subtitle: '20kg afgevallen in 18 maanden',
                             image: <StaticImage src="../../images/growth/wiebe.png" alt="Wiebe progressie" />,
                             package: 'personal training',
                             text: '"Dat uurtje sporten met Sem is een uurtje voor mijzelf, die ik in mijzelf investeer, om mij goed te laten voelen! Twee jaar verder: Ik heb meer energie, zit lekkerder in mijn vel, verleg mijn grenzen en voel mij sterk! En gestopt met roken!"',
+                        },                        {
+                            title: 'Nathan Bakhuyzen',
+                            subtitle: '5kg vet afgevallen en 3kg spiermassa aangekomen in 6 maanden',
+                            image: <StaticImage src="../../images/growth/nathan.jpg" alt="Nathan progressie" />,
+                            package: 'online coaching',
+                            text: `"Na zelfstandig trainen in de sportschool, zocht ik professionele begeleiding. Balanced Lifestyle heeft mij geholpen mijn doelen te verfijnen en te bereiken. Dankzij zijn voeding- en trainingsadvies en constante beschikbaarheid voor vragen, ben ik zeer tevreden over Sem's begeleiding en de kennis die hij me heeft bijgebracht. Top!"`,
                         },
                     ]}
                 />
