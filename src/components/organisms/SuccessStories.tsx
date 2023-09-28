@@ -12,7 +12,7 @@ export const SuccessStories: React.FC = () => {
         <Box py={5} component="section">
             <DefaultContainer>
                 <Typography variant="h2" sx={{ color: theme.palette.primary.main, textAlign: 'center' }} id="succesverhalen">
-                    Succesverhalen
+                    Persoonlijke successen
                 </Typography>
                 <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                     <Typography variant="body1" sx={{ color: theme.palette.secondary.main, textAlign: 'center' }}>
