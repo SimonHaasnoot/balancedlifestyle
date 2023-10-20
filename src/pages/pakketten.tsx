@@ -8,7 +8,6 @@ import { Layout } from '../components/pagelayout/Layout';
 import { balancedLifestyleSchema, combiSchema, dietSchema, onlineCoachingSchema, personalTrainingSchema, trainingSchema } from '../data/schema';
 import useIsMobile from '../hooks/useMobile';
 import { getRouteUrl, HeaderRoutesEnum } from '../types/HeaderRoute';
-import { PackageTabs } from '../components/organisms/PackageTabs';
 
 export const packages = (props: any) => {
     const theme = useTheme();
@@ -72,7 +71,7 @@ export const packages = (props: any) => {
             </Box>
             <Box component="section">
                 <DefaultContainer maxWidth="lg">
-                    <PackageTabs theme={theme} />
+                    {/* <PackageTabs theme={theme} /> */}
 
                     <SchemaTable
                         title="Personal training (óók aan huis)"
