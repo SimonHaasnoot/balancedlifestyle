@@ -14,6 +14,7 @@ export interface SchemaTableProps {
     id?: string;
     children?: React.ReactNode;
     isMountedCallback?: (isMounted: boolean) => void;
+    afterElement?: React.ReactNode;
 }
 
 export const SchemaTable: React.FC<SchemaTableProps> = (props) => {
@@ -84,6 +85,7 @@ export const SchemaTable: React.FC<SchemaTableProps> = (props) => {
                                     {row.tooltip && <Tooltip text={row.tooltip} />}
                                 </TableCell>
                                 {row.time && <TableCell align="right">{row.time}</TableCell>}
+                                {row.duration && <TableCell align="right">{row.duration}</TableCell>}
                                 {row.quantity && <TableCell align="right">{row.quantity}</TableCell>}
                                 <TableCell align="right">{row.price}</TableCell>
                             </TableRow>
@@ -91,6 +93,8 @@ export const SchemaTable: React.FC<SchemaTableProps> = (props) => {
                     </TableBody>
                 </Table>
             </TableContainer>
+
+            {props.afterElement && props.afterElement}
         </Box>
     );
 };

@@ -21,13 +21,13 @@ export const combiSchema = [
 ];
 
 export const personalTrainingSchema = [
-    { name: '1 op 1 personal training', time: 'Minimaal 3 maanden', quantity: '1x per week 60m' },
-    { name: '1 op 1 personal training', time: 'Minimaal 3 maanden', quantity: '2x per week 60m' },
-    { name: 'Duo personal training', time: 'Minimaal 3 maanden', quantity: '1x per week 60m' },
-    { name: 'Duo personal training', time: 'Minimaal 3 maanden', quantity: '2x per week 60m' },
-    { name: 'Techniek training', time: '1 sportsessie', quantity: '1x 120m' },
-    { name: 'Sportschool kickstart', time: '4 sportsessies', quantity: '4x 90m' },
-    { name: 'Kickbokslessen', time: 'Per sessie', quantity: '60m' },
+    { name: 'Personal training', time: 'Intentie minimaal 12 maanden', duration: "30/45/60m", quantity: '1x of 2x per week' },
+    { name: 'Duo personal training', time: 'Intentie minimaal 12 maanden', duration: "30/45/60m", quantity: '1x of 2x per week' },
+    { name: 'Techniek training', time: '1 sportsessie', duration: "120m", quantity: 'Op aanvraag' },
+    { name: 'Sportschool kickstart', time: '4 sportsessies', duration: "90m", quantity: 'Op aanvraag' },
+    { name: 'Kickbokslessen', time: 'Per sessie', duration:"30/60m", quantity: 'Op aanvraag' },
+    { name: 'Small group training', time: 'Per sessie', duration:"60m", quantity: 'Op aanvraag' },
+    { name: 'Hardloop sessie', time: 'Per sessie', duration:"Variabel", quantity: 'Op aanvraag' },
 ];
 
 export const onlineCoachingSchema = [

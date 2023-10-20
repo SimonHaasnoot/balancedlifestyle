@@ -218,7 +218,7 @@ export const index = (props: any) => {
                                     }}
                                 >
                                     <StaticImage
-                                        src="../images/workouts/workout8.jpg"
+                                        src="../images/workouts/workout9.jpg"
                                         alt="Hero"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
@@ -242,9 +242,8 @@ export const index = (props: any) => {
                                     }}
                                 >
                                     <Button
-                                        variant="contained"
+                                        variant="outlined"
                                         href={getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING)}
-                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white, border: 0 }}
                                     >
                                         Personal training
                                     </Button>

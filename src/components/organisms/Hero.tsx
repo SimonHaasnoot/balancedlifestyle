@@ -73,7 +73,7 @@ export const Hero: React.FC = () => {
                                 Laatste update
                             </Typography>
                             <Typography variant="subtitle2" sx={{ color: 'white', textDecoration: 'underline', textDecorationColor: theme.palette.warning.main }}>
-                                "We zijn live met Balanced Lifestyle!"
+                                Neem vrijblijvend contact op voor een gratis proefles
                             </Typography>
                         </Box>
                     </Box>
