@@ -1,10 +1,13 @@
-import { Box, Icon, SvgIconTypeMap, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Icon, Link, SvgIconTypeMap, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import React from 'react';
 
 export type UspProps = {
     title: string;
-    body: string;
+    body: {
+        text: string;
+        link?: string;
+    };
     icon: OverridableComponent<SvgIconTypeMap<{}, 'svg'>>;
     sx?: {};
     children?: any;
@@ -47,8 +50,15 @@ export const Usp: React.FC<UspProps> = (props) => {
             <Typography variant="subtitle1" sx={{ color: theme.palette.common.white, mb: 2 }}>
                 {props.title}
             </Typography>
+
             <Typography variant="body2" sx={{ color: theme.palette.common.white }}>
-                {props.body}
+                {props.body.link ? (
+                    <Link href={props.body.link} sx={{ color: theme.palette.common.white }}>
+                        {props.body.text}
+                    </Link>
+                ) : (
+                    props.body.text
+                )}
             </Typography>
         </Box>
     );

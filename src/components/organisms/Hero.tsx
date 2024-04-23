@@ -50,9 +50,6 @@ export const Hero: React.FC = () => {
                         <Typography variant="h1" component="h1" sx={{ mb: 3, pt: 10 }}>
                             Balanced <br /> Lifestyle
                         </Typography>
-                        <Typography variant="subtitle2" sx={{ mb: 3, maxWidth: isMobile ? '100%' : '60%' }}>
-                            Join the balanced living!
-                        </Typography>
                         <Box sx={{ mb: 10, display: 'flex', gap: 2, flexDirection: isMobile ? 'column' : 'row' }}>
                             <Button variant="outlined" href={getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING)}>
                                 Personal training

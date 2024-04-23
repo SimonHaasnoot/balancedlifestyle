@@ -54,8 +54,19 @@ export const Footer: React.FC = () => {
                                 >
                                     <ListItemText
                                         sx={{ ['> *']: { color: `${theme.palette.common.white} !important` } }}
-                                        primary="Telefoon"
+                                        primary="Telefoon (Sem)"
                                         secondary={projectVariables.COMPANY_PHONE}
+                                    />
+                                </ListItemButton>{' '}
+                                <ListItemButton
+                                    sx={{ textAlign: isMobile ? 'center' : 'left' }}
+                                    component="a"
+                                    href={`tel:${projectVariables.COMPANY_PHONE2}`}
+                                >
+                                    <ListItemText
+                                        sx={{ ['> *']: { color: `${theme.palette.common.white} !important` } }}
+                                        primary="Telefoon (Tim)"
+                                        secondary={projectVariables.COMPANY_PHONE2}
                                     />
                                 </ListItemButton>
                                 <ListItem sx={{ textAlign: isMobile ? 'center' : 'left' }}>
