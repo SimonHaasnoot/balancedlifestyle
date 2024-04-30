@@ -42,7 +42,7 @@ export const AboutTimPage = (props: any) => {
                                     }}
                                 >
                                     <StaticImage
-                                        src="../images/tim/IMG_5633.jpg"
+                                        src="../images/tim/IMG_5633.JPG"
                                         alt="Sem van de Griendt"
                                         placeholder="blurred"
                                         loading="eager"

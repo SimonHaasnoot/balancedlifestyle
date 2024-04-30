@@ -92,7 +92,7 @@ export const onlinecoaching = () => {
                             </Typography>
                         </Grid2>
                         <Grid2 xs={12} md={6}>
-                            <StaticImage src="../images/tim/tim_training.jpg" alt="Voedingsschema" style={{ margin: '40px' }} />
+                            <StaticImage src="../images/tim/tim_training.JPG" alt="Voedingsschema" style={{ margin: '40px' }} />
                         </Grid2>
                     </Grid2>
 

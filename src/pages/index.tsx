@@ -169,7 +169,7 @@ export const index = (props: any) => {
                                     }}
                                 >
                                     <StaticImage
-                                        src="../images/tim/tim_training.jpg"
+                                        src="../images/tim/tim_training.JPG"
                                         alt="Hero"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
@@ -347,7 +347,7 @@ export const index = (props: any) => {
                                     }}
                                 >
                                     <StaticImage
-                                        src="../images/tim/tim_bokzak1.jpg"
+                                        src="../images/tim/tim_bokzak1.JPG"
                                         alt="Hero"
                                         style={{
                                             width: '100%',
