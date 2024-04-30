@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
                     <Grid container spacing={isMobile ? 2 : 5}>
                         <Grid item xs={12} sm={6} md={3}>
                             <List>
-                                {headerRoutes.map((route, index) => {
+                                {headerRoutes.filter(x => !x.notVisible).map((route, index) => {
                                     return (
                                         <ListItemButton sx={{ textAlign: isMobile ? 'center' : 'left' }} component="a" href={route.path} key={index}>
                                             <ListItemText primary={route.name} sx={{ '> span': { color: theme.palette.common.white } }} />
