@@ -10,15 +10,22 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 export const headerRoutes = [
     { name: 'Home', path: '/' },
-    { name: 'Balanced Lifestyle', path: '/balanced-lifestyle' },
     { name: 'Personal training', path: '/personal-training' },
     { name: 'Online coaching', path: '/online-coaching' },
-    { name: 'Pakketten', path: '/pakketten' },
+    { name: 'Groepstraining', path: '/groepstraining' },
+    { name: 'Voeding', path: '/voeding' },
+    { name: 'Specialisaties', path: '/specialisaties' },
+    // { name: 'Balanced Lifestyle', path: '/balanced-lifestyle' },
+    // { name: 'Pakketten', path: '/pakketten' },
     // { name: 'Workshops', path: '/workshops' },
     // { name: 'Blogs', path: '/blogs', isSecondaryLevel: true },
-    { name: 'Goed vlees', path: '/vlees', isSecondaryLevel: true },
-    { name: 'Over mij', path: '/over-mij', isSecondaryLevel: true },
+    // { name: 'Goed vlees', path: '/vlees', isSecondaryLevel: true },
+    { name: 'Over ons', path: '/over-ons', isSecondaryLevel: true },
+    { name: 'Reviews', path: '/reviews', isSecondaryLevel: true },
     { name: 'Contact', path: '/contact', isSecondaryLevel: true },
+    { name: 'Over Tim', path: '/over-tim', notVisible: true },
+    { name: 'Over Sem', path: '/over-sem', notVisible: true },
+
 ] as HeaderRouteType[];
 
 export type LayoutProps = {
@@ -94,7 +101,7 @@ export const Layout: React.FC<LayoutProps> = (props) => {
                             {!isTabletOrSmaller ? (
                                 <>
                                     {headerRoutes
-                                        .filter((x) => !x.isSecondaryLevel)
+                                        .filter((x) => !x.isSecondaryLevel && !x.notVisible)
                                         .map((route, index) => {
                                             let isActive = getIsActiveRoute(route);
                                             const isFirst = index === 0;
@@ -188,7 +195,7 @@ export const Layout: React.FC<LayoutProps> = (props) => {
                             <>
                                 <List sx={{ display: 'flex', justifyContent: 'end', pt: atTopOfPage ? 0 : '8px', transition: 'all 0.2s ease-in-out' }}>
                                     {headerRoutes
-                                        .filter((x) => x.isSecondaryLevel)
+                                        .filter((x) => x.isSecondaryLevel && !x.notVisible)
                                         .map((route, index) => {
                                             const isLast = route.name === 'Contact';
 

@@ -11,6 +11,7 @@ import { Layout } from '../components/pagelayout/Layout';
 import useIsMobile from '../hooks/useMobile';
 import { HeaderRoutesEnum, getRouteUrl } from '../types/HeaderRoute';
 import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
+import { Star } from '../components/atoms/Star';
 
 export const index = (props: any) => {
     const theme = useTheme();
@@ -62,22 +63,25 @@ export const index = (props: any) => {
                         <Grid container spacing={isMobile ? 5 : 10} justifyContent="center" display="flex">
                             <Grid item xs={12} md={4}>
                                 <Usp
-                                    title="Professioneel trainingsplan"
-                                    body="Persoonlijk trainingsschema op basis van een vragenlijst afgestemd op jouw doelen en wensen."
+                                    title="Persoonlijke trainingen"
+                                    body={{ text: 'Personal training in onze moderne studio. Afgestemd op jouw doelen en wensen.' }}
                                     icon={FitnessCenter}
                                 />
                             </Grid>
                             <Grid item xs={12} md={4} sx={{ mt: isMobile ? 0 : 10 }}>
                                 <Usp
-                                    title="Professioneel voedingsplan"
-                                    body="Persoonlijk voedingsschema op basis van een vragenlijst afgestemd op jouw doelen en wensen."
+                                    title="Persoonlijk voedingsplan"
+                                    body={{ text: 'Persoonlijk voedingsplan in onze eigen app. Afgestemd op jouw doelen en wensen.' }}
                                     icon={MenuBook}
                                 />
                             </Grid>
                             <Grid item xs={12} md={4}>
                                 <Usp
-                                    title="Gepersonaliseerd"
-                                    body="Na het afnemen word je niet aan jouw lot overgelaten. Een maand later is er een check up, waarin je positieve en negatieve ervaringen worden doorgenomen en vanuit daar eventuele veranderingen zullen plaatsvinden in jouw plan van aanpak."
+                                    title="Compleet aanbod"
+                                    body={{
+                                        text: 'Klik hier voor ons gehele gezondheidsaanbod',
+                                        link: getRouteUrl(HeaderRoutesEnum.SPECIALISATIES),
+                                    }}
                                     icon={SupervisorAccount}
                                 />
                             </Grid>
@@ -95,27 +99,31 @@ export const index = (props: any) => {
                     </DefaultContainer>
                 </Box>
                 <Block
-                    title="Iets over mij"
+                    title="Iets over ons"
                     subtitle="Terug naar het begin"
-                    body="Welkom, mijn naam is Sem van de Griendt. Oprichter van Balanced lifestyle.<br /><br /> Balanced lifestyle is ontstaan uit een persoonlijk verhaal. Ik heb jaren met extreme huidklachten rondgelopen. De
-                    milde huidklachten ontstonden toen ik 14 was. In het begin maakte ik mij weinig zorgen en was ik ervan overtuigd
-                    dat de pubertijd de veroorzaker was van mijn huidproblemen. 3 Jaar later, tientallen doktersbezoeken en
-                    antibioticakuren verder werden mijn problemen niet minder, maar juist erger."
+                    body="Sinds september 2023 zijn we aan samenwerking aangegaan op basis van vertrouwen, ambitie en visie.
+                    <br /><br />
+                    Beide staan wij voor een gezonde uitdagende leefstijl waarin genieten een belangrijk component is. Effort gecombineerd met genieten is in onze optiek de perfecte formule voor een vitaal en duurzaam succes. In balans!
+                    Door onze kwaliteiten te bundelen en elkaars in onze eigen unieke kracht te zetten vormen we een volmaakt team. Wij coachen elkaar, geven elkaar feedback wat gepaard gaat met een goede grap."
                     button={{
                         text: 'Lees hier verder',
                         link: getRouteUrl(HeaderRoutesEnum.ABOUT_ME),
                     }}
                     staticImage={
-                        <StaticImage src="../images/workouts/workout5.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <StaticImage
+                            src="../images/samen/over_ons_samen.webp"
+                            alt="Hero"
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        />
                     }
                 />
                 <Box sx={{ backgroundColor: theme.palette.grey[100], position: 'relative' }} component="section">
                     <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
                         <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
-                            Mijn missie
+                            Onze missie
                         </Typography>
                         <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.white, mb: 2 }}>
-                            Helpen in het vinden van balans
+                            Jouw gezondheid terug in balans
                         </Typography>
                         <AllInclusiveIcon sx={{ color: theme.palette.common.white, fontSize: 40, mb: 2 }} />
 
@@ -123,11 +131,8 @@ export const index = (props: any) => {
                             variant="body1"
                             sx={{ color: theme.palette.common.white, lineHeight: 2, maxWidth: isMobile ? '100%' : '60%', margin: 'auto' }}
                         >
-                            Mijn missie is om mijn kennis aan jou over te dragen en jou bewust te laten worden van hetgeen wat jij in jouw lichaam
-                            stopt.
-                            <br /> <br />
-                            Met als uitkomst dat je jezelf in de toekomst gezond, fit en gelukkig kan houden en positief terug kan kijken op je eigen
-                            keuzes en acties, zonder mijn hulp!
+                            Onze missie is het coachen in het creëren van een gebalanceerde leefstijl door jou de juiste handvatten te geven in
+                            bewegen, voeding en rust.
                         </Typography>
                     </DefaultContainer>
 
@@ -135,17 +140,17 @@ export const index = (props: any) => {
                 </Box>
 
                 <Box sx={{ backgroundColor: theme.palette.primary.main }} component="section">
-                    <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
+                    <DefaultContainer maxWidth="xl" sx={{ textAlign: 'center' }}>
                         <Box>
                             <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, py: 5, mb: isMobile ? 0 : 10 }}>
-                                Wat kan ik voor jou betekenen?
+                                Waarmee kunnen wij jou van dienst zijn?
                             </Typography>
                         </Box>
                         <Grid container spacing={isMobile ? 2 : 10} justifyContent="center" sx={{ gap: isMobile ? 3 : 0 }}>
                             <Grid
                                 item
                                 xs={10}
-                                sm={4}
+                                sm={3}
                                 position="relative"
                                 sx={{
                                     ':hover': {
@@ -164,7 +169,7 @@ export const index = (props: any) => {
                                     }}
                                 >
                                     <StaticImage
-                                        src="../images/workouts/workout2.jpg"
+                                        src="../images/tim/tim_training.jpg"
                                         alt="Hero"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
@@ -189,17 +194,17 @@ export const index = (props: any) => {
                                 >
                                     <Button
                                         variant="contained"
-                                        href={getRouteUrl(HeaderRoutesEnum.BALANCED_LIFESTYLE)}
+                                        href={getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING)}
                                         sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white, border: 0 }}
                                     >
-                                        🏆 Balanced Lifestyle
+                                        Personal training
                                     </Button>
                                 </Box>
                             </Grid>
                             <Grid
                                 item
                                 xs={10}
-                                sm={4}
+                                sm={3}
                                 position="relative"
                                 sx={{
                                     ':hover': {
@@ -242,17 +247,21 @@ export const index = (props: any) => {
                                     }}
                                 >
                                     <Button
-                                        variant="outlined"
-                                        href={getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING)}
+                                        variant="contained"
+                                        href={getRouteUrl(HeaderRoutesEnum.GROEPSTRAINING)}
+                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white, border: 0 }}
+                                        style={{
+                                            padding: '10px 20px',
+                                        }}
                                     >
-                                        Personal training
+                                        Groepstraining
                                     </Button>
                                 </Box>
                             </Grid>
                             <Grid
                                 item
                                 xs={10}
-                                sm={4}
+                                sm={3}
                                 position="relative"
                                 sx={{
                                     ':hover': {
@@ -309,14 +318,87 @@ export const index = (props: any) => {
                                     />
                                     <Button
                                         variant="contained"
-                                        href={getRouteUrl(HeaderRoutesEnum.ONLINE_COACHING)}
+                                        href={getRouteUrl(HeaderRoutesEnum.VOEDING)}
                                         sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white, border: 0 }}
                                     >
-                                        Online Coaching
+                                        Voeding
+                                    </Button>
+                                </Box>
+                            </Grid>
+                            <Grid
+                                item
+                                xs={10}
+                                sm={3}
+                                position="relative"
+                                sx={{
+                                    ':hover': {
+                                        a: {
+                                            transition: 'all 0.3s ease-in-out',
+                                            transform: 'scale(1.1)',
+                                        },
+                                    },
+                                }}
+                            >
+                                <Box
+                                    sx={{
+                                        width: '100%',
+                                        height: '100%',
+                                        position: 'relative',
+                                    }}
+                                >
+                                    <StaticImage
+                                        src="../images/tim/tim_bokzak1.jpg"
+                                        alt="Hero"
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'cover',
+                                        }}
+                                    />
+                                    <Box
+                                        sx={{
+                                            position: 'absolute',
+                                            inset: 0,
+                                            background: 'linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(255,255,255,0) 50%)',
+                                        }}
+                                    />
+                                </Box>
+
+                                <Box
+                                    sx={{
+                                        position: 'absolute',
+                                        inset: 0,
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        padding: 'inherit',
+                                    }}
+                                >
+                                    <Box
+                                        sx={{
+                                            position: 'absolute',
+                                            inset: 0,
+                                            background: 'rgba(0, 0, 0, 0.3)',
+                                            width: '100%',
+                                            height: '100%',
+                                        }}
+                                    />
+                                    <Button
+                                        variant="contained"
+                                        href={getRouteUrl(HeaderRoutesEnum.SPECIALISATIES)}
+                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white, border: 0 }}
+                                        style={{
+                                            padding: '10px 20px',
+                                        }}
+                                    >
+                                        Mentale coaching
                                     </Button>
                                 </Box>
                             </Grid>
                         </Grid>
+                        <Typography variant="subtitle2" sx={{ color: theme.palette.common.white, my: 10 }}>
+                            100% resultaatgarantie!
+                        </Typography>
                     </DefaultContainer>
                 </Box>
                 <DefaultContainer sx={{ textAlign: 'center' }} component="section">
@@ -347,6 +429,19 @@ export const index = (props: any) => {
                         </Grid>
                     </Box>
                 </DefaultContainer>
+                <Box sx={{ backgroundColor: theme.palette.secondary.main }} component="section">
+                    <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
+                        <Typography variant="subtitle2" sx={{ color: theme.palette.common.white}}>
+                            klanten beoordelen ons gemiddeld met een{' '}
+                            <Star
+                                style={{
+                                    marginRight: '5px',
+                                }}
+                            />
+                            9,4!
+                        </Typography>
+                    </DefaultContainer>
+                </Box>
             </Layout>
         </>
     );

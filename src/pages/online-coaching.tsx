@@ -92,7 +92,7 @@ export const onlinecoaching = () => {
                             </Typography>
                         </Grid2>
                         <Grid2 xs={12} md={6}>
-                            <StaticImage src="../images/workouts/workout9.jpg" alt="Voedingsschema" style={{ margin: '40px' }} />
+                            <StaticImage src="../images/tim/tim_training.jpg" alt="Voedingsschema" style={{ margin: '40px' }} />
                         </Grid2>
                     </Grid2>
 
@@ -131,8 +131,7 @@ export const onlinecoaching = () => {
                                 <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 1 }}>
                                     Extra info
                                 </Typography>
-                                Bekijk <Link href={getRouteUrl(HeaderRoutesEnum.PACKAGES) + '#online-coaching'}>hier</Link> de prijzen of{' '}
-                                <Link href={getRouteUrl(HeaderRoutesEnum.CONTACT)}>neem contact op.</Link>
+                                <Link href={getRouteUrl(HeaderRoutesEnum.CONTACT)}>Neem hier contact op.</Link>
                             </Grid2>
                         </Grid2>
                     </Box>

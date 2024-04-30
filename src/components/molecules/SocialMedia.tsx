@@ -28,9 +28,9 @@ export const SocialMedia: React.FC<SocialMediaProps> = (props) => {
             <Link color={color} href={projectVariables.COMPANY_FACEBOOK}>
                 <Icon component={FacebookOutlined} sx={{ fontSize: '30px' }} />
             </Link>
-            <Link color={color} href={projectVariables.COMPANY_YOUTUBE}>
+            {/* <Link color={color} href={projectVariables.COMPANY_YOUTUBE}>
                 <Icon component={YouTube} sx={{ fontSize: '30px' }} />
-            </Link>
+            </Link> */}
             <Link color={color} href={projectVariables.COMPANY_LINKEDIN}>
                 <Icon component={LinkedIn} sx={{ fontSize: '30px' }} />
             </Link>

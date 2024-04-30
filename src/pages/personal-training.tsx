@@ -132,8 +132,7 @@ export const PersonalTrainingPage = (props: any) => {
                                     <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 1 }}>
                                         Extra info
                                     </Typography>
-                                    Bekijk <Link href={getRouteUrl(HeaderRoutesEnum.PACKAGES) + '#personal-training'}>hier</Link> de prijzen of{' '}
-                                    <Link href={getRouteUrl(HeaderRoutesEnum.CONTACT)}>neem contact op.</Link>
+                                    <Link href={getRouteUrl(HeaderRoutesEnum.CONTACT)}>Neem hier contact op.</Link>
                                 </Grid2>
                             </Grid2>
                         </Box>

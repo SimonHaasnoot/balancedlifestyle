@@ -32,7 +32,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ location, mobileMenuActi
             }}
         >
             <Box position="relative">
-                {headerRoutes.map((route, index) => {
+                {headerRoutes.filter(x => !x.notVisible).map((route, index) => {
                     const isActive = route.path.replace('#', '') === location?.pathname;
 
                     return (

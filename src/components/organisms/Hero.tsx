@@ -1,10 +1,12 @@
-import { Box, Button, Container, Typography, useTheme } from '@mui/material';
+import { Box, Button, Container, Icon, Link, Typography, useTheme } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import useMobile from '../../hooks/useMobile';
 import { SocialMedia } from '../molecules/SocialMedia';
 import { getRouteUrl, HeaderRoutesEnum } from '../../types/HeaderRoute';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import { KeyboardDoubleArrowLeft } from '@mui/icons-material';
 
 export const Hero: React.FC = () => {
     const { isMobile } = useMobile();
@@ -24,7 +26,7 @@ export const Hero: React.FC = () => {
         >
             <Box sx={{ position: 'absolute', inset: '0 0 0 0' }}>
                 <StaticImage
-                    src="../../images/aboutme21.jpg"
+                    src="../../images/samen/sem_en_tim.webp"
                     alt="Random image"
                     placeholder="blurred"
                     loading="eager"
@@ -58,20 +60,25 @@ export const Hero: React.FC = () => {
                             <Button
                                 variant="outlined"
                                 sx={{ outline: '2px solid white', background: 'transparent' }}
-                                href={getRouteUrl(HeaderRoutesEnum.ONLINE_COACHING)}
+                                href={getRouteUrl(HeaderRoutesEnum.GROEPSTRAINING)}
                             >
-                                Online coaching
+                                Groepstrainingen
                             </Button>
                         </Box>
                         <SocialMedia sx={{ mb: 5 }} />
-                        <Box sx={{ position: 'relative', p: 3, display: 'inline-flex' }}>
-                            <Typography variant="caption" sx={{ position: 'absolute', top: 0, left: 0, color: theme.palette.warning.main, display: 'flex', alignItems: 'center', }}>
-                                <InfoOutlinedIcon sx={{ mr: 1 }} />
-                                Laatste update
-                            </Typography>
-                            <Typography variant="subtitle2" sx={{ color: 'white', textDecoration: 'underline', textDecorationColor: theme.palette.warning.main }}>
-                                Neem vrijblijvend contact op voor een gratis proefles
-                            </Typography>
+                        <Box sx={{ position: 'relative', display: 'inline-flex' }}>
+                            <Link
+                                href={getRouteUrl(HeaderRoutesEnum.CONTACT)}
+                                variant="subtitle2"
+                                sx={{ color: theme.palette.common.white, display: 'flex', alignItems: 'center' }}
+                            >
+                                Klik
+                                <Box sx={{ color: theme.palette.warning.main, display: 'flex', alignItems: 'center', mx: 1 }}>
+                                    <Icon component={KeyboardDoubleArrowRightIcon} />
+                                    hier
+                                </Box>
+                                voor een gratis proefles
+                            </Link>
                         </Box>
                     </Box>
                 </Container>

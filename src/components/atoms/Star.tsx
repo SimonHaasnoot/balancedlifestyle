@@ -4,6 +4,7 @@ export type StarProps = {
     size?: number;
     color?: string;
     outline?: boolean;
+    style?: any;
 };
 
 export const Star: React.FC<StarProps> = (props: StarProps) => {
@@ -22,6 +23,7 @@ export const Star: React.FC<StarProps> = (props: StarProps) => {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
+            style={props.style}
         >
             <polygon points="12 2 15.31 7.38 22 8.59 17.66 13.25 18.83 19.97 12 17.27 5.17 19.97 6.34 13.25 2 8.59 8.69 7.38 12 2" />
         </svg>
