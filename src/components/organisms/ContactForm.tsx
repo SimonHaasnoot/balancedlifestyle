@@ -2,7 +2,11 @@ import React from 'react';
 import { Button, FormControl, TextField, useTheme } from '@mui/material';
 import { navigate } from 'gatsby';
 
-export const ContactForm = () => {
+export type ContactFormProps = {
+    description?: string;
+};
+
+export const ContactForm: React.FC<ContactFormProps> = (props) => {
     const theme = useTheme();
 
     // const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -24,12 +28,9 @@ export const ContactForm = () => {
 
     function encode(data: any) {
         return Object.keys(data)
-          .map(
-            (key) =>
-              encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-          )
-          .join("&");
-      }
+            .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+            .join('&');
+    }
 
     const handleSubmit = (event: any) => {
         event.preventDefault();
@@ -38,7 +39,7 @@ export const ContactForm = () => {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: encode({
                 'form-name': event.target.getAttribute('name'),
-                ...name as any,
+                ...(name as any),
             }),
         })
             .then(() => navigate('/bedankt/'))
@@ -61,6 +62,13 @@ export const ContactForm = () => {
                 <TextField name="name" id="name" label="Naam" variant="standard" required={true} autoComplete="name" />
                 <TextField name="celphone" id="celphone" label="Telefoonnummer" variant="standard" required={true} autoComplete="tel" />
                 <TextField name="email" id="email" label="E-mail" variant="standard" required={true} autoComplete="email" />
+                {props.description && (
+                    <TextField name="subject" id="subject" label="Onderwerp" variant="standard" required={true} value={props.description} sx={{
+                        visibility: 'hidden',
+                        position: 'absolute',
+                        opacity: 0,
+                    }} />
+                )}
                 <TextField name="company" id="company" label="Bedrijf (optioneel)" variant="standard" />
                 <TextField
                     name="description"

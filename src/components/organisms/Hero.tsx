@@ -4,9 +4,7 @@ import * as React from 'react';
 import useMobile from '../../hooks/useMobile';
 import { SocialMedia } from '../molecules/SocialMedia';
 import { getRouteUrl, HeaderRoutesEnum } from '../../types/HeaderRoute';
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import { KeyboardDoubleArrowLeft } from '@mui/icons-material';
 
 export const Hero: React.FC = () => {
     const { isMobile } = useMobile();
