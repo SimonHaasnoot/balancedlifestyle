@@ -28,6 +28,12 @@ module.exports = {
             },
         },
         {
+            resolve: `gatsby-plugin-facebook-pixel`,
+            options: {
+                pixelId: '461658289597305',
+            },
+        },
+        {
             resolve: 'gatsby-plugin-manifest',
             options: {
                 icon: 'src/images/gatsby-icon.png',
