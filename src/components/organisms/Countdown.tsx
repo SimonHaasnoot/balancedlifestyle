@@ -44,8 +44,6 @@ export const Countdown: React.FC<CountdownProps> = (props: CountdownProps) => {
             sx={{
                 display: 'flex',
                 gap: isMobile ? 1 : 2,
-                justifyContent: 'center',
-                alignItems: 'center',
                 textAlign: 'center',
             }}
         >

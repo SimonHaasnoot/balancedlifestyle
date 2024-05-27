@@ -3,6 +3,7 @@ import * as React from 'react';
 import useMobile from '../../hooks/useMobile';
 import { Helmet } from 'react-helmet';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { Countdown } from './Countdown';
 
 export type SmallHeroProps = {
     image: React.ReactNode;
@@ -11,7 +12,8 @@ export type SmallHeroProps = {
     linkTo?: {
         link: string;
         text: string;
-    }
+    };
+    countdownDate?: string;
 };
 
 export const SmallHero: React.FC<SmallHeroProps> = (props) => {
@@ -54,18 +56,25 @@ export const SmallHero: React.FC<SmallHeroProps> = (props) => {
                                 variant="subtitle2"
                                 sx={{ mb: 3, maxWidth: isMobile ? '100%' : '60%', padding: 3, background: '#5ab7db38', lineHeight: 1.5 }}
                                 dangerouslySetInnerHTML={{ __html: props.subtitle }}
-                            >
-                            </Typography>
+                            ></Typography>
                             {props.linkTo && (
-                                <Link href={props.linkTo.link} sx={{
-                                    p: 1,
-                                    border: `1px solid ${theme.palette.warning.main}`,
-                                    display: 'inline-flex',
-                                    fontSize: '15px',
-                                }}>
+                                <Link
+                                    href={props.linkTo.link}
+                                    sx={{
+                                        p: 1,
+                                        border: `1px solid ${theme.palette.warning.main}`,
+                                        display: 'inline-flex',
+                                        fontSize: '15px',
+                                    }}
+                                >
                                     {props.linkTo.text}
                                     <ChevronRightIcon sx={{ ml: 1 }} />
                                 </Link>
+                            )}
+                            {props.countdownDate && (
+                                <Box sx={{ mt: 5 }}>
+                                    <Countdown date={props.countdownDate} />
+                                </Box>
                             )}
                         </Box>
                     </Container>

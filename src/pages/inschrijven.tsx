@@ -7,6 +7,8 @@ import { Layout } from '../components/pagelayout/Layout';
 import useMobile from '../hooks/useMobile';
 import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
 import { ContactForm } from '../components/organisms/ContactForm';
+import { SmallHero } from '../components/organisms/SmallHero';
+import { Block } from '../components/molecules/Block';
 
 export default function InschrijvenPage(props: any) {
     const { isMobile } = useMobile();
@@ -17,67 +19,34 @@ export default function InschrijvenPage(props: any) {
             <Helmet>
                 <title>Inschrijven - Balanced Lifestyle</title>
             </Helmet>
-            <Container
-                maxWidth={false}
-                disableGutters
-                component={'section'}
-                sx={{
-                    position: 'relative',
-                    overflow: 'hidden',
-                    height: isMobile ? '100%' : '100vh',
-                    pt: '40px',
-                    pb: '40px',
-                    backgroundColor: '#1C1D1F',
-                }}
-            >
-                <Box sx={{ position: 'absolute', inset: '0 0 0 0' }}>
+            <SmallHero
+                image={
                     <StaticImage
                         src="../images/studio/studio-buiten.webp"
-                        alt="Random image"
-                        placeholder="blurred"
-                        loading="eager"
-                        layout="fixed"
-                        style={{ height: '100%', width: '100%', objectFit: 'cover', filter: isMobile ? 'brightness(0.2)' : 'brightness(0.2)' }}
-                        transformOptions={{
-                            cropFocus: 'entropy',
-                        }}
+                        alt="Hero"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.2)' }}
                     />
-                </Box>
-                <Box
-                    sx={{
-                        display: 'flex',
-                        alignItems: isMobile ? 'center' : 'flex-start',
-                        flexDirection: 'column',
-                        justifyContent: 'center',
-                        width: '100%',
-                        height: '100%',
-                    }}
-                >
-                    <Container maxWidth="lg" sx={{ position: 'relative' }}>
-                        <Box>
-                            <Typography variant="h1" component="h1" sx={{ mb: 10, pt: 10 }}>
-                                Schrijf je nu in!
-                            </Typography>
-                            {/* <Box sx={{ display: 'flex', gap: 1, mb: 2 }}>
-                                <Chip label="Nieuw" color="primary" sx={{ ['> *']: { color: 'white' } }} />
-                                <Chip label="Inschrijf actie" color="primary" sx={{ ['> *']: { color: 'white' } }} />
-                            </Box> */}
-                            <Typography variant="body2" component="p" sx={{ mb: 3, maxWidth: 800, lineHeight: 2, color: 'white' }}>
-                                <span>Balanced Lifestyle. </span>
-                                De prive studio van Zeist! Wij zijn gespecialiseerd in Personal Training, Voeding, Dietiek en Gezondheid! Wij
-                                begeleiden jou naar een gezonde levensstijl en garanderen jou 100% resultaat! Meld je voor 1 juni aan en ontvang een
-                                <span> gratis proefles!</span>
-                                <br />
-                                <br />
-                                De actie loopt nog voor:
-                            </Typography>
-                            <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-                                <Countdown date="2024-06-01T00:00:00" />
-                            </Box>
-                        </Box>
-                    </Container>
-                </Box>
-            </Container>
+                }
+                countdownDate='2024-06-01T00:00:00+02:00'
+                title="Nieuwe studio!"
+                subtitle="Wij zijn zojuist geopend en hebben een speciale inschrijfactie voor jou!"
+            />
+            <Block
+                title="Personal Training inschrijfactie 2024"
+                subtitle="Inhoud"
+                body="In het kort; wij zijn gespecialiseerd in Personal Training, Voeding, Dietiek en Gezondheid!
+                Wij begeleiden jou naar een gezonde levensstijl en garanderen jou 100% resultaat!
+                Meld je voor 1 juni aan en ontvang een gratis proefles!
+                <br /><br />
+                <b>Geheel vrijblijvend en zonder verplichtingen.</b>
+                <br /><br />
+                Schrijf je hieronder in en wij nemen zo snel mogelijk contact met je op!
+                "
+
+                staticImage={
+                    <StaticImage src="../images/workouts/tim_bokzak3.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                }
+            />
             <Box
                 sx={{
                     backgroundColor: theme.palette.secondary.main,
@@ -91,9 +60,9 @@ export default function InschrijvenPage(props: any) {
                     }}
                 >
                     <Typography variant="h3" component="h2" sx={{ mb: 5 }}>
-                        Neem contact op
+                        Neem hier contact op
                     </Typography>
-                    <ContactForm description='Inschrijfactie 2024' />
+                    <ContactForm description="Inschrijfactie 2024"  />
                 </DefaultContainer>
             </Box>
         </Layout>
