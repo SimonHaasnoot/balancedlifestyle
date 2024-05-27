@@ -54,7 +54,7 @@ export const Countdown: React.FC<CountdownProps> = (props: CountdownProps) => {
                             variant="h3"
                             component="h3"
                             sx={{
-                                background: theme.palette.warning.main,
+                                background: theme.palette.secondary.main,
                                 color: 'white',
                                 padding: isMobile ? '0.8rem' : '1rem',
                                 borderRadius: '0.5rem',
