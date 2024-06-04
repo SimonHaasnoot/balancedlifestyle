@@ -1,14 +1,14 @@
-import { Box, Chip, Container, Typography, useTheme } from '@mui/material';
+import { Box, Typography, useTheme } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Countdown } from '../components/organisms/Countdown';
 import { Layout } from '../components/pagelayout/Layout';
 import useMobile from '../hooks/useMobile';
 import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
 import { ContactForm } from '../components/organisms/ContactForm';
 import { SmallHero } from '../components/organisms/SmallHero';
 import { Block } from '../components/molecules/Block';
+import { HeaderRoutesEnum } from '../types/HeaderRoute';
 
 export default function InschrijvenPage(props: any) {
     const { isMobile } = useMobile();
@@ -27,7 +27,7 @@ export default function InschrijvenPage(props: any) {
                         style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.2)' }}
                     />
                 }
-                countdownDate='2024-06-01T00:00:00+02:00'
+                countdownDate='2024-06-30T00:00:00+02:00'
                 title="Nieuwe studio!"
                 subtitle="Wij zijn zojuist geopend en hebben een speciale inschrijfactie voor jou!"
             />
@@ -36,12 +36,16 @@ export default function InschrijvenPage(props: any) {
                 subtitle="Inhoud"
                 body="In het kort; wij zijn gespecialiseerd in Personal Training, Voeding, Dietiek en Gezondheid!
                 Wij begeleiden jou naar een gezonde levensstijl en garanderen jou 100% resultaat!
-                Meld je voor 1 juni aan en ontvang een gratis proefles!
+                Meld je voor eind juni aan en ontvang een gratis proefweek en healthcheck!
                 <br /><br />
                 <b>Geheel vrijblijvend en zonder verplichtingen.</b>
                 <br /><br />
                 Schrijf je hieronder in en wij nemen zo snel mogelijk contact met je op!
                 "
+                button={{
+                    link: HeaderRoutesEnum.PERSONAL_TRAINING,
+                    text: 'Meer over personal training',
+                }}
 
                 staticImage={
                     <StaticImage src="../images/workouts/tim_bokzak3.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
