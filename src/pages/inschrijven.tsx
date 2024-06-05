@@ -8,7 +8,7 @@ import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
 import { ContactForm } from '../components/organisms/ContactForm';
 import { SmallHero } from '../components/organisms/SmallHero';
 import { Block } from '../components/molecules/Block';
-import { HeaderRoutesEnum } from '../types/HeaderRoute';
+import { HeaderRoutesEnum, getRouteUrl } from '../types/HeaderRoute';
 
 export default function InschrijvenPage(props: any) {
     const { isMobile } = useMobile();
@@ -43,7 +43,7 @@ export default function InschrijvenPage(props: any) {
                 Schrijf je hieronder in en wij nemen zo snel mogelijk contact met je op!
                 "
                 button={{
-                    link: HeaderRoutesEnum.PERSONAL_TRAINING,
+                    link: getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING),
                     text: 'Meer over personal training',
                 }}
 
