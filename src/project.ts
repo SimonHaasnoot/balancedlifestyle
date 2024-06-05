@@ -10,7 +10,7 @@ export enum projectVariables {
     COMPANY_EMAIL = 'info@balancedlifestyle.nl',
     COMPANY_WEBSITE = 'balancedlifestyle.nl',
     COMPANY_FACEBOOK = 'https://www.facebook.com/sem.vandegriendt.5',
-    COMPANY_INSTAGRAM = 'https://www.instagram.com/balanced_lifestyle_official_',
+    COMPANY_INSTAGRAM = 'https://www.instagram.com/balancedlifestyle_official',
     COMPANY_TWITTER = '#',
     COMPANY_YOUTUBE = 'https://youtube.com/@Sem_van_de_Griendt',
     COMPANY_LINKEDIN = 'https://www.linkedin.com/in/sem-van-de-griendt-1b9617162/',
