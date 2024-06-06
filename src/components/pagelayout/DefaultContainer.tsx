@@ -9,6 +9,7 @@ export type DefaultContainerProps = {
     children: React.ReactNode;
     disableGutters?: boolean;
     sx?: SxProps<Theme>;
+    id?: string;
 } & DefaultContainerProps;
 
 export const DefaultContainer: React.FC<DefaultContainerProps> = (props) => {
@@ -23,7 +24,7 @@ export const DefaultContainer: React.FC<DefaultContainerProps> = (props) => {
     return (
         <Container disableGutters={props.disableGutters} maxWidth={props.maxWidth} sx={{ background, position: 'relative', ...props.sx }} {...props}>
             <Box py={padding} flex={1}>
-                {props.children}
+                <div id={props.id}>{props.children}</div>
             </Box>
         </Container>
     );

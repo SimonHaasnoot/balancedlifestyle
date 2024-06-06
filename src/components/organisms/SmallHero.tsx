@@ -14,6 +14,7 @@ export type SmallHeroProps = {
         text: string;
     };
     countdownDate?: string;
+    customHeight?: string;
 };
 
 export const SmallHero: React.FC<SmallHeroProps> = (props) => {
@@ -31,7 +32,7 @@ export const SmallHero: React.FC<SmallHeroProps> = (props) => {
                 sx={{
                     position: 'relative',
                     overflow: 'hidden',
-                    height: isMobile ? '90vh' : '75vh',
+                    height: isMobile ? '90vh' : props.customHeight ? props.customHeight : '75vh',
                     backgroundColor: '#1C1D1F',
                 }}
                 component="section"

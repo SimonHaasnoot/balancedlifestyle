@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer';
 
 export type BlockProps = {
     staticImage: any;
-    title: string;
+    title?: string;
     subtitle: string;
     body: string;
     button?: {
@@ -29,12 +29,12 @@ export const Block: React.FC<BlockProps> = (props) => {
     const disableScale = props.disableScale || false;
 
     const getButtonLinkRoute = (link: string | HeaderRoutesEnum) => {
-        if (typeof link === typeof(HeaderRoutesEnum)) {
+        if (typeof link === typeof HeaderRoutesEnum) {
             return getRouteUrl(link as HeaderRoutesEnum);
         }
 
         return link;
-    }
+    };
 
     return (
         <Container maxWidth={maxWidth} disableGutters component="section">
@@ -63,9 +63,11 @@ export const Block: React.FC<BlockProps> = (props) => {
                         <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
                             {props.subtitle}
                         </Typography>
-                        <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.black, mb: 5 }}>
-                            {props.title}
-                        </Typography>
+                        {props.title && (
+                            <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.black, mb: 5 }}>
+                                {props.title}
+                            </Typography>
+                        )}
                         <Typography
                             variant="body1"
                             sx={{ color: theme.palette.common.black }}
