@@ -10,7 +10,7 @@ export type DefaultContainerProps = {
     disableGutters?: boolean;
     sx?: SxProps<Theme>;
     id?: string;
-} & DefaultContainerProps;
+};
 
 export const DefaultContainer: React.FC<DefaultContainerProps> = (props) => {
     const { isMobile } = useIsMobile();

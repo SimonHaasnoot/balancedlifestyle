@@ -15,7 +15,7 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = (props) => {
 
     return (
         <Box py={5} component="section">
-            <DefaultContainer>
+            <DefaultContainer id='succesverhalen'>
                 {props.title && (
                     <Typography variant="h2" sx={{ color: theme.palette.primary.main, textAlign: 'center' }} id="succesverhalen">
                         Persoonlijke successen

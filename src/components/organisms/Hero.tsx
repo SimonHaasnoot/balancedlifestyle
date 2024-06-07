@@ -75,7 +75,7 @@ export const Hero: React.FC = () => {
                                     <Icon component={KeyboardDoubleArrowRightIcon} />
                                     hier
                                 </Box>
-                                voor een gratis proefles
+                                voor een gratis proefles en healthcheck!
                             </Link>
                         </Box>
                     </Box>
