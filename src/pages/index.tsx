@@ -99,22 +99,18 @@ export const index = (props: any) => {
                     </DefaultContainer>
                 </Box>
                 <Block
-                    title="Iets over ons"
+                    title="Iets over mij"
                     subtitle="Terug naar het begin"
-                    body="Sinds september 2023 zijn we aan samenwerking aangegaan op basis van vertrouwen, ambitie en visie.
-                    <br /><br />
-                    Beide staan wij voor een gezonde uitdagende leefstijl waarin genieten een belangrijk component is. Effort gecombineerd met genieten is in onze optiek de perfecte formule voor een vitaal en duurzaam succes. In balans!
-                    Door onze kwaliteiten te bundelen en elkaars in onze eigen unieke kracht te zetten vormen we een volmaakt team. Wij coachen elkaar, geven elkaar feedback wat gepaard gaat met een goede grap."
+                    body="Welkom, mijn naam is Sem van de Griendt. Oprichter van Balanced lifestyle.<br /><br /> Balanced lifestyle is ontstaan uit een persoonlijk verhaal. Ik heb jaren met extreme huidklachten rondgelopen. De
+                    milde huidklachten ontstonden toen ik 14 was. In het begin maakte ik mij weinig zorgen en was ik ervan overtuigd
+                    dat de pubertijd de veroorzaker was van mijn huidproblemen. 3 Jaar later, tientallen doktersbezoeken en
+                    antibioticakuren verder werden mijn problemen niet minder, maar juist erger."
                     button={{
                         text: 'Lees hier verder',
                         link: getRouteUrl(HeaderRoutesEnum.ABOUT_ME),
                     }}
                     staticImage={
-                        <StaticImage
-                            src="../images/samen/over_ons_samen.webp"
-                            alt="Hero"
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                        />
+                        <StaticImage src="../images/workouts/workout5.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     }
                 />
                 <Box sx={{ backgroundColor: theme.palette.grey[100], position: 'relative' }} component="section">
@@ -169,7 +165,7 @@ export const index = (props: any) => {
                                     }}
                                 >
                                     <StaticImage
-                                        src="../images/tim/tim_training.JPG"
+                                        src="../images/workouts/workout2.jpg"
                                         alt="Hero"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
@@ -347,7 +343,7 @@ export const index = (props: any) => {
                                     }}
                                 >
                                     <StaticImage
-                                        src="../images/tim/tim_bokzak1.JPG"
+                                        src="../images/workouts/workout8.jpg"
                                         alt="Hero"
                                         style={{
                                             width: '100%',
@@ -431,7 +427,7 @@ export const index = (props: any) => {
                 </DefaultContainer>
                 <Box sx={{ backgroundColor: theme.palette.secondary.main }} component="section">
                     <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
-                        <Typography variant="subtitle2" sx={{ color: theme.palette.common.white}}>
+                        <Typography variant="subtitle2" sx={{ color: theme.palette.common.white }}>
                             klanten beoordelen ons gemiddeld met een{' '}
                             <Star
                                 style={{
