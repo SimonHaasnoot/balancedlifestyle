@@ -20,10 +20,9 @@ export const headerRoutes = [
     // { name: 'Workshops', path: '/workshops' },
     // { name: 'Blogs', path: '/blogs', isSecondaryLevel: true },
     // { name: 'Goed vlees', path: '/vlees', isSecondaryLevel: true },
-    { name: 'Over ons', path: '/over-ons', isSecondaryLevel: true },
+    { name: 'Over mij', path: '/over-sem', isSecondaryLevel: true },
     { name: 'Reviews', path: '/reviews', isSecondaryLevel: true },
     { name: 'Contact', path: '/contact', isSecondaryLevel: true },
-    { name: 'Over Tim', path: '/over-tim', notVisible: true },
     { name: 'Over Sem', path: '/over-sem', notVisible: true },
 
 ] as HeaderRouteType[];

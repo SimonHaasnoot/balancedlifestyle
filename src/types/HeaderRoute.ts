@@ -21,11 +21,8 @@ export enum HeaderRoutesEnum {
     PACKAGES = 'Pakketten',
     PERSONAL_TRAINING = 'Personal training',
     BLOGS = 'Blogs',
-    ABOUT_ME = 'Over ons',
+    ABOUT_ME = 'Over mij',
     CONTACT = 'Contact',
-    OVER_TIM = 'Over Tim',
-    OVER_SEM = 'Over Sem',
-
 }
 
 export const getRouteUrl = (route: HeaderRoutesEnum): string => {

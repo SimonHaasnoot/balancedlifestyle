@@ -73,9 +73,6 @@ export const contact = (props: any) => {
                                 <Button variant="outlined" sx={{ mt: 2, mb: 5 }} href={`tel:${projectVariables.COMPANY_PHONE}`}>
                                     Bel Sem op {projectVariables.COMPANY_PHONE}
                                 </Button>{' '}
-                                <Button variant="outlined" sx={{ mt: 2, mb: 5 }} href={`tel:${projectVariables.COMPANY_PHONE2}`}>
-                                    Bel Tim op {projectVariables.COMPANY_PHONE2}
-                                </Button>
                                 <Typography variant="subtitle2" sx={{ color: theme.palette.common.white }}>
                                     Of stuur ons een e-mail
                                 </Typography>
