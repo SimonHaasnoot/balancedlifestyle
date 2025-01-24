@@ -29,6 +29,31 @@ export const SpecialisatiesPage = () => {
 
             <Box sx={{ backgroundColor: theme.palette.grey[100] }} component="section">
                 <DefaultContainer maxWidth="lg" doublePadding={true}>
+                    <Box maxWidth={'1000px'}>
+                        <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 2 }}>
+                            Samenwerking met Ruth Vis – Dietist & Orthomoleculair Therapeut
+                        </Typography>
+                        <Typography variant="body1" sx={{ color: theme.palette.common.white, mb: 5 }}>
+                            Bij Balanced Lifestyle geloven we in een holistische benadering van gezondheid, waarbij voeding, beweging en mindset hand
+                            in hand gaan. Daarom werken we samen met Ruth Vis, dietist en orthomoleculair therapeut van Gezondheidspraktijk Vision for
+                            Health. Ruth is gespecialiseerd in darmklachten en hormonale disbalans, en kijkt met behulp van bloed- en
+                            ontlastingsonderzoek naar onderliggende verstoringen en tekorten.
+                            <br />
+                            <br />
+                            Of je nu wilt focussen op afvallen, spiergroei of het verbeteren van je conditie, voeding is altijd de basis voor het
+                            behalen van je doelen. Ruth helpt je om je voedingspatroon optimaal af te stemmen op jouw behoeften, zodat je het beste
+                            uit je training haalt. Waar nodig kunnen supplementen als aanvulling dienen op een gezonde voeding, om tekorten aan te
+                            vullen en je lichaam optimaal te ondersteunen.
+                            <br />
+                            <br />
+                            Wil je meer weten of heb je vragen? Bezoek de website van Ruth voor meer informatie op{' '}
+                            <Link href="https://www.visionforhealth.nl">www.visionforhealth.nl</Link>, of vraag ernaar tijdens je training. We helpen
+                            je graag verder naar een gezondere, energiekere versie van jezelf!
+                        </Typography>
+                    </Box>
+
+                    <Divider />
+
                     <Box maxWidth={'700px'}>
                         <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 2 }}>
                             Bewegingswetenschap
@@ -56,18 +81,6 @@ export const SpecialisatiesPage = () => {
 
                     <Box maxWidth={'700px'}>
                         <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 2 }}>
-                            OMT
-                        </Typography>
-                        <Typography variant="body1" sx={{ color: theme.palette.common.white, mb: 5 }}>
-                            Blessurepreventie door een een specialist. Verminder (chronische) pijnklachten met de juiste visie een aanpak. Voorkomen
-                            is beter dan genezen.
-                        </Typography>
-                    </Box>
-
-                    <Divider />
-
-                    <Box maxWidth={'700px'}>
-                        <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 2 }}>
                             Leefstijl coaches
                         </Typography>
                         <Typography variant="body1" sx={{ color: theme.palette.common.white, mb: 5 }}>
@@ -75,7 +88,6 @@ export const SpecialisatiesPage = () => {
                             om ongezonde patronen te doorbreken door mentale coaching.
                         </Typography>
                     </Box>
-
                 </DefaultContainer>
             </Box>
 

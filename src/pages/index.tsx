@@ -64,14 +64,14 @@ export const index = (props: any) => {
                             <Grid item xs={12} md={4}>
                                 <Usp
                                     title="Persoonlijke trainingen"
-                                    body={{ text: 'Personal training in onze moderne studio. Afgestemd op jouw doelen en wensen.' }}
+                                    body={{ text: 'Personal training in onze moderne studio. wij begeleiden je naar een gezonde en bewuste leefstijl door aandacht te geven aan beweging, voeding en herstel.' }}
                                     icon={FitnessCenter}
                                 />
                             </Grid>
                             <Grid item xs={12} md={4} sx={{ mt: isMobile ? 0 : 10 }}>
                                 <Usp
                                     title="Persoonlijk voedingsplan"
-                                    body={{ text: 'Persoonlijk voedingsplan in onze eigen app. Afgestemd op jouw doelen en wensen.' }}
+                                    body={{ text: 'Persoonlijk voedingsplan. Afgestemd op jouw doelen en wensen. In samenwerking met Dietist & Orthomoleculair Therapeut.' }}
                                     icon={MenuBook}
                                 />
                             </Grid>

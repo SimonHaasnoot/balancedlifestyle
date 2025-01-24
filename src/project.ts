@@ -3,7 +3,7 @@ export enum projectVariables {
     COMPANY_URL = 'https://balancedlifestyle.nl',
     COMPANY_NAME = 'Balanced Lifestyle',
     COMPANY_ONELINER = 'Waar balans centraal staat',
-    COMPANY_DESCRIPTION = "Balanced Lifestyle is gespecialiseerd in het optimaliseren van de leefstijl door balans te creëren in beweging, voeding en rust. Regio Zeist en Utrecht.",
+    COMPANY_DESCRIPTION = 'Balanced Lifestyle is gespecialiseerd in het optimaliseren van de leefstijl door balans te creëren in beweging, voeding en rust. Wij gaan verder dan personal training: met een holistische aanpak helpen wij onze klanten bij het verbeteren van hun fysieke en mentale welzijn, voor duurzame resultaten. Regio Zeist en Utrecht.',
     COMPANY_ADDRESS = 'Korte Steynlaan 22 – 3701 EX Zeist',
     COMPANY_PHONE = '0637199776',
     COMPANY_PHONE2 = '0619238149',
