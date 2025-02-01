@@ -11,7 +11,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 export const headerRoutes = [
     { name: 'Home', path: '/' },
     { name: 'Personal training', path: '/personal-training' },
-    { name: 'Online coaching', path: '/online-coaching' },
+    { name: 'Onze studio', path: '/onze-studio' },
     { name: 'Groepstraining', path: '/groepstraining' },
     { name: 'Voeding', path: '/voeding' },
     { name: 'Specialisaties', path: '/specialisaties' },

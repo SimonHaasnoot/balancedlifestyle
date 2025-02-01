@@ -54,9 +54,6 @@ export const packages = (props: any) => {
                         <Button variant="outlined" href="#personal-training" sx={{ width: isMobile ? '80%' : 'inherit' }}>
                             Personal training
                         </Button>
-                        <Button variant="outlined" href="#online-coaching" sx={{ width: isMobile ? '80%' : 'inherit' }}>
-                            Online coaching
-                        </Button>
                         <Button variant="outlined" href={`#voedingsschema`} sx={{ width: isMobile ? '80%' : 'inherit' }}>
                             Voedingsschema
                         </Button>
@@ -86,18 +83,6 @@ export const packages = (props: any) => {
                     >
                         <Typography variant="body2" sx={{ mb: 3, color: theme.palette.primary.main }}>
                             Meer weten over personal training? klik dan <Link href={getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING)}>hier</Link>.
-                        </Typography>
-                    </SchemaTable>
-
-                    <SchemaTable
-                        title="Online coaching"
-                        schema={onlineCoachingSchema}
-                        tableHead={['Aangeboden', 'Totale duur', 'Contact']}
-                        id="online-coaching"
-                        isMountedCallback={setScrollElementsMounted}
-                    >
-                        <Typography variant="body2" sx={{ mb: 3, color: theme.palette.primary.main }}>
-                            Meer weten over online coaching? klik dan <Link href={getRouteUrl(HeaderRoutesEnum.ONLINE_COACHING)}>hier</Link>.
                         </Typography>
                     </SchemaTable>
                 </DefaultContainer>

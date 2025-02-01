@@ -24,12 +24,12 @@ export const Hero: React.FC = () => {
         >
             <Box sx={{ position: 'absolute', inset: '0 0 0 0' }}>
                 <StaticImage
-                    src="../../images/aboutme21.jpg"
+                    src="../../images/aboutme4.jpg"
                     alt="Random image"
                     placeholder="blurred"
                     loading="eager"
                     layout="fixed"
-                    style={{ height: '100%', width: '100%', objectFit: 'cover', filter: 'brightness(0.4)' }}
+                    style={{ height: '100%', width: '100%', objectFit: 'cover', filter: 'brightness(0.7)' }}
                     transformOptions={{
                         cropFocus: 'entropy',
                     }}
@@ -47,7 +47,7 @@ export const Hero: React.FC = () => {
             >
                 <Container maxWidth="lg" sx={{ position: 'relative' }}>
                     <Box sx={{ color: 'white', textAlign: isMobile ? 'center' : 'inherit' }}>
-                        <Typography variant="h1" component="h1" sx={{ mb: 3, pt: 10 }}>
+                        <Typography variant="h1" component="h1" sx={{ mb: isMobile ? '330px' : 3, pt: 10 }}>
                             Balanced <br /> Lifestyle
                         </Typography>
                         <Box sx={{ mb: 10, display: 'flex', gap: 2, flexDirection: isMobile ? 'column' : 'row' }}>
