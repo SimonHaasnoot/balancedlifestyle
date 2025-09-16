@@ -4,6 +4,7 @@ import useMobile from '../../hooks/useMobile';
 import { Helmet } from 'react-helmet';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Countdown } from './Countdown';
+import { projectVariables } from '../../project';
 
 export type SmallHeroProps = {
     image: React.ReactNode;
@@ -24,7 +25,7 @@ export const SmallHero: React.FC<SmallHeroProps> = (props) => {
     return (
         <>
             <Helmet>
-                <title>{props.title} - Balanced Lifestyle</title>
+                <title>{props.title} - {projectVariables.COMPANY_NAME}</title>
             </Helmet>
             <Container
                 maxWidth={false}

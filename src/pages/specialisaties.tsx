@@ -34,7 +34,7 @@ export const SpecialisatiesPage = () => {
                             Samenwerking met Ruth Vis – Dietist & Orthomoleculair Therapeut
                         </Typography>
                         <Typography variant="body1" sx={{ color: theme.palette.common.white, mb: 5 }}>
-                            Bij Balanced Lifestyle geloven we in een holistische benadering van gezondheid, waarbij voeding, beweging en mindset hand
+                            Bij Lifestyle & Personal Training Zeist geloven we in een holistische benadering van gezondheid, waarbij voeding, beweging en mindset hand
                             in hand gaan. Daarom werken we samen met Ruth Vis, dietist en orthomoleculair therapeut van Gezondheidspraktijk Vision for
                             Health. Ruth is gespecialiseerd in darmklachten en hormonale disbalans, en kijkt met behulp van bloed- en
                             ontlastingsonderzoek naar onderliggende verstoringen en tekorten.

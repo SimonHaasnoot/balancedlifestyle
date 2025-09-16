@@ -11,9 +11,9 @@ export default function TopLayout(props) {
         <React.Fragment>
             <Helmet>
                 <meta name="viewport" content="initial-scale=1, width=device-width" />
-                <meta name="keywords" content="Personal Training, Zeist, Sem van de Griendt, Lifestyle, Sport, Training, Fitness" />
-                <meta name="description" content="Bij Balanced Lifestyle helpen wij jou balans terug te vinden in jouw leefstijl door jou de handvaten te geven van bewegen, voeding en slaap." />
-                <title>Balanced Lifestyle</title>
+                <meta name="keywords" content="Personal Training, Zeist, Sem van de Griendt, Lifestyle, Sport, Training, Fitness, Utrecht, Regio Zeist, Lifestyle & Personal training" />
+                <meta name="description" content="Bij Lifestyle & Personal Training Zeist helpen wij jou balans terug te vinden in jouw leefstijl door jou de handvaten te geven van bewegen, voeding en slaap." />
+                <title>Lifestyle & Personal Training Zeist</title>
                 <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
                 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
                 <link href="https://fonts.googleapis.com/css2?family=Numans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />

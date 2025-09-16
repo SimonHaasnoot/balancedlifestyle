@@ -24,7 +24,6 @@ export const headerRoutes = [
     { name: 'Reviews', path: '/reviews', isSecondaryLevel: true },
     { name: 'Contact', path: '/contact', isSecondaryLevel: true },
     { name: 'Over Sem', path: '/over-sem', notVisible: true },
-
 ] as HeaderRouteType[];
 
 export type LayoutProps = {
@@ -114,17 +113,18 @@ export const Layout: React.FC<LayoutProps> = (props) => {
                                                         marginRight: isFirst ? 'auto' : 0,
                                                         mb: isFirst ? '-10px' : 0,
                                                         pr: isLast ? 0 : 2,
-                                                        [':after']: !isFirst && !isLast
-                                                            ? {
-                                                                  content: '""',
-                                                                  position: 'absolute',
-                                                                  right: 0,
-                                                                  top: '40%',
-                                                                  width: '2px',
-                                                                  height: '10px',
-                                                                  background: theme.palette.common.white,
-                                                              }
-                                                            : {},
+                                                        [':after']:
+                                                            !isFirst && !isLast
+                                                                ? {
+                                                                      content: '""',
+                                                                      position: 'absolute',
+                                                                      right: 0,
+                                                                      top: '40%',
+                                                                      width: '2px',
+                                                                      height: '10px',
+                                                                      background: theme.palette.common.white,
+                                                                  }
+                                                                : {},
                                                     }}
                                                 >
                                                     <Link
@@ -151,11 +151,14 @@ export const Layout: React.FC<LayoutProps> = (props) => {
                                                         ) : (
                                                             <StaticImage
                                                                 src="../../images/logo-white.png"
-                                                                alt="Balanced Lifestyle"
+                                                                alt="Lifestyle & Personal Training Zeist"
                                                                 placeholder="blurred"
                                                                 loading="eager"
                                                                 layout="fixed"
                                                                 height={40}
+                                                                style={{
+                                                                    visibility: 'hidden',
+                                                                }}
                                                                 // style={{ marginBottom: '-20px' }}
                                                             />
                                                         )}
@@ -192,7 +195,9 @@ export const Layout: React.FC<LayoutProps> = (props) => {
                     <Container maxWidth="xl">
                         {!isTabletOrSmaller && (
                             <>
-                                <List sx={{ display: 'flex', justifyContent: 'end', pt: atTopOfPage ? 0 : '8px', transition: 'all 0.2s ease-in-out' }}>
+                                <List
+                                    sx={{ display: 'flex', justifyContent: 'end', pt: atTopOfPage ? 0 : '8px', transition: 'all 0.2s ease-in-out' }}
+                                >
                                     {headerRoutes
                                         .filter((x) => x.isSecondaryLevel && !x.notVisible)
                                         .map((route, index) => {

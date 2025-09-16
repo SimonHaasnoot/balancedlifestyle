@@ -46,7 +46,7 @@ export const FoodPage = (props: any) => {
                             eiwitten.
                             <br />
                             <br />
-                            Bij <span>Balanced lifestyle</span> streven we naar balans. Wij sluiten geen enkele voedingsgroep uit en streven naar
+                            Bij <span>Lifestyle & Personal Training Zeist</span> streven we naar balans. Wij sluiten geen enkele voedingsgroep uit en streven naar
                             voeding van moeder natuur. Producten, zoals vlees, noten, groenten en fruit worden bij voorkeur gekocht van een lokale
                             (bio)boerderij die los staan van de intensieve veehouderij. Hierdoor dragen wij niet bij aan de veeteeltindustrie en de
                             massaproductie.

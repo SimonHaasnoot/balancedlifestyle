@@ -2,6 +2,7 @@ import { Box, Button, Container, Typography, useTheme } from '@mui/material';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Layout } from '../components/pagelayout/Layout';
+import { projectVariables } from '../project';
 
 export default function NotFound(props: any) {
     const theme = useTheme();
@@ -9,7 +10,7 @@ export default function NotFound(props: any) {
     return (
         <>
             <Helmet>
-                <title>Pagina niet gevonden - Balanced Lifestyle</title>
+                <title>Pagina niet gevonden - {projectVariables.COMPANY_NAME}</title>
             </Helmet>
             <Layout location={props.location} disableHeaderTransition={true}>
                 <Container maxWidth="lg" sx={{ minHeight: '95vh', display: 'flex', alignItems: 'center' }}>

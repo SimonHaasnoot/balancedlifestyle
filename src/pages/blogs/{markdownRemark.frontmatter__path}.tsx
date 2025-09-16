@@ -15,7 +15,7 @@ export default function BlogPostTemplate({
     return (
         <Layout disableHeaderTransition={true}>
             <Helmet>
-                <title>{frontmatter.title} - Balanced Lifestyle</title>
+                <title>{frontmatter.title} - Lifestyle & Personal Training Zeist</title>
             </Helmet>
             <DefaultContainer maxWidth="lg" sx={{ mt: 10 }}>
                 <Grid container>

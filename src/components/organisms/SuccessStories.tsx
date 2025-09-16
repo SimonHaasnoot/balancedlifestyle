@@ -39,7 +39,7 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = (props) => {
                             image: <StaticImage src="../../images/growth/mirron.jpg" alt="Mirron progressie" />,
                             package: 'online coaching',
                             text:
-                                '"Sem van Balanced Lifestyle heeft mij zeer goed op weg geholpen met mijn fitness journey! Door hem heb ik de juiste motivatie gekregen en hij heeft een gepersonaliseerd schema opgesteld met de juiste voeding. Heel tevreden dus!"',
+                                '"Sem van Lifestyle Personal Training heeft mij zeer goed op weg geholpen met mijn fitness journey! Door hem heb ik de juiste motivatie gekregen en hij heeft een gepersonaliseerd schema opgesteld met de juiste voeding. Heel tevreden dus!"',
                         },
                         {
                             title: 'Wiebe Palstra',
@@ -54,7 +54,7 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = (props) => {
                             subtitle: '5kg vet afgevallen en 3kg spiermassa aangekomen in 6 maanden',
                             image: <StaticImage src="../../images/growth/nathan.jpg" alt="Nathan progressie" />,
                             package: 'online coaching',
-                            text: `"Na zelfstandig trainen in de sportschool, zocht ik professionele begeleiding. Balanced Lifestyle heeft mij geholpen mijn doelen te verfijnen en te bereiken. Dankzij zijn voeding- en trainingsadvies en constante beschikbaarheid voor vragen, ben ik zeer tevreden over Sem's begeleiding en de kennis die hij me heeft bijgebracht. Top!"`,
+                            text: `"Na zelfstandig trainen in de sportschool, zocht ik professionele begeleiding. Lifestyle Personal Training heeft mij geholpen mijn doelen te verfijnen en te bereiken. Dankzij zijn voeding- en trainingsadvies en constante beschikbaarheid voor vragen, ben ik zeer tevreden over Sem's begeleiding en de kennis die hij me heeft bijgebracht. Top!"`,
                         },
                     ]}
                 />

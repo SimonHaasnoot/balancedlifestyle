@@ -7,6 +7,7 @@ import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
 import { Layout } from '../components/pagelayout/Layout';
 import useIsMobile from '../hooks/useMobile';
 import { getRouteUrl, HeaderRoutesEnum } from '../types/HeaderRoute';
+import { projectVariables } from '../project';
 
 export const AboutSemPage = (props: any) => {
     const theme = useTheme();
@@ -16,7 +17,7 @@ export const AboutSemPage = (props: any) => {
     return (
         <>
             <Helmet>
-                <title>Over Sem - Balanced Lifestyle</title>
+                <title>Over Sem - {projectVariables.COMPANY_NAME}</title>
             </Helmet>
             <Layout location={props.location}>
                 <Box sx={{ position: 'relative', background: theme.palette.grey[100], pt: isMobile ? 10 : 20, pb: 0 }} component="section">

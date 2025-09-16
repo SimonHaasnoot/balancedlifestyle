@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
 import { Layout } from '../components/pagelayout/Layout';
 import useIsMobile from '../hooks/useMobile';
+import { projectVariables } from '../project';
 
 export const ThanksPage = (props: any) => {
     const theme = useTheme();
@@ -12,7 +13,7 @@ export const ThanksPage = (props: any) => {
     return (
         <>
             <Helmet>
-                <title>Bedankt - Balanced Lifestyle</title>
+                <title>Bedankt - {projectVariables.COMPANY_NAME}</title>
             </Helmet>
             <Layout location={props.location} disableHeaderTransition={true}>
                 <DefaultContainer

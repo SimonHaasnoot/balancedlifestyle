@@ -47,8 +47,11 @@ export const Hero: React.FC = () => {
             >
                 <Container maxWidth="lg" sx={{ position: 'relative' }}>
                     <Box sx={{ color: 'white', textAlign: isMobile ? 'center' : 'inherit' }}>
-                        <Typography variant="h1" component="h1" sx={{ mb: isMobile ? '330px' : 3, pt: 10 }}>
-                            Balanced <br /> Lifestyle
+                        <Typography variant="h1" component="h1" sx={{ mb: isMobile ? '100px' : 3, pt: 10 }}>
+                            Personal<br />Training
+                        </Typography>
+                        <Typography variant="h1" component="h2" fontSize={isMobile ? '1rem' : '3rem'} sx={{ mb: 5, }}>
+                        <span>&</span> Lifestyle
                         </Typography>
                         <Box sx={{ mb: 10, display: 'flex', gap: 2, flexDirection: isMobile ? 'column' : 'row' }}>
                             <Button variant="outlined" href={getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING)}>
@@ -75,7 +78,7 @@ export const Hero: React.FC = () => {
                                     <Icon component={KeyboardDoubleArrowRightIcon} />
                                     hier
                                 </Box>
-                                voor een gratis proefles en healthcheck!
+                                voor een vrijblijvende kennismaking in onze studio!
                             </Link>
                         </Box>
                     </Box>

@@ -26,7 +26,7 @@ export const onlinecoaching = () => {
                     />
                 }
                 title="Onze studio"
-                subtitle="Bij Balanced Lifestyle draait alles om jouw persoonlijke groei. In onze exclusieve, professionele trainingsruimte bieden wij een plek waar jouw doelen centraal staan. Geen overvolle sportscholen, maar een veilige ruimte waar we jouw grenzen kunnen verleggen."
+                subtitle="Bij Lifestyle & Personal Training Zeist draait alles om jouw persoonlijke groei. In onze exclusieve, professionele trainingsruimte bieden wij een plek waar jouw doelen centraal staan. Geen overvolle sportscholen, maar een veilige ruimte waar we jouw grenzen kunnen verleggen."
                 linkTo={{
                     link: '#succesverhalen',
                     text: 'Of, ga naar succesverhalen',
@@ -112,7 +112,7 @@ export const onlinecoaching = () => {
                             </Grid2>
                             <Divider />
                             <Typography variant="body1" textAlign={'center'} sx={{ color: theme.palette.common.white, mb: 2 }}>
-                                Bij Balanced Lifestyle, een paramedisch centrum, draait het om een holistische benadering van gezondheid. Niet alleen
+                                Bij Lifestyle & Personal Training Zeist, een paramedisch centrum, draait het om een holistische benadering van gezondheid. Niet alleen
                                 sporten, maar je gehele levensstijl staat centraal.
                                 <br />
                                 <br />

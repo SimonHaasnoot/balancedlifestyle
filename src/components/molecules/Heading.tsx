@@ -19,7 +19,7 @@ export const Heading: React.FC<HeadingProps> = (props) => {
     return (
         <>
             <Helmet>
-                <title>{props.title} - Balanced Lifestyle</title>
+                <title>{props.title} - Lifestyle & Personal Training Zeist</title>
             </Helmet>
             <Box sx={{ position: 'relative', background: theme.palette.grey[100], pt: isMobile ? 10 : 20, pb: 0 }}>
                 <DefaultContainer maxWidth="lg" sx={{ textAlign: props.align ? props.align : '', zIndex: 2 }}>

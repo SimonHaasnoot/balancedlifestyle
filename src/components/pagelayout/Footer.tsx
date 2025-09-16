@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
                                     },
                                 }}
                             >
-                                {projectVariables.COMPANY_NAME}
+                                {'Balanced Lifestyle'}
                             </Typography>
 
                             <Typography variant="caption" sx={{ color: theme.palette.common.white, mb: 2 }}>
@@ -93,7 +93,7 @@ export const Footer: React.FC = () => {
                             <Typography variant="subtitle1" sx={{ color: theme.palette.common.white, mb: 2 }}>
                                 ·
                             </Typography>
-                            <Typography variant="body2" sx={{ color: theme.palette.common.white, mb: 2, color: theme.palette.secondary.main }}>
+                            <Typography variant="body2" sx={{ mb: 2, color: theme.palette.secondary.main }}>
                                 {projectVariables.COMPANY_DESCRIPTION}
                             </Typography>
                             <Typography variant="subtitle1" sx={{ color: theme.palette.common.white, mb: 2 }}>

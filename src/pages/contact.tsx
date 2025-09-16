@@ -15,7 +15,7 @@ export const contact = (props: any) => {
     return (
         <Layout location={props.location}>
             <Helmet>
-                <title>Contact - Balanced Lifestyle</title>
+                <title>Contact - {projectVariables.COMPANY_NAME}</title>
             </Helmet>
             <Container
                 maxWidth={false}

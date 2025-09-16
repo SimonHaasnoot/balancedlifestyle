@@ -10,6 +10,7 @@ import { SmallHero } from '../components/organisms/SmallHero';
 import { Block } from '../components/molecules/Block';
 import { HeaderRoutesEnum, getRouteUrl } from '../types/HeaderRoute';
 import { Rating } from '../components/molecules/Rating';
+import { projectVariables } from '../project';
 
 export default function InschrijvenPage(props: any) {
     const { isMobile } = useMobile();
@@ -18,7 +19,7 @@ export default function InschrijvenPage(props: any) {
     return (
         <Layout location={props.location}>
             <Helmet>
-                <title>Inschrijven - Balanced Lifestyle</title>
+                <title>Inschrijven - {projectVariables.COMPANY_NAME}</title>
             </Helmet>
             <SmallHero
                 image={

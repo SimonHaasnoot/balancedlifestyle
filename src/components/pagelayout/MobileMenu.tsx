@@ -3,6 +3,7 @@ import { HeaderRouteType } from '../../types/HeaderRoute';
 import React from 'react';
 import { Close } from '@mui/icons-material';
 import { headerRoutes } from './Layout';
+import { projectVariables } from '../../project';
 
 type MobileMenuProps = {
     location?: Location;
@@ -62,12 +63,11 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ location, mobileMenuActi
                 sx={{
                     position: 'absolute',
                     bottom: '20px',
-                    right: '20px',
                     color: theme.palette.common.white,
                     fontSize: '0.8rem',
                 }}
             >
-                © {new Date().getFullYear()} Balanced lifestyle
+                © {new Date().getFullYear()} {projectVariables.COMPANY_NAME}
             </Box>
             <Icon
                 component={Close}
