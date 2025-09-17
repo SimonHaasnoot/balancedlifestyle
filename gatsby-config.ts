@@ -11,7 +11,6 @@ module.exports = {
         `gatsby-transformer-sharp`,
         'gatsby-plugin-sitemap',
         'gatsby-plugin-preload-fonts',
-        'gatsby-plugin-netlify-cms',
         {
             resolve: `gatsby-plugin-google-gtag`,
             options: {
