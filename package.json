@@ -13,6 +13,7 @@
         "@emotion/styled": "^11.11.0",
         "@mui/icons-material": "^5.14.10",
         "@mui/material": "^5.14.10",
+        "@parcel/watcher": "^2.4.1",
         "@tippyjs/react": "^4.2.6",
         "decap-cms-app": "^3.5.0",
         "gatsby": "^5.15.0",
@@ -50,6 +51,7 @@
         "serve": "gatsby serve",
         "deploy": "gatsby serve --port 80 --host 0.0.0.0",
         "preload-fonts": "gatsby-preload-fonts",
+        "postinstall": "npm rebuild @parcel/watcher --update-binary",
         "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
     },
     "devDependencies": {
