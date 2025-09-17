@@ -1,0 +1,9 @@
+[build]
+  command = "gatsby clean && npm run build"
+  publish = "public"
+  functions = "netlify/functions"
+
+[build.environment]
+  NPM_CONFIG_OPTIONAL = "true"
+  NPM_FLAGS = "--no-audit --no-fund"
+  NODE_VERSION = "20.17.0"
