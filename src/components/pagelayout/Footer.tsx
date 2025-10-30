@@ -18,13 +18,20 @@ export const Footer: React.FC = () => {
                     <Grid container spacing={isMobile ? 2 : 5}>
                         <Grid item xs={12} sm={6} md={3}>
                             <List>
-                                {headerRoutes.filter(x => !x.notVisible).map((route, index) => {
-                                    return (
-                                        <ListItemButton sx={{ textAlign: isMobile ? 'center' : 'left' }} component="a" href={route.path} key={index}>
-                                            <ListItemText primary={route.name} sx={{ '> span': { color: theme.palette.common.white } }} />
-                                        </ListItemButton>
-                                    );
-                                })}
+                                {headerRoutes
+                                    .filter((x) => !x.notVisible)
+                                    .map((route, index) => {
+                                        return (
+                                            <ListItemButton
+                                                sx={{ textAlign: isMobile ? 'center' : 'left' }}
+                                                component="a"
+                                                href={route.path}
+                                                key={index}
+                                            >
+                                                <ListItemText primary={route.name} sx={{ '> span': { color: theme.palette.common.white } }} />
+                                            </ListItemButton>
+                                        );
+                                    })}
                             </List>
                         </Grid>
                         <Grid item xs={12} sm={6} md={3}>
@@ -71,6 +78,9 @@ export const Footer: React.FC = () => {
                             </List>
                         </Grid>
                         <Grid item xs={12} sm={6} md={6} sx={{ textAlign: 'center', display: 'flex', flexDirection: 'column' }}>
+                            <Typography variant="caption" sx={{ color: theme.palette.common.white }}>
+                                Wij staan voor een
+                            </Typography>
                             <Typography
                                 component="h4"
                                 variant="h1"
@@ -82,14 +92,15 @@ export const Footer: React.FC = () => {
                                     [theme.breakpoints.up('md')]: {
                                         fontSize: 40,
                                     },
+                                    mb: 2,
                                 }}
                             >
-                                {'Balanced Lifestyle'}
+                                een bewuste lifestyle
                             </Typography>
 
-                            <Typography variant="caption" sx={{ color: theme.palette.common.white, mb: 2 }}>
+                            {/* <Typography variant="caption" sx={{ color: theme.palette.common.white, mb: 2 }}>
                                 {projectVariables.COMPANY_ONELINER}
-                            </Typography>
+                            </Typography> */}
                             <Typography variant="subtitle1" sx={{ color: theme.palette.common.white, mb: 2 }}>
                                 ·
                             </Typography>
@@ -101,11 +112,11 @@ export const Footer: React.FC = () => {
                             </Typography>
                             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 'auto' }}>
                                 <StaticImage
-                                    src="../../images/logo-white.png"
+                                    src="../../images/logo-white-v2.png"
                                     alt="Logo"
                                     placeholder="blurred"
                                     style={{
-                                        width: '400px',
+                                        width: '100px',
                                         height: 'auto',
                                         objectFit: 'cover',
                                     }}

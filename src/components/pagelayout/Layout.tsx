@@ -150,15 +150,12 @@ export const Layout: React.FC<LayoutProps> = (props) => {
                                                             </>
                                                         ) : (
                                                             <StaticImage
-                                                                src="../../images/logo-white.png"
+                                                                src="../../images/logo-white-v2.png"
                                                                 alt="Lifestyle & Personal Training Zeist"
                                                                 placeholder="blurred"
                                                                 loading="eager"
                                                                 layout="fixed"
                                                                 height={40}
-                                                                style={{
-                                                                    visibility: 'hidden',
-                                                                }}
                                                                 // style={{ marginBottom: '-20px' }}
                                                             />
                                                         )}
