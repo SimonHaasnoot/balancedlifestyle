@@ -142,255 +142,88 @@ export const index = (props: any) => {
                                 Waarmee kunnen wij jou van dienst zijn?
                             </Typography>
                         </Box>
-                        <Grid container spacing={isMobile ? 2 : 10} justifyContent="center" sx={{ gap: isMobile ? 3 : 0 }}>
-                            <Grid
-                                item
-                                xs={10}
-                                sm={3}
-                                position="relative"
-                                sx={{
-                                    ':hover': {
-                                        a: {
-                                            transition: 'all 0.3s ease-in-out',
-                                            transform: 'scale(1.1)',
-                                        },
-                                    },
-                                }}
-                            >
-                                <Box
-                                    sx={{
-                                        width: '100%',
-                                        height: '100%',
-                                        position: 'relative',
-                                    }}
+                        <Grid container spacing={isMobile ? 2 : 4} justifyContent="center">
+                            {[
+                                { src: '../images/2026/2026-17.jpg', label: 'Personal training', href: getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING), imgNode: <StaticImage src="../images/2026/2026-17.jpg" alt="Personal training" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
+                                { src: '../images/2026/2026-4.jpg', label: 'Groepstraining', href: getRouteUrl(HeaderRoutesEnum.GROEPSTRAINING), imgNode: <StaticImage src="../images/2026/2026-4.jpg" alt="Groepstraining" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
+                                { src: '../images/2026/2026-5.jpg', label: 'Leefstijl', href: getRouteUrl(HeaderRoutesEnum.LEEFSTIJL), imgNode: <StaticImage src="../images/2026/2026-5.jpg" alt="Leefstijl" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
+                                { src: '../images/2026/2026-6.jpg', label: 'Mentale coaching', href: getRouteUrl(HeaderRoutesEnum.SPECIALISATIES), imgNode: <StaticImage src="../images/2026/2026-6.jpg" alt="Mentale coaching" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
+                            ].map((card) => (
+                                <Grid
+                                    item
+                                    xs={12}
+                                    sm={6}
+                                    md={3}
+                                    key={card.label}
+                                    sx={{ position: 'relative' }}
                                 >
-                                    <StaticImage
-                                        src="../images/workouts/workout2.jpg"
-                                        alt="Hero"
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                    />
                                     <Box
+                                        component="a"
+                                        href={card.href}
                                         sx={{
-                                            position: 'absolute',
-                                            inset: 0,
-                                            background: 'linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(255,255,255,0) 50%)',
-                                        }}
-                                    />
-                                </Box>
-
-                                <Box
-                                    sx={{
-                                        position: 'absolute',
-                                        inset: 0,
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        padding: 'inherit',
-                                    }}
-                                >
-                                    <Button
-                                        variant="contained"
-                                        href={getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING)}
-                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white, border: 0 }}
-                                    >
-                                        Personal training
-                                    </Button>
-                                </Box>
-                            </Grid>
-                            <Grid
-                                item
-                                xs={10}
-                                sm={3}
-                                position="relative"
-                                sx={{
-                                    ':hover': {
-                                        a: {
-                                            transition: 'all 0.3s ease-in-out',
-                                            transform: 'scale(1.1)',
-                                        },
-                                    },
-                                }}
-                            >
-                                <Box
-                                    sx={{
-                                        width: '100%',
-                                        height: '100%',
-                                        position: 'relative',
-                                    }}
-                                >
-                                    <StaticImage
-                                        src="../images/workouts/workout9.jpg"
-                                        alt="Hero"
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                    />
-                                    <Box
-                                        sx={{
-                                            position: 'absolute',
-                                            inset: 0,
-                                            background: 'linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(255,255,255,0) 50%)',
-                                        }}
-                                    />
-                                </Box>
-
-                                <Box
-                                    sx={{
-                                        position: 'absolute',
-                                        inset: 0,
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        padding: 'inherit',
-                                    }}
-                                >
-                                    <Button
-                                        variant="contained"
-                                        href={getRouteUrl(HeaderRoutesEnum.GROEPSTRAINING)}
-                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white, border: 0 }}
-                                        style={{
-                                            padding: '10px 20px',
+                                            display: 'block',
+                                            position: 'relative',
+                                            borderRadius: 3,
+                                            overflow: 'hidden',
+                                            height: isMobile ? 220 : 350,
+                                            boxShadow: '0 8px 30px rgba(0,0,0,0.25)',
+                                            transition: 'transform 0.4s ease, box-shadow 0.4s ease',
+                                            textDecoration: 'none',
+                                            ':hover': {
+                                                transform: 'translateY(-6px)',
+                                                boxShadow: '0 16px 40px rgba(0,0,0,0.35)',
+                                                '& .card-overlay': {
+                                                    background: 'linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.15) 100%)',
+                                                },
+                                                '& .card-label': {
+                                                    letterSpacing: '3px',
+                                                },
+                                            },
                                         }}
                                     >
-                                        Groepstraining
-                                    </Button>
-                                </Box>
-                            </Grid>
-                            <Grid
-                                item
-                                xs={10}
-                                sm={3}
-                                position="relative"
-                                sx={{
-                                    ':hover': {
-                                        a: {
-                                            transition: 'all 0.3s ease-in-out',
-                                            transform: 'scale(1.1)',
-                                        },
-                                    },
-                                }}
-                            >
-                                <Box
-                                    sx={{
-                                        width: '100%',
-                                        height: '100%',
-                                        position: 'relative',
-                                    }}
-                                >
-                                    <StaticImage
-                                        src="../images/workouts/workout1.jpg"
-                                        alt="Hero"
-                                        style={{
-                                            width: '100%',
-                                            height: '100%',
-                                            objectFit: 'cover',
-                                        }}
-                                    />
-                                    <Box
-                                        sx={{
-                                            position: 'absolute',
-                                            inset: 0,
-                                            background: 'linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(255,255,255,0) 50%)',
-                                        }}
-                                    />
-                                </Box>
-
-                                <Box
-                                    sx={{
-                                        position: 'absolute',
-                                        inset: 0,
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        padding: 'inherit',
-                                    }}
-                                >
-                                    <Box
-                                        sx={{
-                                            position: 'absolute',
-                                            inset: 0,
-                                            background: 'rgba(0, 0, 0, 0.3)',
-                                            width: '100%',
-                                            height: '100%',
-                                        }}
-                                    />
-                                    <Button
-                                        variant="contained"
-                                        href={getRouteUrl(HeaderRoutesEnum.VOEDING)}
-                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white, border: 0 }}
-                                    >
-                                        Voeding
-                                    </Button>
-                                </Box>
-                            </Grid>
-                            <Grid
-                                item
-                                xs={10}
-                                sm={3}
-                                position="relative"
-                                sx={{
-                                    ':hover': {
-                                        a: {
-                                            transition: 'all 0.3s ease-in-out',
-                                            transform: 'scale(1.1)',
-                                        },
-                                    },
-                                }}
-                            >
-                                <Box
-                                    sx={{
-                                        width: '100%',
-                                        height: '100%',
-                                        position: 'relative',
-                                    }}
-                                >
-                                    <StaticImage
-                                        src="../images/workouts/workout8.jpg"
-                                        alt="Hero"
-                                        style={{
-                                            width: '100%',
-                                            height: '100%',
-                                            objectFit: 'cover',
-                                        }}
-                                    />
-                                    <Box
-                                        sx={{
-                                            position: 'absolute',
-                                            inset: 0,
-                                            background: 'linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(255,255,255,0) 50%)',
-                                        }}
-                                    />
-                                </Box>
-
-                                <Box
-                                    sx={{
-                                        position: 'absolute',
-                                        inset: 0,
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        padding: 'inherit',
-                                    }}
-                                >
-                                    <Box
-                                        sx={{
-                                            position: 'absolute',
-                                            inset: 0,
-                                            background: 'rgba(0, 0, 0, 0.3)',
-                                            width: '100%',
-                                            height: '100%',
-                                        }}
-                                    />
-                                    <Button
-                                        variant="contained"
-                                        href={getRouteUrl(HeaderRoutesEnum.SPECIALISATIES)}
-                                        sx={{ background: 'rgba(255, 255, 255, 0.3)', color: theme.palette.common.white, border: 0 }}
-                                        style={{
-                                            padding: '10px 20px',
-                                        }}
-                                    >
-                                        Mentale coaching
-                                    </Button>
-                                </Box>
-                            </Grid>
+                                        <Box sx={{ position: 'absolute', inset: 0 }}>
+                                            {card.imgNode}
+                                        </Box>
+                                        <Box
+                                            className="card-overlay"
+                                            sx={{
+                                                position: 'absolute',
+                                                inset: 0,
+                                                background: 'linear-gradient(0deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.05) 60%)',
+                                                transition: 'background 0.4s ease',
+                                            }}
+                                        />
+                                        <Box
+                                            sx={{
+                                                position: 'absolute',
+                                                bottom: 0,
+                                                left: 0,
+                                                right: 0,
+                                                p: 3,
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                            }}
+                                        >
+                                            <Typography
+                                                className="card-label"
+                                                variant="subtitle2"
+                                                sx={{
+                                                    color: theme.palette.common.white,
+                                                    fontWeight: 600,
+                                                    fontSize: isMobile ? '0.95rem' : '1.05rem',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: '2px',
+                                                    transition: 'letter-spacing 0.4s ease',
+                                                    textShadow: '0 2px 8px rgba(0,0,0,0.4)',
+                                                }}
+                                            >
+                                                {card.label}
+                                            </Typography>
+                                        </Box>
+                                    </Box>
+                                </Grid>
+                            ))}
                         </Grid>
                         <Typography variant="subtitle2" sx={{ color: theme.palette.common.white, my: 10 }}>
                             100% resultaatgarantie!
@@ -425,17 +258,72 @@ export const index = (props: any) => {
                         </Grid>
                     </Box>
                 </DefaultContainer>
-                <Box sx={{ backgroundColor: theme.palette.secondary.main }} component="section">
-                    <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
-                        <Typography variant="subtitle2" sx={{ color: theme.palette.common.white }}>
-                            klanten beoordelen ons gemiddeld met een{' '}
-                            <Star
-                                style={{
-                                    marginRight: '5px',
-                                }}
-                            />
-                            9,4!
-                        </Typography>
+                <Box
+                    sx={{
+                        background: `linear-gradient(135deg, ${theme.palette.secondary.main} 0%, #3a8fb8 100%)`,
+                        position: 'relative',
+                        overflow: 'hidden',
+                    }}
+                    component="section"
+                >
+                    {/* Decorative circles */}
+                    <Box sx={{
+                        position: 'absolute',
+                        top: -40,
+                        right: -40,
+                        width: 160,
+                        height: 160,
+                        borderRadius: '50%',
+                        background: 'rgba(255,255,255,0.06)',
+                    }} />
+                    <Box sx={{
+                        position: 'absolute',
+                        bottom: -30,
+                        left: '20%',
+                        width: 100,
+                        height: 100,
+                        borderRadius: '50%',
+                        background: 'rgba(255,255,255,0.04)',
+                    }} />
+                    <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
+                        <Box sx={{
+                            display: 'flex',
+                            flexDirection: isMobile ? 'column' : 'row',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            gap: isMobile ? 2 : 5,
+                        }}>
+                            <Box sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: 1,
+                            }}>
+                                <Typography component="span" sx={{ color: theme.palette.common.white, fontWeight: 700, fontSize: isMobile ? '2.5rem' : '3.5rem', lineHeight: 1, fontFamily: 'Exo' }}>
+                                    9,4
+                                </Typography>
+                                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 0.3 }}>
+                                    <Box sx={{ display: 'flex', gap: 0.3 }}>
+                                        {[...Array(5)].map((_, i) => (
+                                            <Star key={i} size={16} color="#FFC107" />
+                                        ))}
+                                    </Box>
+                                    <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.75rem', letterSpacing: 1 }}>
+                                        GEMIDDELDE SCORE
+                                    </Typography>
+                                </Box>
+                            </Box>
+
+                            <Box sx={{
+                                width: isMobile ? 40 : '1px',
+                                height: isMobile ? '1px' : 40,
+                                backgroundColor: 'rgba(255,255,255,0.25)',
+                                flexShrink: 0,
+                            }} />
+
+                            <Typography variant="subtitle2" sx={{ color: theme.palette.common.white, lineHeight: 1.6, fontSize: isMobile ? '0.9rem' : '1rem' }}>
+                                Onze klanten waarderen de <strong>persoonlijke aanpak</strong> en <strong>resultaatgerichte begeleiding</strong>
+                            </Typography>
+                        </Box>
                     </DefaultContainer>
                 </Box>
             </Layout>

@@ -15,7 +15,7 @@ export enum HeaderRoutesEnum {
     BALANCED_LIFESTYLE = 'Balanced Lifestyle',
     ONLINE_COACHING = 'Online coaching',
     GROEPSTRAINING = 'Groepstraining',
-    VOEDING = 'Voeding',
+    LEEFSTIJL = 'Leefstijl',
     SPECIALISATIES = 'Specialisaties',
     REVIEWS = 'Reviews',
     PACKAGES = 'Pakketten',

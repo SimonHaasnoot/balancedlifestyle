@@ -24,12 +24,14 @@ export const Hero: React.FC = () => {
         >
             <Box sx={{ position: 'absolute', inset: '0 0 0 0' }}>
                 <StaticImage
-                    src="../../images/aboutme4.jpg"
+                    src="../../images/2026/2026-1.jpg"
                     alt="Random image"
                     placeholder="blurred"
                     loading="eager"
-                    layout="fixed"
-                    style={{ height: '100%', width: '100%', objectFit: 'cover', filter: 'brightness(0.7)' }}
+                    layout="fullWidth"
+                    quality={100}
+                    style={{ height: '100%' }}
+                    imgStyle={{ objectFit: 'cover', filter: 'brightness(0.7)' }}
                     transformOptions={{
                         cropFocus: 'entropy',
                     }}

@@ -13,7 +13,7 @@ export const headerRoutes = [
     { name: 'Personal training', path: '/personal-training' },
     { name: 'Onze studio', path: '/onze-studio' },
     { name: 'Groepstraining', path: '/groepstraining' },
-    { name: 'Voeding', path: '/voeding' },
+    { name: 'Leefstijl', path: '/leefstijl' },
     { name: 'Specialisaties', path: '/specialisaties' },
     // { name: 'Balanced Lifestyle', path: '/balanced-lifestyle' },
     // { name: 'Pakketten', path: '/pakketten' },

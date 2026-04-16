@@ -7,7 +7,15 @@ module.exports = {
         'gatsby-plugin-mui-emotion',
         'gatsby-plugin-react-helmet',
         `gatsby-plugin-image`,
-        `gatsby-plugin-sharp`,
+        {
+            resolve: `gatsby-plugin-sharp`,
+            options: {
+                defaults: {
+                    quality: 90,
+                    breakpoints: [750, 1080, 1366, 1920, 2560, 3840],
+                },
+            },
+        },
         `gatsby-transformer-sharp`,
         'gatsby-plugin-sitemap',
         'gatsby-plugin-preload-fonts',

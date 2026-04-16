@@ -44,9 +44,9 @@
         "remark-gfm": "^4.0.0"
     },
     "scripts": {
-        "develop": "gatsby develop",
-        "start": "gatsby develop",
-        "build": "gatsby build",
+        "develop": "cross-env NODE_OPTIONS=--no-deprecation gatsby develop",
+        "start": "cross-env NODE_OPTIONS=--no-deprecation gatsby develop",
+        "build": "cross-env NODE_OPTIONS=--no-deprecation gatsby build",
         "clean": "gatsby clean",
         "serve": "gatsby serve",
         "deploy": "gatsby serve --port 80 --host 0.0.0.0",
@@ -59,6 +59,8 @@
         "@types/react": "^18.0.24",
         "@types/react-dom": "^18.0.5",
         "@types/react-helmet": "^6.1.5",
+        "baseline-browser-mapping": "^2.10.18",
+        "cross-env": "^10.1.0",
         "typescript": "^4.7.4"
     },
     "compilerOptions": {
