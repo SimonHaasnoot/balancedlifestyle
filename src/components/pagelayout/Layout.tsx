@@ -1,5 +1,5 @@
 import MenuIcon from '@mui/icons-material/Menu';
-import { AppBar, Box, Container, Icon, Link, List, ListItem, useTheme } from '@mui/material';
+import { AppBar, Box, Container, IconButton, Link, useTheme } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import useIsMobile from '../../hooks/useMobile';
 import { Footer } from './Footer';
@@ -15,15 +15,9 @@ export const headerRoutes = [
     { name: 'Groepstraining', path: '/groepstraining' },
     { name: 'Leefstijl', path: '/leefstijl' },
     { name: 'Specialisaties', path: '/specialisaties' },
-    // { name: 'Balanced Lifestyle', path: '/balanced-lifestyle' },
-    // { name: 'Pakketten', path: '/pakketten' },
-    // { name: 'Workshops', path: '/workshops' },
-    // { name: 'Blogs', path: '/blogs', isSecondaryLevel: true },
-    // { name: 'Goed vlees', path: '/vlees', isSecondaryLevel: true },
     { name: 'Over mij', path: '/over-sem', isSecondaryLevel: true },
     { name: 'Reviews', path: '/reviews', isSecondaryLevel: true },
     { name: 'Contact', path: '/contact', isSecondaryLevel: true },
-    { name: 'Over Sem', path: '/over-sem', notVisible: true },
 ] as HeaderRouteType[];
 
 export type LayoutProps = {
@@ -35,7 +29,7 @@ export type LayoutProps = {
 export const Layout: React.FC<LayoutProps> = (props) => {
     const theme = useTheme();
     const { isTabletOrSmaller, isDesktop } = useIsMobile();
-    const [mobileMenuActive, setMobileMenuActive] = useState<boolean>(false);
+    const [mobileMenuActive, setMobileMenuActive] = useState(false);
     const [showContent, setShowContent] = useState(false);
     const { atTopOfPage } = useScrollPosition();
 
@@ -44,138 +38,110 @@ export const Layout: React.FC<LayoutProps> = (props) => {
     }, [mobileMenuActive]);
 
     useEffect(() => {
-        //Otherwise SSR will cause layoutshift
         setShowContent(true);
     }, []);
 
-    const getIsActiveRoute = (route: HeaderRouteType) => {
-        let isActive = false;
-
-        if (route.path === '/' && props.location?.pathname === '/') {
-            isActive = true;
-        }
-
-        if (route.path !== '/' && props.location?.pathname?.includes(route.path)) {
-            isActive = true;
-        }
-
-        return isActive;
+    const isActiveRoute = (route: HeaderRouteType) => {
+        if (route.path === '/') return props.location?.pathname === '/';
+        return props.location?.pathname?.includes(route.path) ?? false;
     };
 
-    useEffect(() => {
-        if (atTopOfPage) {
-            window.dispatchEvent(new Event('resize'));
-        }
-    }, [atTopOfPage]);
+    const primaryRoutes = headerRoutes.filter((r) => !r.isSecondaryLevel);
+    const secondaryRoutes = headerRoutes.filter((r) => r.isSecondaryLevel);
+    const scrolled = !atTopOfPage || props.disableHeaderTransition;
 
     return (
         <div style={{ display: showContent ? 'block' : 'none' }}>
             <AppBar
                 color="transparent"
                 position="fixed"
+                component="header"
                 sx={{
-                    visibility: 'visible',
-                    opacity: 1,
                     transition: 'all 0.2s ease-in-out',
                     border: 0,
                     boxShadow: 'none',
-                    background: props.disableHeaderTransition ? 'black' : !atTopOfPage ? 'black' : 'transparent',
+                    background: scrolled ? 'black' : 'transparent',
                 }}
             >
                 <Container maxWidth="xl">
-                    <List sx={{ display: 'flex', justifyContent: 'flex-start', pb: atTopOfPage ? 0 : '8px', transition: 'all 0.2s ease-in-out' }}>
-                        <Box
-                            sx={{
-                                marginLeft: 'auto',
-                                width: '100%',
-                                marginRight: 'auto',
-                                justifyContent: isTabletOrSmaller ? 'start' : 'end',
-                                display: 'flex',
-                                alignItems: 'center',
-                                height: isTabletOrSmaller ? 'auto' : '60px',
-                                transition: 'all 0.2s ease-in-out',
-                            }}
-                        >
-                            {!isTabletOrSmaller ? (
-                                <>
-                                    {headerRoutes
-                                        .filter((x) => !x.isSecondaryLevel && !x.notVisible)
-                                        .map((route, index) => {
-                                            let isActive = getIsActiveRoute(route);
-                                            const isFirst = index === 0;
-                                            const isLast = route.name === 'Pakketten';
+                    <Box
+                        component="nav"
+                        aria-label="Hoofdnavigatie"
+                        sx={{
+                            display: 'flex',
+                            justifyContent: isTabletOrSmaller ? 'start' : 'end',
+                            alignItems: 'center',
+                            height: isTabletOrSmaller ? 'auto' : 60,
+                            py: atTopOfPage ? 0 : 1,
+                            transition: 'all 0.2s ease-in-out',
+                        }}
+                    >
+                        {!isTabletOrSmaller ? (
+                            primaryRoutes.map((route, index) => {
+                                const isHome = index === 0;
+                                const active = isActiveRoute(route);
 
-                                            return (
-                                                <ListItem
-                                                    key={index}
-                                                    sx={{
-                                                        width: 'auto',
-                                                        marginRight: isFirst ? 'auto' : 0,
-                                                        mb: isFirst ? '-10px' : 0,
-                                                        pr: isLast ? 0 : 2,
-                                                        [':after']:
-                                                            !isFirst && !isLast
-                                                                ? {
-                                                                      content: '""',
-                                                                      position: 'absolute',
-                                                                      right: 0,
-                                                                      top: '40%',
-                                                                      width: '2px',
-                                                                      height: '10px',
-                                                                      background: theme.palette.common.white,
-                                                                  }
-                                                                : {},
-                                                    }}
-                                                >
-                                                    <Link
-                                                        component="a"
-                                                        underline="none"
-                                                        href={`${route.path}`}
-                                                        sx={{
-                                                            display: 'flex',
-                                                            alignItems: 'center',
-                                                            whiteSpace: 'nowrap',
-                                                            fontWeight: 500,
-                                                            fontSize: isDesktop ? '1rem' : '0.9rem',
-                                                            color: isActive ? theme.palette.secondary.main : theme.palette.common.white,
-                                                            [':hover']: {
-                                                                color: theme.palette.secondary.main,
-                                                            },
-                                                        }}
-                                                    >
-                                                        {!isFirst ? (
-                                                            <>
-                                                                {route.icon && <Icon component={route.icon} sx={{ marginRight: 1 }} />}
-                                                                {route.name}
-                                                            </>
-                                                        ) : (
-                                                            <StaticImage
-                                                                src="../../images/logo-white-v2.png"
-                                                                alt="Lifestyle & Personal Training Zeist"
-                                                                placeholder="blurred"
-                                                                loading="eager"
-                                                                layout="fixed"
-                                                                height={40}
-                                                                // style={{ marginBottom: '-20px' }}
-                                                            />
-                                                        )}
-                                                    </Link>
-                                                </ListItem>
-                                            );
-                                        })}
-                                </>
-                            ) : (
-                                <Box sx={{ display: 'flex', flexDirection: 'column', color: '#ffffff' }}>
-                                    <Icon component={MenuIcon} sx={{ fontSize: '40px' }} onClick={() => setMobileMenuActive(true)} />
-                                    <small>Menu</small>
-                                </Box>
-                            )}
-                        </Box>
-                    </List>
+                                return isHome ? (
+                                    <Link
+                                        key={route.path}
+                                        href={route.path}
+                                        underline="none"
+                                        sx={{ mr: 'auto', display: 'flex', alignItems: 'center' }}
+                                        aria-label="Home"
+                                    >
+                                        <StaticImage
+                                            src="../../images/logo-white-v2.png"
+                                            alt="Lifestyle & Personal Training Zeist"
+                                            placeholder="blurred"
+                                            loading="eager"
+                                            layout="fixed"
+                                            height={40}
+                                        />
+                                    </Link>
+                                ) : (
+                                    <Link
+                                        key={route.path}
+                                        href={route.path}
+                                        underline="none"
+                                        sx={{
+                                            position: 'relative',
+                                            whiteSpace: 'nowrap',
+                                            fontWeight: 500,
+                                            fontSize: isDesktop ? '1rem' : '0.9rem',
+                                            color: active ? theme.palette.secondary.main : theme.palette.common.white,
+                                            px: 1.5,
+                                            '&:hover': { color: theme.palette.secondary.main },
+                                            '&::after': {
+                                                content: '""',
+                                                position: 'absolute',
+                                                right: 0,
+                                                top: '50%',
+                                                transform: 'translateY(-50%)',
+                                                width: 2,
+                                                height: 10,
+                                                background: theme.palette.common.white,
+                                            },
+                                            '&:last-of-type::after': { display: 'none' },
+                                        }}
+                                    >
+                                        {route.name}
+                                    </Link>
+                                );
+                            })
+                        ) : (
+                            <IconButton
+                                onClick={() => setMobileMenuActive(true)}
+                                aria-label="Menu openen"
+                                aria-expanded={mobileMenuActive}
+                                sx={{ color: '#fff', p: 0.5 }}
+                            >
+                                <MenuIcon sx={{ fontSize: 40 }} />
+                            </IconButton>
+                        )}
+                    </Box>
 
                     {isTabletOrSmaller && (
                         <MobileMenu
-                            theme={theme}
                             mobileMenuActive={mobileMenuActive}
                             setMobileMenuActive={setMobileMenuActive}
                             location={props.location}
@@ -183,52 +149,45 @@ export const Layout: React.FC<LayoutProps> = (props) => {
                     )}
                 </Container>
 
-                <Box
-                    sx={{
-                        background: atTopOfPage ? 'transparent' : '#5ab7db',
-                        transition: 'all 0.35s ease-in-out',
-                    }}
-                >
-                    <Container maxWidth="xl">
-                        {!isTabletOrSmaller && (
-                            <>
-                                <List
-                                    sx={{ display: 'flex', justifyContent: 'end', pt: atTopOfPage ? 0 : '8px', transition: 'all 0.2s ease-in-out' }}
-                                >
-                                    {headerRoutes
-                                        .filter((x) => x.isSecondaryLevel && !x.notVisible)
-                                        .map((route, index) => {
-                                            const isLast = route.name === 'Contact';
-
-                                            return (
-                                                <ListItem key={index} sx={{ width: 'inherit', pr: isLast ? 0 : 2 }}>
-                                                    <Link
-                                                        component="a"
-                                                        underline="none"
-                                                        href={`${route.path}`}
-                                                        sx={{
-                                                            display: 'flex',
-                                                            alignItems: 'center',
-                                                            whiteSpace: 'nowrap',
-                                                            fontWeight: 500,
-                                                            fontSize: isDesktop ? '0.85rem' : '0.9rem',
-                                                            color: theme.palette.common.white,
-                                                            [':hover']: {
-                                                                color: theme.palette.common.white,
-                                                                textDecoration: 'underline',
-                                                            },
-                                                        }}
-                                                    >
-                                                        {route.name}
-                                                    </Link>
-                                                </ListItem>
-                                            );
-                                        })}
-                                </List>
-                            </>
-                        )}
-                    </Container>
-                </Box>
+                {!isTabletOrSmaller && (
+                    <Box
+                        sx={{
+                            background: scrolled ? '#5ab7db' : 'transparent',
+                            transition: 'all 0.35s ease-in-out',
+                        }}
+                    >
+                        <Container maxWidth="xl">
+                            <Box
+                                component="nav"
+                                aria-label="Secundaire navigatie"
+                                sx={{
+                                    display: 'flex',
+                                    justifyContent: 'flex-end',
+                                    py: scrolled ? 1 : 0,
+                                    transition: 'all 0.2s ease-in-out',
+                                }}
+                            >
+                                {secondaryRoutes.map((route) => (
+                                    <Link
+                                        key={route.path}
+                                        href={route.path}
+                                        underline="none"
+                                        sx={{
+                                            whiteSpace: 'nowrap',
+                                            fontWeight: 500,
+                                            fontSize: isDesktop ? '0.85rem' : '0.9rem',
+                                            color: theme.palette.common.white,
+                                            px: 1.5,
+                                            '&:hover': { textDecoration: 'underline' },
+                                        }}
+                                    >
+                                        {route.name}
+                                    </Link>
+                                ))}
+                            </Box>
+                        </Container>
+                    </Box>
+                )}
             </AppBar>
 
             {props.children}

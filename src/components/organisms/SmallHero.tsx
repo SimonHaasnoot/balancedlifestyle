@@ -1,15 +1,16 @@
 import { Box, Container, Link, Typography, useTheme } from '@mui/material';
 import * as React from 'react';
 import useMobile from '../../hooks/useMobile';
-import { Helmet } from 'react-helmet';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Countdown } from './Countdown';
-import { projectVariables } from '../../project';
+import { Seo } from '../atoms/Seo';
 
 export type SmallHeroProps = {
     image: React.ReactNode;
     title: string;
     subtitle: string;
+    description?: string;
+    pathname?: string;
     linkTo?: {
         link: string;
         text: string;
@@ -25,9 +26,11 @@ export const SmallHero: React.FC<SmallHeroProps> = (props) => {
 
     return (
         <>
-            <Helmet>
-                <title>{props.title} - {projectVariables.COMPANY_NAME}</title>
-            </Helmet>
+            <Seo
+                title={props.title}
+                description={props.description || props.subtitle}
+                pathname={props.pathname}
+            />
             <Container
                 maxWidth={false}
                 disableGutters

@@ -28,6 +28,8 @@ export const packages = (props: any) => {
                 align="center"
                 title="Pakketten"
                 subtitle="Kies een pakket dat aansluit op jouw doelen en start vandaag met het verbeteren van jouw leefstijl."
+                description="Bekijk onze pakketten voor personal training, voedingscoaching en leefstijlbegeleiding in Zeist. Kies het pakket dat bij jou past."
+                pathname="/pakketten/"
             />
             <Box
                 sx={{

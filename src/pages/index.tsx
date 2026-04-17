@@ -12,6 +12,7 @@ import useIsMobile from '../hooks/useMobile';
 import { HeaderRoutesEnum, getRouteUrl } from '../types/HeaderRoute';
 import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
 import { Star } from '../components/atoms/Star';
+import { Seo } from '../components/atoms/Seo';
 
 export const index = (props: any) => {
     const theme = useTheme();
@@ -50,6 +51,11 @@ export const index = (props: any) => {
     return (
         <>
             <Layout location={props.location}>
+                <Seo
+                    title="Personal Training & Leefstijlcoaching"
+                    description="Lifestyle & Personal Training Zeist: personal training, groepstraining en leefstijlcoaching in Zeist. Persoonlijke begeleiding in beweging, voeding en herstel. Gratis proefles!"
+                    pathname="/"
+                />
                 <Hero />
 
                 <Box sx={{ backgroundColor: theme.palette.grey[100] }} component="section">
@@ -110,7 +116,7 @@ export const index = (props: any) => {
                         link: getRouteUrl(HeaderRoutesEnum.ABOUT_ME),
                     }}
                     staticImage={
-                        <StaticImage src="../images/workouts/workout5.jpg" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <StaticImage src="../images/workouts/workout5.jpg" alt="Personal trainer Sem van de Griendt in actie" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     }
                 />
                 <Box sx={{ backgroundColor: theme.palette.grey[100], position: 'relative' }} component="section">

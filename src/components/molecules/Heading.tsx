@@ -1,8 +1,8 @@
 import { Box, Typography, useTheme } from '@mui/material';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { DefaultContainer } from '../../components/pagelayout/DefaultContainer';
 import useIsMobile from '../../hooks/useMobile';
+import { Seo } from '../atoms/Seo';
 
 export type HeadingProps = {
     title: string;
@@ -10,6 +10,8 @@ export type HeadingProps = {
     align?: 'left' | 'center' | 'right';
     children?: any;
     image?: React.ReactNode;
+    description?: string;
+    pathname?: string;
 };
 
 export const Heading: React.FC<HeadingProps> = (props) => {
@@ -18,9 +20,11 @@ export const Heading: React.FC<HeadingProps> = (props) => {
 
     return (
         <>
-            <Helmet>
-                <title>{props.title} - Lifestyle & Personal Training Zeist</title>
-            </Helmet>
+            <Seo
+                title={props.title}
+                description={props.description || props.subtitle || props.title}
+                pathname={props.pathname}
+            />
             <Box sx={{ position: 'relative', background: theme.palette.grey[100], pt: isMobile ? 10 : 20, pb: 0 }}>
                 <DefaultContainer maxWidth="lg" sx={{ textAlign: props.align ? props.align : '', zIndex: 2 }}>
                     <Box sx={{ color: 'white' }}>

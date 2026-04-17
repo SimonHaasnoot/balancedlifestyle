@@ -4,10 +4,8 @@ import { headerRoutes } from '../components/pagelayout/Layout';
 export type HeaderRouteType = {
     name: HeaderRoutesEnum;
     path: string;
-    activeYAxis?: boolean;
     icon?: (props: SvgIconProps) => JSX.Element;
     isSecondaryLevel?: boolean;
-    notVisible?: boolean;
 };
 
 export enum HeaderRoutesEnum {

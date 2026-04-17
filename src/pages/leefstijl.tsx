@@ -20,12 +20,14 @@ export const FoodPage = (props: any) => {
                     image={
                         <StaticImage
                             src="../images/2026/2026-5.jpg"
-                            alt="Leefstijl coaching"
+                            alt="Leefstijl coaching Zeist"
                             style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.4)' }}
                         />
                     }
                     title="Leefstijl"
                     subtitle="Een gebalanceerde leefstijl is de basis voor een gezond en gelukkig leven. Wij begeleiden je op het gebied van beweging, voeding, slaap en mentale rust — zodat jij duurzaam resultaat behaalt zonder extreme keuzes."
+                    description="Leefstijlcoaching in Zeist. Wij begeleiden je op het gebied van beweging, voeding, slaap en mentale rust voor duurzaam resultaat."
+                    pathname="/leefstijl/"
                 />
 
                 <Box sx={{ background: theme.palette.grey[100] }} component="section">

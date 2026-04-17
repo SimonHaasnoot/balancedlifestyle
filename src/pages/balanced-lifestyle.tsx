@@ -23,10 +23,12 @@ export const BalancedLifestylePage = (props: any) => {
                 <SmallHero
                     title="Balanced Lifestyle"
                     subtitle="De Balanced Lifestyle challenge."
+                    description="De Balanced Lifestyle challenge van Lifestyle & Personal Training Zeist. Werk aan een gebalanceerde leefstijl."
+                    pathname="/balanced-lifestyle/"
                     image={
                         <StaticImage
                             src="../images/pages/gym.jpg"
-                            alt="Random image"
+                            alt="Balanced Lifestyle challenge Zeist"
                             placeholder="blurred"
                             style={{ height: '100%', objectFit: 'cover', width: '100%' }}
                         />

@@ -1,13 +1,12 @@
 import { Box, Button, Grid, Typography, useTheme } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
 import { Divider } from '../components/molecules/Divider';
 import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
 import { Layout } from '../components/pagelayout/Layout';
 import useIsMobile from '../hooks/useMobile';
 import { getRouteUrl, HeaderRoutesEnum } from '../types/HeaderRoute';
-import { projectVariables } from '../project';
+import { Seo } from '../components/atoms/Seo';
 
 export const AboutSemPage = (props: any) => {
     const theme = useTheme();
@@ -16,9 +15,11 @@ export const AboutSemPage = (props: any) => {
 
     return (
         <>
-            <Helmet>
-                <title>Over Sem - {projectVariables.COMPANY_NAME}</title>
-            </Helmet>
+            <Seo
+                title="Over Sem"
+                description="Leer Sem van de Griendt kennen, oprichter van Lifestyle & Personal Training Zeist. Van persoonlijke gezondheidsproblemen naar het helpen van anderen."
+                pathname="/over-sem/"
+            />
             <Layout location={props.location}>
                 <Box sx={{ position: 'relative', background: theme.palette.grey[100], pt: isMobile ? 10 : 20, pb: 0 }} component="section">
                     <DefaultContainer maxWidth="lg" sx={{ mb: isTabletOrSmaller ? 0 : 0 }}>

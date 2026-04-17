@@ -9,22 +9,24 @@ import useIsMobile from '../hooks/useMobile';
 import { getRouteUrl, HeaderRoutesEnum } from '../types/HeaderRoute';
 import { SuccessStories } from '../components/organisms/SuccessStories';
 
-export const SpecialisatiesPage = () => {
+export const SpecialisatiesPage = (props: any) => {
     const theme = useTheme();
     const { isMobile, isTabletOrSmaller } = useIsMobile();
 
     return (
-        <Layout>
+        <Layout location={props.location}>
             <SmallHero
                 image={
                     <StaticImage
                         src="../images/pages/specialisaties.jpg"
-                        alt="Hero"
+                        alt="Specialisaties personal training Zeist"
                         style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.2)' }}
                     />
                 }
                 title="Specialisaties"
                 subtitle="Wij bieden naast personal training ook specialisaties aan om u volledig te ondersteunen. Bekijk hieronder de mogelijkheden."
+                description="Ons aanbod naast personal training: voedingscoaching, mentale coaching en meer. Bekijk alle specialisaties in Zeist."
+                pathname="/specialisaties/"
             />
 
             <Box sx={{ backgroundColor: theme.palette.grey[100] }} component="section">

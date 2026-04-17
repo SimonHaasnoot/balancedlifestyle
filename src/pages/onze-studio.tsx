@@ -11,23 +11,25 @@ import { getRouteUrl, HeaderRoutesEnum } from '../types/HeaderRoute';
 import { SuccessStories } from '../components/organisms/SuccessStories';
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 
-export const onlinecoaching = () => {
+export const onlinecoaching = (props: any) => {
     const theme = useTheme();
     const { isMobile } = useIsMobile();
 
     return (
-        <Layout>
+        <Layout location={props.location}>
             <SmallHero
                 sideImage
                 image={
                     <StaticImage
                         src="../images/2026/2026-07.jpg"
-                        alt="Hero"
+                        alt="Personal training studio Zeist"
                         style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.2)' }}
                     />
                 }
                 title="Onze studio"
                 subtitle="Bij Lifestyle & Personal Training Zeist draait alles om jouw persoonlijke groei. In onze exclusieve, professionele trainingsruimte bieden wij een plek waar jouw doelen centraal staan. Geen overvolle sportscholen, maar een veilige ruimte waar we jouw grenzen kunnen verleggen."
+                description="Bekijk onze professionele personal training studio in Zeist. Exclusieve trainingsruimte met persoonlijke begeleiding."
+                pathname="/onze-studio/"
                 linkTo={{
                     link: '#succesverhalen',
                     text: 'Of, ga naar succesverhalen',

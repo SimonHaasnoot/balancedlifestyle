@@ -1,31 +1,19 @@
-import { useState, useEffect } from 'react';
-import _ from 'lodash';
+import { useState, useEffect, useCallback } from 'react';
 
 export const useScrollPosition = () => {
-    const [scrollPosition, setScrollPosition] = useState(0);
-    const atTopOfPage = scrollPosition <= 0;
+    const [atTopOfPage, setAtTopOfPage] = useState(true);
 
-    const isClient = typeof window !== 'undefined';
-
-    const addWindowScrollListener = () => {
-        window.addEventListener('scroll', _.debounce(handleScroll, 100));
-    };
-
-    const handleScroll = () => {
-        setScrollPosition(window.scrollY);
-    };
-
-    useEffect(() => {
-        if (isClient) {
-            setScrollPosition(window.scrollY);
-
-            addWindowScrollListener();
-        }
-
+    const handleScroll = useCallback(() => {
+        setAtTopOfPage(window.scrollY <= 0);
     }, []);
 
-    return {
-        scrollPosition,
-        atTopOfPage
-    }
-}
+    useEffect(() => {
+        if (typeof window === 'undefined') return;
+
+        handleScroll();
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [handleScroll]);
+
+    return { atTopOfPage };
+};

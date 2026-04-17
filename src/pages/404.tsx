@@ -1,17 +1,14 @@
 import { Box, Button, Container, Typography, useTheme } from '@mui/material';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { Layout } from '../components/pagelayout/Layout';
-import { projectVariables } from '../project';
+import { Seo } from '../components/atoms/Seo';
 
 export default function NotFound(props: any) {
     const theme = useTheme();
 
     return (
         <>
-            <Helmet>
-                <title>Pagina niet gevonden - {projectVariables.COMPANY_NAME}</title>
-            </Helmet>
+            <Seo title="Pagina niet gevonden" description="Deze pagina bestaat niet." noIndex />
             <Layout location={props.location} disableHeaderTransition={true}>
                 <Container maxWidth="lg" sx={{ minHeight: '95vh', display: 'flex', alignItems: 'center' }}>
                     <Box py={5}>

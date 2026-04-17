@@ -10,7 +10,7 @@ export const ReviewsPage = (props: any) => {
 
     return (
         <Layout location={props.location}>
-            <Heading align="center" title="Reviews" />
+            <Heading align="center" title="Reviews" description="Lees de ervaringen van onze klanten. Gemiddeld 9,4 beoordeeld. Bekijk reviews van personal training in Zeist." pathname="/reviews/" />
             <Box>
                 <DefaultContainer maxWidth="lg" component="section">
                     <SuccessStories />

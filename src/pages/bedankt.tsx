@@ -1,10 +1,9 @@
 import { Box, Button, Typography, useTheme } from '@mui/material';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
 import { Layout } from '../components/pagelayout/Layout';
 import useIsMobile from '../hooks/useMobile';
-import { projectVariables } from '../project';
+import { Seo } from '../components/atoms/Seo';
 
 export const ThanksPage = (props: any) => {
     const theme = useTheme();
@@ -12,9 +11,7 @@ export const ThanksPage = (props: any) => {
 
     return (
         <>
-            <Helmet>
-                <title>Bedankt - {projectVariables.COMPANY_NAME}</title>
-            </Helmet>
+            <Seo title="Bedankt" description="Bedankt voor je bericht. We nemen snel contact met je op." noIndex />
             <Layout location={props.location} disableHeaderTransition={true}>
                 <DefaultContainer
                     sx={{ minHeight: isMobile ? '70vh' : '95vh', display: 'flex', alignItems: 'center', textAlign: isMobile ? 'center' : 'left' }}

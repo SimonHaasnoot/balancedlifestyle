@@ -1,12 +1,12 @@
 import { Box, Button, Container, Grid, Link, Typography, useTheme } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { Layout } from '../components/pagelayout/Layout';
 import useIsMobile from '../hooks/useMobile';
 import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
 import { ContactForm } from '../components/organisms/ContactForm';
 import { projectVariables } from '../project';
+import { Seo } from '../components/atoms/Seo';
 
 export const contact = (props: any) => {
     const { isMobile } = useIsMobile();
@@ -14,9 +14,11 @@ export const contact = (props: any) => {
 
     return (
         <Layout location={props.location}>
-            <Helmet>
-                <title>Contact - {projectVariables.COMPANY_NAME}</title>
-            </Helmet>
+            <Seo
+                title="Contact"
+                description="Neem contact op met Lifestyle & Personal Training Zeist. Gratis kennismakingsgesprek en proefles. Korte Steynlaan 22, Zeist."
+                pathname="/contact/"
+            />
             <Container
                 maxWidth={false}
                 disableGutters
@@ -30,7 +32,7 @@ export const contact = (props: any) => {
                 <Box sx={{ position: 'absolute', inset: '0 0 0 0' }}>
                     <StaticImage
                         src="../images/contact.png"
-                        alt="Random image"
+                        alt="Contact Lifestyle Personal Training Zeist"
                         placeholder="blurred"
                         loading="eager"
                         style={{ height: '100%', width: '100%', objectFit: 'cover', filter: 'brightness(0.4)' }}

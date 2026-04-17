@@ -27,6 +27,8 @@ export const PersonalTrainingPage = (props: any) => {
                     }
                     title="Personal training"
                     subtitle="Ben jij iemand die streeft naar meer fysieke en mentale inspanning, een fitter lichaam en een verbeterd zelfbeeld, maar hiervoor een stukje motivatie, kennis en directe feedback mist? Dan is personal training de oplossing voor jou!"
+                    description="Personal training in Zeist. Persoonlijke begeleiding voor een fitter lichaam en verbeterd zelfbeeld. Gratis intake en proefles."
+                    pathname="/personal-training/"
                     linkTo={{
                         link: '#succesverhalen',
                         text: 'Of, ga naar succesverhalen',

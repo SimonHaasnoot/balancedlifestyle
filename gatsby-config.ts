@@ -5,7 +5,6 @@ module.exports = {
         'gatsby-plugin-top-layout',
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-mui-emotion',
-        'gatsby-plugin-react-helmet',
         `gatsby-plugin-image`,
         {
             resolve: `gatsby-plugin-sharp`,
@@ -17,7 +16,6 @@ module.exports = {
             },
         },
         `gatsby-transformer-sharp`,
-        'gatsby-plugin-sitemap',
         'gatsby-plugin-preload-fonts',
         {
             resolve: `gatsby-plugin-google-gtag`,

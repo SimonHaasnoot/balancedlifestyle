@@ -11,23 +11,25 @@ import { getRouteUrl, HeaderRoutesEnum } from '../types/HeaderRoute';
 import { SuccessStories } from '../components/organisms/SuccessStories';
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
 
-export const GroupsTrainingPage = () => {
+export const GroupsTrainingPage = (props: any) => {
     const theme = useTheme();
     const { isMobile } = useIsMobile();
 
     return (
-        <Layout>
+        <Layout location={props.location}>
             <SmallHero
                 sideImage
                 image={
                     <StaticImage
                         src="../images/2026/2026-50.jpg"
-                        alt="Groepstraining"
+                        alt="Groepstraining Zeist"
                         style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.3)' }}
                     />
                 }
                 title="Groepstraining"
                 subtitle="Trainen in een kleine, hechte groep in onze moderne studio. Maximaal 6 personen, maximale aandacht. Samen sterker worden onder professionele begeleiding."
+                description="Groepstraining in Zeist. Train in kleine groepen van max 6 personen met professionele begeleiding in onze moderne studio."
+                pathname="/groepstraining/"
                 linkTo={{
                     link: getRouteUrl(HeaderRoutesEnum.CONTACT),
                     text: 'Neem contact op',

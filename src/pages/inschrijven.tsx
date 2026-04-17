@@ -1,7 +1,6 @@
 import { Box, Grid, Typography, useTheme } from '@mui/material';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { Layout } from '../components/pagelayout/Layout';
 import useMobile from '../hooks/useMobile';
 import { DefaultContainer } from '../components/pagelayout/DefaultContainer';
@@ -10,7 +9,7 @@ import { SmallHero } from '../components/organisms/SmallHero';
 import { Block } from '../components/molecules/Block';
 import { HeaderRoutesEnum, getRouteUrl } from '../types/HeaderRoute';
 import { Rating } from '../components/molecules/Rating';
-import { projectVariables } from '../project';
+
 
 export default function InschrijvenPage(props: any) {
     const { isMobile } = useMobile();
@@ -18,20 +17,19 @@ export default function InschrijvenPage(props: any) {
 
     return (
         <Layout location={props.location}>
-            <Helmet>
-                <title>Inschrijven - {projectVariables.COMPANY_NAME}</title>
-            </Helmet>
             <SmallHero
                 image={
                     <StaticImage
                         src="../images/pages/grouptraining.jpg"
-                        alt="Hero"
+                        alt="Inschrijven personal training Zeist"
                         style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.2)' }}
                     />
                 }
                 countdownDate="2024-06-30T00:00:00+02:00"
                 title="Geef je gezondheid een boost!"
                 subtitle="Neem contact op voor een gratis healthcheck en proefles! Geheel vrijblijvend."
+                description="Schrijf je in voor personal training in Zeist. Gratis healthcheck en proefles, geheel vrijblijvend."
+                pathname="/inschrijven/"
                 customHeight="85vh"
             />
             <Box sx={{ backgroundColor: theme.palette.secondary.main, mb: 10 }} component="section">
@@ -62,7 +60,7 @@ export default function InschrijvenPage(props: any) {
                     link: '#contact',
                     text: 'Neem contact op',
                 }}
-                staticImage={<StaticImage src="../images/3photos.png" alt="Hero" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
+                staticImage={<StaticImage src="../images/3photos.png" alt="Resultaten personal training Zeist" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
             />
             <DefaultContainer sx={{ textAlign: 'center' }} component="section">
                 <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>

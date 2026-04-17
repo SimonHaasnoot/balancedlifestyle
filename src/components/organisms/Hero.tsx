@@ -25,7 +25,7 @@ export const Hero: React.FC = () => {
             <Box sx={{ position: 'absolute', inset: '0 0 0 0' }}>
                 <StaticImage
                     src="../../images/2026/2026-1.jpg"
-                    alt="Random image"
+                    alt="Lifestyle en Personal Training studio Zeist"
                     placeholder="blurred"
                     loading="eager"
                     layout="fullWidth"
