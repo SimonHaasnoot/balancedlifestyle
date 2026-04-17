@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LeefstijlPage from '../components/pages/LeefstijlPage';
+---
+
+<Layout
+    title="Leefstijl"
+    description="Leefstijlcoaching in Zeist. Wij begeleiden je op het gebied van beweging, voeding, slaap en mentale rust voor duurzaam resultaat."
+    pathname="/leefstijl/"
+>
+    <LeefstijlPage client:only="react" />
+    </Layout>

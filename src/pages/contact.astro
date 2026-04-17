@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactPage from '../components/pages/ContactPage';
+---
+
+<Layout
+    title="Contact"
+    description="Neem contact op met Lifestyle & Personal Training Zeist. Gratis kennismakingsgesprek en proefles. Korte Steynlaan 22, Zeist."
+    pathname="/contact/"
+>
+    <ContactPage client:only="react" />
+
+    <!-- Hidden form for Netlify form detection (client:only components are not SSR'd) -->
+    <form name="contact" data-netlify="true" netlify-honeypot="gender" hidden>
+        <input type="hidden" name="form-name" value="contact" />
+        <input name="gender" />
+        <input name="name" />
+        <input name="celphone" />
+        <input name="email" />
+        <input name="subject" />
+        <input name="company" />
+        <textarea name="description"></textarea>
+    </form>
+    </Layout>

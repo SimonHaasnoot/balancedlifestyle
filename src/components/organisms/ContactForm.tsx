@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, FormControl, TextField, useTheme } from '@mui/material';
-import { navigate } from 'gatsby';
 
 export type ContactFormProps = {
     description?: string;
@@ -8,43 +7,6 @@ export type ContactFormProps = {
 
 export const ContactForm: React.FC<ContactFormProps> = (props) => {
     const theme = useTheme();
-
-    // const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    //     event.preventDefault();
-
-    //     const form = event.currentTarget;
-    //     const formData = new FormData(form);
-
-    //     fetch('/', {
-    //         method: 'POST',
-    //         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    //         body: new URLSearchParams(formData as any).toString(),
-    //     })
-    //         .then(() => {
-    //             window.location.href = '/bedankt';
-    //         })
-    //         .catch(() => alert('Er ging iets fout, probeer het later opnieuw.'));
-    // };
-
-    function encode(data: any) {
-        return Object.keys(data)
-            .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-            .join('&');
-    }
-
-    const handleSubmit = (event: any) => {
-        event.preventDefault();
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode({
-                'form-name': event.target.getAttribute('name'),
-                ...(name as any),
-            }),
-        })
-            .then(() => navigate('/bedankt/'))
-            .catch((error) => alert(error));
-    };
 
     return (
         <form name="contact" method="post" action="/bedankt" data-netlify="true" netlify-honeypot="gender">
@@ -63,11 +25,19 @@ export const ContactForm: React.FC<ContactFormProps> = (props) => {
                 <TextField name="celphone" id="celphone" label="Telefoonnummer" variant="standard" required={true} autoComplete="tel" />
                 <TextField name="email" id="email" label="E-mail" variant="standard" required={true} autoComplete="email" />
                 {props.description && (
-                    <TextField name="subject" id="subject" label="Onderwerp" variant="standard" required={true} value={props.description} sx={{
-                        visibility: 'hidden',
-                        position: 'absolute',
-                        opacity: 0,
-                    }} />
+                    <TextField
+                        name="subject"
+                        id="subject"
+                        label="Onderwerp"
+                        variant="standard"
+                        required={true}
+                        value={props.description}
+                        sx={{
+                            visibility: 'hidden',
+                            position: 'absolute',
+                            opacity: 0,
+                        }}
+                    />
                 )}
                 <TextField name="company" id="company" label="Bedrijf (optioneel)" variant="standard" />
                 <TextField

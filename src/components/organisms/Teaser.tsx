@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography, useTheme } from '@mui/material';
+import { Box, Container, GridLegacy as Grid, Typography, useTheme } from '@mui/material';
 import React from 'react';
 
 export type TeaserProps = {

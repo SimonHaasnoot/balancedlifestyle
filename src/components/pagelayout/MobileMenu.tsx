@@ -1,17 +1,16 @@
 import { Box, IconButton, Link, useTheme } from '@mui/material';
-import { HeaderRouteType } from '../../types/HeaderRoute';
 import React, { useCallback, useEffect } from 'react';
 import { Close } from '@mui/icons-material';
-import { headerRoutes } from './Layout';
+import { headerRoutes } from '../../types/HeaderRoute';
 import { projectVariables } from '../../project';
 
 type MobileMenuProps = {
-    location?: Location;
+    pathname?: string;
     mobileMenuActive: boolean;
     setMobileMenuActive: (active: boolean) => void;
 };
 
-export const MobileMenu: React.FC<MobileMenuProps> = ({ location, mobileMenuActive, setMobileMenuActive }) => {
+export const MobileMenu: React.FC<MobileMenuProps> = ({ pathname, mobileMenuActive, setMobileMenuActive }) => {
     const theme = useTheme();
 
     const handleClose = useCallback(() => setMobileMenuActive(false), [setMobileMenuActive]);
@@ -60,7 +59,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ location, mobileMenuActi
 
             <Box component="ul" sx={{ listStyle: 'none', p: 0, m: 0 }}>
                 {headerRoutes.map((route) => {
-                    const isActive = route.path === location?.pathname;
+                    const isActive = route.path === pathname;
 
                     return (
                         <Box component="li" key={route.path} sx={{ lineHeight: 2.5 }}>

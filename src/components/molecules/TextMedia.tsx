@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Button, Icon, Typography, useTheme } from '@mui/material';
 import useIsMobile from '../../hooks/useMobile';
 import { DefaultContainer } from '../pagelayout/DefaultContainer';
+import { OptimizedImage } from '../atoms/OptimizedImage';
 
 export type TextMediaProps = {
     background?: string;
@@ -118,9 +119,10 @@ export const TextMedia: React.FC<TextMediaProps> = (props) => {
                                         flexWrap: 'wrap',
                                     }}
                                 >
-                                    <img
+                                    <OptimizedImage
                                         src={props.image.src}
                                         alt={props.image.alt}
+                                        sizes="(max-width: 900px) 100vw, 40vw"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover', maxWidth: isMobile ? '100%' : '80%', borderRadius: '40px' }}
                                     />
                                 </Box>

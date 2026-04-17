@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GroepstrainingPage from '../components/pages/GroepstrainingPage';
+---
+
+<Layout
+    title="Groepstraining"
+    description="Groepstraining in Zeist. Train in kleine groepen van max 6 personen met professionele begeleiding in onze moderne studio."
+    pathname="/groepstraining/"
+>
+    <GroepstrainingPage client:only="react" />
+    </Layout>

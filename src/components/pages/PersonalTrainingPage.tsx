@@ -1,0 +1,147 @@
+import { Box,Link, List, ListItem, Typography } from '@mui/material';
+import { AppShell } from '../shell/AppShell';
+import { DefaultContainer } from '../pagelayout/DefaultContainer';
+import { Layout } from '../pagelayout/Layout';
+import useIsMobile from '../../hooks/useMobile';
+import { getRouteUrl, HeaderRoutesEnum } from '../../types/HeaderRoute';
+import { SmallHero } from '../organisms/SmallHero';
+const ptVideo = '/images/pt/C0056-2.mp4';
+import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
+import Grid from '@mui/material/Grid';
+import { SuccessStories } from '../organisms/SuccessStories';
+
+import theme from '../../theme';
+export const PersonalTrainingPage = (props: any) => {
+    const { isMobile, isTabletOrSmaller } = useIsMobile();
+
+    return (
+        <AppShell>
+            <Layout>
+                <SmallHero
+                    image={
+                        <video autoPlay={true} muted loop style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.4)' }}>
+                            <source src={ptVideo} type="video/mp4" />
+                        </video>
+                    }
+                    title="Personal training"
+                    subtitle="Ben jij iemand die streeft naar meer fysieke en mentale inspanning, een fitter lichaam en een verbeterd zelfbeeld, maar hiervoor een stukje motivatie, kennis en directe feedback mist? Dan is personal training de oplossing voor jou!"
+                    linkTo={{
+                        link: '#succesverhalen',
+                        text: 'Of, ga naar succesverhalen',
+                    }}
+                />
+
+                <Box sx={{ background: theme.palette.primary.main, position: 'relative' }} component="section">
+                    <DefaultContainer maxWidth="lg">
+                        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                            <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
+                                Hoe het werkt
+                            </Typography>
+                            <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.white, mb: 5 }}>
+                                Wat we gaan doen
+                            </Typography>
+                            <Typography
+                                variant="body1"
+                                sx={{ color: theme.palette.common.white, lineHeight: 2, mb: 5, maxWidth: !isMobile ? '70%' : '100%' }}
+                            >
+                                Samen gaan wij aan de slag om <span>jouw doelen te realiseren</span> en de beste versie van jou naar boven te halen.
+                                Wekelijks gaan wij op 1 op 1 sporten op een locatie naar jouw keuze. In een <span>veilige omgeving</span>, waarin jouw
+                                <span> prestatieverbetering</span> voorop staat.
+                            </Typography>
+                            <Typography
+                                variant="body2"
+                                sx={{
+                                    color: theme.palette.common.white,
+                                    mb: 5,
+                                    display: 'flex',
+                                    alignItems: isMobile ? 'inherit' : 'center',
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                <TrendingFlatIcon sx={{ color: theme.palette.secondary.main, mr: 1 }} />
+                                Doelgroep: geschikt voor beginners en gevorderden
+                            </Typography>
+                        </Box>
+                    </DefaultContainer>
+                </Box>
+
+                <Box sx={{ background: theme.palette.grey[100], position: 'relative' }} component="section">
+                    <DefaultContainer maxWidth="lg">
+                        <Grid container>
+                            <Grid size={{ xs: 12, md: 6 }} >
+                                <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 3 }}>
+                                    Wat je kan verwachten
+                                </Typography>
+                                {isTabletOrSmaller && (
+                                    <img
+                                        src="/images/Sem/1nbg.png"
+                                        alt="Sem"
+                                        style={{ objectFit: 'cover', float: 'right', margin: '10px', width: '165px' }}
+                                    />
+                                )}
+
+                                <Typography variant="body1" sx={{ color: theme.palette.common.white, lineHeight: 2, wordBreak: 'break-word' }}>
+                                    "Trainingen bestaan uit <span>kracht, conditie en mobiliteitsoefeningen</span> in combinatie met <span>kickboksen en technieklessen</span>.
+                                    Naast het sporten gaan wij aan de slag met jouw <span>eetgewoontes</span> door het aan te leren om <span>gezondere en bewustere </span>
+                                    keuzes te maken. Dit geldt ook voor buitenshuis/sociale gelegenheden, waarin <span>balans</span> voorop staat. Hiernaast gaan
+                                    wij ook werken aan jouw <span>slaapritme</span> voor meer ritme en regelmaat. Als laatste gaan wij jouw <span>stressniveau verlagen </span>
+                                    en ontspanningsbezigheid verhogen met als uitkomst een <span>positieve verandering in mindset</span>."
+                                </Typography>
+                            </Grid>
+                        </Grid>
+                        {!isTabletOrSmaller && (
+                            <Box sx={{ position: 'absolute', right: '20%', bottom: 0, width: '300px' }}>
+                                <img src="/images/Sem/1nbg.png" alt="Sem" loading="lazy" decoding="async" style={{ width: '100%', height: 'auto', objectFit: 'cover', display: 'block' }} />
+                            </Box>
+                        )}
+                    </DefaultContainer>
+                </Box>
+                <Box sx={{ backgroundColor: theme.palette.primary.main, py: isMobile ? 5 : 10 }} component="section">
+                    <DefaultContainer maxWidth="lg">
+                        <Box sx={{ color: theme.palette.common.white }}>
+                            <Grid container spacing={isMobile ? 0 : 5} sx={{ textAlign: 'left' }}>
+                                <Grid size={{ xs: 12, md: 6 }} >
+                                    <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 1 }}>
+                                        Nog even alles op een rijtje
+                                    </Typography>
+                                    <Typography variant="body1" component="div" sx={{ mb: 5 }}>
+                                        <List sx={{ listStyleType: isMobile ? '' : 'decimal' }}>
+                                            <ListItem sx={{ display: 'list-item' }}>
+                                                Gevarieerde trainingen; kracht, conditie, mobiliteitsoefeningen en technieklessen
+                                            </ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Kickboksen</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Verbeteren van eetgewoontes</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Verbeteren van slaapritme</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Verlagen van stress en verhogen ontspanning</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Aanleren gezonde en bewuste keuzes</ListItem>
+                                            <ListItem sx={{ display: 'list-item' }}>Positieve verandering in mindset</ListItem>
+                                        </List>
+                                    </Typography>
+                                </Grid>
+                                <Grid size={{ xs: 12, md: 6 }} >
+                                    <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 1 }}>
+                                        Na inschrijving
+                                    </Typography>
+                                    <Typography variant="body1" sx={{ mb: 5 }}>
+                                        Op het moment dat je een personal training pakket afneemt zal er telefonisch contact worden opgenomen. Als
+                                        beide partijen groen licht geven zal ik er een kennismakingsgesprek plaatsvinden voor de intake en hierop
+                                        volgend een 0 meting. De intake bedraagt eenmalig €50. Inschrijfkosten bedraagt €30.
+                                    </Typography>
+                                    <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main, mb: 1 }}>
+                                        Extra info
+                                    </Typography>
+                                    <Link href={getRouteUrl(HeaderRoutesEnum.CONTACT)}>Neem hier contact op.</Link>
+                                </Grid>
+                            </Grid>
+                        </Box>
+                    </DefaultContainer>
+                </Box>
+
+                <SuccessStories />
+            </Layout>
+        </AppShell>
+
+    );
+};
+
+export default PersonalTrainingPage;

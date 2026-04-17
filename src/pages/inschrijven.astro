@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import InschrijvenPage from '../components/pages/InschrijvenPage';
+---
+
+<Layout
+    title="Inschrijven"
+    description="Schrijf je in voor personal training in Zeist. Gratis healthcheck en proefles, geheel vrijblijvend."
+    pathname="/inschrijven/"
+>
+    <InschrijvenPage client:only="react" />
+
+    <!-- Hidden form for Netlify form detection (client:only components are not SSR'd) -->
+    <form name="contact" data-netlify="true" netlify-honeypot="gender" hidden>
+        <input type="hidden" name="form-name" value="contact" />
+        <input name="gender" />
+        <input name="name" />
+        <input name="celphone" />
+        <input name="email" />
+        <input name="subject" />
+        <input name="company" />
+        <textarea name="description"></textarea>
+    </form>
+    </Layout>

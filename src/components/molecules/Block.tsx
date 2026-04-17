@@ -1,12 +1,11 @@
 import React from 'react';
-import { Box, Container, Grid, SxProps, Theme, Typography, useTheme, Button } from '@mui/material';
+import { Box, Container, GridLegacy as Grid, Typography, useTheme, Button } from '@mui/material';
 import useIsMobile from '../../hooks/useMobile';
-import { StaticImage } from 'gatsby-plugin-image';
 import { getRouteUrl, HeaderRoutesEnum } from '../../types/HeaderRoute';
 import { useInView } from 'react-intersection-observer';
 
 export type BlockProps = {
-    staticImage: any;
+    staticImage: React.ReactNode;
     title?: string;
     subtitle: string;
     body: string;
@@ -21,18 +20,16 @@ export type BlockProps = {
 export const Block: React.FC<BlockProps> = (props) => {
     const theme = useTheme();
     const { isMobile } = useIsMobile();
-    const { ref, inView, entry } = useInView({
-        /* Optional options */
+    const { ref, inView } = useInView({
         threshold: 0.9,
     });
     const maxWidth = props.maxWidth || false;
     const disableScale = props.disableScale || false;
 
     const getButtonLinkRoute = (link: string | HeaderRoutesEnum) => {
-        if (typeof link === typeof HeaderRoutesEnum) {
+        if (Object.values(HeaderRoutesEnum).includes(link as HeaderRoutesEnum)) {
             return getRouteUrl(link as HeaderRoutesEnum);
         }
-
         return link;
     };
 
@@ -72,7 +69,7 @@ export const Block: React.FC<BlockProps> = (props) => {
                             variant="body1"
                             sx={{ color: theme.palette.common.black }}
                             dangerouslySetInnerHTML={{ __html: props.body }}
-                        ></Typography>
+                        />
                         {props.button && (
                             <Button variant="contained" sx={{ mt: 5 }} href={getButtonLinkRoute(props.button.link)}>
                                 {props.button.text}

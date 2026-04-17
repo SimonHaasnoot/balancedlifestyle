@@ -5,7 +5,11 @@
       "Bash(gh auth:*)",
       "Bash(git config:*)",
       "Bash(git remote:*)",
-      "Bash(ssh:*)"
+      "Bash(ssh:*)",
+      "Bash(robocopy . \"C:\\\\Users\\\\SimonHaasnoot\\\\Projects\\\\balancedlifestyle-astro\" /E /XD node_modules .cache public .netlify dist .git /NFL /NDL /NJH /NJS /NC /NS /NP)",
+      "Bash(echo \"copy_done_exit=$?\")",
+      "Bash(MSYS_NO_PATHCONV=1 robocopy \"C:\\\\Users\\\\SimonHaasnoot\\\\Projects\\\\balancedlifestyle\" \"C:\\\\Users\\\\SimonHaasnoot\\\\Projects\\\\balancedlifestyle-astro\" /E /XD node_modules .cache public .netlify dist .git /NFL /NDL /NJH /NJS /NC /NS /NP)",
+      "Bash(echo \"exit=$?\")"
     ]
   }
 }

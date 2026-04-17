@@ -1,11 +1,10 @@
-import { Box, Grid, List, ListItem, ListItemButton, ListItemText, Typography, useTheme } from '@mui/material';
-import { StaticImage } from 'gatsby-plugin-image';
+import { Box, GridLegacy as Grid, List, ListItem, ListItemButton, ListItemText, Typography, useTheme } from '@mui/material';
 import React from 'react';
 import useIsMobile from '../../hooks/useMobile';
 import { projectVariables } from '../../project';
 import { SocialMedia } from '../molecules/SocialMedia';
-import { DefaultContainer } from '../pagelayout/DefaultContainer';
-import { headerRoutes } from './Layout';
+import { DefaultContainer } from './DefaultContainer';
+import { headerRoutes } from '../../types/HeaderRoute';
 
 export const Footer: React.FC = () => {
     const { isMobile } = useIsMobile();
@@ -98,9 +97,6 @@ export const Footer: React.FC = () => {
                                 een bewuste lifestyle
                             </Typography>
 
-                            {/* <Typography variant="caption" sx={{ color: theme.palette.common.white, mb: 2 }}>
-                                {projectVariables.COMPANY_ONELINER}
-                            </Typography> */}
                             <Typography variant="subtitle1" sx={{ color: theme.palette.common.white, mb: 2 }}>
                                 ·
                             </Typography>
@@ -111,10 +107,9 @@ export const Footer: React.FC = () => {
                                 ·
                             </Typography>
                             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 'auto' }}>
-                                <StaticImage
-                                    src="../../images/logo-white-v2.png"
+                                <img
+                                    src="/images/logo-white-v2.png"
                                     alt="Logo"
-                                    placeholder="blurred"
                                     style={{
                                         width: '100px',
                                         height: 'auto',

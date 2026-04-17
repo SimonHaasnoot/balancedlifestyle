@@ -1,0 +1,19 @@
+backend:
+    name: github
+    repo: simonhaasnoot/balancedlifestyle
+    branch: main
+media_folder: public/assets
+public_folder: /assets
+
+collections:
+    - name: blog
+      label: Blog
+      folder: src/content/blog
+      create: true
+      fields:
+          - { name: path, label: Path, required: false }
+          - { name: image, label: Image, widget: image, required: false }
+          - { name: date, label: Date, widget: datetime }
+          - { name: tags, label: Tags, widget: list }
+          - { name: title, label: Title }
+          - { name: body, label: Body, widget: markdown }

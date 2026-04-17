@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HomePage from '../components/pages/HomePage';
+---
+
+<Layout
+    title="Personal Training & Leefstijlcoaching"
+    description="Lifestyle & Personal Training Zeist: personal training, groepstraining en leefstijlcoaching in Zeist. Persoonlijke begeleiding in beweging, voeding en herstel. Gratis proefles!"
+    pathname="/"
+>
+    <HomePage client:only="react" />
+    </Layout>

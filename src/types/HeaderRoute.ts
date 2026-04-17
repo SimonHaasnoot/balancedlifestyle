@@ -1,11 +1,11 @@
-import { SvgIconProps } from '@mui/material';
-import { headerRoutes } from '../components/pagelayout/Layout';
+import type { SvgIconProps } from '@mui/material';
 
 export type HeaderRouteType = {
     name: HeaderRoutesEnum;
     path: string;
     icon?: (props: SvgIconProps) => JSX.Element;
     isSecondaryLevel?: boolean;
+    notVisible?: boolean;
 };
 
 export enum HeaderRoutesEnum {
@@ -22,6 +22,18 @@ export enum HeaderRoutesEnum {
     ABOUT_ME = 'Over mij',
     CONTACT = 'Contact',
 }
+
+export const headerRoutes: HeaderRouteType[] = [
+    { name: HeaderRoutesEnum.HOME, path: '/' },
+    { name: HeaderRoutesEnum.PERSONAL_TRAINING, path: '/personal-training' },
+    { name: 'Onze studio' as HeaderRoutesEnum, path: '/onze-studio' },
+    { name: HeaderRoutesEnum.GROEPSTRAINING, path: '/groepstraining' },
+    { name: HeaderRoutesEnum.LEEFSTIJL, path: '/leefstijl' },
+    { name: HeaderRoutesEnum.SPECIALISATIES, path: '/specialisaties' },
+    { name: HeaderRoutesEnum.ABOUT_ME, path: '/over-sem', isSecondaryLevel: true },
+    { name: HeaderRoutesEnum.REVIEWS, path: '/reviews', isSecondaryLevel: true },
+    { name: HeaderRoutesEnum.CONTACT, path: '/contact', isSecondaryLevel: true },
+];
 
 export const getRouteUrl = (route: HeaderRoutesEnum): string => {
     return headerRoutes.find((headerRoute) => headerRoute.name === route)?.path || '#';

@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ReviewsPage from '../components/pages/ReviewsPage';
+---
+
+<Layout
+    title="Reviews"
+    description="Lees de ervaringen van onze klanten. Gemiddeld 9,4 beoordeeld. Bekijk reviews van personal training in Zeist."
+    pathname="/reviews/"
+>
+    <ReviewsPage client:only="react" />
+    </Layout>

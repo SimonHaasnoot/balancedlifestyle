@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogShell from '../../components/pages/BlogShell';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+    const posts = await getCollection('blog');
+    return posts.map((post) => ({
+        params: { slug: post.id.replace(/\.(md|mdx)$/, '') },
+        props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const slug = post.id.replace(/\.(md|mdx)$/, '');
+const formattedDate = new Intl.DateTimeFormat('nl-NL', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+}).format(post.data.date);
+---
+
+<Layout
+    title={post.data.title}
+    description={`Blog van Lifestyle & Personal Training Zeist: ${post.data.title}.`}
+    pathname={`/blogs/${slug}/`}
+>
+    <BlogShell
+        client:only="react"
+        title={post.data.title}
+        date={formattedDate}
+        keywords={post.data.tags}
+        image={post.data.image}
+    />
+
+    <section class="blog-body">
+        <div class="blog-inner">
+            <article class="blog-article">
+                <Content />
+            </article>
+            <a class="blog-back" href="/blogs/">← Ga terug</a>
+        </div>
+    </section>
+</Layout>
+
+<style is:global>
+    .blog-body {
+        background: #1C1D1F;
+        padding: 2rem 0 5rem;
+    }
+    .blog-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+    .blog-article {
+        color: #fff;
+        line-height: 1.8;
+        font-family: 'Nunito', 'Exo', sans-serif;
+    }
+    .blog-article h2,
+    .blog-article h3 {
+        color: #5ab7db;
+        margin-top: 2rem;
+    }
+    .blog-article a {
+        color: #5ab7db;
+    }
+    .blog-article img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    .blog-back {
+        display: inline-block;
+        margin-top: 3rem;
+        padding: 0.75rem 1.5rem;
+        color: #fff;
+        background: #5ab7db;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .blog-back:hover {
+        filter: brightness(1.1);
+    }
+</style>

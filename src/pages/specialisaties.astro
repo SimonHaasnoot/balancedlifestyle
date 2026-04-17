@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SpecialisatiesPage from '../components/pages/SpecialisatiesPage';
+---
+
+<Layout
+    title="Specialisaties"
+    description="Ons aanbod naast personal training: voedingscoaching, mentale coaching en meer. Bekijk alle specialisaties in Zeist."
+    pathname="/specialisaties/"
+>
+    <SpecialisatiesPage client:only="react" />
+    </Layout>

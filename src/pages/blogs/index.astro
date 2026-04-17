@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogsListPage from '../../components/pages/BlogsListPage';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+const blogs = posts
+    .sort((a, b) => (b.data.date.valueOf() - a.data.date.valueOf()))
+    .map((post) => ({
+        slug: post.id.replace(/\.(md|mdx)$/, ''),
+        title: post.data.title,
+        image: post.data.image,
+        date: new Intl.DateTimeFormat('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' }).format(post.data.date),
+    }));
+---
+
+<Layout
+    title="Blogs"
+    description="Lees blogs over een gebalanceerde leefstijl, voeding, sport en mentale gezondheid van Lifestyle & Personal Training Zeist."
+    pathname="/blogs/"
+>
+    <BlogsListPage blogs={blogs} client:only="react" />
+</Layout>

@@ -1,10 +1,10 @@
 import { Box, Button, Container, Icon, Link, Typography, useTheme } from '@mui/material';
-import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import useMobile from '../../hooks/useMobile';
 import { SocialMedia } from '../molecules/SocialMedia';
 import { getRouteUrl, HeaderRoutesEnum } from '../../types/HeaderRoute';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import { OptimizedImage } from '../atoms/OptimizedImage';
 
 export const Hero: React.FC = () => {
     const { isMobile } = useMobile();
@@ -23,18 +23,13 @@ export const Hero: React.FC = () => {
             }}
         >
             <Box sx={{ position: 'absolute', inset: '0 0 0 0' }}>
-                <StaticImage
-                    src="../../images/2026/2026-1.jpg"
+                <OptimizedImage
+                    src="/images/2026/2026-1.jpg"
                     alt="Lifestyle en Personal Training studio Zeist"
-                    placeholder="blurred"
                     loading="eager"
-                    layout="fullWidth"
-                    quality={100}
-                    style={{ height: '100%' }}
-                    imgStyle={{ objectFit: 'cover', filter: 'brightness(0.7)' }}
-                    transformOptions={{
-                        cropFocus: 'entropy',
-                    }}
+                    fetchPriority="high"
+                    sizes="100vw"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.7)' }}
                 />
             </Box>
             <Box
@@ -45,6 +40,7 @@ export const Hero: React.FC = () => {
                     justifyContent: 'center',
                     width: '100%',
                     height: '100%',
+                    position: 'relative',
                 }}
             >
                 <Container maxWidth="lg" sx={{ position: 'relative' }}>
@@ -52,8 +48,8 @@ export const Hero: React.FC = () => {
                         <Typography variant="h1" component="h1" sx={{ mb: isMobile ? '100px' : 3, pt: 10 }}>
                             Personal<br />Training
                         </Typography>
-                        <Typography variant="h1" component="h2" fontSize={isMobile ? '1rem' : '3rem'} sx={{ mb: 5, }}>
-                        <span>&</span> Lifestyle
+                        <Typography variant="h1" component="h2" fontSize={isMobile ? '1rem' : '3rem'} sx={{ mb: 5 }}>
+                            <span>&</span> Lifestyle
                         </Typography>
                         <Box sx={{ mb: 10, display: 'flex', gap: 2, flexDirection: isMobile ? 'column' : 'row' }}>
                             <Button variant="outlined" href={getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING)}>

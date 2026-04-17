@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BedanktPage from '../components/pages/BedanktPage';
+---
+
+<Layout
+    title="Bedankt"
+    description="Bedankt voor je bericht. We nemen snel contact met je op."
+    noIndex
+>
+    <BedanktPage client:only="react" />
+    </Layout>

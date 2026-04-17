@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PersonalTrainingPage from '../components/pages/PersonalTrainingPage';
+---
+
+<Layout
+    title="Personal training"
+    description="Personal training in Zeist. Persoonlijke begeleiding voor een fitter lichaam en verbeterd zelfbeeld. Gratis intake en proefles."
+    pathname="/personal-training/"
+>
+    <PersonalTrainingPage client:only="react" />
+    </Layout>

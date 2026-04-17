@@ -4,33 +4,21 @@ import React, { useEffect, useState } from 'react';
 import useIsMobile from '../../hooks/useMobile';
 import { Footer } from './Footer';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
-import { HeaderRouteType } from '../../types/HeaderRoute';
+import { headerRoutes } from '../../types/HeaderRoute';
+import type { HeaderRouteType } from '../../types/HeaderRoute';
 import { MobileMenu } from './MobileMenu';
-import { StaticImage } from 'gatsby-plugin-image';
-
-export const headerRoutes = [
-    { name: 'Home', path: '/' },
-    { name: 'Personal training', path: '/personal-training' },
-    { name: 'Onze studio', path: '/onze-studio' },
-    { name: 'Groepstraining', path: '/groepstraining' },
-    { name: 'Leefstijl', path: '/leefstijl' },
-    { name: 'Specialisaties', path: '/specialisaties' },
-    { name: 'Over mij', path: '/over-sem', isSecondaryLevel: true },
-    { name: 'Reviews', path: '/reviews', isSecondaryLevel: true },
-    { name: 'Contact', path: '/contact', isSecondaryLevel: true },
-] as HeaderRouteType[];
 
 export type LayoutProps = {
-    location?: Location;
+    pathname?: string;
     disableHeaderTransition?: boolean;
-    children?: any;
+    children?: React.ReactNode;
 };
 
 export const Layout: React.FC<LayoutProps> = (props) => {
     const theme = useTheme();
     const { isTabletOrSmaller, isDesktop } = useIsMobile();
     const [mobileMenuActive, setMobileMenuActive] = useState(false);
-    const [showContent, setShowContent] = useState(false);
+    const [currentPath, setCurrentPath] = useState(props.pathname ?? '');
     const { atTopOfPage } = useScrollPosition();
 
     useEffect(() => {
@@ -38,12 +26,14 @@ export const Layout: React.FC<LayoutProps> = (props) => {
     }, [mobileMenuActive]);
 
     useEffect(() => {
-        setShowContent(true);
-    }, []);
+        if (!props.pathname && typeof window !== 'undefined') {
+            setCurrentPath(window.location.pathname);
+        }
+    }, [props.pathname]);
 
     const isActiveRoute = (route: HeaderRouteType) => {
-        if (route.path === '/') return props.location?.pathname === '/';
-        return props.location?.pathname?.includes(route.path) ?? false;
+        if (route.path === '/') return currentPath === '/';
+        return currentPath.includes(route.path);
     };
 
     const primaryRoutes = headerRoutes.filter((r) => !r.isSecondaryLevel);
@@ -51,7 +41,7 @@ export const Layout: React.FC<LayoutProps> = (props) => {
     const scrolled = !atTopOfPage || props.disableHeaderTransition;
 
     return (
-        <div style={{ display: showContent ? 'block' : 'none' }}>
+        <div>
             <AppBar
                 color="transparent"
                 position="fixed"
@@ -89,13 +79,12 @@ export const Layout: React.FC<LayoutProps> = (props) => {
                                         sx={{ mr: 'auto', display: 'flex', alignItems: 'center' }}
                                         aria-label="Home"
                                     >
-                                        <StaticImage
-                                            src="../../images/logo-white-v2.png"
+                                        <img
+                                            src="/images/logo-white-v2.png"
                                             alt="Lifestyle & Personal Training Zeist"
-                                            placeholder="blurred"
-                                            loading="eager"
-                                            layout="fixed"
                                             height={40}
+                                            loading="eager"
+                                            style={{ display: 'block' }}
                                         />
                                     </Link>
                                 ) : (
@@ -144,7 +133,7 @@ export const Layout: React.FC<LayoutProps> = (props) => {
                         <MobileMenu
                             mobileMenuActive={mobileMenuActive}
                             setMobileMenuActive={setMobileMenuActive}
-                            location={props.location}
+                            pathname={currentPath}
                         />
                     )}
                 </Container>

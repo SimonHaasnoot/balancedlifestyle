@@ -1,7 +1,6 @@
 import React from 'react';
-import { Box, Container, Grid, Typography, useTheme } from '@mui/material';
-import { StaticImage } from 'gatsby-plugin-image';
-import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
+import { Box, Typography, useTheme } from '@mui/material';
+import Grid from '@mui/material/Grid';
 
 export type CardsProps = {
     cards: {
@@ -17,10 +16,10 @@ export const Cards: React.FC<CardsProps> = (props) => {
     const theme = useTheme();
 
     return (
-        <Grid2 container spacing={2} justifyContent="center">
+        <Grid container spacing={2} justifyContent="center">
             {props.cards.map((card, index) => {
                 return (
-                    <Grid2 xs={12} md={4} display="flex" key={index}>
+                    <Grid size={{ xs: 12, md: 4 }} display="flex" key={index}>
                         <Box p={2} boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.3)">
                             <Box
                                 sx={{
@@ -28,14 +27,14 @@ export const Cards: React.FC<CardsProps> = (props) => {
                                     overflow: 'hidden',
                                     paddingTop: '90%',
                                     position: 'relative',
-
-                                    ['> div']: {
+                                    ['> *']: {
                                         position: 'absolute',
                                         top: 0,
                                         left: 0,
                                         width: '100%',
                                         height: '100%',
-                                    }
+                                        objectFit: 'cover',
+                                    },
                                 }}
                             >
                                 {card.image}
@@ -53,9 +52,9 @@ export const Cards: React.FC<CardsProps> = (props) => {
                                 {card.text}
                             </Typography>
                         </Box>
-                    </Grid2>
+                    </Grid>
                 );
             })}
-        </Grid2>
+        </Grid>
     );
 };

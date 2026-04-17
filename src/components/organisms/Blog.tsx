@@ -1,19 +1,15 @@
 import { ArrowLeft } from '@mui/icons-material';
 import { Box, Button, Chip, Typography, Icon } from '@mui/material';
-import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import useIsMobile from '../../hooks/useMobile';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import rehypeRaw from 'rehype-raw';
 
 export type BlogProps = {
     title: string;
     subtitle?: string;
     image?: string;
-    content: string;
     keywords: string[];
     date: string;
+    children?: React.ReactNode;
 };
 
 export const Blog: React.FC<BlogProps> = (props) => {
@@ -21,7 +17,11 @@ export const Blog: React.FC<BlogProps> = (props) => {
 
     return (
         <Box component={'section'}>
-            <StaticImage src="../../images/pt/pt1.jpg" alt="Blog afbeelding" />
+            <img
+                src={props.image || '/images/pt/pt1.jpg'}
+                alt={props.title}
+                style={{ width: '100%', maxHeight: '400px', objectFit: 'cover' }}
+            />
 
             <Typography
                 variant="h4"
@@ -41,12 +41,8 @@ export const Blog: React.FC<BlogProps> = (props) => {
                     })}
                 </Box>
             )}
-            <ReactMarkdown
-                linkTarget="_blank"
-                rehypePlugins={[rehypeRaw as any]}
-                remarkPlugins={[remarkGfm]}
-                children={props.content}
-            ></ReactMarkdown>
+
+            <Box className="blog-content">{props.children}</Box>
 
             <Box sx={{ mt: isMobile ? 5 : 10 }}>
                 <Button variant="contained" color="primary" href={'/blogs'}>

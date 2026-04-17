@@ -1,0 +1,283 @@
+---
+import '@fontsource/exo/400.css';
+import '@fontsource/exo/500.css';
+import '@fontsource/exo/600.css';
+import '@fontsource/exo/700.css';
+import '@fontsource/nunito/400.css';
+import '@fontsource/nunito/500.css';
+import '@fontsource/nunito/600.css';
+import '@fontsource/nunito/700.css';
+import '@fontsource/numans/400.css';
+import { projectVariables } from '../project';
+
+interface Props {
+    title: string;
+    description: string;
+    pathname?: string;
+    noIndex?: boolean;
+    disableSeo?: boolean;
+}
+
+const { title, description, pathname, noIndex, disableSeo } = Astro.props;
+
+const siteUrl = projectVariables.COMPANY_URL;
+const fullTitle = `${title} - ${projectVariables.COMPANY_NAME}`;
+const canonicalPath = pathname ?? Astro.url.pathname;
+const canonical = `${siteUrl}${canonicalPath}`;
+const isHomepage = canonicalPath === '/';
+
+const localBusinessJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'HealthAndBeautyBusiness',
+    name: 'Lifestyle & Personal Training Zeist',
+    description: projectVariables.COMPANY_DESCRIPTION,
+    url: projectVariables.COMPANY_URL,
+    telephone: `+31${projectVariables.COMPANY_PHONE}`,
+    email: projectVariables.COMPANY_EMAIL,
+    address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Korte Steynlaan 22',
+        addressLocality: 'Zeist',
+        postalCode: '3701 EX',
+        addressCountry: 'NL',
+    },
+    geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 52.0893,
+        longitude: 5.2332,
+    },
+    aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '9.4',
+        bestRating: '10',
+        ratingCount: '50',
+    },
+    priceRange: '€€',
+    openingHoursSpecification: [
+        {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+            opens: '07:00',
+            closes: '21:00',
+        },
+        {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: 'Saturday',
+            opens: '08:00',
+            closes: '14:00',
+        },
+    ],
+    sameAs: [projectVariables.COMPANY_LINKEDIN],
+};
+---
+
+<!doctype html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content={Astro.generator} />
+
+        <title>{fullTitle}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonical} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={fullTitle} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:site_name" content={projectVariables.COMPANY_NAME} />
+        <meta property="og:locale" content="nl_NL" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={fullTitle} />
+        <meta name="twitter:description" content={description} />
+
+        <meta name="geo.region" content="NL-UT" />
+        <meta name="geo.placename" content="Zeist" />
+        {noIndex && <meta name="robots" content="noindex,nofollow" />}
+
+        <link rel="icon" type="image/png" href="/images/gatsby-icon.png" />
+        <link rel="apple-touch-icon" href="/images/gatsby-icon.png" />
+
+        {
+            isHomepage && !disableSeo && (
+                <script type="application/ld+json" set:html={JSON.stringify(localBusinessJsonLd)} />
+            )
+        }
+
+        <!-- Google Analytics -->
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${projectVariables.GOOGLE_ANALYTICS_KEY}`}></script>
+        <script is:inline define:vars={{ gaKey: projectVariables.GOOGLE_ANALYTICS_KEY }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { window.dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', gaKey, { anonymize_ip: true });
+        </script>
+
+        <!-- Facebook Pixel -->
+        <script is:inline>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '461658289597305');
+            fbq('track', 'PageView');
+        </script>
+        <noscript>
+            <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=461658289597305&ev=PageView&noscript=1" />
+        </noscript>
+        <style is:inline>
+            /* ── Page reveal system ── */
+            /* Phase 1: Dark canvas with subtle shimmer — feels like UI skeleton */
+            #page-reveal {
+                position: fixed;
+                inset: 0;
+                z-index: 9999;
+                background: #151515;
+                pointer-events: none;
+                opacity: 1;
+                transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+                overflow: hidden;
+            }
+            #page-reveal::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(
+                    105deg,
+                    transparent 40%,
+                    rgba(90, 183, 219, 0.03) 45%,
+                    rgba(90, 183, 219, 0.06) 50%,
+                    rgba(90, 183, 219, 0.03) 55%,
+                    transparent 60%
+                );
+                background-size: 200% 100%;
+                animation: shimmer 1.4s ease-in-out infinite;
+            }
+            #page-reveal.done {
+                opacity: 0;
+            }
+
+            /* Phase 2: Content starts hidden, refines into place */
+            astro-island {
+                opacity: 0;
+                filter: blur(6px);
+                transform: translateY(8px) scale(0.995);
+                transition:
+                    opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                    filter 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+                will-change: opacity, filter, transform;
+            }
+            astro-island.mounted {
+                opacity: 1;
+                filter: blur(0);
+                transform: translateY(0) scale(1);
+            }
+
+            @keyframes shimmer {
+                0%   { background-position: 200% 0; }
+                100% { background-position: -200% 0; }
+            }
+
+            /* Respect reduced motion */
+            @media (prefers-reduced-motion: reduce) {
+                #page-reveal::after { animation: none; }
+                astro-island {
+                    filter: none;
+                    transform: none;
+                    transition: opacity 0.3s ease-out;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="page-reveal"></div>
+        <slot />
+        <script is:inline>
+            (function() {
+                var revealed = false;
+                function reveal() {
+                    if (revealed) return;
+                    revealed = true;
+                    clearInterval(poll);
+                    // Fade out cover
+                    var cover = document.getElementById('page-reveal');
+                    if (cover) {
+                        cover.classList.add('done');
+                        cover.addEventListener('transitionend', function() { cover.remove(); }, { once: true });
+                        setTimeout(function() { if (cover && cover.parentNode) cover.remove(); }, 600);
+                    }
+                    // Reveal islands with stagger
+                    var islands = document.querySelectorAll('astro-island');
+                    for (var i = 0; i < islands.length; i++) {
+                        (function(el, delay) {
+                            setTimeout(function() { el.classList.add('mounted'); }, delay);
+                        })(islands[i], i * 60);
+                    }
+                }
+                var poll = setInterval(function() {
+                    var islands = document.querySelectorAll('astro-island');
+                    if (!islands.length) return;
+                    for (var i = 0; i < islands.length; i++) {
+                        if (islands[i].querySelector('div')) {
+                            reveal();
+                            return;
+                        }
+                    }
+                }, 30);
+                // Fallback — never block the user
+                setTimeout(reveal, 3500);
+            })();
+        </script>
+    </body>
+</html>
+
+<style is:global>
+    /* ── Critical CSS (MUI CssBaseline equivalent) ── */
+    html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-size-adjust: 100%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 200px;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Numans', 'Nunito', 'Exo', sans-serif;
+        background-color: #151515;
+        color: #fcfcfc;
+        line-height: 1.5;
+    }
+
+    body {
+        -webkit-font-smoothing: antialiased;
+    }
+
+    img, picture, video, canvas, svg {
+        display: block;
+        max-width: 100%;
+    }
+
+    input, button, textarea, select {
+        font: inherit;
+    }
+
+    p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+    }
+</style>

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Box, Button, List, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, useTheme } from '@mui/material';
-import { SimpleSchema } from '../../types/Schema';
+import type { SimpleSchema } from '../../types/Schema';
 import useIsMobile from '../../hooks/useMobile';
 import { useInView } from 'react-intersection-observer';
 import Tippy from '@tippyjs/react';
