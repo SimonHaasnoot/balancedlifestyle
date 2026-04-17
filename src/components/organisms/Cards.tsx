@@ -29,8 +29,8 @@ export const Cards: React.FC<CardsProps> = (props) => {
                                 width: '100%',
                                 borderRadius: 4,
                                 overflow: 'hidden',
-                                background: 'rgba(255,255,255,0.03)',
-                                border: '1px solid rgba(255,255,255,0.06)',
+                                background: 'rgba(255,255,255,0.05)',
+                                border: '1px solid rgba(255,255,255,0.12)',
                                 backdropFilter: 'blur(10px)',
                                 transition: 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
                                 '&:hover': {

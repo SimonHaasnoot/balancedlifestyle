@@ -12,6 +12,7 @@ const fadeIn = keyframes`
 export type SuccessStoriesProps = {
     title?: string;
     subtitle?: string;
+    hideHeader?: boolean;
 };
 
 export const SuccessStories: React.FC<SuccessStoriesProps> = (props) => {
@@ -22,13 +23,16 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = (props) => {
         <Box
             component="section"
             sx={{
-                background: `linear-gradient(180deg, ${theme.palette.grey[100]} 0%, #0c0c0c 100%)`,
-                py: { xs: 8, md: 12 },
+                background: props.hideHeader
+                    ? 'transparent'
+                    : `linear-gradient(180deg, ${theme.palette.grey[100]} 0%, #0c0c0c 100%)`,
+                py: props.hideHeader ? { xs: 4, md: 6 } : { xs: 8, md: 12 },
                 position: 'relative',
                 overflow: 'hidden',
             }}
         >
             {/* Subtle background glow */}
+            {!props.hideHeader && (
             <Box sx={{
                 position: 'absolute',
                 top: '20%',
@@ -40,9 +44,11 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = (props) => {
                 background: `radial-gradient(circle, rgba(90,183,219,0.06) 0%, transparent 70%)`,
                 pointerEvents: 'none',
             }} />
+            )}
 
             <DefaultContainer id="succesverhalen" maxWidth="lg">
                 {/* Section header */}
+                {!props.hideHeader && (
                 <Box sx={{ textAlign: 'center', mb: { xs: 5, md: 8 } }}>
                     <Typography
                         sx={{
@@ -93,6 +99,7 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = (props) => {
                         </Typography>
                     )}
                 </Box>
+                )}
 
                 <Cards
                     cards={[

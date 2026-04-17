@@ -11,10 +11,10 @@ export const ReviewsPage = (props: any) => {
     return (
         <AppShell>
             <Layout>
-            <Heading align="center" title="Reviews" />
-            <Box>
+            <Heading align="center" title="Reviews" subtitle="Persoonlijke successen van onze klanten" />
+            <Box sx={{ background: 'linear-gradient(180deg, #151515 0%, #0c0c0c 100%)', pb: { xs: 6, md: 10 } }}>
                 <DefaultContainer maxWidth="lg" component="section">
-                    <SuccessStories />
+                    <SuccessStories hideHeader />
                 </DefaultContainer>
             </Box>
         </Layout>
