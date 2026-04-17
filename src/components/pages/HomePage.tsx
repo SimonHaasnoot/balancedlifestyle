@@ -11,6 +11,7 @@ import useIsMobile from '../../hooks/useMobile';
 import { HeaderRoutesEnum, getRouteUrl } from '../../types/HeaderRoute';
 import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
 import { Star } from '../atoms/Star';
+import { OptimizedImage } from '../atoms/OptimizedImage';
 import theme from '../../theme';
 export const index = (props: any) => {
     const { isMobile } = useIsMobile();
@@ -142,10 +143,10 @@ export const index = (props: any) => {
                         </Box>
                         <Grid container spacing={isMobile ? 2 : 4} justifyContent="center">
                             {[
-                                { src: '../images/2026/2026-17.jpg', label: 'Personal training', href: getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING), imgNode: <img src="/images/2026/2026-17.jpg" alt="Personal training" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
-                                { src: '../images/2026/2026-4.jpg', label: 'Groepstraining', href: getRouteUrl(HeaderRoutesEnum.GROEPSTRAINING), imgNode: <img src="/images/2026/2026-4.jpg" alt="Groepstraining" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
-                                { src: '../images/2026/2026-5.jpg', label: 'Leefstijl', href: getRouteUrl(HeaderRoutesEnum.LEEFSTIJL), imgNode: <img src="/images/2026/2026-5.jpg" alt="Leefstijl" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
-                                { src: '../images/2026/2026-6.jpg', label: 'Mentale coaching', href: getRouteUrl(HeaderRoutesEnum.SPECIALISATIES), imgNode: <img src="/images/2026/2026-6.jpg" alt="Mentale coaching" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
+                                { src: '../images/2026/2026-17.jpg', label: 'Personal training', href: getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING), imgNode: <OptimizedImage src="/images/2026/2026-17.jpg" alt="Personal training" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
+                                { src: '../images/2026/2026-4.jpg', label: 'Groepstraining', href: getRouteUrl(HeaderRoutesEnum.GROEPSTRAINING), imgNode: <OptimizedImage src="/images/2026/2026-4.jpg" alt="Groepstraining" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
+                                { src: '../images/2026/2026-5.jpg', label: 'Leefstijl', href: getRouteUrl(HeaderRoutesEnum.LEEFSTIJL), imgNode: <OptimizedImage src="/images/2026/2026-5.jpg" alt="Leefstijl" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
+                                { src: '../images/2026/2026-6.jpg', label: 'Mentale coaching', href: getRouteUrl(HeaderRoutesEnum.SPECIALISATIES), imgNode: <OptimizedImage src="/images/2026/2026-6.jpg" alt="Mentale coaching" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
                             ].map((card) => (
                                 <Grid
                                     item

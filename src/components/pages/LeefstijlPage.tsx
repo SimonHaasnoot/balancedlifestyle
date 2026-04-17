@@ -6,6 +6,7 @@ import { Layout } from '../pagelayout/Layout';
 import useIsMobile from '../../hooks/useMobile';
 import Grid from '@mui/material/Grid';
 import { Divider } from '../molecules/Divider';
+import { OptimizedImage } from '../atoms/OptimizedImage';
 
 import theme from '../../theme';
 export const FoodPage = (props: any) => {
@@ -64,7 +65,7 @@ export const FoodPage = (props: any) => {
                             <Grid size={{ xs: 12, md: 5 }} >
                                 <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', height: isMobile ? 250 : 400, position: 'relative', '&:hover .img-zoom': { transform: 'scale(1.06)' } }}>
                                     <Box className="img-zoom" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
-                                        <img src="/images/2026/2026-42.jpg" alt="Leefstijl" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                        <OptimizedImage src="/images/2026/2026-42.jpg" alt="Leefstijl" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                     </Box>
                                 </Box>
                             </Grid>
@@ -160,7 +161,7 @@ export const FoodPage = (props: any) => {
                                 '&:hover .gallery-img': { transform: 'scale(1.05)' },
                             }}>
                                 <Box className="gallery-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.6s ease' }}>
-                                    <img src="/images/2026/2026-40.jpg" alt="Leefstijl training" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <OptimizedImage src="/images/2026/2026-40.jpg" alt="Leefstijl training" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </Box>
                                 <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg, rgba(0,0,0,0.4) 0%, transparent 40%)' }} />
                             </Box>
@@ -175,7 +176,7 @@ export const FoodPage = (props: any) => {
                                 '&:hover .gallery-img': { transform: 'scale(1.05)' },
                             }}>
                                 <Box className="gallery-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.6s ease' }}>
-                                    <img src="/images/2026/2026-23.jpg" alt="Leefstijl coaching" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <OptimizedImage src="/images/2026/2026-23.jpg" alt="Leefstijl coaching" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </Box>
                             </Box>
 
@@ -189,7 +190,7 @@ export const FoodPage = (props: any) => {
                                 '&:hover .gallery-img': { transform: 'scale(1.05)' },
                             }}>
                                 <Box className="gallery-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.6s ease' }}>
-                                    <img src="/images/2026/2026-30.jpg" alt="Leefstijl beweging" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <OptimizedImage src="/images/2026/2026-30.jpg" alt="Leefstijl beweging" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </Box>
                             </Box>
 
@@ -205,7 +206,7 @@ export const FoodPage = (props: any) => {
                                 '&:hover .gallery-img': { transform: 'scale(1.05)' },
                             }}>
                                 <Box className="gallery-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.6s ease' }}>
-                                    <img src="/images/2026/2026-41.jpg" alt="Leefstijl resultaat" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <OptimizedImage src="/images/2026/2026-41.jpg" alt="Leefstijl resultaat" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </Box>
                                 <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg, rgba(0,0,0,0.4) 0%, transparent 40%)' }} />
                             </Box>
@@ -221,7 +222,7 @@ export const FoodPage = (props: any) => {
                                 '&:hover .gallery-img': { transform: 'scale(1.05)' },
                             }}>
                                 <Box className="gallery-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.6s ease' }}>
-                                    <img src="/images/2026/2026-20.jpg" alt="Leefstijl voeding" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <OptimizedImage src="/images/2026/2026-20.jpg" alt="Leefstijl voeding" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </Box>
                             </Box>
 
@@ -237,7 +238,7 @@ export const FoodPage = (props: any) => {
                                 '&:hover .gallery-img': { transform: 'scale(1.05)' },
                             }}>
                                 <Box className="gallery-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.6s ease' }}>
-                                    <img src="/images/2026/2026-19.jpg" alt="Leefstijl training" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <OptimizedImage src="/images/2026/2026-19.jpg" alt="Leefstijl training" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </Box>
                             </Box>
 
@@ -252,7 +253,7 @@ export const FoodPage = (props: any) => {
                                 '&:hover .gallery-img': { transform: 'scale(1.05)' },
                             }}>
                                 <Box className="gallery-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.6s ease' }}>
-                                    <img src="/images/2026/2026-34.jpg" alt="Leefstijl balans" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <OptimizedImage src="/images/2026/2026-34.jpg" alt="Leefstijl balans" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </Box>
                                 <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg, rgba(0,0,0,0.4) 0%, transparent 40%)' }} />
                             </Box>

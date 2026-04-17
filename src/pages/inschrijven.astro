@@ -11,7 +11,7 @@ import InschrijvenPage from '../components/pages/InschrijvenPage';
     <InschrijvenPage client:only="react" />
 
     <!-- Hidden form for Netlify form detection (client:only components are not SSR'd) -->
-    <form name="contact" data-netlify="true" netlify-honeypot="gender" hidden>
+    <form name="contact" action="/bedankt" data-netlify="true" netlify-honeypot="gender" hidden>
         <input type="hidden" name="form-name" value="contact" />
         <input name="gender" />
         <input name="name" />

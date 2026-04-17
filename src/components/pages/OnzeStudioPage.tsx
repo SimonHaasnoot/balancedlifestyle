@@ -7,6 +7,7 @@ import { Layout } from '../pagelayout/Layout';
 import useIsMobile from '../../hooks/useMobile';
 import { SuccessStories } from '../organisms/SuccessStories';
 import Grid from '@mui/material/Grid';
+import { OptimizedImage } from '../atoms/OptimizedImage';
 
 import theme from '../../theme';
 export const onlinecoaching = (props: any) => {
@@ -18,7 +19,7 @@ export const onlinecoaching = (props: any) => {
             <SmallHero
                 sideImage
                 image={
-                    <img
+                    <OptimizedImage
                         src="/images/2026/2026-07.jpg"
                         alt="Personal training studio Zeist"
                         style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.2)' }}
@@ -56,14 +57,14 @@ export const onlinecoaching = (props: any) => {
                                 gap: 2,
                             }}>
                                 <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)' }}>
-                                    <img
+                                    <OptimizedImage
                                         src="/images/2026/2026-08.jpg"
                                         alt="Training in de studio"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
                                 </Box>
                                 <Box sx={{ borderRadius: 3, overflow: 'hidden', mt: 4, boxShadow: '0 8px 30px rgba(0,0,0,0.3)' }}>
-                                    <img
+                                    <OptimizedImage
                                         src="/images/2026/2026-09.jpg"
                                         alt="Training in de studio"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
@@ -234,7 +235,7 @@ export const onlinecoaching = (props: any) => {
                                         '&:hover .seq-overlay': { opacity: 0 },
                                     }}>
                                         <Box className="seq-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
-                                            <img src="/images/2026/2026-10.jpg" alt="Hammer training 1" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                            <OptimizedImage src="/images/2026/2026-10.jpg" alt="Hammer training 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                         </Box>
                                         <Box className="seq-overlay" sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg, rgba(0,0,0,0.5) 0%, transparent 50%)', transition: 'opacity 0.4s ease' }} />
                                         <Typography variant="overline" sx={{ position: 'absolute', bottom: 12, left: 0, right: 0, textAlign: 'center', color: theme.palette.secondary.main, fontSize: '0.7rem', letterSpacing: 3, textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>1 / 4</Typography>
@@ -248,7 +249,7 @@ export const onlinecoaching = (props: any) => {
                                         '&:hover .seq-overlay': { opacity: 0 },
                                     }}>
                                         <Box className="seq-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
-                                            <img src="/images/2026/2026-11.jpg" alt="Hammer training 2" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                            <OptimizedImage src="/images/2026/2026-11.jpg" alt="Hammer training 2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                         </Box>
                                         <Box className="seq-overlay" sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg, rgba(0,0,0,0.5) 0%, transparent 50%)', transition: 'opacity 0.4s ease' }} />
                                         <Typography variant="overline" sx={{ position: 'absolute', bottom: 12, left: 0, right: 0, textAlign: 'center', color: theme.palette.secondary.main, fontSize: '0.7rem', letterSpacing: 3, textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>2 / 4</Typography>
@@ -262,7 +263,7 @@ export const onlinecoaching = (props: any) => {
                                         '&:hover .seq-overlay': { opacity: 0 },
                                     }}>
                                         <Box className="seq-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
-                                            <img src="/images/2026/2026-12.jpg" alt="Hammer training 3" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                            <OptimizedImage src="/images/2026/2026-12.jpg" alt="Hammer training 3" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                         </Box>
                                         <Box className="seq-overlay" sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg, rgba(0,0,0,0.5) 0%, transparent 50%)', transition: 'opacity 0.4s ease' }} />
                                         <Typography variant="overline" sx={{ position: 'absolute', bottom: 12, left: 0, right: 0, textAlign: 'center', color: theme.palette.secondary.main, fontSize: '0.7rem', letterSpacing: 3, textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>3 / 4</Typography>
@@ -275,7 +276,7 @@ export const onlinecoaching = (props: any) => {
                                         '&:hover .seq-overlay': { opacity: 0 },
                                     }}>
                                         <Box className="seq-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
-                                            <img src="/images/2026/2026-13.jpg" alt="Hammer training 4" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                            <OptimizedImage src="/images/2026/2026-13.jpg" alt="Hammer training 4" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                         </Box>
                                         <Box className="seq-overlay" sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg, rgba(0,0,0,0.5) 0%, transparent 50%)', transition: 'opacity 0.4s ease' }} />
                                         <Typography variant="overline" sx={{ position: 'absolute', bottom: 12, left: 0, right: 0, textAlign: 'center', color: theme.palette.secondary.main, fontSize: '0.7rem', letterSpacing: 3, textShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>4 / 4</Typography>
@@ -286,21 +287,21 @@ export const onlinecoaching = (props: any) => {
                             <Grid size={{ xs: 12, md: 4 }} >
                                 <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', height: isMobile ? 250 : 350, position: 'relative', '&:hover .seq-img': { transform: 'scale(1.08)' } }}>
                                     <Box className="seq-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
-                                        <img src="/images/2026/2026-14.jpg" alt="Studio sfeer" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                        <OptimizedImage src="/images/2026/2026-14.jpg" alt="Studio sfeer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                     </Box>
                                 </Box>
                             </Grid>
                             <Grid size={{ xs: 12, md: 4 }} >
                                 <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', height: isMobile ? 250 : 350, position: 'relative', '&:hover .seq-img': { transform: 'scale(1.08)' } }}>
                                     <Box className="seq-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
-                                        <img src="/images/2026/2026-15.jpg" alt="Studio sfeer" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                        <OptimizedImage src="/images/2026/2026-15.jpg" alt="Studio sfeer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                     </Box>
                                 </Box>
                             </Grid>
                             <Grid size={{ xs: 12, md: 4 }} >
                                 <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', height: isMobile ? 250 : 350, position: 'relative', '&:hover .seq-img': { transform: 'scale(1.08)' } }}>
                                     <Box className="seq-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
-                                        <img src="/images/2026/2026-16.jpg" alt="Studio sfeer" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                        <OptimizedImage src="/images/2026/2026-16.jpg" alt="Studio sfeer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                     </Box>
                                 </Box>
                             </Grid>
@@ -308,7 +309,7 @@ export const onlinecoaching = (props: any) => {
                             <Grid size={12} >
                                 <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', height: isMobile ? 250 : 400, position: 'relative', '&:hover .seq-img': { transform: 'scale(1.05)' } }}>
                                     <Box className="seq-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
-                                        <img src="/images/2026/2026-17.jpg" alt="Studio overzicht" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                        <OptimizedImage src="/images/2026/2026-17.jpg" alt="Studio overzicht" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                     </Box>
                                 </Box>
                             </Grid>

@@ -9,6 +9,7 @@ import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 import { getRouteUrl, HeaderRoutesEnum } from '../../types/HeaderRoute';
 import { SuccessStories } from '../organisms/SuccessStories';
 import Grid from '@mui/material/Grid';
+import { OptimizedImage } from '../atoms/OptimizedImage';
 
 import theme from '../../theme';
 export const GroupsTrainingPage = (props: any) => {
@@ -20,7 +21,7 @@ export const GroupsTrainingPage = (props: any) => {
             <SmallHero
                 sideImage
                 image={
-                    <img
+                    <OptimizedImage
                         src="/images/2026/2026-50.jpg"
                         alt="Groepstraining Zeist"
                         style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.3)' }}
@@ -93,7 +94,7 @@ export const GroupsTrainingPage = (props: any) => {
                         <Grid size={{ xs: 12, md: 5 }} >
                             <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', height: isMobile ? 280 : 400, position: 'relative', '&:hover .img-zoom': { transform: 'scale(1.05)' } }}>
                                 <Box className="img-zoom" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
-                                    <img src="/images/2026/2026-51.jpg" alt="Groepstraining sfeer" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <OptimizedImage src="/images/2026/2026-51.jpg" alt="Groepstraining sfeer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </Box>
                             </Box>
                         </Grid>
@@ -169,21 +170,21 @@ export const GroupsTrainingPage = (props: any) => {
                             <Grid size={{ xs: 12, md: 4 }} >
                                 <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', '&:hover .gallery-img': { transform: 'scale(1.05)' } }}>
                                     <Box className="gallery-img" sx={{ transition: 'transform 0.6s ease' }}>
-                                        <img src="/images/2026/2026-53.jpg" alt="Groepstraining" loading="lazy" decoding="async" style={{ width: '100%', display: 'block' }} />
+                                        <OptimizedImage src="/images/2026/2026-53.jpg" alt="Groepstraining" style={{ width: '100%', display: 'block' }} />
                                     </Box>
                                 </Box>
                             </Grid>
                             <Grid size={{ xs: 6, md: 4 }} >
                                 <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', '&:hover .gallery-img': { transform: 'scale(1.05)' } }}>
                                     <Box className="gallery-img" sx={{ transition: 'transform 0.6s ease' }}>
-                                        <img src="/images/2026/2026-52.jpg" alt="Groepstraining" loading="lazy" decoding="async" style={{ width: '100%', display: 'block' }} />
+                                        <OptimizedImage src="/images/2026/2026-52.jpg" alt="Groepstraining" style={{ width: '100%', display: 'block' }} />
                                     </Box>
                                 </Box>
                             </Grid>
                             <Grid size={{ xs: 6, md: 4 }} >
                                 <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', '&:hover .gallery-img': { transform: 'scale(1.05)' } }}>
                                     <Box className="gallery-img" sx={{ transition: 'transform 0.6s ease' }}>
-                                        <img src="/images/2026/2026-54.jpg" alt="Groepstraining" loading="lazy" decoding="async" style={{ width: '100%', display: 'block' }} />
+                                        <OptimizedImage src="/images/2026/2026-54.jpg" alt="Groepstraining" style={{ width: '100%', display: 'block' }} />
                                     </Box>
                                 </Box>
                             </Grid>
@@ -192,7 +193,7 @@ export const GroupsTrainingPage = (props: any) => {
                             <Grid size={12} >
                                 <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', '&:hover .gallery-img': { transform: 'scale(1.05)' } }}>
                                     <Box className="gallery-img" sx={{ transition: 'transform 0.6s ease' }}>
-                                        <img src="/images/2026/2026-50.jpg" alt="Groepstraining" loading="lazy" decoding="async" style={{ width: '100%', display: 'block' }} />
+                                        <OptimizedImage src="/images/2026/2026-50.jpg" alt="Groepstraining" style={{ width: '100%', display: 'block' }} />
                                     </Box>
                                 </Box>
                             </Grid>
@@ -201,14 +202,14 @@ export const GroupsTrainingPage = (props: any) => {
                             <Grid size={{ xs: 12, md: 6 }} >
                                 <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', '&:hover .gallery-img': { transform: 'scale(1.05)' } }}>
                                     <Box className="gallery-img" sx={{ transition: 'transform 0.6s ease' }}>
-                                        <img src="/images/2026/2026-55.jpg" alt="Groepstraining" loading="lazy" decoding="async" style={{ width: '100%', display: 'block' }} />
+                                        <OptimizedImage src="/images/2026/2026-55.jpg" alt="Groepstraining" style={{ width: '100%', display: 'block' }} />
                                     </Box>
                                 </Box>
                             </Grid>
                             <Grid size={{ xs: 12, md: 6 }} >
                                 <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', '&:hover .gallery-img': { transform: 'scale(1.05)' } }}>
                                     <Box className="gallery-img" sx={{ transition: 'transform 0.6s ease' }}>
-                                        <img src="/images/2026/2026-51.jpg" alt="Groepstraining" loading="lazy" decoding="async" style={{ width: '100%', display: 'block' }} />
+                                        <OptimizedImage src="/images/2026/2026-51.jpg" alt="Groepstraining" style={{ width: '100%', display: 'block' }} />
                                     </Box>
                                 </Box>
                             </Grid>
