@@ -37,10 +37,10 @@ async function optimizeImage(inputPath) {
 
     const results = [];
     for (const width of WIDTHS) {
-        if (width > originalWidth * 1.1) continue; // don't upscale
+        const targetWidth = Math.min(width, originalWidth); // don't upscale, use original width instead
         const outPath = join(outDir, `${name}-${width}.webp`);
         await sharp(inputPath)
-            .resize(width, null, { withoutEnlargement: true })
+            .resize(targetWidth, null, { withoutEnlargement: true })
             .webp({ quality: QUALITY })
             .toFile(outPath);
 
