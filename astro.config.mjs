@@ -4,7 +4,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-    site: 'https://lifestylepersonaltraining-zeist.nl',
+    site: 'https://www.lifestylepersonaltraining-zeist.nl',
     output: 'static',
     integrations: [
         react(),
