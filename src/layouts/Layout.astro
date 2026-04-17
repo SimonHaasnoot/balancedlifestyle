@@ -16,9 +16,10 @@ interface Props {
     pathname?: string;
     noIndex?: boolean;
     disableSeo?: boolean;
+    serviceJsonLd?: Record<string, unknown>;
 }
 
-const { title, description, pathname, noIndex, disableSeo } = Astro.props;
+const { title, description, pathname, noIndex, disableSeo, serviceJsonLd } = Astro.props;
 
 const siteUrl = projectVariables.COMPANY_URL;
 const fullTitle = `${title} - ${projectVariables.COMPANY_NAME}`;
@@ -105,6 +106,17 @@ const localBusinessJsonLd = {
                 <script type="application/ld+json" set:html={JSON.stringify(localBusinessJsonLd)} />
             )
         }
+
+        {
+            serviceJsonLd && !disableSeo && (
+                <script type="application/ld+json" set:html={JSON.stringify(serviceJsonLd)} />
+            )
+        }
+
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://connect.facebook.net" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
 
         <!-- Google Analytics -->
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${projectVariables.GOOGLE_ANALYTICS_KEY}`}></script>

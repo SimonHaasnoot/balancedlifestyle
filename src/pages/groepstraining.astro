@@ -7,6 +7,28 @@ import GroepstrainingPage from '../components/pages/GroepstrainingPage';
     title="Groepstraining"
     description="Groepstraining in Zeist. Train in kleine groepen van max 6 personen met professionele begeleiding in onze moderne studio."
     pathname="/groepstraining/"
+    serviceJsonLd={{
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Groepstraining',
+        description: 'Train in kleine groepen van maximaal 6 personen met professionele begeleiding. Inclusief voedingsadvies en toegang tot onze app.',
+        provider: {
+            '@type': 'HealthAndBeautyBusiness',
+            name: 'Lifestyle & Personal Training Zeist',
+            url: 'https://www.lifestylepersonaltraining-zeist.nl',
+        },
+        areaServed: {
+            '@type': 'City',
+            name: 'Zeist',
+        },
+        serviceType: 'Groepstraining',
+        url: 'https://www.lifestylepersonaltraining-zeist.nl/groepstraining/',
+        offers: {
+            '@type': 'Offer',
+            priceCurrency: 'EUR',
+            availability: 'https://schema.org/InStock',
+        },
+    }}
 >
     <GroepstrainingPage client:only="react" />
     </Layout>

@@ -7,6 +7,23 @@ import LeefstijlPage from '../components/pages/LeefstijlPage';
     title="Leefstijl"
     description="Leefstijlcoaching in Zeist. Wij begeleiden je op het gebied van beweging, voeding, slaap en mentale rust voor duurzaam resultaat."
     pathname="/leefstijl/"
+    serviceJsonLd={{
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Leefstijlcoaching',
+        description: 'Begeleiding op het gebied van beweging, voeding, slaap en mentale rust. Een holistische aanpak voor duurzaam resultaat.',
+        provider: {
+            '@type': 'HealthAndBeautyBusiness',
+            name: 'Lifestyle & Personal Training Zeist',
+            url: 'https://www.lifestylepersonaltraining-zeist.nl',
+        },
+        areaServed: {
+            '@type': 'City',
+            name: 'Zeist',
+        },
+        serviceType: 'Leefstijlcoaching',
+        url: 'https://www.lifestylepersonaltraining-zeist.nl/leefstijl/',
+    }}
 >
     <LeefstijlPage client:only="react" />
     </Layout>
