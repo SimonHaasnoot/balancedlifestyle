@@ -10,6 +10,8 @@ import { getRouteUrl, HeaderRoutesEnum } from '../../types/HeaderRoute';
 import { SuccessStories } from '../organisms/SuccessStories';
 import Grid from '@mui/material/Grid';
 import { OptimizedImage } from '../atoms/OptimizedImage';
+import { PhotoGallery } from '../organisms/PhotoGallery';
+import type { GalleryPhoto } from '../organisms/PhotoGallery';
 
 import theme from '../../theme';
 export const GroupsTrainingPage = (props: any) => {
@@ -165,55 +167,16 @@ export const GroupsTrainingPage = (props: any) => {
                             De energie van samen trainen
                         </Typography>
 
-                        <Grid container spacing={2}>
-                            {/* Rij 1: 3 foto's — landscape, portrait, landscape */}
-                            <Grid size={{ xs: 12, md: 4 }} >
-                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', '&:hover .gallery-img': { transform: 'scale(1.05)' } }}>
-                                    <Box className="gallery-img" sx={{ transition: 'transform 0.6s ease' }}>
-                                        <OptimizedImage src="/images/2026/2026-53.jpg" alt="Groepstraining" style={{ width: '100%', display: 'block' }} />
-                                    </Box>
-                                </Box>
-                            </Grid>
-                            <Grid size={{ xs: 6, md: 4 }} >
-                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', '&:hover .gallery-img': { transform: 'scale(1.05)' } }}>
-                                    <Box className="gallery-img" sx={{ transition: 'transform 0.6s ease' }}>
-                                        <OptimizedImage src="/images/2026/2026-52.jpg" alt="Groepstraining" style={{ width: '100%', display: 'block' }} />
-                                    </Box>
-                                </Box>
-                            </Grid>
-                            <Grid size={{ xs: 6, md: 4 }} >
-                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', '&:hover .gallery-img': { transform: 'scale(1.05)' } }}>
-                                    <Box className="gallery-img" sx={{ transition: 'transform 0.6s ease' }}>
-                                        <OptimizedImage src="/images/2026/2026-54.jpg" alt="Groepstraining" style={{ width: '100%', display: 'block' }} />
-                                    </Box>
-                                </Box>
-                            </Grid>
-
-                            {/* Rij 2: brede landscape */}
-                            <Grid size={12} >
-                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', '&:hover .gallery-img': { transform: 'scale(1.05)' } }}>
-                                    <Box className="gallery-img" sx={{ transition: 'transform 0.6s ease' }}>
-                                        <OptimizedImage src="/images/2026/2026-50.jpg" alt="Groepstraining" style={{ width: '100%', display: 'block' }} />
-                                    </Box>
-                                </Box>
-                            </Grid>
-
-                            {/* Rij 3: 2 landscape naast elkaar */}
-                            <Grid size={{ xs: 12, md: 6 }} >
-                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', '&:hover .gallery-img': { transform: 'scale(1.05)' } }}>
-                                    <Box className="gallery-img" sx={{ transition: 'transform 0.6s ease' }}>
-                                        <OptimizedImage src="/images/2026/2026-55.jpg" alt="Groepstraining" style={{ width: '100%', display: 'block' }} />
-                                    </Box>
-                                </Box>
-                            </Grid>
-                            <Grid size={{ xs: 12, md: 6 }} >
-                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', '&:hover .gallery-img': { transform: 'scale(1.05)' } }}>
-                                    <Box className="gallery-img" sx={{ transition: 'transform 0.6s ease' }}>
-                                        <OptimizedImage src="/images/2026/2026-51.jpg" alt="Groepstraining" style={{ width: '100%', display: 'block' }} />
-                                    </Box>
-                                </Box>
-                            </Grid>
-                        </Grid>
+                        <PhotoGallery
+                            photos={[
+                                { src: '/images/2026/2026-53.jpg', width: 3600, height: 2400, alt: 'Groepstraining' },
+                                { src: '/images/2026/2026-52.jpg', width: 2400, height: 3600, alt: 'Groepstraining' },
+                                { src: '/images/2026/2026-54.jpg', width: 2400, height: 3600, alt: 'Groepstraining' },
+                                { src: '/images/2026/2026-50.jpg', width: 3600, height: 2400, alt: 'Groepstraining' },
+                                { src: '/images/2026/2026-55.jpg', width: 3600, height: 2400, alt: 'Groepstraining' },
+                                { src: '/images/2026/2026-51.jpg', width: 3600, height: 2400, alt: 'Groepstraining' },
+                            ]}
+                        />
                     </Box>
                 </DefaultContainer>
             </Box>

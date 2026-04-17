@@ -7,6 +7,7 @@ import useIsMobile from '../../hooks/useMobile';
 import Grid from '@mui/material/Grid';
 import { Divider } from '../molecules/Divider';
 import { OptimizedImage } from '../atoms/OptimizedImage';
+import { PhotoGallery } from '../organisms/PhotoGallery';
 
 import theme from '../../theme';
 export const FoodPage = (props: any) => {
@@ -141,123 +142,17 @@ export const FoodPage = (props: any) => {
                             Een kijkje in onze aanpak
                         </Typography>
 
-                        <Box sx={{
-                            display: 'grid',
-                            gridTemplateColumns: isMobile ? '1fr 1fr' : 'repeat(4, 1fr)',
-                            gridTemplateRows: isMobile ? 'auto' : '280px 280px 320px',
-                            gap: 2,
-                        }}>
-                            {/* Rij 1: portrait links (2 rijen), 2x landscape, portrait rechts (2 rijen) */}
-
-                            {/* 2026-40 — portrait, rij 1+2 kolom 1 */}
-                            <Box sx={{
-                                gridColumn: isMobile ? '1' : '1',
-                                gridRow: isMobile ? 'auto' : '1 / 3',
-                                borderRadius: 3,
-                                overflow: 'hidden',
-                                boxShadow: '0 8px 30px rgba(0,0,0,0.3)',
-                                position: 'relative',
-                                height: isMobile ? 350 : '100%',
-                                '&:hover .gallery-img': { transform: 'scale(1.05)' },
-                            }}>
-                                <Box className="gallery-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.6s ease' }}>
-                                    <OptimizedImage src="/images/2026/2026-40.jpg" alt="Leefstijl training" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                </Box>
-                                <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg, rgba(0,0,0,0.4) 0%, transparent 40%)' }} />
-                            </Box>
-
-                            {/* 2026-23 — landscape, rij 1 kolom 2 */}
-                            <Box sx={{
-                                borderRadius: 3,
-                                overflow: 'hidden',
-                                boxShadow: '0 8px 30px rgba(0,0,0,0.3)',
-                                position: 'relative',
-                                height: isMobile ? 200 : '100%',
-                                '&:hover .gallery-img': { transform: 'scale(1.05)' },
-                            }}>
-                                <Box className="gallery-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.6s ease' }}>
-                                    <OptimizedImage src="/images/2026/2026-23.jpg" alt="Leefstijl coaching" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                </Box>
-                            </Box>
-
-                            {/* 2026-30 — landscape, rij 1 kolom 3 */}
-                            <Box sx={{
-                                borderRadius: 3,
-                                overflow: 'hidden',
-                                boxShadow: '0 8px 30px rgba(0,0,0,0.3)',
-                                position: 'relative',
-                                height: isMobile ? 200 : '100%',
-                                '&:hover .gallery-img': { transform: 'scale(1.05)' },
-                            }}>
-                                <Box className="gallery-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.6s ease' }}>
-                                    <OptimizedImage src="/images/2026/2026-30.jpg" alt="Leefstijl beweging" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                </Box>
-                            </Box>
-
-                            {/* 2026-41 — portrait, rij 1+2 kolom 4 */}
-                            <Box sx={{
-                                gridColumn: isMobile ? '2' : '4',
-                                gridRow: isMobile ? 'auto' : '1 / 3',
-                                borderRadius: 3,
-                                overflow: 'hidden',
-                                boxShadow: '0 8px 30px rgba(0,0,0,0.3)',
-                                position: 'relative',
-                                height: isMobile ? 350 : '100%',
-                                '&:hover .gallery-img': { transform: 'scale(1.05)' },
-                            }}>
-                                <Box className="gallery-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.6s ease' }}>
-                                    <OptimizedImage src="/images/2026/2026-41.jpg" alt="Leefstijl resultaat" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                </Box>
-                                <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg, rgba(0,0,0,0.4) 0%, transparent 40%)' }} />
-                            </Box>
-
-                            {/* 2026-20 — landscape, rij 2 kolom 2+3 (breed midden) */}
-                            <Box sx={{
-                                gridColumn: isMobile ? '1 / 3' : '2 / 4',
-                                borderRadius: 3,
-                                overflow: 'hidden',
-                                boxShadow: '0 8px 30px rgba(0,0,0,0.3)',
-                                position: 'relative',
-                                height: isMobile ? 200 : '100%',
-                                '&:hover .gallery-img': { transform: 'scale(1.05)' },
-                            }}>
-                                <Box className="gallery-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.6s ease' }}>
-                                    <OptimizedImage src="/images/2026/2026-20.jpg" alt="Leefstijl voeding" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                </Box>
-                            </Box>
-
-                            {/* Rij 3: 2026-19 portrait links, 2026-34 breed midden+rechts */}
-
-                            {/* 2026-19 — portrait, rij 3 kolom 1 */}
-                            <Box sx={{
-                                borderRadius: 3,
-                                overflow: 'hidden',
-                                boxShadow: '0 8px 30px rgba(0,0,0,0.3)',
-                                position: 'relative',
-                                height: isMobile ? 300 : '100%',
-                                '&:hover .gallery-img': { transform: 'scale(1.05)' },
-                            }}>
-                                <Box className="gallery-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.6s ease' }}>
-                                    <OptimizedImage src="/images/2026/2026-19.jpg" alt="Leefstijl training" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                </Box>
-                            </Box>
-
-                            {/* 2026-34 — landscape, rij 3 kolom 2+3+4 (breed) */}
-                            <Box sx={{
-                                gridColumn: isMobile ? '2' : '2 / 5',
-                                borderRadius: 3,
-                                overflow: 'hidden',
-                                boxShadow: '0 8px 30px rgba(0,0,0,0.3)',
-                                position: 'relative',
-                                height: isMobile ? 300 : '100%',
-                                '&:hover .gallery-img': { transform: 'scale(1.05)' },
-                            }}>
-                                <Box className="gallery-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.6s ease' }}>
-                                    <OptimizedImage src="/images/2026/2026-34.jpg" alt="Leefstijl balans" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                </Box>
-                                <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg, rgba(0,0,0,0.4) 0%, transparent 40%)' }} />
-                            </Box>
-                        </Box>
+                        <PhotoGallery
+                            photos={[
+                                { src: '/images/2026/2026-40.jpg', width: 2400, height: 3600, alt: 'Leefstijl training' },
+                                { src: '/images/2026/2026-23.jpg', width: 3600, height: 2400, alt: 'Leefstijl coaching' },
+                                { src: '/images/2026/2026-30.jpg', width: 3600, height: 2400, alt: 'Leefstijl beweging' },
+                                { src: '/images/2026/2026-41.jpg', width: 2400, height: 3600, alt: 'Leefstijl resultaat' },
+                                { src: '/images/2026/2026-20.jpg', width: 3600, height: 2400, alt: 'Leefstijl voeding' },
+                                { src: '/images/2026/2026-19.jpg', width: 2400, height: 3600, alt: 'Leefstijl training' },
+                                { src: '/images/2026/2026-34.jpg', width: 3600, height: 2400, alt: 'Leefstijl balans' },
+                            ]}
+                        />
 
                         {/* Quote onderaan */}
                         <Box sx={{

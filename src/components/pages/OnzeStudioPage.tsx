@@ -8,6 +8,7 @@ import useIsMobile from '../../hooks/useMobile';
 import { SuccessStories } from '../organisms/SuccessStories';
 import Grid from '@mui/material/Grid';
 import { OptimizedImage } from '../atoms/OptimizedImage';
+import { PhotoGallery } from '../organisms/PhotoGallery';
 
 import theme from '../../theme';
 export const onlinecoaching = (props: any) => {
@@ -284,34 +285,15 @@ export const onlinecoaching = (props: any) => {
                                 </Box>
                             </Grid>
 
-                            <Grid size={{ xs: 12, md: 4 }} >
-                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', height: isMobile ? 250 : 350, position: 'relative', '&:hover .seq-img': { transform: 'scale(1.08)' } }}>
-                                    <Box className="seq-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
-                                        <OptimizedImage src="/images/2026/2026-14.jpg" alt="Studio sfeer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                    </Box>
-                                </Box>
-                            </Grid>
-                            <Grid size={{ xs: 12, md: 4 }} >
-                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', height: isMobile ? 250 : 350, position: 'relative', '&:hover .seq-img': { transform: 'scale(1.08)' } }}>
-                                    <Box className="seq-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
-                                        <OptimizedImage src="/images/2026/2026-15.jpg" alt="Studio sfeer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                    </Box>
-                                </Box>
-                            </Grid>
-                            <Grid size={{ xs: 12, md: 4 }} >
-                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', height: isMobile ? 250 : 350, position: 'relative', '&:hover .seq-img': { transform: 'scale(1.08)' } }}>
-                                    <Box className="seq-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
-                                        <OptimizedImage src="/images/2026/2026-16.jpg" alt="Studio sfeer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                    </Box>
-                                </Box>
-                            </Grid>
-
-                            <Grid size={12} >
-                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', height: isMobile ? 250 : 400, position: 'relative', '&:hover .seq-img': { transform: 'scale(1.05)' } }}>
-                                    <Box className="seq-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
-                                        <OptimizedImage src="/images/2026/2026-17.jpg" alt="Studio overzicht" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                    </Box>
-                                </Box>
+                            <Grid size={12}>
+                                <PhotoGallery
+                                    photos={[
+                                        { src: '/images/2026/2026-14.jpg', width: 2400, height: 3600, alt: 'Studio sfeer' },
+                                        { src: '/images/2026/2026-15.jpg', width: 2400, height: 3600, alt: 'Studio sfeer' },
+                                        { src: '/images/2026/2026-16.jpg', width: 2400, height: 3600, alt: 'Studio sfeer' },
+                                        { src: '/images/2026/2026-17.jpg', width: 3600, height: 2400, alt: 'Studio overzicht' },
+                                    ]}
+                                />
                             </Grid>
                         </Grid>
                     </Box>
