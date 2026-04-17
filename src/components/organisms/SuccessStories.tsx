@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, useTheme, keyframes } from '@mui/material';
 import { DefaultContainer } from '../pagelayout/DefaultContainer';
 import { Cards } from './Cards';
+import { OptimizedImage } from '../atoms/OptimizedImage';
 
 const fadeIn = keyframes`
     from { opacity: 0; transform: translateY(20px); }
@@ -98,7 +99,7 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = (props) => {
                         {
                             title: 'Miron Jansen',
                             subtitle: '8kg spiermassa aangekomen in 12 maanden',
-                            image: <img src="/images/growth/mirron.jpg" alt="Mirron progressie" loading="lazy" />,
+                            image: <OptimizedImage src="/images/growth/mirron.jpg" alt="Mirron progressie" />,
                             package: 'Online coaching',
                             text:
                                 '"Sem van Lifestyle Personal Training heeft mij zeer goed op weg geholpen met mijn fitness journey! Door hem heb ik de juiste motivatie gekregen en hij heeft een gepersonaliseerd schema opgesteld met de juiste voeding. Heel tevreden dus!"',
@@ -106,7 +107,7 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = (props) => {
                         {
                             title: 'Wiebe Palstra',
                             subtitle: '20kg afgevallen in 18 maanden',
-                            image: <img src="/images/growth/wiebe.png" alt="Wiebe progressie" loading="lazy" />,
+                            image: <OptimizedImage src="/images/growth/wiebe.png" alt="Wiebe progressie" />,
                             package: 'Personal training',
                             text:
                                 '"Dat uurtje sporten met Sem is een uurtje voor mijzelf, die ik in mijzelf investeer, om mij goed te laten voelen! Twee jaar verder: Ik heb meer energie, zit lekkerder in mijn vel, verleg mijn grenzen en voel mij sterk! En gestopt met roken!"',
@@ -114,7 +115,7 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = (props) => {
                         {
                             title: 'Nathan Bakhuyzen',
                             subtitle: '5kg vet afgevallen en 3kg spiermassa aangekomen in 6 maanden',
-                            image: <img src="/images/growth/nathan.jpg" alt="Nathan progressie" loading="lazy" />,
+                            image: <OptimizedImage src="/images/growth/nathan.jpg" alt="Nathan progressie" />,
                             package: 'Online coaching',
                             text: `"Na zelfstandig trainen in de sportschool, zocht ik professionele begeleiding. Lifestyle Personal Training heeft mij geholpen mijn doelen te verfijnen en te bereiken. Dankzij zijn voeding- en trainingsadvies en constante beschikbaarheid voor vragen, ben ik zeer tevreden over Sem's begeleiding en de kennis die hij me heeft bijgebracht. Top!"`,
                         },

@@ -109,7 +109,7 @@ export const index = (props: any) => {
                         link: getRouteUrl(HeaderRoutesEnum.ABOUT_ME),
                     }}
                     staticImage={
-                        <img src="/images/workouts/workout5.jpg" alt="Personal trainer Sem van de Griendt in actie" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <OptimizedImage src="/images/workouts/workout5.jpg" alt="Personal trainer Sem van de Griendt in actie" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     }
                 />
                 <Box sx={{ backgroundColor: theme.palette.grey[100], position: 'relative' }} component="section">

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lifestylepersonaltraining-zeist.nl/sitemap-index.xml
+Sitemap: https://www.lifestylepersonaltraining-zeist.nl/sitemap-index.xml

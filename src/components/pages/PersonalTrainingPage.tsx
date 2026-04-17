@@ -9,6 +9,7 @@ const ptVideo = '/images/pt/C0056-2.mp4';
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 import Grid from '@mui/material/Grid';
 import { SuccessStories } from '../organisms/SuccessStories';
+import { OptimizedImage } from '../atoms/OptimizedImage';
 
 import theme from '../../theme';
 export const PersonalTrainingPage = (props: any) => {
@@ -91,7 +92,7 @@ export const PersonalTrainingPage = (props: any) => {
                         </Grid>
                         {!isTabletOrSmaller && (
                             <Box sx={{ position: 'absolute', right: '20%', bottom: 0, width: '300px' }}>
-                                <img src="/images/Sem/1nbg.png" alt="Sem" loading="lazy" decoding="async" style={{ width: '100%', height: 'auto', objectFit: 'cover', display: 'block' }} />
+                                <OptimizedImage src="/images/Sem/1nbg.png" alt="Sem" style={{ width: '100%', height: 'auto', objectFit: 'cover', display: 'block' }} />
                             </Box>
                         )}
                     </DefaultContainer>

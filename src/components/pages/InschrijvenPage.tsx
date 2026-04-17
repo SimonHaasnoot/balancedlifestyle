@@ -7,7 +7,7 @@ import { ContactForm } from '../organisms/ContactForm';
 import { SmallHero } from '../organisms/SmallHero';
 import { Block } from '../molecules/Block';
 import { Rating } from '../molecules/Rating';
-
+import { OptimizedImage } from '../atoms/OptimizedImage';
 
 import theme from '../../theme';
 export default function InschrijvenPage(props: any) {
@@ -57,7 +57,7 @@ export default function InschrijvenPage(props: any) {
                     link: '#contact',
                     text: 'Neem contact op',
                 }}
-                staticImage={<img src="/images/3photos.png" alt="Resultaten personal training Zeist" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
+                staticImage={<OptimizedImage src="/images/3photos.png" alt="Resultaten personal training Zeist" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
             />
             <DefaultContainer sx={{ textAlign: 'center' }} component="section">
                 <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>

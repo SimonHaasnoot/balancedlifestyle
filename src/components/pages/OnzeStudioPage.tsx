@@ -148,7 +148,7 @@ export const onlinecoaching = (props: any) => {
                                     '&:hover .transform-img': { transform: 'scale(1.05)' },
                                 }}>
                                     <Box className="transform-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
-                                        <img
+                                        <OptimizedImage
                                             src="/images/klanten/kim2.png"
                                             alt="Kim's transformatie"
                                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
@@ -166,7 +166,7 @@ export const onlinecoaching = (props: any) => {
                                     '&:hover .transform-img': { transform: 'scale(1.05)' },
                                 }}>
                                     <Box className="transform-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
-                                        <img
+                                        <OptimizedImage
                                             src="/images/klanten/kim3.png"
                                             alt="Kim's transformatie"
                                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}

@@ -6,6 +6,7 @@ import { DefaultContainer } from '../pagelayout/DefaultContainer';
 import { Layout } from '../pagelayout/Layout';
 import useIsMobile from '../../hooks/useMobile';
 import { getRouteUrl, HeaderRoutesEnum } from '../../types/HeaderRoute';
+import { OptimizedImage } from '../atoms/OptimizedImage';
 import theme from '../../theme';
 
 export const AboutSemPage = (props: any) => {
@@ -144,7 +145,7 @@ export const AboutSemPage = (props: any) => {
                                     Resultaat voorkant
                                 </Typography>
                                 <Box sx={{ mt: 2, maxHeight: '500px' }}>
-                                    <img src="/images/Sem/beforeafter1.jpg" alt="Before after foto 1" loading="lazy" decoding="async" height={500} />
+                                    <OptimizedImage src="/images/Sem/beforeafter1.jpg" alt="Before after foto 1" height={500} />
                                 </Box>
                             </Box>
                             <Box sx={{ width: isTabletOrSmaller ? '100%' : '50%' }}>
@@ -152,7 +153,7 @@ export const AboutSemPage = (props: any) => {
                                     Resultaat achterkant
                                 </Typography>
                                 <Box sx={{ mt: 2, maxHeight: '500px' }}>
-                                    <img src="/images/Sem/beforeafter2.jpg" alt="Before after foto 2" loading="lazy" decoding="async" height={500} />
+                                    <OptimizedImage src="/images/Sem/beforeafter2.jpg" alt="Before after foto 2" height={500} />
                                 </Box>
                             </Box>
                         </Box>
