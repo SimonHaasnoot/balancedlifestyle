@@ -1,12 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PersonalTrainingPage from '../components/pages/PersonalTrainingPage';
+
+const faq = [
+    { question: 'Hoe werkt personal training in Zeist?', answer: 'Na een gratis intake en healthcheck stelt je personal trainer een trainingsplan op maat samen. Je traint 1-op-1 in onze studio aan de Korte Steynlaan. Het programma combineert krachttraining, conditie, voedingsadvies en herstel.' },
+    { question: 'Voor wie is personal training geschikt?', answer: 'Personal training is geschikt voor iedereen, ongeacht niveau. Of je nu wilt afvallen, sterker worden, meer energie wilt of aan je zelfvertrouwen wilt werken – wij passen het programma aan op jouw doelen.' },
+    { question: 'Hoe vaak moet ik trainen bij een personal trainer?', answer: 'Wij adviseren 2-3 keer per week te trainen voor optimaal resultaat. Je personal trainer stelt samen met jou een haalbaar schema op dat past bij je leefstijl.' },
+    { question: 'Wat is inbegrepen bij personal training?', answer: 'Bij personal training krijg je een volledig programma: persoonlijke trainingen, een trainingsschema, voedingsadvies, leefstijlcoaching en toegang tot onze app voor het bijhouden van je voortgang.' },
+];
 ---
 
 <Layout
     title="Personal Training Zeist | Personal Trainer & Fitness Begeleiding"
     description="Personal training in Zeist met ervaren personal trainer. Persoonlijke fitness begeleiding voor een fitter lichaam en meer zelfvertrouwen. Gratis intake en proefles."
     pathname="/personal-training/"
+    faqJsonLd={faq}
     serviceJsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -31,4 +39,33 @@ import PersonalTrainingPage from '../components/pages/PersonalTrainingPage';
     }}
 >
     <PersonalTrainingPage client:only="react" />
-    </Layout>
+
+    <section class="seo-content" aria-label="Informatie over personal training in Zeist">
+        <h2>Personal Training in Zeist – Meer dan Fitness</h2>
+        <p>Bij Lifestyle & Personal Training Zeist gaan we verder dan een standaard personal trainer. Onze aanpak combineert personal fitness met leefstijlcoaching. Je personal trainer helpt je niet alleen met krachttraining en conditie, maar ook met voeding, slaap en mentale gezondheid.</p>
+        <p>Of je nu zoekt naar een personal trainer in Zeist voor gewichtsverlies, spieropbouw of meer energie in het dagelijks leven – wij stellen een programma samen dat past bij jouw leven. Geen standaard schema's, maar persoonlijke fitness begeleiding afgestemd op jouw doelen en mogelijkheden.</p>
+        <h3>Wat maakt onze personal training uniek?</h3>
+        <ul>
+            <li>1-op-1 begeleiding door een ervaren personal trainer</li>
+            <li>Trainingsschema volledig op maat</li>
+            <li>Inclusief voedingscoaching en leefstijladvies</li>
+            <li>Voortgang bijhouden via onze app</li>
+            <li>Gratis intake en proefles</li>
+        </ul>
+    </section>
+
+    <style>
+        .seo-content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+        .seo-content h2 { color: #fff; margin-bottom: 1rem; font-size: 1.5rem; }
+        .seo-content h3 { color: #fff; margin: 1.5rem 0 0.75rem; font-size: 1.2rem; }
+        .seo-content p { margin-bottom: 1rem; }
+        .seo-content ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+        .seo-content li { margin-bottom: 0.5rem; }
+    </style>
+</Layout>

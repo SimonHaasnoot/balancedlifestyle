@@ -1,12 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LeefstijlPage from '../components/pages/LeefstijlPage';
+
+const faq = [
+    { question: 'Wat doet een leefstijlcoach?', answer: 'Een leefstijlcoach helpt je op alle vlakken van je gezondheid: beweging, voeding, slaap en mentale rust. Het doel is een gebalanceerde leefstijl die je vol kunt houden.' },
+    { question: 'Wat is het verschil tussen een personal trainer en een leefstijlcoach?', answer: 'Een personal trainer focust vooral op training. Een leefstijlcoach kijkt breder: ook naar voeding, slaapkwaliteit, stressmanagement en mentaal welzijn. Bij ons krijg je beide in één.' },
+    { question: 'Is leefstijlcoaching iets voor mij?', answer: 'Leefstijlcoaching is geschikt als je duurzaam gezonder wilt leven, meer energie wilt, beter wilt slapen of aan je vitaliteit wilt werken. Het is geen dieet of korte fix, maar een blijvende verandering.' },
+    { question: 'Hoe ziet een leefstijlcoaching traject eruit?', answer: 'We starten met een intake waarin we je huidige leefstijl in kaart brengen. Daarna maken we samen een plan op maat met concrete stappen voor beweging, voeding en herstel.' },
+];
 ---
 
 <Layout
     title="Leefstijlcoach Zeist | Leefstijlcoaching & Personal Coach"
     description="Professionele leefstijlcoach in Zeist. Persoonlijke coaching op beweging, voeding, slaap en mentale rust. Duurzaam resultaat met een holistische aanpak. Ook life coaching en vitaliteitscoaching."
     pathname="/leefstijl/"
+    faqJsonLd={faq}
     serviceJsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -26,4 +34,34 @@ import LeefstijlPage from '../components/pages/LeefstijlPage';
     }}
 >
     <LeefstijlPage client:only="react" />
-    </Layout>
+
+    <section class="seo-content" aria-label="Informatie over leefstijlcoaching in Zeist">
+        <h2>Leefstijlcoach in Zeist – Coaching voor een Gebalanceerd Leven</h2>
+        <p>Als je in Zeist of omgeving woont en op zoek bent naar een professionele leefstijlcoach, dan ben je bij ons aan het juiste adres. Onze leefstijlcoaching gaat verder dan alleen fitness: we begeleiden je op het gebied van beweging, voeding, slaap en mentale gezondheid.</p>
+        <p>Of je nu zoekt naar life coaching, vitaliteitscoaching of een personal coach die je helpt met zelfvertrouwen en energie – bij Lifestyle & Personal Training Zeist krijg je een holistische aanpak voor duurzaam resultaat.</p>
+        <h3>Onze leefstijlcoaching omvat</h3>
+        <ul>
+            <li>Persoonlijk beweegplan en trainingsschema</li>
+            <li>Voedingscoaching en supplementadvies</li>
+            <li>Slaap- en hersteloptimalisatie</li>
+            <li>Mentale coaching en stressmanagement</li>
+            <li>Wandeltraining en buitenactiviteiten</li>
+            <li>Vitaliteitscoaching voor meer energie</li>
+        </ul>
+    </section>
+
+    <style>
+        .seo-content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+        .seo-content h2 { color: #fff; margin-bottom: 1rem; font-size: 1.5rem; }
+        .seo-content h3 { color: #fff; margin: 1.5rem 0 0.75rem; font-size: 1.2rem; }
+        .seo-content p { margin-bottom: 1rem; }
+        .seo-content ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+        .seo-content li { margin-bottom: 0.5rem; }
+    </style>
+</Layout>

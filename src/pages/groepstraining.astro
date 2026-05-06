@@ -1,12 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GroepstrainingPage from '../components/pages/GroepstrainingPage';
+
+const faq = [
+    { question: 'Hoe groot zijn de groepen bij groepstraining?', answer: 'Onze groepstraining in Zeist is in kleine groepen van maximaal 6 personen. Zo krijg je persoonlijke aandacht van de trainer én de energie van samen sporten.' },
+    { question: 'Wat is het verschil met een gewone sportschool?', answer: 'Bij een grote sportschool train je zelfstandig. Bij onze groepstraining word je begeleid door een professionele trainer die je techniek corrigeert en motiveert. Plus: voedingsadvies is inbegrepen.' },
+    { question: 'Is groepstraining geschikt voor beginners?', answer: 'Ja! De trainer past oefeningen aan op jouw niveau. Of je nu net begint met sporten of al ervaring hebt, iedereen is welkom.' },
+    { question: 'Wanneer zijn de groepstrainingen?', answer: 'We bieden groepstrainingen aan op meerdere momenten door de week, zowel ochtend als avond. Neem contact op voor het actuele rooster.' },
+];
 ---
 
 <Layout
     title="Groepstraining Zeist | Fitness & Sportschool in Kleine Groepen"
     description="Groepstraining en fitness in Zeist. Train in onze sportschool in kleine groepen van max 6 personen. Professionele begeleiding, voedingsadvies en persoonlijke aandacht."
     pathname="/groepstraining/"
+    faqJsonLd={faq}
     serviceJsonLd={{
         '@context': 'https://schema.org',
         '@type': 'Service',
@@ -31,4 +39,33 @@ import GroepstrainingPage from '../components/pages/GroepstrainingPage';
     }}
 >
     <GroepstrainingPage client:only="react" />
-    </Layout>
+
+    <section class="seo-content" aria-label="Informatie over groepstraining in Zeist">
+        <h2>Groepstraining in Zeist – Fitness met Persoonlijke Aandacht</h2>
+        <p>Zoek je een sportschool in Zeist waar je niet verdwijnt in de massa? Onze groepstraining biedt het beste van twee werelden: de motivatie van samen sporten én de persoonlijke begeleiding van een trainer. In groepen van maximaal 6 personen krijg je de aandacht die je verdient.</p>
+        <p>Anders dan bij grote sportscholen in Zeist zoals Fit for Free of Trainmore, trainen wij uitsluitend in kleine groepen. Elke sessie wordt begeleid door een professionele trainer die let op je techniek, je motiveert en het programma aanpast aan jouw niveau.</p>
+        <h3>Voordelen van onze groepstraining</h3>
+        <ul>
+            <li>Kleine groepen van maximaal 6 personen</li>
+            <li>Professionele begeleiding bij elke training</li>
+            <li>Voedingsadvies en trainingsschema inbegrepen</li>
+            <li>Geschikt voor alle niveaus</li>
+            <li>Gezellige en motiverende sfeer</li>
+        </ul>
+    </section>
+
+    <style>
+        .seo-content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+        .seo-content h2 { color: #fff; margin-bottom: 1rem; font-size: 1.5rem; }
+        .seo-content h3 { color: #fff; margin: 1.5rem 0 0.75rem; font-size: 1.2rem; }
+        .seo-content p { margin-bottom: 1rem; }
+        .seo-content ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+        .seo-content li { margin-bottom: 0.5rem; }
+    </style>
+</Layout>

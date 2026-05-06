@@ -17,9 +17,10 @@ interface Props {
     noIndex?: boolean;
     disableSeo?: boolean;
     serviceJsonLd?: Record<string, unknown>;
+    faqJsonLd?: Array<{ question: string; answer: string }>;
 }
 
-const { title, description, pathname, noIndex, disableSeo, serviceJsonLd } = Astro.props;
+const { title, description, pathname, noIndex, disableSeo, serviceJsonLd, faqJsonLd } = Astro.props;
 
 const siteUrl = projectVariables.COMPANY_URL;
 const brandSuffix = ` | ${projectVariables.COMPANY_NAME}`;
@@ -111,6 +112,23 @@ const localBusinessJsonLd = {
         {
             serviceJsonLd && !disableSeo && (
                 <script type="application/ld+json" set:html={JSON.stringify(serviceJsonLd)} />
+            )
+        }
+
+        {
+            faqJsonLd && faqJsonLd.length > 0 && !disableSeo && (
+                <script type="application/ld+json" set:html={JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'FAQPage',
+                    mainEntity: faqJsonLd.map(faq => ({
+                        '@type': 'Question',
+                        name: faq.question,
+                        acceptedAnswer: {
+                            '@type': 'Answer',
+                            text: faq.answer,
+                        },
+                    })),
+                })} />
             )
         }
 

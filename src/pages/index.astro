@@ -1,12 +1,52 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HomePage from '../components/pages/HomePage';
+
+const faq = [
+    { question: 'Wat kost personal training in Zeist?', answer: 'Personal training bij Lifestyle & Personal Training Zeist start vanaf een flexibel maandabonnement. Je krijgt een gratis intake en proefles om te kijken of het bij je past.' },
+    { question: 'Is er een sportschool in Zeist met persoonlijke begeleiding?', answer: 'Ja, onze studio aan de Korte Steynlaan 22 in Zeist biedt personal training en groepstraining in kleine groepen van maximaal 6 personen. Geen grote sportschool, maar persoonlijke aandacht.' },
+    { question: 'Wat is het verschil tussen personal training en groepstraining?', answer: 'Bij personal training train je 1-op-1 met je personal trainer. Bij groepstraining train je in een kleine groep van max 6 personen. Beide opties bevatten voedingsadvies en een trainingsschema op maat.' },
+    { question: 'Bieden jullie ook leefstijlcoaching aan?', answer: 'Ja, wij zijn meer dan een sportschool. Onze leefstijlcoaching richt zich op beweging, voeding, slaap en mentale rust. Zo bereik je duurzaam resultaat.' },
+    { question: 'Kan ik een gratis proefles krijgen?', answer: 'Absoluut! Meld je aan voor een gratis en vrijblijvende proefles inclusief healthcheck. Zo ervaar je hoe personal training bij ons werkt.' },
+];
 ---
 
 <Layout
     title="Personal Trainer Zeist | Personal Training & Leefstijlcoaching"
     description="Zoek je een personal trainer in Zeist? Lifestyle & Personal Training biedt personal training, groepstraining, fitness en leefstijlcoaching. Sportschool met persoonlijke begeleiding. Gratis proefles!"
     pathname="/"
+    faqJsonLd={faq}
 >
     <HomePage client:only="react" />
-    </Layout>
+
+    <!-- SEO content (server-rendered for Google) -->
+    <section class="seo-content" aria-label="Informatie over personal training in Zeist">
+        <h2>Personal Trainer in Zeist – Jouw Sportschool voor Persoonlijke Begeleiding</h2>
+        <p>Lifestyle & Personal Training Zeist is dé plek in Zeist voor iedereen die een gezondere en meer gebalanceerde levensstijl wil bereiken. Onze personal trainers begeleiden je bij het behalen van je fitnessdoelen met een persoonlijke aanpak. Of je nu zoekt naar personal training, groepstraining of leefstijlcoaching – bij ons krijg je meer dan alleen een workout.</p>
+        <p>Onze studio aan de Korte Steynlaan in Zeist is geen grote sportschool, maar een persoonlijke traininglocatie waar je traint in kleine groepen of 1-op-1. Wij combineren fitness met voedingsadvies, slaapcoaching en mentale begeleiding voor duurzaam resultaat.</p>
+        <h3>Waarom kiezen voor onze personal trainer in Zeist?</h3>
+        <ul>
+            <li>Persoonlijke begeleiding afgestemd op jouw doelen</li>
+            <li>Kleine groepen van maximaal 6 personen</li>
+            <li>Holistische aanpak: beweging, voeding én herstel</li>
+            <li>Moderne studio aan de Korte Steynlaan 22</li>
+            <li>Gratis kennismakingsgesprek en proefles</li>
+            <li>Gemiddeld 9,4 beoordeeld door onze klanten</li>
+        </ul>
+    </section>
+
+    <style>
+        .seo-content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+        .seo-content h2 { color: #fff; margin-bottom: 1rem; font-size: 1.5rem; }
+        .seo-content h3 { color: #fff; margin: 1.5rem 0 0.75rem; font-size: 1.2rem; }
+        .seo-content p { margin-bottom: 1rem; }
+        .seo-content ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+        .seo-content li { margin-bottom: 0.5rem; }
+    </style>
+</Layout>

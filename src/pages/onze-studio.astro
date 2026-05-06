@@ -1,12 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import OnzeStudioPage from '../components/pages/OnzeStudioPage';
+
+const faq = [
+    { question: 'Waar zit jullie sportschool in Zeist?', answer: 'Onze studio zit aan de Korte Steynlaan 22 in Zeist, vlakbij het centrum. Makkelijk bereikbaar met de auto en fiets, met voldoende parkeergelegenheid.' },
+    { question: 'Hoe verschilt jullie van andere sportscholen in Zeist?', answer: 'Wij zijn geen grote sportschool maar een personal training studio. Je traint altijd onder begeleiding, in kleine groepen of 1-op-1. Persoonlijke aandacht staat centraal.' },
+    { question: 'Welke apparatuur hebben jullie?', answer: 'Onze studio is uitgerust met professionele fitnessapparatuur voor functionele training, krachttraining en conditie. Alles wat je nodig hebt voor een complete workout.' },
+];
 ---
 
 <Layout
     title="Sportschool Zeist | Onze Personal Training Studio & Traininglocatie"
     description="Sportschool en personal training studio in Zeist aan de Korte Steynlaan. Moderne traininglocatie met professionele apparatuur. Geen grote sportscholen, wel persoonlijke begeleiding."
     pathname="/onze-studio/"
+    faqJsonLd={faq}
 >
     <OnzeStudioPage client:only="react" />
-    </Layout>
+
+    <section class="seo-content" aria-label="Informatie over onze sportschool in Zeist">
+        <h2>Sportschool in Zeist – Persoonlijke Traininglocatie</h2>
+        <p>Onze sportschool aan de Korte Steynlaan 22 in Zeist is een moderne traininglocatie speciaal ingericht voor personal training en groepstraining in kleine groepen. Geen onpersoonlijke fitnesshal, maar een studio waar jij centraal staat.</p>
+        <p>De studio is volledig uitgerust met professionele fitnessapparatuur en biedt een rustige, motiverende omgeving. Of je nu zoekt naar een sportschool in Zeist, een gym of een traininglocatie met begeleiding – bij ons ben je aan het juiste adres.</p>
+        <h3>Onze faciliteiten</h3>
+        <ul>
+            <li>Professionele fitnessapparatuur</li>
+            <li>Functionele trainingsruimte</li>
+            <li>Privé trainingsomgeving</li>
+            <li>Parkeergelegenheid bij de deur</li>
+            <li>Centraal gelegen in Zeist (Korte Steynlaan)</li>
+        </ul>
+    </section>
+
+    <style>
+        .seo-content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+        .seo-content h2 { color: #fff; margin-bottom: 1rem; font-size: 1.5rem; }
+        .seo-content h3 { color: #fff; margin: 1.5rem 0 0.75rem; font-size: 1.2rem; }
+        .seo-content p { margin-bottom: 1rem; }
+        .seo-content ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+        .seo-content li { margin-bottom: 0.5rem; }
+    </style>
+</Layout>
