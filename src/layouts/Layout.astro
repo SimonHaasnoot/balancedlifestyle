@@ -18,9 +18,10 @@ interface Props {
     disableSeo?: boolean;
     serviceJsonLd?: Record<string, unknown>;
     faqJsonLd?: Array<{ question: string; answer: string }>;
+    ogImage?: string;
 }
 
-const { title, description, pathname, noIndex, disableSeo, serviceJsonLd, faqJsonLd } = Astro.props;
+const { title, description, pathname, noIndex, disableSeo, serviceJsonLd, faqJsonLd, ogImage } = Astro.props;
 
 const siteUrl = projectVariables.COMPANY_URL;
 const brandSuffix = ` | ${projectVariables.COMPANY_NAME}`;
@@ -28,6 +29,24 @@ const fullTitle = title.includes('Zeist') || title.length > 40 ? title : `${titl
 const canonicalPath = pathname ?? Astro.url.pathname;
 const canonical = `${siteUrl}${canonicalPath}`;
 const isHomepage = canonicalPath === '/';
+const ogImageUrl = ogImage ? `${siteUrl}${ogImage}` : `${siteUrl}/images/og-default.jpg`;
+
+// Breadcrumb structured data
+const breadcrumbItems = [{ name: 'Home', url: siteUrl + '/' }];
+if (!isHomepage) {
+    const pageName = title.split('|')[0].trim();
+    breadcrumbItems.push({ name: pageName, url: canonical });
+}
+const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbItems.map((item, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: item.name,
+        item: item.url,
+    })),
+};
 
 const localBusinessJsonLd = {
     '@context': 'https://schema.org',
@@ -91,10 +110,14 @@ const localBusinessJsonLd = {
         <meta property="og:url" content={canonical} />
         <meta property="og:site_name" content={projectVariables.COMPANY_NAME} />
         <meta property="og:locale" content="nl_NL" />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={fullTitle} />
         <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImageUrl} />
 
         <meta name="geo.region" content="NL-UT" />
         <meta name="geo.placename" content="Zeist" />
@@ -129,6 +152,12 @@ const localBusinessJsonLd = {
                         },
                     })),
                 })} />
+            )
+        }
+
+        {
+            !isHomepage && !disableSeo && (
+                <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
             )
         }
 

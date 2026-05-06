@@ -1,6 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import BlogsListPage from '../../components/pages/BlogsListPage';
 import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog');
@@ -10,6 +9,7 @@ const blogs = posts
         slug: post.id.replace(/\.(md|mdx)$/, ''),
         title: post.data.title,
         image: post.data.image,
+        tags: post.data.tags || [],
         date: new Intl.DateTimeFormat('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' }).format(post.data.date),
     }));
 ---
@@ -19,5 +19,230 @@ const blogs = posts
     description="Lees blogs over fitness, voeding, een gebalanceerde leefstijl en sport van je personal trainer in Zeist. Tips voor een gezonder leven."
     pathname="/blogs/"
 >
-    <BlogsListPage blogs={blogs} client:only="react" />
+    <main class="blogs-page">
+        <header class="blogs-hero">
+            <div class="blogs-hero-inner">
+                <h1>Blog</h1>
+                <p>Tips en inzichten over fitness, voeding en een gebalanceerde leefstijl van je personal trainer in Zeist.</p>
+                <a href="/" class="blogs-home-link">← Terug naar Home</a>
+            </div>
+        </header>
+
+        <section class="blogs-grid-section">
+            <div class="blogs-container">
+                {blogs.length === 0 && (
+                    <p class="blogs-empty">Er zijn nog geen blogs gepubliceerd.</p>
+                )}
+
+                <div class="blogs-grid">
+                    {blogs.map((blog, index) => (
+                        <a href={`/blogs/${blog.slug}/`} class={`blog-card ${index === 0 ? 'blog-card--featured' : ''}`}>
+                            <div class="blog-card-image">
+                                <img
+                                    src={blog.image || '/images/pt/pt1.jpg'}
+                                    alt={blog.title}
+                                    loading={index < 3 ? 'eager' : 'lazy'}
+                                />
+                            </div>
+                            <div class="blog-card-content">
+                                <div class="blog-card-tags">
+                                    {blog.tags.slice(0, 3).map((tag: string) => (
+                                        <span class="blog-tag">{tag}</span>
+                                    ))}
+                                </div>
+                                <h2 class="blog-card-title">{blog.title}</h2>
+                                <time class="blog-card-date">{blog.date}</time>
+                                <span class="blog-card-cta">Lees meer →</span>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+            </div>
+        </section>
+    </main>
 </Layout>
+
+<style>
+    .blogs-page {
+        background: #111;
+        min-height: 100vh;
+    }
+
+    .blogs-hero {
+        background: linear-gradient(135deg, #151515 0%, #1a2a32 100%);
+        padding: 8rem 1.5rem 4rem;
+        text-align: center;
+    }
+
+    .blogs-hero-inner {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .blogs-home-link {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 0.75rem 1.5rem;
+        font-family: 'Exo', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #fff;
+        background: #5ab7db;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.2s, transform 0.2s;
+    }
+
+    .blogs-home-link:hover {
+        background: #4aa3c5;
+        transform: translateY(-1px);
+    }
+
+    .blogs-hero h1 {
+        font-family: 'Exo', sans-serif;
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 700;
+        color: #fff;
+        margin: 0 0 1rem;
+    }
+
+    .blogs-hero p {
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.1rem;
+        color: #90cee6;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .blogs-grid-section {
+        padding: 3rem 1.5rem 5rem;
+    }
+
+    .blogs-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .blogs-empty {
+        color: #999;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .blogs-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    @media (min-width: 640px) {
+        .blogs-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .blogs-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .blog-card--featured {
+            grid-column: span 2;
+        }
+        .blog-card--featured .blog-card-image {
+            height: 320px;
+        }
+    }
+
+    .blog-card {
+        display: flex;
+        flex-direction: column;
+        background: #1c1d1f;
+        border-radius: 12px;
+        overflow: hidden;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border: 1px solid #2a2a2a;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(90, 183, 219, 0.1);
+        border-color: #5ab7db;
+    }
+
+    .blog-card-image {
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+    }
+
+    .blog-card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover .blog-card-image img {
+        transform: scale(1.05);
+    }
+
+    .blog-card-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .blog-card-tags {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 0.75rem;
+    }
+
+    .blog-tag {
+        font-family: 'Nunito', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #5ab7db;
+        background: rgba(90, 183, 219, 0.1);
+        padding: 0.25rem 0.75rem;
+        border-radius: 100px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .blog-card-title {
+        font-family: 'Exo', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #fff;
+        margin: 0 0 0.75rem;
+        line-height: 1.4;
+    }
+
+    .blog-card--featured .blog-card-title {
+        font-size: 1.5rem;
+    }
+
+    .blog-card-date {
+        font-family: 'Nunito', sans-serif;
+        font-size: 0.85rem;
+        color: #888;
+        margin-bottom: 1rem;
+    }
+
+    .blog-card-cta {
+        font-family: 'Exo', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #5ab7db;
+        margin-top: auto;
+        transition: color 0.2s;
+    }
+
+    .blog-card:hover .blog-card-cta {
+        color: #90cee6;
+    }
+</style>

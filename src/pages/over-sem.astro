@@ -1,12 +1,61 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import OverSemPage from '../components/pages/OverSemPage';
+
+const personJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Sem van de Griendt',
+    jobTitle: 'Personal Trainer & Leefstijlcoach',
+    worksFor: {
+        '@type': 'HealthAndBeautyBusiness',
+        name: 'Lifestyle & Personal Training Zeist',
+        url: 'https://lifestylepersonaltraining-zeist.nl',
+    },
+    url: 'https://lifestylepersonaltraining-zeist.nl/over-sem/',
+    sameAs: ['https://www.linkedin.com/in/sem-van-de-griendt-1b9617162/'],
+    knowsAbout: ['Personal Training', 'Leefstijlcoaching', 'Voedingsadvies', 'Krachttraining', 'Mentale Coaching'],
+    address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Zeist',
+        addressCountry: 'NL',
+    },
+};
 ---
 
 <Layout
     title="Over Sem | Personal Trainer & Leefstijlcoach Zeist"
     description="Maak kennis met Sem van de Griendt, personal trainer en leefstijlcoach in Zeist. Van persoonlijke gezondheidsproblemen naar het helpen van anderen met een gebalanceerde lifestyle."
     pathname="/over-sem/"
+    serviceJsonLd={personJsonLd}
 >
     <OverSemPage client:only="react" />
-    </Layout>
+
+    <section class="seo-content" aria-label="Over Sem van de Griendt">
+        <h2>Over Sem van de Griendt – Personal Trainer in Zeist</h2>
+        <p>Sem van de Griendt is de oprichter van Lifestyle & Personal Training Zeist. Als gecertificeerd personal trainer en leefstijlcoach helpt hij mensen in Zeist en omgeving met het bereiken van hun gezondheids- en fitnessdoelen.</p>
+        <p>Vanuit eigen ervaring met gezondheidsproblemen weet Sem als geen ander hoe belangrijk een gebalanceerde leefstijl is. Zijn missie: iedereen helpen om het beste uit zichzelf te halen door de juiste balans te vinden tussen beweging, voeding en herstel.</p>
+        <h3>Expertise en kwalificaties</h3>
+        <ul>
+            <li>Gecertificeerd Personal Trainer</li>
+            <li>Leefstijlcoach met holistische aanpak</li>
+            <li>Specialisatie in krachttraining en voeding</li>
+            <li>Ervaring met mentale coaching en zelfvertrouwen</li>
+            <li>Werkzaam vanuit eigen studio in Zeist</li>
+        </ul>
+    </section>
+
+    <style>
+        .seo-content {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</Layout>

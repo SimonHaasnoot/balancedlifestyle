@@ -1,12 +1,67 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ReviewsPage from '../components/pages/ReviewsPage';
+
+const faq = [
+    { question: 'Hoe worden jullie beoordeeld door klanten?', answer: 'Onze klanten beoordelen ons gemiddeld met een 9,4 uit 10. We zijn trots op de persoonlijke aanpak die onze klanten waarderen.' },
+    { question: 'Kan ik ervaringen van andere klanten lezen?', answer: 'Ja! Op onze reviews pagina vind je eerlijke ervaringen van klanten die personal training of groepstraining bij ons volgen. Ook op Google Reviews kun je onze beoordelingen vinden.' },
+];
+
+const reviewsJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Lifestyle & Personal Training Zeist',
+    aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '9.4',
+        bestRating: '10',
+        worstRating: '1',
+        ratingCount: '50',
+    },
+    address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Korte Steynlaan 22',
+        addressLocality: 'Zeist',
+        postalCode: '3701 EX',
+        addressCountry: 'NL',
+    },
+};
 ---
 
 <Layout
     title="Reviews | Personal Trainer Zeist (9,4 Gemiddeld)"
     description="Lees ervaringen van klanten over personal training in Zeist. Gemiddeld 9,4 beoordeeld. Bekijk waarom mensen kiezen voor onze personal trainer."
     pathname="/reviews/"
+    faqJsonLd={faq}
+    serviceJsonLd={reviewsJsonLd}
 >
     <ReviewsPage client:only="react" />
-    </Layout>
+
+    <section class="seo-content" aria-label="Reviews en ervaringen personal training Zeist">
+        <h2>Reviews Personal Training Zeist – Ervaringen van Onze Klanten</h2>
+        <p>Bij Lifestyle & Personal Training Zeist staan resultaten en persoonlijke aandacht centraal. Onze klanten beoordelen ons gemiddeld met een 9,4 uit 10. Hieronder lees je waarom mensen kiezen voor onze personal trainer in Zeist.</p>
+        <h3>Waarom klanten ons aanbevelen</h3>
+        <ul>
+            <li>Persoonlijke aandacht en betrokkenheid</li>
+            <li>Duidelijke resultaten in korte tijd</li>
+            <li>Holistische aanpak: niet alleen fitness maar ook voeding en leefstijl</li>
+            <li>Professionele en gezellige sfeer</li>
+            <li>Flexibele trainingstijden</li>
+        </ul>
+        <p>Wil je zelf ervaren waarom onze klanten zo tevreden zijn? Meld je aan voor een gratis proefles en ontdek het verschil van personal training met persoonlijke begeleiding in Zeist.</p>
+    </section>
+
+    <style>
+        .seo-content {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</Layout>
