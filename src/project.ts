@@ -1,6 +1,6 @@
 export enum projectVariables {
     // Path: src\project.ts
-    COMPANY_URL = 'https://www.lifestylepersonaltraining-zeist.nl',
+    COMPANY_URL = 'https://lifestylepersonaltraining-zeist.nl',
     COMPANY_NAME = 'Lifestyle & Personal Training Zeist',
     COMPANY_ONELINER = 'Waar balans centraal staat',
     COMPANY_DESCRIPTION = 'Lifestyle & Personal Training Zeist is gespecialiseerd in het optimaliseren van de leefstijl door balans te creëren in beweging, voeding en rust. Wij gaan verder dan personal training: met een holistische aanpak helpen wij onze klanten bij het verbeteren van hun fysieke en mentale welzijn, voor duurzame resultaten. Regio Zeist en Utrecht.',

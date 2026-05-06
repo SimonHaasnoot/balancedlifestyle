@@ -10,13 +10,11 @@ export type HeaderRouteType = {
 
 export enum HeaderRoutesEnum {
     HOME = 'Home',
-    BALANCED_LIFESTYLE = 'Balanced Lifestyle',
     ONLINE_COACHING = 'Online coaching',
     GROEPSTRAINING = 'Groepstraining',
     LEEFSTIJL = 'Leefstijl',
     SPECIALISATIES = 'Specialisaties',
     REVIEWS = 'Reviews',
-    PACKAGES = 'Pakketten',
     PERSONAL_TRAINING = 'Personal training',
     BLOGS = 'Blogs',
     ABOUT_ME = 'Over mij',

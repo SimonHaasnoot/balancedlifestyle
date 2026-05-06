@@ -21,3 +21,79 @@
   for = "/images/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# Enforce trailing slashes (301 redirect)
+[[redirects]]
+  from = "/personal-training"
+  to = "/personal-training/"
+  status = 301
+
+[[redirects]]
+  from = "/pakketten"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/pakketten/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/groepstraining"
+  to = "/groepstraining/"
+  status = 301
+
+[[redirects]]
+  from = "/leefstijl"
+  to = "/leefstijl/"
+  status = 301
+
+[[redirects]]
+  from = "/balanced-lifestyle"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/balanced-lifestyle/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/onze-studio"
+  to = "/onze-studio/"
+  status = 301
+
+[[redirects]]
+  from = "/over-sem"
+  to = "/over-sem/"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact/"
+  status = 301
+
+[[redirects]]
+  from = "/reviews"
+  to = "/reviews/"
+  status = 301
+
+[[redirects]]
+  from = "/specialisaties"
+  to = "/specialisaties/"
+  status = 301
+
+[[redirects]]
+  from = "/inschrijven"
+  to = "/contact/"
+  status = 301
+
+[[redirects]]
+  from = "/inschrijven/"
+  to = "/contact/"
+  status = 301
+
+[[redirects]]
+  from = "/blogs"
+  to = "/blogs/"
+  status = 301

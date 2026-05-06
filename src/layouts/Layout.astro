@@ -22,7 +22,8 @@ interface Props {
 const { title, description, pathname, noIndex, disableSeo, serviceJsonLd } = Astro.props;
 
 const siteUrl = projectVariables.COMPANY_URL;
-const fullTitle = `${title} - ${projectVariables.COMPANY_NAME}`;
+const brandSuffix = ` | ${projectVariables.COMPANY_NAME}`;
+const fullTitle = title.includes('Zeist') || title.length > 40 ? title : `${title}${brandSuffix}`;
 const canonicalPath = pathname ?? Astro.url.pathname;
 const canonical = `${siteUrl}${canonicalPath}`;
 const isHomepage = canonicalPath === '/';
@@ -96,7 +97,7 @@ const localBusinessJsonLd = {
 
         <meta name="geo.region" content="NL-UT" />
         <meta name="geo.placename" content="Zeist" />
-        {noIndex && <meta name="robots" content="noindex,nofollow" />}
+        {noIndex ? <meta name="robots" content="noindex,nofollow" /> : <meta name="robots" content="index,follow" />}
 
         <link rel="icon" type="image/png" href="/images/gatsby-icon.png" />
         <link rel="apple-touch-icon" href="/images/gatsby-icon.png" />
