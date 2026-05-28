@@ -98,18 +98,15 @@ export const index = (props: any) => {
                     </DefaultContainer>
                 </Box>
                 <Block
-                    title="Iets over mij"
-                    subtitle="Terug naar het begin"
-                    body="Welkom, mijn naam is Sem van de Griendt. Oprichter van Lifestyle & Personal Training Zeist.<br /><br /> Lifestyle & Personal Training Zeist is ontstaan uit een persoonlijk verhaal. Ik heb jaren met extreme huidklachten rondgelopen. De
-                    milde huidklachten ontstonden toen ik 14 was. In het begin maakte ik mij weinig zorgen en was ik ervan overtuigd
-                    dat de pubertijd de veroorzaker was van mijn huidproblemen. 3 Jaar later, tientallen doktersbezoeken en
-                    antibioticakuren verder werden mijn problemen niet minder, maar juist erger."
+                    title="Over ons"
+                    subtitle="Wie zijn wij?"
+                    body="Bij Lifestyle & Personal Training Zeist geloven wij dat krachttraining meer is dan alleen bewegen. Het is een investering in jezelf.<br /><br /> In een persoonlijke, rustige en hoogwaardige omgeving werken wij samen aan duurzame resultaten, zowel fysiek als mentaal. Onze aanpak is volledig op maat. Geen standaard schema's, maar begeleiding die aansluit op jouw doelen, niveau en levensstijl."
                     button={{
                         text: 'Lees hier verder',
                         link: getRouteUrl(HeaderRoutesEnum.ABOUT_ME),
                     }}
                     staticImage={
-                        <OptimizedImage src="/images/workouts/workout5.jpg" alt="Personal trainer Sem van de Griendt in actie" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <OptimizedImage src="/images/2026/2026-70.jpg" alt="Het team van Lifestyle & Personal Training Zeist" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     }
                 />
                 <Box sx={{ backgroundColor: theme.palette.grey[100], position: 'relative' }} component="section">

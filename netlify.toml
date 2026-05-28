@@ -64,8 +64,13 @@
   status = 301
 
 [[redirects]]
+  from = "/over-ons"
+  to = "/over-ons/"
+  status = 301
+
+[[redirects]]
   from = "/over-sem"
-  to = "/over-sem/"
+  to = "/over-ons/"
   status = 301
 
 [[redirects]]

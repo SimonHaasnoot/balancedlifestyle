@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import OverOnsPage from '../components/pages/OverOnsPage';
+
+const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'HealthAndBeautyBusiness',
+    name: 'Lifestyle & Personal Training Zeist',
+    url: 'https://lifestylepersonaltraining-zeist.nl',
+    description: 'Persoonlijke begeleiding in krachttraining en leefstijlcoaching in Zeist. Volledig op maat, geen standaard schemas.',
+    address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Zeist',
+        addressCountry: 'NL',
+    },
+    knowsAbout: ['Personal Training', 'Leefstijlcoaching', 'Voedingsadvies', 'Krachttraining', 'Mentale Coaching'],
+};
+---
+
+<Layout
+    title="Over Ons | Lifestyle & Personal Training Zeist"
+    description="Bij Lifestyle & Personal Training Zeist geloven wij dat krachttraining meer is dan alleen bewegen. Persoonlijke begeleiding op maat in een rustige, hoogwaardige omgeving."
+    pathname="/over-ons/"
+    serviceJsonLd={organizationJsonLd}
+>
+    <OverOnsPage client:only="react" />
+
+    <section class="seo-content" aria-label="Over Lifestyle & Personal Training Zeist">
+        <h2>Over Ons – Lifestyle & Personal Training Zeist</h2>
+        <p>Bij Lifestyle & Personal Training Zeist geloven wij dat krachttraining meer is dan alleen bewegen. Het is een investering in jezelf.</p>
+        <p>Onze aanpak is volledig op maat. Geen standaard schema's, maar begeleiding die aansluit op jouw doelen, niveau en levensstijl.</p>
+        <h3>Wat ons onderscheidt</h3>
+        <ul>
+            <li>Persoonlijke aandacht en scherp advies op basis van jouw context</li>
+            <li>Betrokken en vast klantenbestand</li>
+            <li>Geen massale sportschool maar een plek waar jij centraal staat</li>
+            <li>Continuïteit, progressie en plezier staan voorop</li>
+            <li>Duurzame resultaten door goede gewoontes</li>
+        </ul>
+    </section>
+
+    <style>
+        .seo-content {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</Layout>

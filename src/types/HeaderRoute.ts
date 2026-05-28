@@ -17,7 +17,7 @@ export enum HeaderRoutesEnum {
     REVIEWS = 'Reviews',
     PERSONAL_TRAINING = 'Personal training',
     BLOGS = 'Blogs',
-    ABOUT_ME = 'Over mij',
+    ABOUT_ME = 'Over ons',
     CONTACT = 'Contact',
 }
 
@@ -28,7 +28,7 @@ export const headerRoutes: HeaderRouteType[] = [
     { name: HeaderRoutesEnum.GROEPSTRAINING, path: '/groepstraining' },
     { name: HeaderRoutesEnum.LEEFSTIJL, path: '/leefstijl' },
     { name: HeaderRoutesEnum.SPECIALISATIES, path: '/specialisaties' },
-    { name: HeaderRoutesEnum.ABOUT_ME, path: '/over-sem', isSecondaryLevel: true },
+    { name: HeaderRoutesEnum.ABOUT_ME, path: '/over-ons', isSecondaryLevel: true },
     { name: HeaderRoutesEnum.REVIEWS, path: '/reviews', isSecondaryLevel: true },
     { name: HeaderRoutesEnum.CONTACT, path: '/contact', isSecondaryLevel: true },
 ];
