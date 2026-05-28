@@ -94,6 +94,26 @@
   status = 301
 
 [[redirects]]
+  from = "/specialisaties/"
+  to = "/community/"
+  status = 301
+
+[[redirects]]
+  from = "/over-sem/"
+  to = "/over-ons/"
+  status = 301
+
+[[redirects]]
+  from = "/voeding"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/voeding/"
+  to = "/"
+  status = 301
+
+[[redirects]]
   from = "/inschrijven"
   to = "/contact/"
   status = 301

@@ -11,7 +11,10 @@ export default defineConfig({
         react(),
         mdx(),
         sitemap({
-            filter: (page) => !page.includes('/bedankt') && !page.includes('/404'),
+            filter: (page) =>
+                !page.includes('/bedankt') &&
+                !page.includes('/404') &&
+                !page.includes('/over-sem'),
         }),
     ],
     vite: {
