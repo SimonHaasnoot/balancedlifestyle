@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CommunityPage from '../components/pages/CommunityPage';
+
+const communityJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SportsActivityLocation',
+    name: 'Lifestyle & Personal Training Zeist – Community',
+    url: 'https://lifestylepersonaltraining-zeist.nl/community/',
+    description: 'Word onderdeel van onze sportieve community in Zeist. Samen trainen, samen groeien. Personal training in een hechte, betrokken groep.',
+    address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Zeist',
+        addressCountry: 'NL',
+    },
+};
+---
+
+<Layout
+    title="Community | Samen Trainen & Groeien | Lifestyle & Personal Training Zeist"
+    description="Word onderdeel van onze sportieve community in Zeist. Samen trainen, samen groeien in een hechte groep. Kerstborrels, sportevents en dagelijkse support."
+    pathname="/community/"
+    serviceJsonLd={communityJsonLd}
+>
+    <CommunityPage client:only="react" />
+
+    <section class="seo-content" aria-label="Community Lifestyle & Personal Training Zeist">
+        <h2>Community – Samen Trainen, Samen Groeien in Zeist</h2>
+        <p>Bij Lifestyle & Personal Training Zeist draait het niet alleen om trainen, maar om samen groeien. We bouwen aan een omgeving waar iedereen zich welkom en thuis voelt, elkaar motiveert en het beste in elkaar naar boven haalt.</p>
+        <p>Onze community bestaat uit mensen met dezelfde mindset: werken aan jezelf, fysiek én mentaal. Er is ruimte voor een grap, maar ook voor groei, focus en discipline.</p>
+        <h3>Wat maakt onze community bijzonder?</h3>
+        <ul>
+            <li>Samen trainen in een hechte, betrokken groep</li>
+            <li>Support en saamhorigheid staan centraal</li>
+            <li>Ruimte voor groei, focus en discipline</li>
+            <li>Gezamenlijke events zoals kerstborrels en sportevents</li>
+            <li>Niet alleen een studio, maar een sportieve en sociale groep</li>
+        </ul>
+        <h3>Events en verbinding</h3>
+        <p>Naast de trainingen organiseren we momenten om de band binnen de community te versterken. Denk aan gezellige kerstborrels en gezamenlijke sportevents waar plezier en verbinding centraal staan.</p>
+    </section>
+
+    <style>
+        .seo-content {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</Layout>

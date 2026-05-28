@@ -79,7 +79,7 @@ export const index = (props: any) => {
                                     title="Compleet aanbod"
                                     body={{
                                         text: 'Klik hier voor ons gehele gezondheidsaanbod',
-                                        link: getRouteUrl(HeaderRoutesEnum.SPECIALISATIES),
+                                        link: getRouteUrl(HeaderRoutesEnum.COMMUNITY),
                                     }}
                                     icon={SupervisorAccount}
                                 />
@@ -143,7 +143,7 @@ export const index = (props: any) => {
                                 { src: '../images/2026/2026-17.jpg', label: 'Personal training', href: getRouteUrl(HeaderRoutesEnum.PERSONAL_TRAINING), imgNode: <OptimizedImage src="/images/2026/2026-17.jpg" alt="Personal training" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
                                 { src: '../images/2026/2026-4.jpg', label: 'Groepstraining', href: getRouteUrl(HeaderRoutesEnum.GROEPSTRAINING), imgNode: <OptimizedImage src="/images/2026/2026-4.jpg" alt="Groepstraining" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
                                 { src: '../images/2026/2026-5.jpg', label: 'Leefstijl', href: getRouteUrl(HeaderRoutesEnum.LEEFSTIJL), imgNode: <OptimizedImage src="/images/2026/2026-5.jpg" alt="Leefstijl" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
-                                { src: '../images/2026/2026-6.jpg', label: 'Mentale coaching', href: getRouteUrl(HeaderRoutesEnum.SPECIALISATIES), imgNode: <OptimizedImage src="/images/2026/2026-6.jpg" alt="Mentale coaching" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
+                                { src: '../images/2026/2026-6.jpg', label: 'Community', href: getRouteUrl(HeaderRoutesEnum.COMMUNITY), imgNode: <OptimizedImage src="/images/2026/2026-6.jpg" alt="Community" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> },
                             ].map((card) => (
                                 <Grid
                                     item

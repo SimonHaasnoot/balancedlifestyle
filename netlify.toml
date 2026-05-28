@@ -84,8 +84,13 @@
   status = 301
 
 [[redirects]]
+  from = "/community"
+  to = "/community/"
+  status = 301
+
+[[redirects]]
   from = "/specialisaties"
-  to = "/specialisaties/"
+  to = "/community/"
   status = 301
 
 [[redirects]]
