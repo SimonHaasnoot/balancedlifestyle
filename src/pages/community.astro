@@ -2,6 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import CommunityPage from '../components/pages/CommunityPage';
 
+const faq = [
+    { question: 'Wat is de community bij Lifestyle & Personal Training Zeist?', answer: 'Onze community is een hechte groep van mensen die samen trainen en groeien. Je bent niet alleen lid van een sportschool, maar onderdeel van een sportieve en sociale groep die elkaar motiveert.' },
+    { question: 'Organiseren jullie events buiten de trainingen?', answer: 'Ja! We organiseren regelmatig sociale momenten zoals kerstborrels en gezamenlijke sportevents. Dit versterkt de band en maakt trainen nog leuker.' },
+    { question: 'Is de community geschikt voor beginners?', answer: 'Absoluut. Of je nu net begint of al jaren traint, iedereen is welkom. De groep motiveert elkaar ongeacht niveau.' },
+    { question: 'Hoe kan ik onderdeel worden van de community?', answer: 'Door je aan te melden voor personal training of groepstraining bij ons word je automatisch onderdeel van de community. Neem contact op voor een gratis kennismaking.' },
+];
+
 const communityJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'SportsActivityLocation',
@@ -17,10 +24,11 @@ const communityJsonLd = {
 ---
 
 <Layout
-    title="Community | Samen Trainen & Groeien | Lifestyle & Personal Training Zeist"
-    description="Word onderdeel van onze sportieve community in Zeist. Samen trainen, samen groeien in een hechte groep. Kerstborrels, sportevents en dagelijkse support."
+    title="Sport Community Zeist | Samen Trainen & Groeien | Personal Training"
+    description="Word onderdeel van onze sportieve community in Zeist. Samen trainen, samen groeien in een hechte groep met personal training. Events, sportdagen en dagelijkse support. Meld je aan!"
     pathname="/community/"
     serviceJsonLd={communityJsonLd}
+    faqJsonLd={faq}
 >
     <CommunityPage client:only="react" />
 

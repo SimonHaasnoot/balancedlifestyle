@@ -51,6 +51,12 @@ Na 3 maanden leefstijlcoaching ervaren onze klanten:
 
 ### Starten met leefstijlcoaching
 
-Benieuwd of leefstijlcoaching iets voor jou is? Plan een gratis kennismakingsgesprek in. We bespreken je doelen, brengen je huidige leefstijl in kaart en kijken samen wat de beste aanpak is.
+Benieuwd of leefstijlcoaching iets voor jou is? Plan een [gratis kennismakingsgesprek](/contact/) in. We bespreken je doelen, brengen je huidige leefstijl in kaart en kijken samen wat de beste aanpak is.
 
-Onze aanpak gaat verder dan een standaard sportschool in Zeist. We helpen je echt om je leven te veranderen – stap voor stap, op jouw tempo.
+Onze aanpak gaat verder dan een standaard sportschool in Zeist. We helpen je echt om je leven te veranderen – stap voor stap, op jouw tempo. Bekijk ook onze [leefstijlcoaching pagina](/leefstijl/) voor meer informatie.
+
+### Meer lezen
+
+- [Afvallen in Zeist met personal training](/blogs/afvallen-zeist-personal-training/)
+- [Krachttraining voor beginners](/blogs/krachttraining-beginners-fitness-zeist/)
+- [Word onderdeel van onze community](/community/)

@@ -47,6 +47,14 @@ Elke beginner moet deze basisoefeningen beheersen:
 
 Het voordeel van starten bij een sportschool in Zeist met begeleiding: je leert direct de juiste techniek. Hierdoor voorkom je blessures en boek je sneller resultaat. Bij ons krijg je als beginner een volledig programma inclusief voedingsadvies.
 
+Lees meer: [Hoe kies je de juiste personal trainer in Zeist?](/blogs/personal-trainer-zeist-kiezen/)
+
 ### Tips voor thuis en in de sportschool
 
-Of je nu thuis traint of in een sportschool in Zeist — consistentie is de sleutel. Begin met wat je hebt, en bouw langzaam op. Zoek je professionele begeleiding? Onze personal trainers helpen je graag op weg.
+Of je nu thuis traint of in een sportschool in Zeist — consistentie is de sleutel. Begin met wat je hebt, en bouw langzaam op. Zoek je professionele begeleiding? Onze [personal trainers](/personal-training/) helpen je graag op weg.
+
+### Meer lezen
+
+- [Wat kost een personal trainer?](/blogs/wat-kost-personal-trainer-zeist/)
+- [Afvallen in Zeist: effectief resultaat met personal training](/blogs/afvallen-zeist-personal-training/)
+- [Fitness in Zeist: sportschool of personal training studio?](/blogs/fitness-zeist-sportschool-of-personal-training/)

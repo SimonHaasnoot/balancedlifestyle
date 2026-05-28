@@ -2,6 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import OverOnsPage from '../components/pages/OverOnsPage';
 
+const faq = [
+    { question: 'Wie zitten er achter Lifestyle & Personal Training Zeist?', answer: 'Wij zijn een team van gecertificeerde personal trainers en leefstijlcoaches in Zeist. We geloven in persoonlijke aandacht, duurzame resultaten en een veilige omgeving.' },
+    { question: 'Wat maakt jullie anders dan een gewone sportschool?', answer: 'Geen massale sportschool, maar een plek waar jij centraal staat. We werken met een vast klantenbestand, bieden begeleiding op maat en combineren training met leefstijlcoaching.' },
+    { question: 'Werken jullie met standaard trainingsschema\'s?', answer: 'Nee, onze aanpak is volledig op maat. Geen standaard schema\'s, maar begeleiding die aansluit op jouw doelen, niveau en levensstijl.' },
+    { question: 'Wat is jullie missie?', answer: 'Wij zijn ervan overtuigd dat echte verandering ontstaat door consistentie, duidelijke afspraken en een veilige omgeving. Door goede gewoontes help je op lange termijn je gezondheidsdoelen behalen.' },
+];
+
 const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'HealthAndBeautyBusiness',
@@ -18,10 +25,11 @@ const organizationJsonLd = {
 ---
 
 <Layout
-    title="Over Ons | Lifestyle & Personal Training Zeist"
-    description="Bij Lifestyle & Personal Training Zeist geloven wij dat krachttraining meer is dan alleen bewegen. Persoonlijke begeleiding op maat in een rustige, hoogwaardige omgeving."
+    title="Over Ons | Personal Trainers Zeist | Lifestyle & Personal Training"
+    description="Maak kennis met het team achter Lifestyle & Personal Training Zeist. Persoonlijke begeleiding op maat, geen standaard schema's. Ontdek onze aanpak en kernwaarden."
     pathname="/over-ons/"
     serviceJsonLd={organizationJsonLd}
+    faqJsonLd={faq}
 >
     <OverOnsPage client:only="react" />
 

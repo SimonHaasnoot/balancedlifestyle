@@ -30,8 +30,14 @@ Kies een sportschool of studio die dichtbij is. Onze studio aan de Korte Steynla
 
 ### 5. Kleine groepen vs. 1-op-1
 
-Sommige mensen floreren in een groepstraining, anderen hebben liever individuele aandacht. Wij bieden beide: personal training 1-op-1 én groepstraining in kleine groepen van maximaal 6 personen.
+Sommige mensen floreren in een [groepstraining](/groepstraining/), anderen hebben liever individuele aandacht. Wij bieden beide: [personal training](/personal-training/) 1-op-1 én groepstraining in kleine groepen van maximaal 6 personen.
 
 ### Conclusie
 
-De beste personal trainer in Zeist is degene die bij jouw doelen en persoonlijkheid past. Neem de tijd om te vergelijken en plan altijd een proefles in. Wil je ervaren hoe wij werken? Meld je aan voor een gratis kennismaking.
+De beste personal trainer in Zeist is degene die bij jouw doelen en persoonlijkheid past. Neem de tijd om te vergelijken en plan altijd een proefles in. Wil je ervaren hoe wij werken? [Meld je aan voor een gratis kennismaking](/contact/).
+
+### Meer lezen
+
+- [Wat kost een personal trainer?](/blogs/wat-kost-personal-trainer-zeist/)
+- [Fitness in Zeist: sportschool of personal training studio?](/blogs/fitness-zeist-sportschool-of-personal-training/)
+- [Lees meer over ons team](/over-ons/)
