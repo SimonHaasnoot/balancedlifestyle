@@ -106,7 +106,10 @@ export const index = (props: any) => {
                         link: getRouteUrl(HeaderRoutesEnum.ABOUT_ME),
                     }}
                     staticImage={
-                        <OptimizedImage src="/images/2026/2026-70.jpg" alt="Het team van Lifestyle & Personal Training Zeist" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', height: '100%', gap: 0 }}>
+                            <OptimizedImage src="/images/2026/2026-3.jpg" alt="Het team van Lifestyle & Personal Training Zeist" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <OptimizedImage src="/images/2026/2026-80.jpg" alt="Het team van Lifestyle & Personal Training Zeist" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        </Box>
                     }
                 />
                 <Box sx={{ backgroundColor: theme.palette.grey[100], position: 'relative' }} component="section">
