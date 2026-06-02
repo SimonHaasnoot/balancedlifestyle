@@ -19,9 +19,11 @@ export const FoodPage = (props: any) => {
                 <SmallHero
                     sideImage
                     image={
-                        <img
+                        <OptimizedImage
                             src="/images/2026/2026-5.jpg"
                             alt="Leefstijl coaching Zeist"
+                            loading="eager"
+                            fetchPriority="high"
                             style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.4)' }}
                         />
                     }

@@ -2,6 +2,7 @@ import { AppShell } from '../shell/AppShell';
 import { Box, Chip, Typography } from '@mui/material';
 import { Layout } from '../pagelayout/Layout';
 import { DefaultContainer } from '../pagelayout/DefaultContainer';
+import { OptimizedImage } from '../atoms/OptimizedImage';
 
 type Props = {
     title: string;
@@ -16,7 +17,7 @@ export default function BlogShell({ title, date, keywords, image }: Props) {
             <Layout disableHeaderTransition>
                 <DefaultContainer maxWidth="lg" sx={{ mt: 10 }}>
                     <Box component="section">
-                        <img
+                        <OptimizedImage
                             src={image || '/images/pt/pt1.jpg'}
                             alt={title}
                             style={{ width: '100%', maxHeight: '400px', objectFit: 'cover' }}

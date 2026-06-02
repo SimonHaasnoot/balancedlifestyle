@@ -2,6 +2,7 @@ import { ArrowLeft } from '@mui/icons-material';
 import { Box, Button, Chip, Typography, Icon } from '@mui/material';
 import React from 'react';
 import useIsMobile from '../../hooks/useMobile';
+import { OptimizedImage } from '../atoms/OptimizedImage';
 
 export type BlogProps = {
     title: string;
@@ -17,7 +18,7 @@ export const Blog: React.FC<BlogProps> = (props) => {
 
     return (
         <Box component={'section'}>
-            <img
+            <OptimizedImage
                 src={props.image || '/images/pt/pt1.jpg'}
                 alt={props.title}
                 style={{ width: '100%', maxHeight: '400px', objectFit: 'cover' }}

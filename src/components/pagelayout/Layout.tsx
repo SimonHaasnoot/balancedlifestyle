@@ -7,6 +7,7 @@ import { useScrollPosition } from '../../hooks/useScrollPosition';
 import { getRouteUrl, headerRoutes, HeaderRoutesEnum } from '../../types/HeaderRoute';
 import type { HeaderRouteType } from '../../types/HeaderRoute';
 import { MobileMenu } from './MobileMenu';
+import { OptimizedImage } from '../atoms/OptimizedImage';
 
 export type LayoutProps = {
     pathname?: string;
@@ -79,7 +80,7 @@ export const Layout: React.FC<LayoutProps> = (props) => {
                                         sx={{ mr: 'auto', display: 'flex', alignItems: 'center' }}
                                         aria-label="Home"
                                     >
-                                        <img
+                                        <OptimizedImage
                                             src="/images/logo-white-v2.png"
                                             alt="Lifestyle & Personal Training Zeist"
                                             height={40}

@@ -6,6 +6,7 @@ import useIsMobile from '../../hooks/useMobile';
 import { DefaultContainer } from '../pagelayout/DefaultContainer';
 import { ContactForm } from '../organisms/ContactForm';
 import { projectVariables } from '../../project';
+import { OptimizedImage } from '../atoms/OptimizedImage';
 import theme from '../../theme';
 export const contact = (props: any) => {
     const { isMobile } = useIsMobile();
@@ -24,10 +25,11 @@ export const contact = (props: any) => {
                 }}
             >
                 <Box sx={{ position: 'absolute', inset: '0 0 0 0' }}>
-                    <img
+                    <OptimizedImage
                         src="/images/2026/2026-contact-1.jpg"
                         alt="Contact Lifestyle Personal Training Zeist"
                         loading="eager"
+                        fetchPriority="high"
                         style={{ height: '100%', width: '100%', objectFit: 'cover', filter: 'brightness(0.4)' }}
                     />
                 </Box>

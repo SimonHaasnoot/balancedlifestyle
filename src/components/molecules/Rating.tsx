@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography, useTheme } from '@mui/material';
 import { Star } from '../atoms/Star';
+import { OptimizedImage } from '../atoms/OptimizedImage';
 
 export type RatingProps = {
     rating: number;
@@ -41,7 +42,7 @@ export const Rating: React.FC<RatingProps> = (props) => {
             >
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                     <Box sx={{ width: imageHeight, height: imageHeight, borderRadius: '100%', overflow: 'hidden', flexShrink: 0 }}>
-                        <img src={silhouette} alt="Silhouette" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <OptimizedImage src={silhouette} alt="Silhouette" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </Box>
                     <Box>
                         <Typography variant="subtitle2" sx={{ color: theme.palette.common.white, fontWeight: 700 }}>

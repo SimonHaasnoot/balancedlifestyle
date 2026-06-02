@@ -5,6 +5,7 @@ import { projectVariables } from '../../project';
 import { SocialMedia } from '../molecules/SocialMedia';
 import { DefaultContainer } from './DefaultContainer';
 import { headerRoutes } from '../../types/HeaderRoute';
+import { OptimizedImage } from '../atoms/OptimizedImage';
 
 export const Footer: React.FC = () => {
     const { isMobile } = useIsMobile();
@@ -118,7 +119,7 @@ export const Footer: React.FC = () => {
                                 ·
                             </Typography>
                             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: 'auto' }}>
-                                <img
+                                <OptimizedImage
                                     src="/images/logo-white-v2.png"
                                     alt="Logo"
                                     style={{
