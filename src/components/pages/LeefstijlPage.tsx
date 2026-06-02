@@ -7,7 +7,6 @@ import useIsMobile from '../../hooks/useMobile';
 import Grid from '@mui/material/Grid';
 import { Divider } from '../molecules/Divider';
 import { OptimizedImage } from '../atoms/OptimizedImage';
-import { PhotoGallery } from '../organisms/PhotoGallery';
 
 import theme from '../../theme';
 export const FoodPage = (props: any) => {
@@ -64,7 +63,7 @@ export const FoodPage = (props: any) => {
                                 </Box>
                             </Grid>
                             <Grid size={{ xs: 12, md: 5 }} >
-                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', height: isMobile ? 250 : 400, position: 'relative', '&:hover .img-zoom': { transform: 'scale(1.06)' } }}>
+                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', height: 600, position: 'relative', '&:hover .img-zoom': { transform: 'scale(1.06)' } }}>
                                     <Box className="img-zoom" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.5s ease' }}>
                                         <OptimizedImage src="/images/2026/2026-42.jpg" alt="Leefstijl" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                     </Box>
@@ -138,21 +137,40 @@ export const FoodPage = (props: any) => {
                         >
                             Sfeerimpressie
                         </Typography>
-                        <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.white, mb: 5 }}>
+                        <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.white, mb: 2 }}>
                             Een kijkje in onze aanpak
                         </Typography>
+                        <Typography variant="body1" sx={{ color: theme.palette.common.white, opacity: 0.8, maxWidth: 600, mx: 'auto', mb: 5, lineHeight: 1.9 }}>
+                            Van krachttraining en voedingsadvies tot mentale begeleiding — een impressie van hoe wij samen werken aan jouw gebalanceerde leefstijl.
+                        </Typography>
 
-                        <PhotoGallery
-                            photos={[
-                                { src: '/images/2026/2026-40.jpg', width: 2400, height: 3600, alt: 'Leefstijl training' },
-                                { src: '/images/2026/2026-23.jpg', width: 3600, height: 2400, alt: 'Leefstijl coaching' },
-                                { src: '/images/2026/2026-30.jpg', width: 3600, height: 2400, alt: 'Leefstijl beweging' },
-                                { src: '/images/2026/2026-41.jpg', width: 2400, height: 3600, alt: 'Leefstijl resultaat' },
-                                { src: '/images/2026/2026-20.jpg', width: 3600, height: 2400, alt: 'Leefstijl voeding' },
-                                { src: '/images/2026/2026-19.jpg', width: 2400, height: 3600, alt: 'Leefstijl training' },
-                                { src: '/images/2026/2026-34.jpg', width: 3600, height: 2400, alt: 'Leefstijl balans' },
-                            ]}
-                        />
+                        <Grid container spacing={2}>
+                            {/* Landscape foto full width — 3:2 ratio */}
+                            <Grid size={12}>
+                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', aspectRatio: '3 / 2', '&:hover img': { transform: 'scale(1.05)' } }}>
+                                    <OptimizedImage src="/images/2026/2026-23.jpg" alt="Leefstijl coaching" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s ease' }} />
+                                </Box>
+                            </Grid>
+
+                            {/* Twee portrait foto's naast elkaar — 2:3 ratio */}
+                            <Grid size={{ xs: 12, md: 6 }}>
+                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', aspectRatio: '2 / 3', '&:hover img': { transform: 'scale(1.05)' } }}>
+                                    <OptimizedImage src="/images/2026/2026-40.jpg" alt="Leefstijl training" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s ease' }} />
+                                </Box>
+                            </Grid>
+                            <Grid size={{ xs: 12, md: 6 }}>
+                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', aspectRatio: '2 / 3', '&:hover img': { transform: 'scale(1.05)' } }}>
+                                    <OptimizedImage src="/images/2026/2026-41.jpg" alt="Leefstijl resultaat" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s ease' }} />
+                                </Box>
+                            </Grid>
+
+                            {/* Landscape foto full width — 3:2 ratio */}
+                            <Grid size={12}>
+                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', aspectRatio: '3 / 2', '&:hover img': { transform: 'scale(1.05)' } }}>
+                                    <OptimizedImage src="/images/2026/2026-30.jpg" alt="Leefstijl beweging" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s ease' }} />
+                                </Box>
+                            </Grid>
+                        </Grid>
 
                         {/* Quote onderaan */}
                         <Box sx={{

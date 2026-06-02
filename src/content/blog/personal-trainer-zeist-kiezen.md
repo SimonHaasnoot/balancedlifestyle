@@ -26,7 +26,7 @@ Zoek een personal trainer die verder kijkt dan alleen het trainen. De beste resu
 
 ### 4. Locatie en bereikbaarheid
 
-Kies een sportschool of studio die dichtbij is. Onze studio aan de Korte Steynlaan 22 in Zeist is centraal gelegen en makkelijk bereikbaar met auto of fiets.
+Kies een sportschool of studio die dichtbij is. Onze studio aan de Korte Steynlaan 44 in Zeist is centraal gelegen en makkelijk bereikbaar met auto of fiets.
 
 ### 5. Kleine groepen vs. 1-op-1
 

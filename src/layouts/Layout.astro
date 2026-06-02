@@ -54,11 +54,11 @@ const localBusinessJsonLd = {
     name: 'Lifestyle & Personal Training Zeist',
     description: projectVariables.COMPANY_DESCRIPTION,
     url: projectVariables.COMPANY_URL,
-    telephone: `+31${projectVariables.COMPANY_PHONE}`,
+    telephone: `+31${projectVariables.COMPANY_PHONE.replace(/\s/g, '').slice(1)}`,
     email: projectVariables.COMPANY_EMAIL,
     address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Korte Steynlaan 22',
+        streetAddress: 'Korte Steynlaan 44',
         addressLocality: 'Zeist',
         postalCode: '3701 EX',
         addressCountry: 'NL',

@@ -104,57 +104,6 @@ export const GroupsTrainingPage = (props: any) => {
 
                     <Divider />
 
-                    {/* USP kaarten */}
-                    {/* <Box sx={{ py: isMobile ? 5 : 8 }}>
-                        <Typography
-                            variant="overline"
-                            sx={{ color: theme.palette.secondary.main, fontSize: '0.8rem', letterSpacing: 4, display: 'block', mb: 1 }}
-                        >
-                            Voordelen
-                        </Typography>
-                        <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.white, mb: 5 }}>
-                            Waarom groepstraining?
-                        </Typography>
-
-                        <Grid container spacing={isMobile ? 2 : 3}>
-                            {[
-                                { title: 'Kleine groepen', desc: 'Maximaal 6 deelnemers per sessie. Persoonlijke aandacht gegarandeerd, alsof je een personal trainer deelt.' },
-                                { title: 'Professioneel', desc: 'Elke training wordt begeleid door een ervaren coach die jouw techniek bewaakt en je veilig tot resultaat brengt.' },
-                                { title: 'Motivatie', desc: 'De energie en dynamiek van samen trainen pusht je om het beste uit jezelf te halen. Samen is leuker én effectiever.' },
-                                { title: 'Compleet pakket', desc: 'Inclusief voedingsadvies, leefstijl coaching en toegang tot onze app. Alles wat je nodig hebt voor een gebalanceerde aanpak.' },
-                            ].map((item, i) => (
-                                <Grid size={{ xs: 12, sm: 6, md: 3 }} key={item.title}>
-                                    <Box sx={{
-                                        p: 3,
-                                        height: '100%',
-                                        borderRadius: 3,
-                                        background: 'rgba(90, 183, 219, 0.06)',
-                                        border: '1px solid rgba(90, 183, 219, 0.15)',
-                                        backdropFilter: 'blur(8px)',
-                                        transition: 'all 0.3s ease',
-                                        '&:hover': {
-                                            background: 'rgba(90, 183, 219, 0.12)',
-                                            transform: 'translateY(-4px)',
-                                            boxShadow: '0 8px 30px rgba(90, 183, 219, 0.15)',
-                                        },
-                                    }}>
-                                        <Typography variant="overline" sx={{ color: theme.palette.secondary.main, fontSize: '0.65rem', letterSpacing: 3 }}>
-                                            0{i + 1}
-                                        </Typography>
-                                        <Typography variant="subtitle1" sx={{ color: theme.palette.common.white, mb: 1, fontSize: '1.1rem' }}>
-                                            {item.title}
-                                        </Typography>
-                                        <Typography variant="body2" sx={{ color: theme.palette.common.white, opacity: 0.75, lineHeight: 1.7 }}>
-                                            {item.desc}
-                                        </Typography>
-                                    </Box>
-                                </Grid>
-                            ))}
-                        </Grid>
-                    </Box>
-
-                    <Divider /> */}
-
                     {/* Foto galerij */}
                     <Box sx={{ py: isMobile ? 5 : 8 }}>
                         <Typography
@@ -167,16 +116,23 @@ export const GroupsTrainingPage = (props: any) => {
                             De energie van samen trainen
                         </Typography>
 
-                        <PhotoGallery
-                            photos={[
-                                { src: '/images/2026/2026-53.jpg', width: 3600, height: 2400, alt: 'Groepstraining' },
-                                { src: '/images/2026/2026-52.jpg', width: 2400, height: 3600, alt: 'Groepstraining' },
-                                { src: '/images/2026/2026-54.jpg', width: 2400, height: 3600, alt: 'Groepstraining' },
-                                { src: '/images/2026/2026-50.jpg', width: 3600, height: 2400, alt: 'Groepstraining' },
-                                { src: '/images/2026/2026-55.jpg', width: 3600, height: 2400, alt: 'Groepstraining' },
-                                { src: '/images/2026/2026-51.jpg', width: 3600, height: 2400, alt: 'Groepstraining' },
-                            ]}
-                        />
+                        <Grid container spacing={2}>
+                            <Grid size={12}>
+                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', height: isMobile ? 250 : 800, position: 'relative', '&:hover img': { transform: 'scale(1.05)' } }}>
+                                    <OptimizedImage src="/images/2026/2026-53.jpg" alt="Groepstraining 1" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s ease' }} />
+                                </Box>
+                            </Grid>
+                            <Grid size={{ xs: 12, md: 6 }}>
+                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', height: isMobile ? 600 : 800, position: 'relative', '&:hover img': { transform: 'scale(1.05)' } }}>
+                                    <OptimizedImage src="/images/2026/2026-52.jpg" alt="Groepstraining 2" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s ease' }} />
+                                </Box>
+                            </Grid>
+                            <Grid size={{ xs: 12, md: 6 }}>
+                                <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)', height: isMobile ? 600 : 800, position: 'relative', '&:hover img': { transform: 'scale(1.05)' } }}>
+                                    <OptimizedImage src="/images/2026/2026-54.jpg" alt="Groepstraining 3" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s ease' }} />
+                                </Box>
+                            </Grid>
+                        </Grid>
                     </Box>
                 </DefaultContainer>
             </Box>

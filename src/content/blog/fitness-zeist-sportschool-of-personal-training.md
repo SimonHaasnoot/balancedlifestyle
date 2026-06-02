@@ -50,7 +50,7 @@ Een personal training studio is ideaal als je:
 
 ### Onze studio in Zeist
 
-Bij [Lifestyle & Personal Training Zeist](/onze-studio/) combineren we het beste van beide werelden. Onze studio aan de Korte Steynlaan 22 biedt:
+Bij [Lifestyle & Personal Training Zeist](/onze-studio/) combineren we het beste van beide werelden. Onze studio aan de Korte Steynlaan 44 biedt:
 
 - Professionele apparatuur in een rustige omgeving
 - [Personal training](/personal-training/) 1-op-1 of in kleine groepen

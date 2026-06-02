@@ -35,16 +35,16 @@ export const PersonalTrainingPage = (props: any) => {
 
                 {/* Photo strip */}
                 <Box component="section" sx={{ overflow: 'hidden' }}>
-                    <Grid container spacing={0}>
+                    <Grid container spacing={0} sx={{ ...(!isMobile && { height: 350 }) }}>
                         {[
-                            { src: '/images/2026/2026-pt-1.jpg', alt: 'Personal training begeleiding' },
-                            { src: '/images/2026/2026-pt-2.jpg', alt: 'Krachttraining sessie' },
-                            { src: '/images/2026/2026-pt-3.jpg', alt: 'Training op maat' },
-                            { src: '/images/2026/2026-pt-4.jpg', alt: 'Resultaten bereiken' },
+                            { src: '/images/2026/2026-pt-1.jpg', alt: 'Personal training begeleiding', ratio: '2 / 3' },
+                            { src: '/images/2026/2026-pt-2.jpg', alt: 'Krachttraining sessie', ratio: '3 / 2' },
+                            { src: '/images/2026/2026-pt-3.jpg', alt: 'Training op maat', ratio: '3 / 2' },
+                            { src: '/images/2026/2026-pt-4.jpg', alt: 'Resultaten bereiken', ratio: '3 / 2' },
                         ].map((img) => (
-                            <Grid size={{ xs: 6, md: 3 }} key={img.src}>
-                                <Box sx={{ height: isMobile ? 180 : 300, overflow: 'hidden' }}>
-                                    <OptimizedImage src={img.src} alt={img.alt} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <Grid size={{ xs: 12, md: 3 }} key={img.src} sx={{ ...(!isMobile && { height: '100%' }) }}>
+                                <Box sx={{ aspectRatio: isMobile ? img.ratio : undefined, height: isMobile ? undefined : '100%', overflow: 'hidden' }}>
+                                    <OptimizedImage src={img.src} alt={img.alt} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                                 </Box>
                             </Grid>
                         ))}
@@ -186,11 +186,15 @@ export const PersonalTrainingPage = (props: any) => {
                     sx={{
                         position: 'relative',
                         overflow: 'hidden',
-                        py: isMobile ? 8 : 12,
+                        py: isMobile ? 10 : 12,
+                        minHeight: isMobile ? 300 : 400,
+                        display: 'flex',
+                        alignItems: 'center',
+                        backgroundColor: '#000',
                     }}
                 >
-                    <Box sx={{ position: 'absolute', inset: 0 }}>
-                        <OptimizedImage src="/images/2026/2026-pt-4.jpg" alt="Start met personal training" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <Box sx={{ position: 'absolute', inset: 0, '& img, & picture': { width: '100%', height: '100%', objectFit: 'cover', display: 'block' } }}>
+                        <OptimizedImage src="/images/2026/2026-pt-4.jpg" alt="Start met personal training" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                     </Box>
                     <Box sx={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.65)' }} />
                     <DefaultContainer maxWidth="md" sx={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>

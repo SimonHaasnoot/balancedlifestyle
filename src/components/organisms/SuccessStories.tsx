@@ -114,7 +114,9 @@ export const SuccessStories: React.FC<SuccessStoriesProps> = (props) => {
                         {
                             title: 'Wiebe Palstra',
                             subtitle: '20kg afgevallen in 18 maanden',
-                            image: <OptimizedImage src="/images/growth/wiebe.png" alt="Wiebe progressie" />,
+                            image: <OptimizedImage src="/images/growth/wiebe.png" alt="Wiebe progressie"  style={{
+                                width: '100%'
+                            }}/>,
                             package: 'Personal training',
                             text:
                                 '"Dat uurtje sporten met Sem is een uurtje voor mijzelf, die ik in mijzelf investeer, om mij goed te laten voelen! Twee jaar verder: Ik heb meer energie, zit lekkerder in mijn vel, verleg mijn grenzen en voel mij sterk! En gestopt met roken!"',

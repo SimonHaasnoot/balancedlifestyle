@@ -49,13 +49,14 @@ export const CommunityPage = () => {
                 <SmallHero
                     image={
                         <OptimizedImage
-                            src="/images/2026/2026-53.jpg"
+                            src="/images/2026/2026-community-1.jpg"
                             alt="De community van Lifestyle & Personal Training Zeist"
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />
                     }
                     title="Community"
                     subtitle="Samen trainen, samen groeien. Dat is onze kracht."
+                    nextSectionColor="#ffffff"
                 />
 
                 {/* Intro */}
@@ -80,6 +81,65 @@ export const CommunityPage = () => {
                         </Typography>
                     </Box>
                 </DefaultContainer>
+
+                {/* Full-width community foto met parallax-achtig reveal effect */}
+                <Box
+                    sx={{
+                        position: 'relative',
+                        overflow: 'hidden',
+                        aspectRatio: isMobile ? '3 / 2' : '2.5 / 1',
+                        '&:hover .community-img': {
+                            transform: 'scale(1.05)',
+                        },
+                        '&:hover .community-overlay': {
+                            opacity: 0.1,
+                        },
+                    }}
+                >
+                    <Box
+                        className="community-img"
+                        sx={{ position: 'absolute', inset: 0, transition: 'transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)' }}
+                    >
+                        <OptimizedImage
+                            src="/images/2026/2026-community-4.jpg"
+                            alt="Community sfeer bij Lifestyle & Personal Training Zeist"
+                            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 40%' }}
+                        />
+                    </Box>
+                    <Box
+                        className="community-overlay"
+                        sx={{
+                            position: 'absolute',
+                            inset: 0,
+                            background: `linear-gradient(135deg, rgba(28,29,31,0.4) 0%, transparent 50%, rgba(90,183,219,0.2) 100%)`,
+                            transition: 'opacity 0.8s ease',
+                        }}
+                    />
+                    <Box
+                        sx={{
+                            position: 'absolute',
+                            bottom: 0,
+                            left: 0,
+                            right: 0,
+                            height: '40%',
+                            background: 'linear-gradient(0deg, rgba(28,29,31,0.7) 0%, transparent 100%)',
+                        }}
+                    />
+                    <Typography
+                        variant="h3"
+                        sx={{
+                            position: 'absolute',
+                            bottom: isMobile ? 20 : 40,
+                            left: isMobile ? 20 : 60,
+                            color: theme.palette.common.white,
+                            textShadow: '0 2px 20px rgba(0,0,0,0.5)',
+                            fontWeight: 600,
+                            zIndex: 1,
+                        }}
+                    >
+                        Samen sterker
+                    </Typography>
+                </Box>
 
                 {/* Pillars */}
                 <Box sx={{ backgroundColor: theme.palette.grey[100], py: isMobile ? 5 : 10 }} component="section">
@@ -125,9 +185,9 @@ export const CommunityPage = () => {
 
                 {/* Photo + Text Block */}
                 <Grid container spacing={0} component="section">
-                    <Grid item xs={12} md={6} sx={{ minHeight: isMobile ? '300px' : '500px', position: 'relative' }}>
+                    <Grid item xs={12} md={6} sx={{ position: 'relative', aspectRatio: '3 / 2' }}>
                         <OptimizedImage
-                            src="/images/2026/2026-53.jpg"
+                            src="/images/2026/2026-community-3.jpg"
                             alt="Community momenten bij Lifestyle & Personal Training Zeist"
                             style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }}
                         />

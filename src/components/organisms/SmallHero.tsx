@@ -15,6 +15,7 @@ export type SmallHeroProps = {
     countdownDate?: string;
     customHeight?: string;
     sideImage?: boolean;
+    nextSectionColor?: string;
 };
 
 export const SmallHero: React.FC<SmallHeroProps> = (props) => {
@@ -29,7 +30,7 @@ export const SmallHero: React.FC<SmallHeroProps> = (props) => {
                 position: 'relative',
                 overflow: 'hidden',
                 height: isMobile ? 'auto' : props.customHeight ? props.customHeight : '70vh',
-                minHeight: isMobile ? '70vh' : undefined,
+                minHeight: isMobile ? '55vh' : undefined,
                 backgroundColor: '#1C1D1F',
             }}
             component="section"
@@ -69,6 +70,83 @@ export const SmallHero: React.FC<SmallHeroProps> = (props) => {
                     zIndex: 3,
                 }}
             />
+
+            {/* Decoratieve floating accenten op mobiel */}
+            {isMobile && (
+                <>
+                    <Box
+                        sx={{
+                            position: 'absolute',
+                            top: '15%',
+                            right: '8%',
+                            width: 6,
+                            height: 6,
+                            borderRadius: '50%',
+                            backgroundColor: theme.palette.secondary.main,
+                            opacity: 0.6,
+                            zIndex: 2,
+                            animation: 'floatUp 4s ease-in-out infinite',
+                            '@keyframes floatUp': {
+                                '0%, 100%': { transform: 'translateY(0) scale(1)', opacity: 0.6 },
+                                '50%': { transform: 'translateY(-12px) scale(1.3)', opacity: 1 },
+                            },
+                        }}
+                    />
+                    <Box
+                        sx={{
+                            position: 'absolute',
+                            top: '25%',
+                            left: '5%',
+                            width: 4,
+                            height: 4,
+                            borderRadius: '50%',
+                            backgroundColor: theme.palette.secondary.main,
+                            opacity: 0.4,
+                            zIndex: 2,
+                            animation: 'floatUp 5s ease-in-out 1s infinite',
+                        }}
+                    />
+                    <Box
+                        sx={{
+                            position: 'absolute',
+                            top: '35%',
+                            right: '15%',
+                            width: 3,
+                            height: 3,
+                            borderRadius: '50%',
+                            backgroundColor: theme.palette.secondary.main,
+                            opacity: 0.3,
+                            zIndex: 2,
+                            animation: 'floatUp 6s ease-in-out 2s infinite',
+                        }}
+                    />
+                </>
+            )}
+
+            {/* Golvende onderkant op mobiel */}
+            {isMobile && (
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        bottom: -1,
+                        left: 0,
+                        right: 0,
+                        zIndex: 3,
+                        lineHeight: 0,
+                    }}
+                >
+                    <svg
+                        viewBox="0 0 1440 80"
+                        preserveAspectRatio="none"
+                        style={{ width: '100%', height: '40px', display: 'block' }}
+                    >
+                        <path
+                            d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z"
+                            fill={props.nextSectionColor || theme.palette.grey[100]}
+                        />
+                    </svg>
+                </Box>
+            )}
 
             <Box
                 sx={{

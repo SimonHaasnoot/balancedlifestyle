@@ -1,3 +1,4 @@
+
 import { Box, Button, Container, GridLegacy as Grid, Link, Typography } from '@mui/material';
 import { AppShell } from '../shell/AppShell';
 import { Layout } from '../pagelayout/Layout';
@@ -64,8 +65,12 @@ export const contact = (props: any) => {
                                 <Typography variant="h3" sx={{ color: theme.palette.common.white, mb: 2 }}>
                                     Liever bellen?
                                 </Typography>
-                                <Button variant="outlined" sx={{ mt: 2, mb: 5 }} href={`tel:${projectVariables.COMPANY_PHONE}`}>
+                                <Button variant="outlined" sx={{ mt: 2, mb: 2 }} href={`tel:+31${projectVariables.COMPANY_PHONE.replace(/\s/g, '').slice(1)}`}>
                                     Bel Sem op {projectVariables.COMPANY_PHONE}
+                                </Button>{' '}
+                                <br />
+                                <Button variant="outlined" sx={{ mb: 5 }} href={`tel:+31${projectVariables.TIM_PHONE.replace(/\s/g, '').slice(1)}`}>
+                                    Bel Tim op {projectVariables.TIM_PHONE}
                                 </Button>{' '}
                                 <Typography variant="subtitle2" sx={{ color: theme.palette.common.white }}>
                                     Of stuur ons een e-mail

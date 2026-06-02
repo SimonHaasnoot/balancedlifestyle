@@ -285,14 +285,35 @@ export const onlinecoaching = (props: any) => {
                                 </Box>
                             </Grid>
 
-                            <Grid size={12}>
+                            <Grid size={12} sx={{ pt: isMobile ? 6 : 10, textAlign: 'center' }}>
+                                <Typography
+                                    variant="overline"
+                                    sx={{
+                                        color: theme.palette.secondary.main,
+                                        fontSize: '0.8rem',
+                                        letterSpacing: 4,
+                                        display: 'block',
+                                        mb: 1,
+                                    }}
+                                >
+                                    Impressie
+                                </Typography>
+                                <Typography variant="h3" sx={{
+                                    background: `linear-gradient(135deg, ${theme.palette.common.white} 0%, ${theme.palette.secondary.main} 100%)`,
+                                    WebkitBackgroundClip: 'text',
+                                    WebkitTextFillColor: 'transparent',
+                                    mb: 1,
+                                }}>
+                                    Sfeerfoto's
+                                </Typography>
+                                <Box sx={{ width: 60, height: 3, backgroundColor: theme.palette.secondary.main, mx: 'auto', mb: 4, borderRadius: 2 }} />
                                 <PhotoGallery
                                     photos={[
                                         { src: '/images/2026/2026-14.jpg', width: 2400, height: 3600, alt: 'Studio sfeer' },
                                         { src: '/images/2026/2026-15.jpg', width: 2400, height: 3600, alt: 'Studio sfeer' },
                                         { src: '/images/2026/2026-16.jpg', width: 2400, height: 3600, alt: 'Studio sfeer' },
-                                        { src: '/images/2026/2026-17.jpg', width: 3600, height: 2400, alt: 'Studio overzicht' },
                                     ]}
+                                    columns={(w: number) => (w < 600 ? 1 : 3)}
                                 />
                             </Grid>
                         </Grid>
