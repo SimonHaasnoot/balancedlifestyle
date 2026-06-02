@@ -23,14 +23,14 @@ export enum HeaderRoutesEnum {
 
 export const headerRoutes: HeaderRouteType[] = [
     { name: HeaderRoutesEnum.HOME, path: '/' },
-    { name: HeaderRoutesEnum.PERSONAL_TRAINING, path: '/personal-training' },
-    { name: 'Onze studio' as HeaderRoutesEnum, path: '/onze-studio' },
-    { name: HeaderRoutesEnum.GROEPSTRAINING, path: '/groepstraining' },
-    { name: HeaderRoutesEnum.LEEFSTIJL, path: '/leefstijl' },
-    { name: HeaderRoutesEnum.COMMUNITY, path: '/community' },
-    { name: HeaderRoutesEnum.ABOUT_ME, path: '/over-ons', isSecondaryLevel: true },
-    { name: HeaderRoutesEnum.REVIEWS, path: '/reviews', isSecondaryLevel: true },
-    { name: HeaderRoutesEnum.CONTACT, path: '/contact', isSecondaryLevel: true },
+    { name: HeaderRoutesEnum.PERSONAL_TRAINING, path: '/personal-training/' },
+    { name: 'Onze studio' as HeaderRoutesEnum, path: '/onze-studio/' },
+    { name: HeaderRoutesEnum.GROEPSTRAINING, path: '/groepstraining/' },
+    { name: HeaderRoutesEnum.LEEFSTIJL, path: '/leefstijl/' },
+    { name: HeaderRoutesEnum.COMMUNITY, path: '/community/' },
+    { name: HeaderRoutesEnum.ABOUT_ME, path: '/over-ons/', isSecondaryLevel: true },
+    { name: HeaderRoutesEnum.REVIEWS, path: '/reviews/', isSecondaryLevel: true },
+    { name: HeaderRoutesEnum.CONTACT, path: '/contact/', isSecondaryLevel: true },
 ];
 
 export const getRouteUrl = (route: HeaderRoutesEnum): string => {

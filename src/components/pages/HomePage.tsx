@@ -112,26 +112,217 @@ export const index = (props: any) => {
                         </Box>
                     }
                 />
-                <Box sx={{ backgroundColor: theme.palette.grey[100], position: 'relative' }} component="section">
-                    <DefaultContainer maxWidth="lg" sx={{ textAlign: 'center' }}>
-                        <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
-                            Onze missie
-                        </Typography>
-                        <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.white, mb: 2 }}>
-                            Jouw gezondheid terug in balans
-                        </Typography>
-                        <AllInclusiveIcon sx={{ color: theme.palette.common.white, fontSize: 40, mb: 2 }} />
+                {/* Missie sectie — activerend & opvallend */}
+                <Box
+                    component="section"
+                    sx={{
+                        position: 'relative',
+                        overflow: 'hidden',
+                        background: `linear-gradient(165deg, #0a0a0a 0%, #1a1a2e 40%, #16213e 100%)`,
+                    }}
+                >
+                    {/* Glow effect achtergrond */}
+                    <Box sx={{
+                        position: 'absolute',
+                        top: '20%',
+                        left: '-10%',
+                        width: '50%',
+                        height: '60%',
+                        background: `radial-gradient(ellipse, ${theme.palette.secondary.main}15 0%, transparent 70%)`,
+                        filter: 'blur(60px)',
+                    }} />
+                    <Box sx={{
+                        position: 'absolute',
+                        bottom: '10%',
+                        right: '-5%',
+                        width: '40%',
+                        height: '50%',
+                        background: `radial-gradient(ellipse, ${theme.palette.secondary.main}10 0%, transparent 70%)`,
+                        filter: 'blur(80px)',
+                    }} />
 
-                        <Typography
-                            variant="body1"
-                            sx={{ color: theme.palette.common.white, lineHeight: 2, maxWidth: isMobile ? '100%' : '60%', margin: 'auto' }}
-                        >
-                            Onze missie is het coachen in het creëren van een gebalanceerde leefstijl door jou de juiste handvatten te geven in
-                            bewegen, voeding en rust.
-                        </Typography>
+                    <DefaultContainer maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+                        <Grid container spacing={isMobile ? 4 : 8} alignItems="center">
+                            {/* Foto kolom */}
+                            <Grid item xs={12} md={5}>
+                                <Box sx={{
+                                    position: 'relative',
+                                    borderRadius: isMobile ? 2 : 4,
+                                    overflow: 'hidden',
+                                    boxShadow: `0 20px 60px rgba(0,0,0,0.5), 0 0 40px ${theme.palette.secondary.main}15`,
+                                    aspectRatio: isMobile ? '3 / 4' : '2 / 3',
+                                    maxHeight: isMobile ? 'none' : 550,
+                                    width: '100%',
+                                    '&:hover .mission-img': { transform: 'scale(1.04)' },
+                                }}>
+                                    <Box className="mission-img" sx={{ position: 'absolute', inset: 0, transition: 'transform 0.8s ease' }}>
+                                        <OptimizedImage
+                                            src="/images/2026/2026-54.jpg"
+                                            alt="Personal training begeleiding"
+                                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                        />
+                                    </Box>
+                                    {/* Gradient overlay onderin */}
+                                    <Box sx={{
+                                        position: 'absolute',
+                                        bottom: 0,
+                                        left: 0,
+                                        right: 0,
+                                        height: '30%',
+                                        background: 'linear-gradient(0deg, rgba(0,0,0,0.6) 0%, transparent 100%)',
+                                    }} />
+                                    {/* Accent border */}
+                                    <Box sx={{
+                                        position: 'absolute',
+                                        inset: 0,
+                                        border: `1px solid rgba(90,183,219,0.2)`,
+                                        borderRadius: 4,
+                                    }} />
+                                </Box>
+                            </Grid>
+
+                            {/* Content kolom */}
+                            <Grid item xs={12} md={7}>
+                                <Box sx={{ pl: isMobile ? 0 : 3 }}>
+                                    <Typography
+                                        variant="overline"
+                                        sx={{
+                                            color: theme.palette.secondary.main,
+                                            fontSize: '0.75rem',
+                                            letterSpacing: 5,
+                                            display: 'block',
+                                            mb: 1,
+                                        }}
+                                    >
+                                        Onze missie
+                                    </Typography>
+
+                                    <Typography
+                                        variant="h3"
+                                        component="h2"
+                                        sx={{
+                                            color: theme.palette.common.white,
+                                            fontWeight: 700,
+                                            mb: 3,
+                                            lineHeight: 1.2,
+                                            fontSize: isMobile ? '1.8rem' : '2.5rem',
+                                        }}
+                                    >
+                                        Wij maken jou de
+                                        <Box component="span" sx={{
+                                            display: 'block',
+                                            background: `linear-gradient(90deg, ${theme.palette.secondary.main}, #7dd3fc)`,
+                                            WebkitBackgroundClip: 'text',
+                                            WebkitTextFillColor: 'transparent',
+                                        }}>
+                                            beste versie van jezelf
+                                        </Box>
+                                    </Typography>
+
+                                    <Typography variant="body1" sx={{
+                                        color: 'rgba(255,255,255,0.8)',
+                                        lineHeight: 2,
+                                        mb: 4,
+                                        fontSize: isMobile ? '0.95rem' : '1.05rem',
+                                    }}>
+                                        Geen vluchtige resultaten, maar duurzame verandering. Wij combineren professionele
+                                        begeleiding met een persoonlijke aanpak die écht werkt. Beweging, voeding en mentale
+                                        kracht — in balans, op jouw tempo.
+                                    </Typography>
+
+                                    {/* Statistieken */}
+                                    <Grid container spacing={isMobile ? 2 : 3} sx={{ mb: 4 }}>
+                                        {[
+                                            { value: '100+', label: 'Tevreden klanten' },
+                                            { value: '9,4', label: 'Gemiddelde score' },
+                                            { value: '5+', label: 'Jaar ervaring' },
+                                        ].map((stat) => (
+                                            <Grid item xs={4} key={stat.label}>
+                                                <Box sx={{
+                                                    textAlign: 'center',
+                                                    p: isMobile ? 1.5 : 2.5,
+                                                    borderRadius: 2,
+                                                    background: 'rgba(90,183,219,0.06)',
+                                                    border: '1px solid rgba(90,183,219,0.15)',
+                                                    transition: 'all 0.3s ease',
+                                                    height: '100%',
+                                                    display: 'flex',
+                                                    flexDirection: 'column',
+                                                    justifyContent: 'center',
+                                                    '&:hover': {
+                                                        background: 'rgba(90,183,219,0.12)',
+                                                        borderColor: theme.palette.secondary.main,
+                                                        transform: 'translateY(-3px)',
+                                                    },
+                                                }}>
+                                                    <Typography sx={{
+                                                        color: theme.palette.secondary.main,
+                                                        fontWeight: 800,
+                                                        fontSize: isMobile ? '1.4rem' : '2rem',
+                                                        lineHeight: 1,
+                                                        fontFamily: 'Exo',
+                                                        mb: 0.5,
+                                                    }}>
+                                                        {stat.value}
+                                                    </Typography>
+                                                    <Typography variant="caption" sx={{
+                                                        color: 'rgba(255,255,255,0.6)',
+                                                        letterSpacing: 0.5,
+                                                        fontSize: isMobile ? '0.6rem' : '0.75rem',
+                                                        textTransform: 'uppercase',
+                                                    }}>
+                                                        {stat.label}
+                                                    </Typography>
+                                                </Box>
+                                            </Grid>
+                                        ))}
+                                    </Grid>
+
+                                    {/* CTA */}
+                                    <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+                                        <Button
+                                            variant="contained"
+                                            size="large"
+                                            href={getRouteUrl(HeaderRoutesEnum.CONTACT)}
+                                            sx={{
+                                                px: 4,
+                                                py: 1.5,
+                                                background: `linear-gradient(135deg, ${theme.palette.secondary.main} 0%, #3a8fb8 100%)`,
+                                                color: '#fff',
+                                                fontWeight: 600,
+                                                fontSize: '0.95rem',
+                                                boxShadow: `0 4px 20px ${theme.palette.secondary.main}40`,
+                                                '&:hover': {
+                                                    boxShadow: `0 8px 30px ${theme.palette.secondary.main}60`,
+                                                    transform: 'translateY(-2px)',
+                                                },
+                                                transition: 'all 0.3s ease',
+                                            }}
+                                        >
+                                            Start jouw transformatie
+                                        </Button>
+                                        <Button
+                                            variant="outlined"
+                                            size="large"
+                                            href={getRouteUrl(HeaderRoutesEnum.REVIEWS)}
+                                            sx={{
+                                                px: 3,
+                                                py: 1.5,
+                                                borderColor: 'rgba(255,255,255,0.25)',
+                                                color: theme.palette.common.white,
+                                                '&:hover': {
+                                                    borderColor: theme.palette.secondary.main,
+                                                    background: 'rgba(90,183,219,0.08)',
+                                                },
+                                            }}
+                                        >
+                                            Bekijk reviews
+                                        </Button>
+                                    </Box>
+                                </Box>
+                            </Grid>
+                        </Grid>
                     </DefaultContainer>
-
-                    {generateFlowBackground()}
                 </Box>
 
                 <Box sx={{ backgroundColor: theme.palette.primary.main }} component="section">
