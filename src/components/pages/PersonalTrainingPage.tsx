@@ -35,7 +35,7 @@ export const PersonalTrainingPage = (props: any) => {
 
                 {/* Photo strip */}
                 <Box component="section" sx={{ overflow: 'hidden' }}>
-                    <Grid container spacing={0} sx={{ ...(!isMobile && { height: 350 }) }}>
+                    <Grid container spacing={0.5} sx={{ ...(!isMobile && { height: 350 }) }}>
                         {[
                             { src: '/images/2026/2026-pt-1.jpg', alt: 'Personal training begeleiding', ratio: '2 / 3' },
                             { src: '/images/2026/2026-pt-2.jpg', alt: 'Krachttraining sessie', ratio: '3 / 2' },
@@ -177,6 +177,28 @@ export const PersonalTrainingPage = (props: any) => {
                                 </Grid>
                             )}
                         </Grid>
+                    </DefaultContainer>
+                </Box>
+
+                {/* Social proof / urgency strip */}
+                <Box component="section" sx={{ background: theme.palette.grey[100], borderTop: '1px solid rgba(90, 183, 219, 0.1)', borderBottom: '1px solid rgba(90, 183, 219, 0.1)' }}>
+                    <DefaultContainer maxWidth="lg" sx={{ py: isMobile ? 3 : 4 }}>
+                        <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'center', alignItems: 'center', gap: isMobile ? 3 : 6 }}>
+                            {[
+                                { value: '100+', label: 'Tevreden klanten' },
+                                { value: '1-op-1', label: 'Persoonlijke aandacht' },
+                                { value: '9,4', label: 'Gemiddelde score' },
+                            ].map((item) => (
+                                <Box key={item.label} sx={{ textAlign: 'center' }}>
+                                    <Typography sx={{ color: theme.palette.secondary.main, fontWeight: 700, fontSize: isMobile ? '1.2rem' : '1.5rem', lineHeight: 1, fontFamily: 'Exo' }}>
+                                        {item.value}
+                                    </Typography>
+                                    <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', letterSpacing: 1, fontSize: '0.65rem' }}>
+                                        {item.label}
+                                    </Typography>
+                                </Box>
+                            ))}
+                        </Box>
                     </DefaultContainer>
                 </Box>
 

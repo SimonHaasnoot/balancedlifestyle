@@ -25,7 +25,7 @@ export const contact = (props: any) => {
             >
                 <Box sx={{ position: 'absolute', inset: '0 0 0 0' }}>
                     <img
-                        src="/images/contact.png"
+                        src="/images/2026/2026-contact-1.jpg"
                         alt="Contact Lifestyle Personal Training Zeist"
                         loading="eager"
                         style={{ height: '100%', width: '100%', objectFit: 'cover', filter: 'brightness(0.4)' }}

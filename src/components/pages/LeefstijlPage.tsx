@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { AppShell } from '../shell/AppShell';
 import { SmallHero } from '../organisms/SmallHero';
 import { DefaultContainer } from '../pagelayout/DefaultContainer';
@@ -7,6 +7,7 @@ import useIsMobile from '../../hooks/useMobile';
 import Grid from '@mui/material/Grid';
 import { Divider } from '../molecules/Divider';
 import { OptimizedImage } from '../atoms/OptimizedImage';
+import { getRouteUrl, HeaderRoutesEnum } from '../../types/HeaderRoute';
 
 import theme from '../../theme';
 export const FoodPage = (props: any) => {
@@ -126,9 +127,31 @@ export const FoodPage = (props: any) => {
                             ))}
                         </Grid>
 
-                        <Box sx={{ py: isMobile ? 5 : 8 }}>
-                            <Divider />
+                        {/* Mid-page CTA */}
+                        <Box sx={{ mt: isMobile ? 4 : 6, mb: isMobile ? 5 : 8 }}>
+                            <Button
+                                variant="outlined"
+                                size="large"
+                                href={getRouteUrl(HeaderRoutesEnum.CONTACT)}
+                                sx={{
+                                    px: 4,
+                                    py: 1.5,
+                                    borderColor: theme.palette.secondary.main,
+                                    color: 'white',
+                                    fontWeight: 600,
+                                    '&:hover': {
+                                        backgroundColor: 'rgba(90, 183, 219, 0.1)',
+                                        borderColor: theme.palette.secondary.main,
+                                        transform: 'translateY(-2px)',
+                                    },
+                                    transition: 'all 0.3s ease',
+                                }}
+                            >
+                                Vraag een vrijblijvend gesprek aan
+                            </Button>
                         </Box>
+
+                        <Divider />
 
                         {/* Foto galerij */}
                         <Typography
@@ -191,6 +214,51 @@ export const FoodPage = (props: any) => {
                             </Typography>
                         </Box>
 
+                    </DefaultContainer>
+                </Box>
+
+                {/* CTA sectie */}
+                <Box
+                    component="section"
+                    sx={{
+                        background: `linear-gradient(135deg, ${theme.palette.secondary.main} 0%, #3a8fb8 100%)`,
+                        position: 'relative',
+                        overflow: 'hidden',
+                    }}
+                >
+                    <Box sx={{ position: 'absolute', top: -50, right: -50, width: 200, height: 200, borderRadius: '50%', background: 'rgba(255,255,255,0.06)' }} />
+                    <Box sx={{ position: 'absolute', bottom: -30, left: '15%', width: 120, height: 120, borderRadius: '50%', background: 'rgba(255,255,255,0.04)' }} />
+                    <DefaultContainer maxWidth="md" sx={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
+                        <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.white, mb: 2, fontWeight: 700 }}>
+                            Klaar voor een gebalanceerd leven?
+                        </Typography>
+                        <Typography variant="body1" sx={{ color: 'rgba(255,255,255,0.9)', mb: 4, maxWidth: 500, mx: 'auto', lineHeight: 1.8 }}>
+                            Plan een vrijblijvend kennismakingsgesprek en ontdek hoe wij jou kunnen begeleiden naar duurzame gezondheid.
+                        </Typography>
+                        <Button
+                            variant="contained"
+                            size="large"
+                            href={getRouteUrl(HeaderRoutesEnum.CONTACT)}
+                            sx={{
+                                px: 5,
+                                py: 1.5,
+                                backgroundColor: theme.palette.common.white,
+                                color: theme.palette.secondary.main,
+                                fontWeight: 600,
+                                fontSize: '1rem',
+                                '&:hover': {
+                                    backgroundColor: 'rgba(255,255,255,0.9)',
+                                    transform: 'translateY(-2px)',
+                                    boxShadow: '0 8px 25px rgba(0,0,0,0.2)',
+                                },
+                                transition: 'all 0.3s ease',
+                            }}
+                        >
+                            Plan een kennismaking
+                        </Button>
+                        <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.7)', mt: 2, fontSize: '0.8rem' }}>
+                            Eerste gesprek is altijd vrijblijvend
+                        </Typography>
                     </DefaultContainer>
                 </Box>
             </Layout>

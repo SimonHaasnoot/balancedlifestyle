@@ -1,10 +1,10 @@
 import MenuIcon from '@mui/icons-material/Menu';
-import { AppBar, Box, Container, IconButton, Link, useTheme } from '@mui/material';
+import { AppBar, Box, Button, Container, IconButton, Link, useTheme } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import useIsMobile from '../../hooks/useMobile';
 import { Footer } from './Footer';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
-import { headerRoutes } from '../../types/HeaderRoute';
+import { getRouteUrl, headerRoutes, HeaderRoutesEnum } from '../../types/HeaderRoute';
 import type { HeaderRouteType } from '../../types/HeaderRoute';
 import { MobileMenu } from './MobileMenu';
 
@@ -182,6 +182,53 @@ export const Layout: React.FC<LayoutProps> = (props) => {
             {props.children}
 
             <Footer />
+
+            {/* Sticky CTA bar - hidden on contact & bedankt pages */}
+            {!currentPath.includes('/contact') && !currentPath.includes('/bedankt') && (
+                <Box
+                    sx={{
+                        position: 'fixed',
+                        bottom: 0,
+                        left: 0,
+                        right: 0,
+                        zIndex: 1200,
+                        background: 'rgba(0, 0, 0, 0.92)',
+                        backdropFilter: 'blur(10px)',
+                        borderTop: `1px solid rgba(90, 183, 219, 0.2)`,
+                        py: 1.5,
+                        px: 2,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: 2,
+                        transform: scrolled ? 'translateY(0)' : 'translateY(100%)',
+                        transition: 'transform 0.3s ease',
+                    }}
+                >
+                    <Box sx={{ color: '#fff', fontSize: isTabletOrSmaller ? '0.8rem' : '0.9rem', fontWeight: 500 }}>
+                        Gratis kennismakingsgesprek
+                    </Box>
+                    <Button
+                        variant="contained"
+                        size="small"
+                        href={getRouteUrl(HeaderRoutesEnum.CONTACT)}
+                        sx={{
+                            background: `linear-gradient(135deg, ${theme.palette.secondary.main} 0%, #3a8fb8 100%)`,
+                            color: '#fff',
+                            fontWeight: 600,
+                            px: 3,
+                            py: 0.8,
+                            fontSize: '0.8rem',
+                            whiteSpace: 'nowrap',
+                            '&:hover': {
+                                boxShadow: `0 4px 15px rgba(90, 183, 219, 0.3)`,
+                            },
+                        }}
+                    >
+                        Plan nu in
+                    </Button>
+                </Box>
+            )}
         </div>
     );
 };

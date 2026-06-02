@@ -46,7 +46,7 @@ theme = createTheme({
             fontFamily: 'Exo',
             textTransform: 'uppercase',
             [theme.breakpoints.between('xs', 'sm')]: {
-                fontSize: 48,
+                fontSize: 42,
             },
             [theme.breakpoints.between('sm', 'lg')]: {
                 fontSize: 64,
