@@ -1,5 +1,6 @@
 ---
 title: "Afvallen in Zeist: Effectief Resultaat met Personal Training"
+description: "Wil je duurzaam afvallen in Zeist? Ontdek hoe personal training, voeding en leefstijlcoaching je helpen écht resultaat te boeken. Gratis kennismaking."
 image: /images/2026/2026-30.jpg
 date: 2026-05-22T10:00:00.000Z
 tags:

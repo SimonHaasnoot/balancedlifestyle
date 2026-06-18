@@ -31,6 +31,7 @@ Leefstijlcoaching is ideaal voor mensen die:
 
 - Duurzaam willen afvallen (geen jojo-effect)
 - Last hebben van vermoeidheid of energiegebrek
+- [Rugklachten willen verminderen](/blogs/rugklachten-verminderen-krachttraining-zeist/) door een sterkere basis
 - Stress beter willen managen
 - Een gezondere balans zoeken in hun leven
 - Al van alles geprobeerd hebben maar niks werkt
