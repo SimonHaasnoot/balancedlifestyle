@@ -30,6 +30,7 @@ export const headerRoutes: HeaderRouteType[] = [
     { name: HeaderRoutesEnum.COMMUNITY, path: '/community/' },
     { name: HeaderRoutesEnum.ABOUT_ME, path: '/over-ons/', isSecondaryLevel: true },
     { name: HeaderRoutesEnum.REVIEWS, path: '/reviews/', isSecondaryLevel: true },
+    { name: HeaderRoutesEnum.BLOGS, path: '/blogs/', isSecondaryLevel: true },
     { name: HeaderRoutesEnum.CONTACT, path: '/contact/', isSecondaryLevel: true },
 ];
 
