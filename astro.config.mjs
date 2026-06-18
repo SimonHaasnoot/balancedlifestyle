@@ -42,6 +42,9 @@ export default defineConfig({
         }),
     ],
     vite: {
+        resolve: {
+            dedupe: ['react', 'react-dom', '@mui/material', '@mui/system'],
+        },
         ssr: {
             noExternal: ['@mui/*', '@emotion/*'],
         },
