@@ -37,13 +37,18 @@ const articleJsonLd = {
     mainEntityOfPage: `https://lifestylepersonaltraining-zeist.nl/blogs/${slug}/`,
     keywords: post.data.tags?.join(', '),
 };
+
+const metaDescription =
+    post.data.description ??
+    `${post.data.title} – Blog van Lifestyle & Personal Training Zeist over ${post.data.tags?.slice(0, 2).join(' en ').toLowerCase() || 'fitness en leefstijl'}.`;
 ---
 
 <Layout
     title={post.data.title}
-    description={`${post.data.title} – Blog van Lifestyle & Personal Training Zeist over ${post.data.tags?.slice(0, 2).join(' en ').toLowerCase() || 'fitness en leefstijl'}.`}
+    description={metaDescription}
     pathname={`/blogs/${slug}/`}
     serviceJsonLd={articleJsonLd}
+    faqJsonLd={post.data.faq}
 >
     <main class="blog-page">
         <article class="blog-article" itemscope itemtype="https://schema.org/BlogPosting">
