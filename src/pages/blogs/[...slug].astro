@@ -1,16 +1,18 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection, render } from 'astro:content';
+import { getBlogImageMap } from '../../data/blogImages';
 
 export async function getStaticPaths() {
     const posts = await getCollection('blog');
+    const imageMap = getBlogImageMap(posts);
     return posts.map((post) => ({
         params: { slug: post.id.replace(/\.(md|mdx)$/, '') },
-        props: { post },
+        props: { post, heroImage: imageMap.get(post.id.replace(/\.(md|mdx)$/, '')) },
     }));
 }
 
-const { post } = Astro.props;
+const { post, heroImage } = Astro.props;
 const { Content } = await render(post);
 const slug = post.id.replace(/\.(md|mdx)$/, '');
 const formattedDate = new Intl.DateTimeFormat('nl-NL', {
@@ -36,6 +38,7 @@ const articleJsonLd = {
     },
     mainEntityOfPage: `https://lifestylepersonaltraining-zeist.nl/blogs/${slug}/`,
     keywords: post.data.tags?.join(', '),
+    image: heroImage ? `https://lifestylepersonaltraining-zeist.nl${heroImage}` : undefined,
 };
 
 const metaDescription =
@@ -49,6 +52,7 @@ const metaDescription =
     pathname={`/blogs/${slug}/`}
     serviceJsonLd={articleJsonLd}
     faqJsonLd={post.data.faq}
+    ogImage={heroImage}
 >
     <main class="blog-page">
         <article class="blog-article" itemscope itemtype="https://schema.org/BlogPosting">
@@ -75,9 +79,9 @@ const metaDescription =
                 </div>
             </header>
 
-            {post.data.image && (
+            {heroImage && (
                 <div class="blog-hero-image">
-                    <img src={post.data.image} alt={post.data.title} loading="eager" />
+                    <img src={heroImage} alt={post.data.title} loading="eager" />
                 </div>
             )}
 
