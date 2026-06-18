@@ -23,7 +23,11 @@ export const PersonalTrainingPage = (props: any) => {
             <Layout>
                 <SmallHero
                     image={
-                        <OptimizedImage src="/images/2026/2026-18.jpg" alt="Personal training bij Lifestyle & Personal Training Zeist" style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.4)' }} />
+                        <OptimizedImage
+                            src="/images/2026/2026-18.jpg"
+                            alt="Personal training bij Lifestyle & Personal Training Zeist"
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        />
                     }
                     title="Personal training"
                     subtitle="Investeer in jezelf. Wij begeleiden je 1-op-1 naar een sterker, fitter en gezonder lichaam — met een aanpak die volledig op jou is afgestemd."
@@ -35,16 +39,19 @@ export const PersonalTrainingPage = (props: any) => {
 
                 {/* Photo strip */}
                 <Box component="section" sx={{ overflow: 'hidden' }}>
-                    <Grid container spacing={0.5} sx={{ ...(!isMobile && { height: 350 }) }}>
+                    <Grid container spacing={0.5}>
                         {[
-                            { src: '/images/2026/2026-pt-1.jpg', alt: 'Personal training begeleiding', ratio: '2 / 3' },
-                            { src: '/images/2026/2026-pt-2.jpg', alt: 'Krachttraining sessie', ratio: '3 / 2' },
-                            { src: '/images/2026/2026-pt-3.jpg', alt: 'Training op maat', ratio: '3 / 2' },
-                            { src: '/images/2026/2026-pt-4.jpg', alt: 'Resultaten bereiken', ratio: '3 / 2' },
+                            { src: '/images/2026/2026-pt-2.jpg', alt: 'Personal training begeleiding' },
+                            { src: '/images/2026/pt/pt-carousel-2.jpg', alt: 'Krachttraining sessie' },
+                            { src: '/images/2026/pt/pt-carousel-3.jpg', alt: 'Training op maat' },
                         ].map((img) => (
-                            <Grid size={{ xs: 12, md: 3 }} key={img.src} sx={{ ...(!isMobile && { height: '100%' }) }}>
-                                <Box sx={{ aspectRatio: isMobile ? img.ratio : undefined, height: isMobile ? undefined : '100%', overflow: 'hidden' }}>
-                                    <OptimizedImage src={img.src} alt={img.alt} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                            <Grid size={{ xs: 12, md: 4 }} key={img.src}>
+                                <Box sx={{ aspectRatio: '3 / 2', overflow: 'hidden' }}>
+                                    <OptimizedImage
+                                        src={img.src}
+                                        alt={img.alt}
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                                    />
                                 </Box>
                             </Grid>
                         ))}
@@ -63,9 +70,9 @@ export const PersonalTrainingPage = (props: any) => {
                                     Persoonlijk, professioneel & resultaatgericht
                                 </Typography>
                                 <Typography variant="body1" sx={{ color: theme.palette.common.white, lineHeight: 2, mb: 4 }}>
-                                    Geen standaard schema's of drukke sportschool. Bij ons train je 1-op-1 in een rustige, professionele studio.
-                                    Elke sessie is volledig afgestemd op jouw doelen, niveau en lichaam. Wij combineren krachttraining,
-                                    conditie en mobiliteit met persoonlijke aandacht voor voeding, herstel en mindset.
+                                    Geen standaard schema's of drukke sportschool. Bij ons train je 1-op-1 in een rustige, professionele studio. Elke
+                                    sessie is volledig afgestemd op jouw doelen, niveau en lichaam. Wij combineren krachttraining, conditie en
+                                    mobiliteit met persoonlijke aandacht voor voeding, herstel en mindset.
                                 </Typography>
                                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                                     {[
@@ -76,7 +83,9 @@ export const PersonalTrainingPage = (props: any) => {
                                     ].map((item) => (
                                         <Box key={item.text} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                                             <Box sx={{ color: theme.palette.secondary.main, display: 'flex' }}>{item.icon}</Box>
-                                            <Typography variant="body1" sx={{ color: theme.palette.common.white }}>{item.text}</Typography>
+                                            <Typography variant="body1" sx={{ color: theme.palette.common.white }}>
+                                                {item.text}
+                                            </Typography>
                                         </Box>
                                     ))}
                                 </Box>
@@ -84,7 +93,11 @@ export const PersonalTrainingPage = (props: any) => {
                             {!isMobile && (
                                 <Grid size={{ xs: 12, md: 6 }}>
                                     <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)' }}>
-                                        <OptimizedImage src="/images/2026/2026-pt-1.jpg" alt="Personal training begeleiding" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                                        <OptimizedImage
+                                            src="/images/2026/2026-pt-1.jpg"
+                                            alt="Personal training begeleiding"
+                                            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                                        />
                                     </Box>
                                 </Grid>
                             )}
@@ -99,7 +112,11 @@ export const PersonalTrainingPage = (props: any) => {
                             {!isMobile && (
                                 <Grid size={{ xs: 12, md: 6 }}>
                                     <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)' }}>
-                                        <OptimizedImage src="/images/2026/2026-pt-2.jpg" alt="Training resultaten" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                                        <OptimizedImage
+                                            src="/images/2026/pt/pt-1.jpg"
+                                            alt="Training resultaten"
+                                            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                                        />
                                     </Box>
                                 </Grid>
                             )}
@@ -111,8 +128,8 @@ export const PersonalTrainingPage = (props: any) => {
                                     Meer dan alleen sporten
                                 </Typography>
                                 <Typography variant="body1" sx={{ color: theme.palette.common.white, lineHeight: 2, mb: 3 }}>
-                                    Onze trainingen bestaan uit kracht, conditie en mobiliteitsoefeningen in combinatie met kickboksen en technieklessen.
-                                    Maar we gaan verder dan alleen bewegen:
+                                    Onze trainingen bestaan uit kracht, conditie en mobiliteitsoefeningen in combinatie met kickboksen en
+                                    technieklessen. Maar we gaan verder dan alleen bewegen:
                                 </Typography>
                                 <List sx={{ p: 0 }}>
                                     {[
@@ -124,7 +141,9 @@ export const PersonalTrainingPage = (props: any) => {
                                     ].map((item) => (
                                         <ListItem key={item} sx={{ px: 0, py: 0.5 }}>
                                             <CheckCircleIcon sx={{ color: theme.palette.secondary.main, mr: 1.5, fontSize: 20 }} />
-                                            <Typography variant="body1" sx={{ color: theme.palette.common.white }}>{item}</Typography>
+                                            <Typography variant="body1" sx={{ color: theme.palette.common.white }}>
+                                                {item}
+                                            </Typography>
                                         </ListItem>
                                     ))}
                                 </List>
@@ -146,9 +165,21 @@ export const PersonalTrainingPage = (props: any) => {
                                 </Typography>
                                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
                                     {[
-                                        { step: '01', title: 'Kennismaking', desc: 'We plannen een vrijblijvend kennismakingsgesprek om jouw doelen en wensen te bespreken.' },
-                                        { step: '02', title: 'Intake & 0-meting', desc: 'Een uitgebreide intake en lichamelijke meting zodat we jouw startpunt vastleggen.' },
-                                        { step: '03', title: 'Training op maat', desc: 'We starten met een persoonlijk trainingsplan dat volledig aansluit op jouw leven.' },
+                                        {
+                                            step: '01',
+                                            title: 'Kennismaking',
+                                            desc: 'We plannen een vrijblijvend kennismakingsgesprek om jouw doelen en wensen te bespreken.',
+                                        },
+                                        {
+                                            step: '02',
+                                            title: 'Intake & 0-meting',
+                                            desc: 'Een uitgebreide intake en lichamelijke meting zodat we jouw startpunt vastleggen.',
+                                        },
+                                        {
+                                            step: '03',
+                                            title: 'Training op maat',
+                                            desc: 'We starten met een persoonlijk trainingsplan dat volledig aansluit op jouw leven.',
+                                        },
                                     ].map((item) => (
                                         <Box key={item.step} sx={{ display: 'flex', gap: 2.5 }}>
                                             <Typography variant="h4" sx={{ color: theme.palette.secondary.main, fontWeight: 700, minWidth: 45 }}>
@@ -172,7 +203,11 @@ export const PersonalTrainingPage = (props: any) => {
                             {!isMobile && (
                                 <Grid size={{ xs: 12, md: 6 }}>
                                     <Box sx={{ borderRadius: 3, overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.3)' }}>
-                                        <OptimizedImage src="/images/2026/2026-pt-3.jpg" alt="Personal training sessie" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                                        <OptimizedImage
+                                            src="/images/2026/2026-pt-3.jpg"
+                                            alt="Personal training sessie"
+                                            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                                        />
                                     </Box>
                                 </Grid>
                             )}
@@ -181,19 +216,45 @@ export const PersonalTrainingPage = (props: any) => {
                 </Box>
 
                 {/* Social proof / urgency strip */}
-                <Box component="section" sx={{ background: theme.palette.grey[100], borderTop: '1px solid rgba(90, 183, 219, 0.1)', borderBottom: '1px solid rgba(90, 183, 219, 0.1)' }}>
+                <Box
+                    component="section"
+                    sx={{
+                        background: theme.palette.grey[100],
+                        borderTop: '1px solid rgba(90, 183, 219, 0.1)',
+                        borderBottom: '1px solid rgba(90, 183, 219, 0.1)',
+                    }}
+                >
                     <DefaultContainer maxWidth="lg" sx={{ py: isMobile ? 3 : 4 }}>
-                        <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'center', alignItems: 'center', gap: isMobile ? 3 : 6 }}>
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                flexDirection: isMobile ? 'column' : 'row',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                gap: isMobile ? 3 : 6,
+                            }}
+                        >
                             {[
                                 { value: '100+', label: 'Tevreden klanten' },
                                 { value: '1-op-1', label: 'Persoonlijke aandacht' },
                                 { value: '9,4', label: 'Gemiddelde score' },
                             ].map((item) => (
                                 <Box key={item.label} sx={{ textAlign: 'center' }}>
-                                    <Typography sx={{ color: theme.palette.secondary.main, fontWeight: 700, fontSize: isMobile ? '1.2rem' : '1.5rem', lineHeight: 1, fontFamily: 'Exo' }}>
+                                    <Typography
+                                        sx={{
+                                            color: theme.palette.secondary.main,
+                                            fontWeight: 700,
+                                            fontSize: isMobile ? '1.2rem' : '1.5rem',
+                                            lineHeight: 1,
+                                            fontFamily: 'Exo',
+                                        }}
+                                    >
                                         {item.value}
                                     </Typography>
-                                    <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', letterSpacing: 1, fontSize: '0.65rem' }}>
+                                    <Typography
+                                        variant="caption"
+                                        sx={{ color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', letterSpacing: 1, fontSize: '0.65rem' }}
+                                    >
                                         {item.label}
                                     </Typography>
                                 </Box>
@@ -215,8 +276,18 @@ export const PersonalTrainingPage = (props: any) => {
                         backgroundColor: '#000',
                     }}
                 >
-                    <Box sx={{ position: 'absolute', inset: 0, '& img, & picture': { width: '100%', height: '100%', objectFit: 'cover', display: 'block' } }}>
-                        <OptimizedImage src="/images/2026/2026-pt-4.jpg" alt="Start met personal training" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                    <Box
+                        sx={{
+                            'position': 'absolute',
+                            'inset': 0,
+                            '& img, & picture': { width: '100%', height: '100%', objectFit: 'cover', display: 'block' },
+                        }}
+                    >
+                        <OptimizedImage
+                            src="/images/2026/2026-pt-4.jpg"
+                            alt="Start met personal training"
+                            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                        />
                     </Box>
                     <Box sx={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.65)' }} />
                     <DefaultContainer maxWidth="md" sx={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
@@ -226,12 +297,7 @@ export const PersonalTrainingPage = (props: any) => {
                         <Typography variant="body1" sx={{ color: theme.palette.common.white, mb: 4, maxWidth: 500, mx: 'auto', opacity: 0.9 }}>
                             Neem vrijblijvend contact op en ontdek wat personal training voor jou kan betekenen.
                         </Typography>
-                        <Button
-                            variant="contained"
-                            size="large"
-                            href={getRouteUrl(HeaderRoutesEnum.CONTACT)}
-                            sx={{ px: 5, py: 1.5 }}
-                        >
+                        <Button variant="contained" size="large" href={getRouteUrl(HeaderRoutesEnum.CONTACT)} sx={{ px: 5, py: 1.5 }}>
                             Neem contact op
                         </Button>
                     </DefaultContainer>
