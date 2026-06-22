@@ -75,7 +75,7 @@ Krachttraining is een krachtig middel, maar rugklachten hebben vaak meerdere oor
 
 - **Dagelijkse beweging**: Hoe kun je meer bewegen buiten je trainingen om? Wandelen, staan achter je bureau, regelmatig je houding wisselen
 - **Slaap en herstel**: Tijdens diepe slaap herstellen je spieren en tussenwervelschijven. Slechte slaap vertraagt dat proces
-- **Stressmanagement**: Stress verhoogt je spierspanning, vooral in nek, schouders en onderrug. Minder stress betekent minder klachten
+- **Stressmanagement**: Stress verhoogt je spierspanning, vooral in nek, schouders en onderrug. Minder stress betekent minder klachten — lees ook onze tips over [stress verminderen door sport](/blogs/stress-verminderen-sport-zeist/)
 - **Voeding**: Voldoende eiwitten ondersteunen spierherstel, en ontstekingsremmende voeding kan pijn helpen verminderen
 
 Deze factoren versterken elkaar. Een goed trainingsplan zonder aandacht voor slaap en stress levert minder op dan je zou verwachten. Andersom geldt hetzelfde: ontspanning zonder een sterk lichaam lost de oorzaak niet op.

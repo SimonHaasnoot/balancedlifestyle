@@ -1,5 +1,6 @@
 ---
 title: "Sporten in de Overgang: Met Krachttraining Sterk en Vitaal Blijven in Zeist"
+description: "Ga je door de overgang en wil je fit blijven? Ontdek hoe krachttraining in Zeist je helpt sterker en vitaler te worden. Tips en begeleiding op maat."
 image: /images/2026/2026-17.jpg
 date: 2026-06-15T10:00:00.000Z
 tags:
