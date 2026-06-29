@@ -6,6 +6,7 @@ tags:
   - Krachttraining
   - Fitness
   - Beginners
+description: "Beginnen met krachttraining in Zeist? Leer de basis, voorkom fouten en start veilig met professionele begeleiding. Tips voor beginners."
 ---
 
 ## Krachttraining voor beginners – Alles wat je moet weten
@@ -41,7 +42,7 @@ Elke beginner moet deze basisoefeningen beheersen:
 - Techniek verwaarlozen
 - Geen opwarming
 - Elke dag dezelfde spiergroep trainen
-- Voeding negeren
+- Voeding negeren — lees onze [voedingstips bij krachttraining](/blogs/voeding-krachttraining-zeist/) voor een goede basis
 
 ### Beginnen met een personal trainer
 

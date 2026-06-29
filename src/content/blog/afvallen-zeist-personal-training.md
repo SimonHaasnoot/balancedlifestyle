@@ -33,7 +33,7 @@ Veel mensen denken dat je moet hardlopen om af te vallen. Maar krachttraining is
 3. **Lichaamscompositie**: Je wordt strakker, ook als het gewicht op de weegschaal gelijk blijft
 4. **Sterker worden**: Meer kracht betekent meer energie in het dagelijks leven
 
-Lees ook: [Krachttraining voor beginners](/blogs/krachttraining-beginners-fitness-zeist/)
+Lees ook: [Krachttraining voor beginners](/blogs/krachttraining-beginners-fitness-zeist/). Wil je weten welke voeding je het beste kunt combineren met krachttraining? Bekijk dan ook onze [voedingstips bij krachttraining in Zeist](/blogs/voeding-krachttraining-zeist/).
 
 ### De rol van voeding bij afvallen
 
