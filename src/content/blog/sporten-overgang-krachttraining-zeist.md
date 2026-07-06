@@ -53,6 +53,8 @@ Bij onze [leefstijlcoaching](/leefstijl/) in Zeist kijken we naar het complete p
 
 Bij Lifestyle & Personal Training Zeist begeleiden we regelmatig vrouwen die middenin de overgang zitten. We stellen samen een trainingsschema op dat past bij jouw energie van die dag, bouwen krachttraining rustig en veilig op, en combineren dit met voedingsadvies en leefstijlcoaching. Geen standaard schema, maar een plan dat met jou meebeweegt — in onze studio aan de Korte Steynlaan 44, goed bereikbaar vanuit Zeist, Driebergen en Bilthoven.
 
+Ook mannen ervaren na hun veertigste hormonale veranderingen die hun training beïnvloeden. Lees meer in ons artikel over [krachttraining na je veertigste voor mannen in Zeist](/blogs/krachttraining-na-je-veertigste-mannen-zeist/).
+
 ### Begin vandaag met een gratis kennismaking
 
 Twijfel je of krachttraining iets voor jou is tijdens de overgang? Tijdens een gratis en vrijblijvend kennismakingsgesprek bespreken we jouw situatie en doelen, en ervaar je direct hoe wij werken — zonder verkooppraatje.

@@ -69,6 +69,8 @@ Training is een krachtig middel, maar stress aanpakken vraagt om meer. Bij Lifes
 
 Benieuwd hoe leefstijlcoaching precies werkt? Lees ook ons artikel over [leefstijlcoaching: wat is het en voor wie is het geschikt?](/blogs/leefstijlcoaching-wat-is-het/)
 
+Ben je een man na je veertigste en merk je dat stress en vermoeidheid je harder raken dan vroeger? Dan spelen hormonale veranderingen waarschijnlijk een rol. Lees meer in ons artikel over [krachttraining na je veertigste voor mannen in Zeist](/blogs/krachttraining-na-je-veertigste-mannen-zeist/).
+
 ### Praktische tips om vandaag al stress te verminderen
 
 Je hoeft niet te wachten op een trainingsschema om iets aan je stress te doen. Begin met deze stappen:

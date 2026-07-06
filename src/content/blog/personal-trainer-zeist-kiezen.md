@@ -1,5 +1,6 @@
 ---
 title: "Personal Trainer in Zeist Kiezen: Waar Moet Je Op Letten?"
+description: "Op zoek naar een personal trainer in Zeist? Ontdek waar je op moet letten: kwalificaties, aanpak, persoonlijke klik en locatie. Gratis proefles."
 image: /images/pt/pt1.jpg
 date: 2026-05-01T10:00:00.000Z
 tags:
