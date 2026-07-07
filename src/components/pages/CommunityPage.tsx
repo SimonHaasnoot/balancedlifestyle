@@ -14,6 +14,35 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import CelebrationIcon from '@mui/icons-material/Celebration';
 
+// Twee kolommen met elk één staande (3:4) en één liggende (4:3) foto,
+// zodat beide kolommen exact even hoog uitkomen (4/3 + 3/4 per kolom).
+const galleryColumns = [
+    [
+        {
+            src: '/images/2026/community/community-zeist-3.jpg',
+            alt: 'Leden in gesprek tijdens een community-event in de studio in Zeist',
+            aspectRatio: '3 / 4',
+        },
+        {
+            src: '/images/2026/community/community-zeist-1.jpg',
+            alt: 'Gezellige borrel met leden in de studio van Lifestyle & Personal Training Zeist',
+            aspectRatio: '4 / 3',
+        },
+    ],
+    [
+        {
+            src: '/images/2026/community/community-zeist-4.jpg',
+            alt: 'Lachende leden tijdens de kerstborrel van Lifestyle & Personal Training Zeist',
+            aspectRatio: '4 / 3',
+        },
+        {
+            src: '/images/2026/community/community-zeist-2.jpg',
+            alt: 'Prijsuitreiking tijdens een community-avond in de studio in Zeist',
+            aspectRatio: '3 / 4',
+        },
+    ],
+];
+
 const pillars = [
     {
         icon: GroupsIcon,
@@ -40,6 +69,7 @@ const pillars = [
 export const CommunityPage = () => {
     const { isMobile, isTabletOrSmaller } = useIsMobile();
     const { ref: pillarsRef, inView: pillarsInView } = useInView({ threshold: 0.2, triggerOnce: true });
+    const { ref: galleryRef, inView: galleryInView } = useInView({ threshold: 0.1, triggerOnce: true });
     const { ref: ctaRef, inView: ctaInView } = useInView({ threshold: 0.3, triggerOnce: true });
 
     return (
@@ -140,6 +170,67 @@ export const CommunityPage = () => {
                         Samen sterker
                     </Typography>
                 </Box>
+
+                {/* Foto galerij: sfeerimpressie van community events */}
+                <DefaultContainer maxWidth="lg" component="section">
+                    <Box ref={galleryRef} sx={{ py: isMobile ? 5 : 10 }}>
+                        <Box sx={{ textAlign: 'center', mb: isMobile ? 4 : 6 }}>
+                            <Typography variant="subtitle1" sx={{ color: theme.palette.secondary.main }}>
+                                Sfeerimpressie
+                            </Typography>
+                            <Typography variant="h4" component="h2" sx={{ color: theme.palette.common.black }}>
+                                Onze community in beeld
+                            </Typography>
+                        </Box>
+                        <Box
+                            sx={{
+                                display: 'grid',
+                                gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
+                                gap: isMobile ? 2 : 3,
+                            }}
+                        >
+                            {galleryColumns.map((column, columnIndex) => (
+                                <Box
+                                    key={columnIndex}
+                                    sx={{ display: 'flex', flexDirection: 'column', gap: isMobile ? 2 : 3 }}
+                                >
+                                    {column.map((photo, photoIndex) => (
+                                        <Box
+                                            key={photo.src}
+                                            sx={{
+                                                position: 'relative',
+                                                overflow: 'hidden',
+                                                borderRadius: 3,
+                                                aspectRatio: photo.aspectRatio,
+                                                opacity: galleryInView ? 1 : 0,
+                                                transform: galleryInView ? 'translateY(0)' : 'translateY(30px)',
+                                                transition: 'opacity 0.6s ease, transform 0.6s ease',
+                                                transitionDelay: `${(columnIndex * 2 + photoIndex) * 0.15}s`,
+                                                '&:hover img': {
+                                                    transform: 'scale(1.05)',
+                                                },
+                                            }}
+                                        >
+                                            <OptimizedImage
+                                                src={photo.src}
+                                                alt={photo.alt}
+                                                sizes={isMobile ? '100vw' : '50vw'}
+                                                style={{
+                                                    width: '100%',
+                                                    height: '100%',
+                                                    objectFit: 'cover',
+                                                    position: 'absolute',
+                                                    inset: 0,
+                                                    transition: 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                                                }}
+                                            />
+                                        </Box>
+                                    ))}
+                                </Box>
+                            ))}
+                        </Box>
+                    </Box>
+                </DefaultContainer>
 
                 {/* Pillars */}
                 <Box sx={{ backgroundColor: theme.palette.grey[100], py: isMobile ? 5 : 10 }} component="section">

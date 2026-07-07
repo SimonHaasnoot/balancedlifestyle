@@ -30,6 +30,7 @@ export const PersonalTrainingPage = (props: any) => {
                         />
                     }
                     title="Personal training"
+                    
                     subtitle="Investeer in jezelf. Wij begeleiden je 1-op-1 naar een sterker, fitter en gezonder lichaam — met een aanpak die volledig op jou is afgestemd."
                     linkTo={{
                         link: '#succesverhalen',
