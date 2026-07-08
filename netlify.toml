@@ -127,3 +127,8 @@
   from = "/blogs"
   to = "/blogs/"
   status = 301
+
+[[redirects]]
+  from = "/gratis-kennismaking"
+  to = "/gratis-kennismaking/"
+  status = 301
