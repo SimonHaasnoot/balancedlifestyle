@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GratisKennismakingPage from '../components/pages/GratisKennismakingPage';
+---
+
+<Layout
+    title="Gratis kennismaking | Personal Trainer Zeist"
+    description="Plan een gratis en vrijblijvende kennismaking bij Lifestyle & Personal Training Zeist. Persoonlijke begeleiding in onze eigen studio: beweging, voeding en rust. Gewaardeerd met een 9,4."
+    pathname="/gratis-kennismaking/"
+>
+    <GratisKennismakingPage client:only="react" />
+
+    <!-- Hidden form for Netlify form detection (client:only components are not SSR'd) -->
+    <form name="kennismaking" action="/bedankt" data-netlify="true" netlify-honeypot="gender" hidden>
+        <input type="hidden" name="form-name" value="kennismaking" />
+        <input name="gender" />
+        <input name="name" />
+        <input name="celphone" />
+        <input name="email" />
+        <select name="goal"></select>
+    </form>
+</Layout>
