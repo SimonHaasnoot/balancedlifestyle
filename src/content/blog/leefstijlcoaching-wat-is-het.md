@@ -18,7 +18,7 @@ Een leefstijlcoach begeleidt je op meerdere vlakken van je gezondheid:
 
 - **Beweging**: Een trainingsplan dat past bij jouw leven
 - **Voeding**: Geen streng dieet, maar bewuste keuzes
-- **Slaap**: Optimaliseren van je herstel en energie
+- **Slaap**: Optimaliseren van je herstel en energie — lees hoe [sport je slaapkwaliteit verbetert](/blogs/slaap-verbeteren-sport-zeist/)
 - **Mentale rust**: Stressmanagement en mindset
 
 ### Het verschil met een personal trainer

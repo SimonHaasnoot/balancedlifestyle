@@ -62,7 +62,7 @@ Ben je nog niet bekend met krachttraining? Lees dan onze gids over [krachttraini
 
 Training is een krachtig middel, maar stress aanpakken vraagt om meer. Bij Lifestyle & Personal Training Zeist geloven we in een brede aanpak. Onze [leefstijlcoaching](/leefstijl/) richt zich daarom ook op:
 
-- **Slaapoptimalisatie**: we helpen je met routines en gewoontes die je slaapkwaliteit verbeteren
+- **Slaapoptimalisatie**: we helpen je met routines en gewoontes die je slaapkwaliteit verbeteren — lees ook hoe [sport je nachtrust structureel verbetert](/blogs/slaap-verbeteren-sport-zeist/)
 - **Voeding**: bepaalde voedingsstoffen ondersteunen je zenuwstelsel en helpen cortisol te reguleren — magnesium, omega-3 vetzuren en voldoende eiwitten maken een merkbaar verschil
 - **Bewust bewegen buiten training**: wandelen in het Zeisterbos, fietsen richting de Utrechtse Heuvelrug — dagelijkse beweging in het groen verlaagt je stressniveau aantoonbaar
 - **Ademhaling en herstel**: simpele ademhalingstechnieken en bewust rusten helpen je zenuwstelsel te kalmeren

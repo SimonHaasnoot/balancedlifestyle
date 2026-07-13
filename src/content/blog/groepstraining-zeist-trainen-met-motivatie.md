@@ -1,5 +1,6 @@
 ---
 title: "Groepstraining in Zeist: Trainen met Energie en Motivatie"
+description: "Groepstraining in Zeist in kleine groepen van max 6 personen. Persoonlijke begeleiding, groepsenergie en meetbaar resultaat. Plan een gratis proefles!"
 image: /images/2026/2026-1.jpg
 date: 2026-06-03T10:00:00.000Z
 tags:
