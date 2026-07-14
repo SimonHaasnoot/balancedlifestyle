@@ -8,8 +8,13 @@ export type ContactFormProps = {
 export const ContactForm: React.FC<ContactFormProps> = (props) => {
     const theme = useTheme();
 
+    const prepareLeadTracking = () => {
+        sessionStorage.setItem('lead-method', 'contact_form');
+        sessionStorage.removeItem('lead-tracked');
+    };
+
     return (
-        <form name="contact" method="post" action="/bedankt" data-netlify="true" netlify-honeypot="gender">
+        <form name="contact" method="post" action="/bedankt" data-netlify="true" netlify-honeypot="gender" onSubmit={prepareLeadTracking}>
             <input type="hidden" name="gender" />
             <input type="hidden" name="form-name" value="contact" />
             <FormControl

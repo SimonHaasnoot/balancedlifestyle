@@ -1,5 +1,6 @@
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import PhoneIcon from '@mui/icons-material/Phone';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import {
@@ -31,6 +32,29 @@ const fadeIn = keyframes`
 
 const accent = theme.palette.secondary.main;
 const phoneHref = (phone: string) => `tel:+31${phone.replace(/\s/g, '').slice(1)}`;
+
+// wa.me verwacht een internationaal nummer zonder + of leidende 0 (bijv. 31612345678)
+const whatsappHref = (phone: string, message: string) =>
+    `https://wa.me/31${phone.replace(/\s/g, '').slice(1)}?text=${encodeURIComponent(message)}`;
+
+const WHATSAPP_MESSAGE =
+    'Hoi! Ik zag jullie pagina en wil graag een gratis kennismaking plannen. Wanneer kan dat?';
+
+// Conversie-tracking: pusht events naar Google Analytics (gtag) en Meta Pixel (fbq) indien aanwezig.
+const trackLead = (method: 'form' | 'whatsapp' | 'phone') => {
+    if (typeof window === 'undefined') return;
+    if (method === 'form') {
+        sessionStorage.setItem('lead-method', 'kennismaking_form');
+        sessionStorage.removeItem('lead-tracked');
+        return;
+    }
+    const w = window as unknown as {
+        gtag?: (...args: unknown[]) => void;
+        fbq?: (...args: unknown[]) => void;
+    };
+    w.gtag?.('event', 'generate_lead', { method, page: 'gratis-kennismaking' });
+    w.fbq?.('track', 'Lead', { method });
+};
 
 const heroUsps = [
     'Persoonlijk plan op maat: beweging, voeding én rust',
@@ -126,7 +150,14 @@ const LeadForm: React.FC<{ id?: string; dark?: boolean }> = ({ id }) => (
             Vrijblijvend en zonder verplichtingen. Wij nemen binnen 24 uur contact met je op.
         </Typography>
 
-        <form name="kennismaking" method="post" action="/bedankt" data-netlify="true" netlify-honeypot="gender">
+        <form
+            name="kennismaking"
+            method="post"
+            action="/bedankt"
+            data-netlify="true"
+            netlify-honeypot="gender"
+            onSubmit={() => trackLead('form')}
+        >
             <input type="hidden" name="gender" />
             <input type="hidden" name="form-name" value="kennismaking" />
             <FormControl fullWidth sx={{ ['> div']: { mb: 2 } }}>
@@ -167,6 +198,34 @@ const LeadForm: React.FC<{ id?: string; dark?: boolean }> = ({ id }) => (
                 </Button>
             </FormControl>
         </form>
+
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, my: 2 }}>
+            <Box sx={{ flex: 1, height: '1px', background: 'rgba(0,0,0,0.12)' }} />
+            <Typography sx={{ color: 'rgba(0,0,0,0.45)', fontSize: '0.78rem' }}>of direct</Typography>
+            <Box sx={{ flex: 1, height: '1px', background: 'rgba(0,0,0,0.12)' }} />
+        </Box>
+
+        <Button
+            fullWidth
+            href={whatsappHref(projectVariables.COMPANY_PHONE, WHATSAPP_MESSAGE)}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackLead('whatsapp')}
+            startIcon={<WhatsAppIcon />}
+            sx={{
+                py: 1.1,
+                fontWeight: 700,
+                fontSize: '0.95rem',
+                textTransform: 'none',
+                color: '#fff',
+                borderRadius: 2,
+                background: '#25D366',
+                boxShadow: '0 4px 16px rgba(37,211,102,0.4)',
+                '&:hover': { background: '#1ebe5b', boxShadow: '0 8px 24px rgba(37,211,102,0.55)' },
+            }}
+        >
+            Stuur een WhatsApp
+        </Button>
 
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, mt: 1.5, flexWrap: 'wrap' }}>
             <Box sx={{ display: 'flex', gap: 0.3 }}>
@@ -210,6 +269,7 @@ export const GratisKennismakingPage = () => {
                     </Link>
                     <Button
                         href={phoneHref(projectVariables.COMPANY_PHONE)}
+                        onClick={() => trackLead('phone')}
                         startIcon={<PhoneIcon />}
                         sx={{
                             color: '#fff',
@@ -698,6 +758,7 @@ export const GratisKennismakingPage = () => {
                         </Button>
                         <Button
                             href={phoneHref(projectVariables.COMPANY_PHONE)}
+                            onClick={() => trackLead('phone')}
                             startIcon={<PhoneIcon />}
                             sx={{
                                 px: 4,
@@ -756,13 +817,14 @@ export const GratisKennismakingPage = () => {
                         p: 1.5,
                         display: 'flex',
                         justifyContent: 'center',
+                        gap: 1.5,
                     }}
                 >
                     <Button
                         href="#kennismaking-form"
-                        fullWidth
                         sx={{
-                            maxWidth: 420,
+                            flex: 1,
+                            maxWidth: 320,
                             py: 1.2,
                             borderRadius: '50px',
                             fontWeight: 700,
@@ -772,7 +834,26 @@ export const GratisKennismakingPage = () => {
                             boxShadow: `0 4px 20px ${accent}40`,
                         }}
                     >
-                        Plan gratis kennismaking
+                        Plan kennismaking
+                    </Button>
+                    <Button
+                        href={whatsappHref(projectVariables.COMPANY_PHONE, WHATSAPP_MESSAGE)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => trackLead('whatsapp')}
+                        aria-label="Stuur een WhatsApp"
+                        sx={{
+                            minWidth: 0,
+                            px: 2,
+                            py: 1.2,
+                            borderRadius: '50px',
+                            color: '#fff',
+                            background: '#25D366',
+                            boxShadow: '0 4px 16px rgba(37,211,102,0.4)',
+                            '&:hover': { background: '#1ebe5b' },
+                        }}
+                    >
+                        <WhatsAppIcon />
                     </Button>
                 </Box>
             )}

@@ -163,16 +163,33 @@ const localBusinessJsonLd = {
 
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://connect.facebook.net" />
-        <link rel="dns-prefetch" href="https://connect.facebook.net" />
 
         <!-- Google Analytics -->
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${projectVariables.GOOGLE_ANALYTICS_KEY}`}></script>
         <script is:inline define:vars={{ gaKey: projectVariables.GOOGLE_ANALYTICS_KEY }}>
             window.dataLayer = window.dataLayer || [];
-            function gtag() { window.dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', gaKey, { anonymize_ip: true });
+            window.gtag = function () { window.dataLayer.push(arguments); };
+            window.gtag('js', new Date());
+            window.gtag('config', gaKey, {
+                anonymize_ip: true,
+                cookie_flags: 'SameSite=None;Secure',
+                send_page_view: true,
+            });
+
+            window.shouldTrackLead = window.location.pathname.replace(/\/$/, '') === '/bedankt'
+                && !sessionStorage.getItem('lead-tracked');
+
+            if (window.shouldTrackLead) {
+                const method = sessionStorage.getItem('lead-method') || 'website_form';
+                window.leadMethod = method;
+                window.gtag('event', 'generate_lead', {
+                    currency: 'EUR',
+                    value: 1,
+                    method,
+                });
+                sessionStorage.setItem('lead-tracked', 'true');
+                sessionStorage.removeItem('lead-method');
+            }
         </script>
 
         <!-- Facebook Pixel -->
@@ -185,8 +202,11 @@ const localBusinessJsonLd = {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '461658289597305');
-            fbq('track', 'PageView');
+            window.fbq('init', '461658289597305');
+            window.fbq('track', 'PageView');
+            if (window.shouldTrackLead) {
+                window.fbq('track', 'Lead', { method: window.leadMethod });
+            }
         </script>
         <noscript>
             <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=461658289597305&ev=PageView&noscript=1" />
