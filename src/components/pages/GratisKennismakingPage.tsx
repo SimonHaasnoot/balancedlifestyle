@@ -17,7 +17,7 @@ import {
     Typography,
     keyframes,
 } from '@mui/material';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import useIsMobile from '../../hooks/useMobile';
 import { projectVariables } from '../../project';
 import theme from '../../theme';
@@ -242,6 +242,33 @@ const LeadForm: React.FC<{ id?: string; dark?: boolean }> = ({ id }) => (
 
 export const GratisKennismakingPage = () => {
     const { isMobile, isTabletOrSmaller } = useIsMobile();
+    const [isFormVisible, setIsFormVisible] = useState(false);
+
+    useEffect(() => {
+        const form = document.getElementById('kennismaking-form');
+        if (!form) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => setIsFormVisible(entry.isIntersecting),
+            { threshold: 0.15 },
+        );
+        observer.observe(form);
+        return () => observer.disconnect();
+    }, []);
+
+    const scrollToForm = (event: React.MouseEvent<HTMLAnchorElement>) => {
+        event.preventDefault();
+        const form = document.getElementById('kennismaking-form');
+        if (!form) return;
+
+        const top = window.scrollY + form.getBoundingClientRect().top - (isTabletOrSmaller ? 24 : 80);
+        window.history.replaceState(null, '', '#kennismaking-form');
+        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+        window.setTimeout(
+            () => form.querySelector<HTMLInputElement>('input:not([type="hidden"])')?.focus({ preventScroll: true }),
+            500,
+        );
+    };
 
     return (
         <AppShell>
@@ -520,6 +547,7 @@ export const GratisKennismakingPage = () => {
 
                     <Button
                         href="#kennismaking-form"
+                        onClick={scrollToForm}
                         sx={{
                             mt: 6,
                             px: 4,
@@ -740,6 +768,7 @@ export const GratisKennismakingPage = () => {
                     <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
                         <Button
                             href="#kennismaking-form"
+                            onClick={scrollToForm}
                             sx={{
                                 px: 4,
                                 py: 1.6,
@@ -803,7 +832,7 @@ export const GratisKennismakingPage = () => {
             </Box>
 
             {/* ── Sticky CTA op mobiel ── */}
-            {isTabletOrSmaller && (
+            {isTabletOrSmaller && !isFormVisible && (
                 <Box
                     sx={{
                         position: 'fixed',
@@ -822,6 +851,7 @@ export const GratisKennismakingPage = () => {
                 >
                     <Button
                         href="#kennismaking-form"
+                        onClick={scrollToForm}
                         sx={{
                             flex: 1,
                             maxWidth: 320,
