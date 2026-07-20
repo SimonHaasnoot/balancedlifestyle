@@ -52,7 +52,7 @@ Lees meer: [Hoe kies je de juiste personal trainer in Zeist?](/blogs/personal-tr
 
 ### Tips voor thuis en in de sportschool
 
-Of je nu thuis traint of in een sportschool in Zeist — consistentie is de sleutel. Begin met wat je hebt, en bouw langzaam op. Heb je last van rugklachten? Lees dan ook hoe [krachttraining helpt bij rugklachten](/blogs/rugklachten-verminderen-krachttraining-zeist/). Zoek je professionele begeleiding? Onze [personal trainers](/personal-training/) helpen je graag op weg.
+Of je nu thuis traint of in een sportschool in Zeist — consistentie is de sleutel. Begin met wat je hebt, en bouw langzaam op. Heb je last van rugklachten? Lees dan ook hoe [krachttraining helpt bij rugklachten](/blogs/rugklachten-verminderen-krachttraining-zeist/). Last van kniepijn? Ontdek in ons artikel hoe [krachttraining je knieën sterker maakt](/blogs/kniepijn-verminderen-krachttraining-zeist/). Zoek je professionele begeleiding? Onze [personal trainers](/personal-training/) helpen je graag op weg.
 
 ### Meer lezen
 

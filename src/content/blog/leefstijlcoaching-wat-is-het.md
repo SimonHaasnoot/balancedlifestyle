@@ -1,5 +1,6 @@
 ---
 title: "Leefstijlcoaching: Wat Is Het en Voor Wie Is Het Geschikt?"
+description: "Wat is leefstijlcoaching en voor wie is het geschikt? Ontdek hoe beweging, voeding en slaap je energie en gezondheid duurzaam verbeteren. Gratis kennismaking."
 image: /images/pt/pt3.jpg
 date: 2026-03-20T10:00:00.000Z
 tags:
