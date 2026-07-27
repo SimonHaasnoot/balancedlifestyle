@@ -114,6 +114,6 @@ Ja, wij begeleiden regelmatig klanten met rugklachten. Tijdens een gratis en vri
 
 Rugklachten hoeven je niet tegen te houden. Met de juiste begeleiding kun je sterker, pijnvrij en energieker door het leven. Bij Lifestyle & Personal Training Zeist helpen we je graag op weg — persoonlijk, professioneel en in jouw tempo.
 
-Heb je naast rugklachten ook last van kniepijn? Lees dan hoe [krachttraining je knieën sterker maakt en kniepijn vermindert](/blogs/kniepijn-verminderen-krachttraining-zeist/) — de aanpak is verrassend vergelijkbaar.
+Heb je naast rugklachten ook last van kniepijn? Lees dan hoe [krachttraining je knieën sterker maakt en kniepijn vermindert](/blogs/kniepijn-verminderen-krachttraining-zeist/) — de aanpak is verrassend vergelijkbaar. Last van je schouders? In ons artikel over [schouderklachten verminderen met krachttraining in Zeist](/blogs/schouderklachten-krachttraining-zeist/) lees je hoe dezelfde principes ook jouw schouders sterker en pijnvrij maken.
 
 [Plan je gratis kennismaking](/contact/) en ontdek wat krachttraining voor jouw rug kan betekenen.

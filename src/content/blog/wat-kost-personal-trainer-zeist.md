@@ -1,5 +1,6 @@
 ---
 title: "Wat Kost een Personal Trainer? Prijzen & Opties in Zeist"
+description: "Wat kost een personal trainer in Zeist? Eerlijk overzicht van prijzen, abonnementsvormen en wat je ervoor terugkrijgt. Inclusief gratis kennismaking."
 image: /images/2026/2026-17.jpg
 date: 2026-05-28T10:00:00.000Z
 tags:

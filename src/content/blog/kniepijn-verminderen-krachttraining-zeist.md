@@ -78,7 +78,7 @@ Kniepijn staat zelden op zichzelf. Bij onze [leefstijlcoaching](/leefstijl/) kij
 - **Gewichtsmanagement**: Minder belasting op de knie heeft direct effect op pijnvermindering — zelfs twee tot drie kilogram minder maakt een meetbaar verschil
 - **Slaap en herstel**: Tijdens diepe slaap herstellen gewrichten en kraakbeen. Chronische slaapgebrek vertraagt dat proces
 
-Dezelfde aanpak die werkt voor rugklachten geldt ook hier. Lees meer in ons artikel over [rugklachten verminderen met krachttraining in Zeist](/blogs/rugklachten-verminderen-krachttraining-zeist/) — veel van die principes overlappen, want een sterk lichaam begint bij een sterke basis.
+Dezelfde aanpak die werkt voor rugklachten geldt ook hier. Lees meer in ons artikel over [rugklachten verminderen met krachttraining in Zeist](/blogs/rugklachten-verminderen-krachttraining-zeist/) — veel van die principes overlappen, want een sterk lichaam begint bij een sterke basis. Heb je ook last van je schouders? Lees hoe [krachttraining schouderklachten vermindert in Zeist](/blogs/schouderklachten-krachttraining-zeist/).
 
 ### Personal training bij kniepijn in Zeist
 
