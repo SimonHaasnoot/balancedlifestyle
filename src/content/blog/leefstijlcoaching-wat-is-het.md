@@ -37,6 +37,8 @@ Leefstijlcoaching is ideaal voor mensen die:
 - Een gezondere balans zoeken in hun leven
 - Al van alles geprobeerd hebben maar niks werkt
 
+Herken je het patroon van starten en stoppen? Dan is het opbouwen van een echte routine net zo belangrijk als de inhoud van je training. Lees hoe je een [duurzame sportgewoonte opbouwt in Zeist](/blogs/sportgewoonte-opbouwen-personal-training-zeist/) — ook als je dat eerder niet lukte.
+
 ### Leefstijlcoaching in Zeist
 
 Als je in Zeist of omgeving woont en op zoek bent naar een professionele leefstijlcoach, dan ben je bij ons aan het juiste adres. We bieden persoonlijke begeleiding vanuit onze studio aan de Korte Steynlaan.

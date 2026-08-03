@@ -35,7 +35,7 @@ Sommige mensen floreren in een [groepstraining](/groepstraining/), anderen hebbe
 
 ### Conclusie
 
-De beste personal trainer in Zeist is degene die bij jouw doelen en persoonlijkheid past. Neem de tijd om te vergelijken en plan altijd een proefles in. Wil je ervaren hoe wij werken? [Meld je aan voor een gratis kennismaking](/contact/).
+De beste personal trainer in Zeist is degene die bij jouw doelen en persoonlijkheid past. Neem de tijd om te vergelijken en plan altijd een proefles in. Twijfel je of je het dit keer wél volhoudt? Lees dan hoe je een [duurzame sportgewoonte opbouwt in Zeist](/blogs/sportgewoonte-opbouwen-personal-training-zeist/) — kleine, slimme stappen maken het verschil. Wil je ervaren hoe wij werken? [Meld je aan voor een gratis kennismaking](/contact/).
 
 ### Meer lezen
 

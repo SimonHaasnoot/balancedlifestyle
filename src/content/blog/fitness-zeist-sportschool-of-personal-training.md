@@ -1,5 +1,6 @@
 ---
 title: "Fitness in Zeist: Sportschool of Personal Training Studio?"
+description: "Grote sportschool of personal training studio in Zeist? Ontdek de voor- en nadelen en welke optie jou écht resultaat oplevert. Inclusief gratis proefles."
 image: /images/2026/2026-4.jpg
 date: 2026-05-25T10:00:00.000Z
 tags:
